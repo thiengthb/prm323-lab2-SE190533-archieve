@@ -5,7 +5,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Mục | Nội dung |
 |---|---|
 | Sinh viên | thien · SE190533 |
-| Đề tài | Ứng dụng di động điểm danh bằng QR cho giảng viên FPTU, thay việc gọi tên rồi nhập tay lên FAP (đã được GVHD duyệt) |
+| Đề tài | Ứng dụng di động bổ trợ việc điểm danh trên FAP cho giảng viên FPTU cơ sở TP.HCM (đã được GVHD duyệt) |
 | Persona một dòng | *Sẽ cập nhật sau khi tổng hợp nghiên cứu (S2)* |
 | Figma | *Sẽ cập nhật* |
 | Thuyết trình | 14:30 thứ Sáu 16/10/2026 |
@@ -23,15 +23,16 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Ảnh Stitch, ảnh Figma | `assets/stitch/`, `assets/figma/` | Chưa có |
 | Flutter handoff | `handoff/flutter-handoff.md` | Chưa có |
 
-## Hồ sơ quá trình (bổ sung)
+## Hồ sơ quá trình (bổ sung, phục vụ truy vết)
 
 | Nội dung | Đường dẫn |
 |---|---|
-| Quy trình làm việc theo phiên | `process/00-quy-trinh-lam-viec.md` |
-| Sổ quyết định D-xx | `process/01-so-quyet-dinh.md` |
-| Quy trình phỏng vấn mô phỏng bằng AI | `process/02-quy-trinh-phong-van-mo-phong.md` |
-| Bộ câu hỏi v1, kiểm định thiên lệch, v2, Google Form | `research/` |
-| Prompt nguyên văn của các subagent | `research/prompts/` |
+| Quy ước tài liệu, hệ mã, nhãn bằng chứng | `process/conventions.md` |
+| Ma trận truy vết bằng chứng → màn hình | `process/traceability-matrix.md` |
+| Sổ quyết định D-nn | `process/decision-log.md` |
+| Kế hoạch làm việc theo phiên | `process/work-plan.md` |
+| Hồ sơ nghiên cứu (kế hoạch, bàn giấy, công cụ, người trả lời, dữ liệu thô, tổng hợp) | `research/` (mục lục: `research/README.md`) |
+| Prompt nguyên văn của mọi lần dùng AI | `ai/prompts/` |
 
 ## Công cụ AI đã dùng
 

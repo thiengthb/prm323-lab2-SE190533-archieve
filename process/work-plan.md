@@ -33,7 +33,7 @@ Mỗi phiên kết thúc bằng một commit, để Git tự chứng minh quá t
 
 ## 4. Luật làm việc giữa hai ta
 
-- Mỗi quyết định có mã **D-xx** trong `process/01-so-quyet-dinh.md`: vấn đề, các phương án, khuyến nghị của Claude kèm căn cứ (persona, heuristic Nielsen, WCAG, ràng buộc đề/thời gian), quyết định của thien, lý do. Bất đồng được ghi lại nguyên văn, không xoá.
+- Mỗi quyết định có mã **D-xx** trong `process/decision-log.md`: vấn đề, các phương án, khuyến nghị của Claude kèm căn cứ (persona, heuristic Nielsen, WCAG, ràng buộc đề/thời gian), quyết định của thien, lý do. Bất đồng được ghi lại nguyên văn, không xoá.
 - Claude không chấp nhận lý do "thích" hoặc "AI nói vậy" (đề bài cũng cấm). Mọi lý do phải trỏ về persona, heuristic hoặc ràng buộc thật.
 - Không câu hỏi nào bị bỏ qua: Claude hỏi, thien chọn. Nếu thien chưa trả lời, Claude làm tiếp theo phương án khuyến nghị và ghi rõ là tạm.
 - Phần việc của bạn phải đủ để bạn tự trả lời review 5 phút: bạn chạy Stitch, bạn dựng hoặc ít nhất tự tay chỉnh Figma; Claude viết prompt, phản biện, soạn tài liệu, kiểm tra a11y.

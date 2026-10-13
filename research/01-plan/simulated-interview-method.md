@@ -1,4 +1,10 @@
-# Quy trình phỏng vấn mô phỏng bằng AI (D-05, D-05a, D-09)
+# Phương pháp phỏng vấn mô phỏng bằng AI
+
+| Thuộc tính | Giá trị |
+|---|---|
+| Mã tài liệu | RES-METHOD |
+| Trạng thái | Đã duyệt |
+| Quyết định liên quan | D-05, D-05a, D-09, D-13 |
 
 Bối cảnh: thời gian 3 ngày, GVHD cho phép dùng AI tạo dữ liệu phỏng vấn. Mục tiêu là dữ liệu **đa dạng, độc lập, không bị dẫn dắt**, và được ghi nhãn trung thực để hội đồng không coi là dữ liệu thật.
 
@@ -27,32 +33,16 @@ Lợi ích: slide nghiên cứu có thể nói "8 phỏng vấn mô phỏng, ki�
 | 1 | Claude (BA) | Toàn bộ | — | Câu hỏi nghiên cứu (điều ta muốn biết, không phải giả thuyết) |
 | 2 | Agent soạn câu hỏi | Câu hỏi nghiên cứu, bối cảnh điểm danh ở FPTU | Sản phẩm, giải pháp QR, persona dự kiến | Bộ câu hỏi theo vai |
 | 3 | Agent kiểm tra thiên lệch | Bộ câu hỏi | Câu hỏi nghiên cứu, sản phẩm | Bảng lỗi (dẫn dắt, hai ý trong một câu, giả định, gợi ý giải pháp) và bộ câu hỏi đã sửa |
-| 4 | Agent người trả lời R01–R08 (mỗi người một agent) | Chỉ thẻ hồ sơ của mình và câu hỏi | Sản phẩm, người trả lời khác | Bản ghi phỏng vấn |
+| 4 | Agent người trả lời R01–R11 (mỗi người một agent) | Chỉ thẻ hồ sơ của mình và câu hỏi | Sản phẩm, người trả lời khác | Bản ghi phỏng vấn |
 | 5 | Agent người hỏi đào sâu | Bản ghi của một người | Sản phẩm, giả thuyết | 2–3 câu hỏi đào sâu trung lập, người trả lời trả lời tiếp |
 | 6 | Agent tổng hợp | Chỉ các bản ghi có mã | Sản phẩm, giả thuyết | Affinity board, mỗi ý dẫn mã nguồn, chỗ thiếu ghi UNKNOWN |
 | 7 | Agent phản biện tổng hợp | Bản ghi + tổng hợp | — | Các chỗ khái quát quá mức hoặc chỉ có ở một người |
 | 8 | Claude + thien | Toàn bộ | — | Persona, Coverage Matrix, quyết định |
 
-## 3. Danh sách người trả lời đề xuất (D-09)
+## 3. Danh sách người trả lời
 
-| Mã | Vai trò | Khác biệt cần có |
-|---|---|---|
-| R01 | Giảng viên lâu năm, dạy môn lý thuyết | Ít dùng công nghệ, quen gọi tên trên giấy, hoài nghi app mới |
-| R02 | Giảng viên trẻ, 5 lớp mỗi kỳ | Thạo công nghệ, nhập FAP thường xuyên, bận nhất |
-| R03 | Giảng viên thỉnh giảng | Dạy nhiều nơi, di chuyển giữa ca, chủ yếu cầm điện thoại |
-| R04 | Giảng viên dạy thực hành, lớp 35–40 SV | Phòng lab ồn, SV vào muộn rải rác, hay có tranh cãi điểm danh |
-| R05 | SV năm 1 | Chăm, điện thoại Android cũ, mạng 4G yếu trong phòng |
-| R06 | SV năm 3 | Đi làm thêm, hay đến muộn, từng bị ghi vắng sai |
-| R07 | SV có hạn chế thị lực | Dùng cỡ chữ lớn, khó đọc màn hình chiếu xa |
-| R08 | Cán bộ phòng đào tạo | Xử lý khiếu nại điểm danh, không trực tiếp điểm danh (Supporting) |
+Xem `research/04-participants/roster.md` (11 người, mô hình 4 nhóm thái độ D-13).
 
-Giảng viên chiếm 4/8 vì Primary Persona là giảng viên (D-04).
+## 4. Nhãn bằng chứng
 
-## 4. Nhãn bằng chứng dùng trong persona
-
-- **Simulated (Sxx-Rnn)**: từ phỏng vấn mô phỏng AI.
-- **Observed (O-nn)**: thien tự quan sát.
-- **Reported (T-nn)**: người thật kể lại.
-- **Assumed**: chưa có nguồn nào, ghi rõ cần kiểm chứng.
-
-Mọi prompt và câu trả lời của subagent được lưu nguyên văn trong `research/` của repo, và được khai báo trong `ai/ai-design-log.md` mục Disclosure.
+Xem `process/conventions.md`, mục 3.

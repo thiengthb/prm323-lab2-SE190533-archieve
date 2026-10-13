@@ -47,4 +47,4 @@ Cách tạo: Google Forms → Form trống → dán từng câu dưới đây. B
 
 ---
 
-Ghi chú thiết kế: mọi câu hỏi về hành vi đã xảy ra, có lựa chọn "Chưa", "Không biết" hoặc "Không nhớ" để không ép người trả lời nhận là có vấn đề (theo kiểm định thiên lệch ở `02-kiem-dinh-thien-lech.md`). Không có câu nào nêu giải pháp hay công nghệ.
+Ghi chú thiết kế: mọi câu hỏi về hành vi đã xảy ra, có lựa chọn "Chưa", "Không biết" hoặc "Không nhớ" để không ép người trả lời nhận là có vấn đề (theo kiểm định thiên lệch ở `research/03-instruments/bias-audit-v1.md`). Không có câu nào nêu giải pháp hay công nghệ.
