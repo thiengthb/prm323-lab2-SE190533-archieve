@@ -23,4 +23,4 @@ Các file do AI tạo ra được giữ nguyên văn (`process/conventions.md`, 
 | `…/02-kiem-dinh-thien-lech.md` | `research/03-instruments/bias-audit-v1.md` |
 | `…/03-bo-cau-hoi-v2.md` | `research/03-instruments/interview-guide-v2.md` |
 | `…/00-boi-canh-fptu.md` | `research/02-desk/fptu-all-campuses.md` |
-| `…/00b-boi-canh-hcm.md` | `research/02-desk/fptu-hcm.md` |
+| `/mnt/project-files/design/lab02/research/00b-boi-canh-hcm.md` | `research/02-desk/fptu-hcm.md` |
