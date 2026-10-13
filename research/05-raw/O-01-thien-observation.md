@@ -27,7 +27,7 @@
 |---|---|---|
 | O-01.1 | Khớp với slot mới 135 phút (nguồn sinh viên tải lên); nay có thêm xác nhận từ HCM | S14 (AI-04) |
 | O-01.2–O-01.4 | Lấp khoảng trống "giảng viên điểm danh thực tế thế nào", web không có nguồn | AI-04, AI-05 mục khoảng trống |
-| O-01.6–O-01.7 | Mâu thuẫn một phần với quy trình khiếu nại lên phòng QLĐT (S12, S17): nếu giảng viên không sửa được sau ngày học thì sửa sau đó phải qua phòng đào tạo. Cần kiểm chứng ai sửa được sau khi hệ thống chốt | S12, S17 |
+| O-01.6–O-01.7 | **Ủng hộ một phần** (AI-07, `research/02-desk/fap-edit-window.md`). Sinh viên phải báo giảng viên trong ngày học (môn LUK: 2 ngày), điều này khớp với O-01.6. Quá hạn đó vẫn còn đường nộp "Đơn khiếu nại điểm danh" trên FAP gửi phòng QLĐT, xử lý trong 2 ngày làm việc, nên "không còn cứu vãn được" (O-01.7) là quá mạnh. Chưa có nguồn xác nhận FAP khóa quyền sửa của giảng viên về mặt kỹ thuật | S12, S17, V01–V16 |
 | O-01.8 | Phù hợp với giai thoại "ngủ quên slot 1 dẫn tới cấm thi" | S9, S10 |
 
 ## Ý nghĩa cho thiết kế (giả thuyết, chưa phải kết luận)

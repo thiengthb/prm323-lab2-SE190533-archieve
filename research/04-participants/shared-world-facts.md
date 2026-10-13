@@ -20,3 +20,5 @@ Mọi người trả lời mô phỏng đều nhận bảng dưới đây, để
 | W7 | Theo hiểu biết phổ biến của sinh viên: chỉ giảng viên sửa được điểm danh của lớp, và chỉ trong ngày có slot; qua ngày thì hệ thống tự chốt | O-01.5–O-01.6 (Reported, chưa kiểm chứng) |
 | W8 | Sau giờ học, ô điểm danh trên FAP có thể hiện "Not yet" khi giảng viên chưa điểm danh | H36 |
 | W9 | Trường có F-Bus miễn phí chạy trước mỗi slot; đường Lê Văn Việt và Xa lộ Hà Nội hay kẹt giờ cao điểm | H20, H22, H23, H24 |
+
+> **Ghi chú sau kiểm chứng (13/10/2026):** W7 giữ nguyên văn vì đây là đúng câu đã đưa vào prompt người trả lời. Kết quả AI-07 (`research/02-desk/fap-edit-window.md`): phần "báo trong ngày" được nguồn chính thức ủng hộ; phần "qua ngày hệ thống tự chốt, không sửa được" chưa kiểm chứng, và sau ngày học vẫn còn đường khiếu nại qua phòng QLĐT. Theo D-15, nội dung W7 không được tính là phát hiện từ R-nn.
