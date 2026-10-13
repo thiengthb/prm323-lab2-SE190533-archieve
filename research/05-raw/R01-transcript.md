@@ -103,3 +103,14 @@
 
 **[Lời kết]** Hỏi: Cảm ơn chị rất nhiều. Những gì chị kể giúp nhóm hiểu rõ việc điểm danh đang diễn ra thế nào. Nếu sau buổi này chị nhớ ra điều gì muốn bổ sung, hoặc muốn rút lại phần nào đã chia sẻ, chị có thể liên hệ tôi qua [kênh liên hệ].
 > Đáp: Ừ, cảm ơn em. Có gì cứ nhắn email cho tôi.
+
+## Đào sâu (vòng 2)
+
+**[R01-P1]** Hỏi: Chị nói mấy phút đầu giờ là lúc chị nhìn mặt từng em, "em nào mệt, em nào hay vắng, tôi biết". Lần gần nhất chị nhìn mặt một em lúc gọi tên mà biết được như vậy là khi nào?
+> Đáp: Cũng sáng thứ Hai 12/10, ca 1 ở phòng 205. Có một em nữ ngồi dãy thứ hai, tôi đọc tên thì em đáp "có" nhỏ xíu, tôi nhìn lên thấy mặt em tái, tay ôm bụng. Tôi chưa nói gì liền, đọc tiếp cho hết danh sách, rồi lúc cho làm bài tập tôi đi xuống hỏi thì em nói em đau bao tử, chưa ăn sáng. Tôi cho em ra căn tin mua gì ăn rồi vào, hôm đó tôi không gọi em lên bảng. Còn chuyện "hay vắng" thì tôi biết là nhờ tờ giấy hơn là nhờ nhìn mặt: em vắng không vào hôm đó, nhìn cột mấy buổi trước thì đã có hai ô trống rồi.
+
+**[R01-P2]** Hỏi: Tối thứ Năm 1/10, ngay sau khi chị sửa em đó thành Attended trên FAP, chỗ tên em trên tờ danh sách thì sao?
+> Đáp: Tôi sửa luôn trên giấy tối đó. Tôi lấy bút đỏ đánh chữ "v" vào chỗ trống cạnh tên em, ghi nhỏ bên cạnh "sửa tối 1/10, em email". Số trên góc giấy tôi ghi "27/30" thì tôi gạch đi, ghi lại "28/30". Tờ giấy là cái gốc của tôi nên trên FAP sao thì trên giấy phải y vậy, chứ để lệch thì cuối kỳ tôi dò lại là rối.
+
+**[R01-P3]** Hỏi: Chị kể thêm giúp tôi về "sợ bấm lệch dòng" mà chị nói lúc nhập FAP chiều thứ Hai 12/10.
+> Đáp: Trên FAP tên các em xếp theo đúng thứ tự như tờ tôi in, nhưng trên màn hình các dòng sát nhau, chữ nhỏ, tôi phải phóng to trình duyệt lên. Mắt tôi nhìn qua lại giữa tờ giấy với màn hình, dễ bị nhảy dòng, nhất là chỗ hai em cùng tên Minh nằm sát nhau. Nên chiều thứ Hai tôi đặt cây thước ngang dưới dòng đang dò trên giấy, dò xong em nào thì kéo thước xuống một dòng, tay kia bấm trên laptop. Hôm đó tôi không thấy bấm lệch chỗ nào, lưu xong đếm ra hai mươi tám khớp với giấy. Lần bấm lệch thật sự mà tôi nhớ là hồi mới dùng FAP, chứ gần đây thì tôi không nhớ có lần nào.

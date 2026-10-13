@@ -11,6 +11,10 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-03 | 13/10/2026 | Claude (subagent độc lập với AI-02) | Kiểm định câu hỏi dẫn dắt, sửa thành v2 | `ai/prompts/AI-03-bias-audit.md` → `research/03-instruments/bias-audit-v1.md`, `research/03-instruments/interview-guide-v2.md` |
 | AI-04 | 13/10/2026 | Claude (subagent, WebSearch/WebFetch) | Nghiên cứu bàn giấy về quy định và bối cảnh điểm danh FPTU | `ai/prompts/AI-04-desk-research-fptu.md` → `research/02-desk/fptu-all-campuses.md` |
 | AI-05 | 13/10/2026 | Claude (subagent, WebSearch/WebFetch) | Nghiên cứu bàn giấy riêng cơ sở TP.HCM (D-11) | `ai/prompts/AI-05-desk-research-hcm.md` → `research/02-desk/fptu-hcm.md` |
+| AI-06 | 13/10/2026 | Claude (11 subagent độc lập, mỗi người một agent) | Phỏng vấn mô phỏng R01–R11 | `ai/prompts/AI-06-respondents/Rnn.md` → `research/05-raw/Rnn-transcript.md` |
+| AI-07 | 13/10/2026 | Claude (subagent, WebSearch/WebFetch) | Kiểm chứng quy tắc "chỉ sửa điểm danh trong ngày" (O-01.6) | `ai/prompts/AI-07-verify-fap-edit-window.md` → `research/02-desk/fap-edit-window.md` |
+| AI-08 | 13/10/2026 | Claude (11 subagent độc lập với người trả lời) | Đặt 3 câu đào sâu cho từng bản ghi | `ai/prompts/AI-08-probers/Rnn.md` → `research/05-raw/Rnn-probes.md` |
+| AI-09 | 13/10/2026 | Claude (tiếp tục agent AI-06) | Người trả lời trả lời câu đào sâu | `ai/prompts/AI-09-probe-answer-message.md` → mục "Đào sâu (vòng 2)" trong bản ghi |
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
@@ -31,3 +35,15 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 - **Output:** `research/02-desk/fptu-hcm.md`, gồm 43 nguồn mới H01–H43 và bảng đánh dấu nguồn nào của AI-04 áp dụng cho HCM. Chỉ 3/35 nguồn cũ nói rõ là của HCM; ngưỡng vắng 20% và FAP là quy định toàn trường. Chi tiết riêng HCM: Block A, wifi FPTU_Students, F-Bus chạy trước mỗi slot, kẹt xe ở Lê Văn Việt và Xa lộ Hà Nội, không có KTX, trạng thái "Not yet" trên FAP sau giờ học.
 - **Khoảng trống:** khung giờ slot hiện hành ở HCM, ai được sửa điểm danh, hạn chót giảng viên điểm danh, cách giảng viên điểm danh thực tế trên lớp. Confession và fanpage HCM chặn công cụ đọc.
 - **Quyết định:** thêm chi tiết HCM vào từng thẻ người trả lời. Các khoảng trống được giao cho phần tự quan sát O-nn (`research/05-raw/O-self-observation-template.md`), vì chỉ người học thật ở HCM mới trả lời được.
+
+## AI-06, AI-08, AI-09 — Phỏng vấn mô phỏng (13/10/2026)
+
+- **Quy trình:** 11 người trả lời là 11 agent riêng, mỗi agent chỉ thấy thẻ hồ sơ của mình, bảng sự thật chung W1–W9 và bộ câu hỏi v2 kèm phần bổ sung RQ-9. Sau đó 11 agent người hỏi khác đọc từng bản ghi và đặt 3 câu đào sâu, rồi người trả lời trả lời tiếp trong cùng ngữ cảnh.
+- **Output:** `research/05-raw/R01…R11-transcript.md` (mỗi bản 14 câu chính và 3 câu đào sâu), `research/05-raw/R01…R11-probes.md`.
+- **Kiểm soát:** điều gì có trong W1–W9 không được tính là phát hiện từ R-nn (D-15).
+
+## AI-07 — Kiểm chứng quy tắc sửa điểm danh (13/10/2026)
+
+- **Vấn đề:** O-01.6 ("chỉ sửa trong ngày, qua ngày hệ thống tự chốt") là ràng buộc thiết kế mạnh nhất, nhưng mới ở mức Reported.
+- **Output:** `research/02-desk/fap-edit-window.md`, 16 nguồn V01–V16. Kết luận: **ủng hộ một phần**. Sinh viên phải báo giảng viên trong ngày học (2 ngày với môn LUK). Quá hạn thì vẫn còn đường nộp "Đơn khiếu nại điểm danh" trên FAP gửi phòng QLĐT, xử lý trong 2 ngày làm việc. Không có nguồn nào xác nhận FAP tự khóa về mặt kỹ thuật sau ngày học.
+- **Quyết định:** sửa cách diễn đạt từ "quá ngày là không còn cứu vãn" thành "quá ngày thì sửa sai chuyển từ giảng viên (nhanh, trong ngày) sang đơn khiếu nại lên phòng QLĐT (chậm hơn, cần bằng chứng)". Luồng phục hồi trong thiết kế phải có cả hai nhánh.
