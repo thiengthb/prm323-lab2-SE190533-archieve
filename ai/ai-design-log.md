@@ -15,6 +15,9 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-07 | 13/10/2026 | Claude (subagent, WebSearch/WebFetch) | Kiểm chứng quy tắc "chỉ sửa điểm danh trong ngày" (O-01.6) | `ai/prompts/AI-07-verify-fap-edit-window.md` → `research/02-desk/fap-edit-window.md` |
 | AI-08 | 13/10/2026 | Claude (11 subagent độc lập với người trả lời) | Đặt 3 câu đào sâu cho từng bản ghi | `ai/prompts/AI-08-probers/Rnn.md` → `research/05-raw/Rnn-probes.md` |
 | AI-09 | 13/10/2026 | Claude (tiếp tục agent AI-06) | Người trả lời trả lời câu đào sâu | `ai/prompts/AI-09-probe-answer-message.md` → mục "Đào sâu (vòng 2)" trong bản ghi |
+| AI-10 | 13/10/2026 | Claude (subagent độc lập) | Tổng hợp affinity từ R01–R11 và O-01 | `ai/prompts/AI-10-synthesis.md` → `research/06-synthesis/affinity-board.md` |
+| AI-11 | 13/10/2026 | Claude (subagent độc lập với AI-10) | Phản biện bản tổng hợp | `ai/prompts/AI-11-synthesis-critic.md` → `research/06-synthesis/synthesis-critique.md` |
+| AI-12 | 13/10/2026 | Claude (subagent độc lập với AI-10, AI-11) | Áp dụng phản biện, tạo bảng affinity v2 | `ai/prompts/AI-12-synthesis-v2.md` → `research/06-synthesis/affinity-board-v2.md` |
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
@@ -47,3 +50,10 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 - **Vấn đề:** O-01.6 ("chỉ sửa trong ngày, qua ngày hệ thống tự chốt") là ràng buộc thiết kế mạnh nhất, nhưng mới ở mức Reported.
 - **Output:** `research/02-desk/fap-edit-window.md`, 16 nguồn V01–V16. Kết luận: **ủng hộ một phần**. Sinh viên phải báo giảng viên trong ngày học (2 ngày với môn LUK). Quá hạn thì vẫn còn đường nộp "Đơn khiếu nại điểm danh" trên FAP gửi phòng QLĐT, xử lý trong 2 ngày làm việc. Không có nguồn nào xác nhận FAP tự khóa về mặt kỹ thuật sau ngày học.
 - **Quyết định:** sửa cách diễn đạt từ "quá ngày là không còn cứu vãn" thành "quá ngày thì sửa sai chuyển từ giảng viên (nhanh, trong ngày) sang đơn khiếu nại lên phòng QLĐT (chậm hơn, cần bằng chứng)". Luồng phục hồi trong thiết kế phải có cả hai nhánh.
+
+## AI-10, AI-11 — Tổng hợp và phản biện (13/10/2026)
+
+- **AI-10:** 180 ghi chú nguyên tử, 26 nhóm, 32 phát hiện (17 Mạnh, 11 Vừa, 4 Yếu), 15 nhu cầu. Tự hạ F-03 và F-26 vì nghi dữ liệu mô phỏng lặp mô-típ.
+- **AI-11:** không có trích dẫn bịa, nhưng có nguồn bị đọc ngược nghĩa và người bị đếm ở cả hai phía. Đề nghị hạ 10 phát hiện, bỏ F-26 (tiếng vọng của W7), hạ hoặc bỏ N-05, N-07, N-10, N-15, gộp N-02 vào N-04. Chỉ F-17, F-18, F-23, F-24, F-25 đứng vững nguyên văn.
+- **Nhận xét quan trọng nhất của AI-11:** dữ liệu mô phỏng không độc lập (9/11 người cùng lấy thứ Hai 12/10 làm buổi gần nhất, ca của R01 và R10 gần như soi gương, câu khuôn lặp ở 6/11 bản ghi). Vì vậy phát hiện chỉ dựa trên dữ liệu mô phỏng không được gắn nhãn Mạnh.
+- **Quyết định:** D-16. Theo quy ước, v1 giữ nguyên văn; phản biện được áp dụng ở bản v2 (AI-12).
