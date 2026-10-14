@@ -19,6 +19,8 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-11 | 13/10/2026 | Claude (subagent độc lập với AI-10) | Phản biện bản tổng hợp | `ai/prompts/AI-11-synthesis-critic.md` → `research/06-synthesis/synthesis-critique.md` |
 | AI-12 | 13/10/2026 | Claude (subagent độc lập với AI-10, AI-11) | Áp dụng phản biện, tạo bảng affinity v2 | `ai/prompts/AI-12-synthesis-v2.md` → `research/06-synthesis/affinity-board-v2.md` |
 | AI-13 | 14/10/2026 | Claude (phiên chính) | Viết persona P-01, P-02, Coverage Matrix, IA, FL-1..FL-3, danh sách SC-01..SC-13 từ RES-AFFINITY-v2 | Không có prompt riêng; đầu vào là các mã F, N, RB trong tài liệu → `ux/persona.md`, `ux/user-flow.md` |
+| AI-14 | 14/10/2026 | Claude (subagent, WebSearch/WebFetch) | Tra cứu giao diện, màu, trạng thái điểm danh của FAP và myFAP | `ai/prompts/AI-14-fap-visual-identity.md` → `research/02-desk/fap-visual-identity.md` |
+| AI-15 | 14/10/2026 | Claude (subagent, WebSearch/WebFetch) | Tra cứu kiểu gian lận khi điểm danh QR và biện pháp | `ai/prompts/AI-15-qr-fraud-research.md` → `research/02-desk/qr-attendance-fraud.md` |
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
