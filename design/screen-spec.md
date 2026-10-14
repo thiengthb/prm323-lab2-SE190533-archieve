@@ -44,7 +44,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 
 ## SC-01 · Đăng nhập
 
-**Mục đích.** Cho giảng viên và sinh viên vào ứng dụng bằng tài khoản FPT, rồi tách vai trò theo tài khoản. Màn nói ngay từ đầu rằng ứng dụng bổ trợ FAP, không thay FAP (D-12, NT-7).
+**Mục đích.** Cho giảng viên và sinh viên vào ứng dụng bằng đúng email họ dùng để vào FAP, rồi tách vai trò theo tài khoản. Màn nói ngay từ đầu rằng ứng dụng bổ trợ FAP, không thay FAP (D-12, NT-7).
 
 **Flow.** Điểm vào của FL-1 (giảng viên) và FL-2 (sinh viên). Đăng nhập xong: tài khoản giảng viên tới SC-02, tài khoản sinh viên tới SC-09.
 
@@ -52,17 +52,21 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 1. Biểu tượng ứng dụng (không dùng logo FPT, NT-7).
 2. Tiêu đề "Điểm danh buổi học" và dòng phụ "Ứng dụng bổ trợ FAP cho giảng viên và sinh viên FPTU TP.HCM".
 3. Banner lỗi (chỉ ở trạng thái lỗi).
-4. Nút "Đăng nhập bằng tài khoản FPT".
-5. Dòng chú thích "Ứng dụng không thay FAP. Kết quả điểm danh vẫn lưu trên FAP."
+4. Dòng hướng dẫn "Dùng email bạn đã đăng ký với trường: email @fpt.edu.vn hoặc Gmail cá nhân."
+5. Nút "Đăng nhập bằng Google".
+6. Dòng chú thích "Ứng dụng không thay FAP. Kết quả điểm danh vẫn lưu trên FAP."
 
-**Hành động chính.** "Đăng nhập bằng tài khoản FPT".
+**Hành động chính.** "Đăng nhập bằng Google".
 
 **Trạng thái.**
 - Mặc định: frame "SC-01 · Đăng nhập".
-- Lỗi tài khoản: frame "SC-01 · Đăng nhập · Lỗi tài khoản". Banner lỗi nói rõ tài khoản nào không thuộc FPTU và cách sửa: "Tài khoản tran.an@gmail.com không thuộc FPTU. Đăng nhập lại bằng email @fpt.edu.vn."
+- Lỗi tài khoản: frame "SC-01 · Đăng nhập · Lỗi tài khoản". Banner lỗi nói rõ email nào chưa đăng ký với trường và cách sửa: "tran.an@gmail.com chưa được đăng ký với FPTU. Đăng nhập lại bằng email bạn đã đăng ký với trường."
 - Đang đăng nhập: **chưa có frame**. Nút chính chuyển sang biến thể Loading của CMP-01, các phần khác giữ nguyên.
 
-**Quy tắc.** Chỉ nhận email @fpt.edu.vn. Ứng dụng không có ô mật khẩu riêng; việc xác thực do trang đăng nhập của trường lo.
+**Quy tắc.**
+- Nhận đúng email mà FAP nhận: giảng viên dùng email @fpt.edu.vn do trường cấp; sinh viên dùng email đã đăng ký với trường, với các khóa mới là Gmail cá nhân khai lúc nhập học, không phải email @fpt.edu.vn (CR-41, nguồn ở `design/final-ui-review.md`). Email không có trong danh sách của trường thì báo lỗi, không đoán theo đuôi email.
+- Cả hai loại email đều là tài khoản Google, nên một nút "Đăng nhập bằng Google" dùng được cho cả hai vai trò. Ứng dụng không có ô mật khẩu riêng.
+- Phạm vi chỉ cơ sở TP.HCM, nên màn không hỏi chọn cơ sở như trang đăng nhập FAP.
 
 ## SC-02 · Lịch dạy hôm nay
 

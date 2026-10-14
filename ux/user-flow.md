@@ -60,7 +60,7 @@ graph TD
 
 | Mã | Màn hình | Vai trò | Flow | Nhu cầu | Trạng thái cần thiết kế |
 |---|---|---|---|---|---|
-| SC-01 | Đăng nhập | Cả hai | FL-1, FL-2 | — | Mặc định, đang tải, lỗi tài khoản không thuộc FPTU |
+| SC-01 | Đăng nhập | Cả hai | FL-1, FL-2 | — | Mặc định, đang tải, lỗi email chưa đăng ký với trường (sinh viên các khóa mới đăng nhập FAP bằng Gmail cá nhân, CR-41) |
 | SC-02 | Lịch dạy hôm nay | GV | FL-1, FL-3 | N-04, N-11 | Slot sắp tới (nút "Mở điểm danh"), đang mở, chờ xác nhận, chờ điền lên FAP, đã lên FAP, có báo sai mới |
 | SC-03 | Phiên điểm danh: QR đang mở | GV | FL-1 | N-04 | Mở tại lớp, **mở từ xa** (mã chỉ hiện trên màn hình phòng P.205, D-24), laptop chưa kết nối, sắp đóng, đã đóng; dòng có cờ "Cùng thiết bị" |
 | SC-04 | Đối chiếu sĩ số | GV | FL-1 | N-04 | Khớp, số quét lớn hơn số người (chỉ ra người quét cuối, quét sát lúc mã đổi), số quét nhỏ hơn số người |
