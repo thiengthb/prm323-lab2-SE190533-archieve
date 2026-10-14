@@ -22,7 +22,7 @@
 | 3 | CR-03, CR-04, CR-08 | Accept |
 | 4 | CR-05 | Modify |
 | 5 | CR-06 | Accept |
-| 6 | CR-07 | Accept (phòng ngừa) |
+| 6 | CR-07 | Reject sau khi đo (chữ đã ≥ 14 px); giữ dòng này làm ràng buộc |
 | 7 | D-22, D-23, CR-09 | Áp dụng quyết định |
 
 Prompt SC-09 sửa CR-10..CR-14; prompt SC-11 sửa CR-14..CR-17 (xem `design/stitch-critique-it0.md` mục 3).

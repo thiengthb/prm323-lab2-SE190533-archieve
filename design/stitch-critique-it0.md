@@ -3,8 +3,8 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-CRIT-IT0 |
-| Trạng thái | Cột "Đề xuất" là đề xuất của Claude; chờ thien duyệt. IT-1 (`ai/prompts/AI-20-stitch-it1.md`) đang theo đề xuất |
-| Đầu vào | P1, P2, P3 trong `ai/prompts/AI-18-stitch-first-prompt.md`; ảnh `assets/stitch/IT-0-SC-03-preview.png`, `IT-0-SC-09-preview.png`, `IT-0-SC-11-preview.png` (cắt từ ảnh chụp màn hình Stitch của thien, 14/10/2026, độ phân giải thấp) |
+| Trạng thái | **Đã duyệt:** thien chấp nhận toàn bộ đề xuất (14/10/2026), sẽ kiểm bằng cách nhìn kết quả IT-1 |
+| Đầu vào | P1, P2, P3 trong `ai/prompts/AI-18-stitch-first-prompt.md`; bản Export của Stitch `assets/stitch/IT-0-SC-03.png`, `IT-0-SC-11.png` (kèm mã HTML và `IT-0-stitch-generated-DESIGN.md`); SC-09 chỉ có ảnh cắt `IT-0-SC-09-preview.png` |
 | Người phản biện | Claude, theo heuristic Nielsen, WCAG 2.1 và persona P-01 |
 | Màn | SC-03 · Phiên điểm danh (CR-01..CR-09); SC-09 · Hôm nay và SC-11 · Kết quả quét (CR-10..CR-17) |
 
@@ -22,9 +22,11 @@ Stitch theo brief khá sát: đúng màu chính `#4254BA`, đúng nền, chip tr
 | CR-04 | Thẻ "PRM393 · Slot 1 / Học kỳ Fall 2024 / P.205" lặp thông tin lẽ ra nằm ở app bar, đẩy danh sách xuống | Nielsen #8 (tối giản); P-01 cần thấy danh sách nhanh | Trung bình | Accept: gộp vào app bar |
 | CR-05 | Ảnh sinh viên là ảnh người thật trông như ảnh stock | Không dựng nhân vật trên người thật; quyền riêng tư | Trung bình | Modify: dùng avatar chữ cái hoặc ảnh minh họa trung tính trong bản thiết kế; ghi chú "ảnh thật lấy từ FAP" |
 | CR-06 | "Đang trực tiếp" tô màu primary, trông như link bấm được | DESIGN.md mục 4: primary chỉ có nghĩa "bấm được" | Thấp | Accept: đổi sang chấm trạng thái + chữ `muted` |
-| CR-07 | Chữ phụ (mã SV, giờ quét) và chữ trong chip trông nhỏ hơn 14 sp | Đề bài: chữ ≥ 14 sp | Cần đo | Kiểm lại trên bản Export; nếu < 14 sp thì Accept |
+| CR-07 | Chữ phụ (mã SV, giờ quét) và chữ trong chip trông nhỏ hơn 14 sp | Đề bài: chữ ≥ 14 sp | **Không phải lỗi** | Đã đo trên mã HTML của bản Export: cỡ nhỏ nhất là 14 px, chip cao 32 px, nút cao 48 px. Ảnh cắt độ phân giải thấp làm chữ trông nhỏ. **Reject**, giữ dòng 6 của prompt IT-1 như một ràng buộc |
 | CR-08 | Avatar tài khoản và menu ba chấm trên app bar không có chức năng trong phiên điểm danh | DESIGN.md CMP-05: tối đa một hành động phải | Thấp | Accept: bỏ avatar |
-| CR-09 | Stitch tự sinh màu "Tertiary `#944900`" trong bảng theme, không có trong token | DESIGN.md mục 4 | Thấp | Reject màu này; khai báo đủ token ở IT-1 |
+| CR-09 | Stitch tự sinh màu "Tertiary `#944900`" trong bảng theme, không có trong token. File thiết kế Stitch xuất ra còn đổi `primary` thành `#283BA1` (đẩy `#4254BA` xuống thành `primary-container`) và dùng font Roboto Flex | DESIGN.md mục 4; `assets/stitch/IT-0-stitch-generated-DESIGN.md` | Thấp | Reject các giá trị này; nguồn token duy nhất là `design/DESIGN.md` |
+
+CR-07 là phát hiện sai của chính bản phản biện: đo trên mã HTML cho thấy chữ đạt chuẩn. Điều này cho thấy phải kiểm phát hiện của AI bằng số đo, không chỉ bằng mắt.
 
 CR-01 và CR-02 cho thấy rủi ro chính khi dùng AI sinh giao diện: mô hình tự thêm chức năng nghe hợp lý nhưng mâu thuẫn với quyết định đã chốt. Đây là ví dụ tốt để nói trước hội đồng.
 
