@@ -6,7 +6,7 @@
 | Phiên bản | v1 (14/10/2026) |
 | Trạng thái | Chờ thien duyệt |
 | Đầu vào | `process/decision-log.md` (D-xx do thien chốt), `design/DESIGN.md` v2 (NT-1..NT-7), `design/final-ui-review.md` (CR-26..CR-40), Figma trang 03 và 06 sau IT-3c |
-| Cách đo | Số liệu ở mục 2 do Claude đo bằng script đọc file Figma ngày 14/10/2026 (60 frame 360 × 800 và 3 frame 412 × 915 trên trang 03, 124 vùng bấm trên trang 06). Không có số nào ước lượng bằng mắt |
+| Cách đo | Số liệu ở mục 2 do Claude đo bằng script đọc file Figma ngày 14/10/2026 (68 frame 360 × 800 và 3 frame 412 × 915 trên trang 03, 146 vùng bấm trên trang 06). Không có số nào ước lượng bằng mắt |
 
 ## 1. Mười quyết định quan trọng nhất
 

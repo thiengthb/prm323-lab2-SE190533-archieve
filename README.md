@@ -10,6 +10,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Figma | [PRM323 Lab 2 · SE190533 · Điểm danh FAP](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w) (6 trang; ghi chép dựng file: `design/figma-build.md`) |
 | Figma dự phòng | [Bản sao dự phòng](https://www.figma.com/design/ubzn09LV1N7VJnmiBuEA3w) (không có lịch sử phiên bản; bản nộp là link ở trên) |
 | Thuyết trình | 14:30 thứ Sáu 16/10/2026 |
+| Slide | [12 slide trên Claude](https://claude.ai/artifact/2zGSwXg9K52VN8QBrFrjhq) (mỗi slide có ghi chú người nói; cần được chia sẻ quyền xem) |
 
 ## Bản đồ sản phẩm nộp
 
