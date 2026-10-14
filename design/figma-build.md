@@ -63,11 +63,12 @@ Mỗi hàng là một luồng, có tiêu đề và một dòng mô tả ở trê
 | FL-2 · Sinh viên quét mã (K5) | SC-09 07:01 | Quét mã → SC-10 (chạm khung quét) → đang xác thực → Mã hết hạn → Quét lại → thành công → SC-09 chờ xác nhận → tab Báo sai (trống) | SC-11 đang xác thực 1,2 giây, hai lần; "Không quét được?" ở SC-10 và SC-11 mở sheet (overlay, trượt từ dưới lên) | Mã hết hạn → Quét lại |
 | FL-2 lỗi · Camera và mất mạng | SC-10 chưa có quyền camera | Cấp quyền → quét → mất mạng → thử lại → thành công | SC-11 đang xác thực | Chưa cấp camera; mất mạng |
 | FL-2 · Sinh viên báo sai (K3) | SC-09 20:58 | Chạm MAS291 → SC-12 → SC-13 → đang gửi → mất mạng → gửi lại → SC-14 Đã gửi 21:02 → tab Hôm nay: SC-09 21:22, tab Báo sai có huy hiệu 1 → mở tab: SC-14 Đã sửa, huy hiệu mất | SC-13 đang gửi 1,2 giây, hai lần | Mất mạng khi gửi → Thử gửi lại |
-| FL-2 phục hồi · Bị từ chối | SC-14 bị từ chối | Xem cách gửi đơn khiếu nại → SC-15 | — | Đường sang đơn khiếu nại |
+| FL-2 phục hồi · Bị từ chối | SC-14 bị từ chối | Xem cách gửi đơn khiếu nại → SC-15; tab Hôm nay → SC-09 21:22 (MAS291 vẫn Vắng, báo sai bị từ chối) | — | Đường sang đơn khiếu nại |
 | FL-2 phục hồi · Quá hạn (K4) | SC-12 đã qua hạn (13/10) | Xem cách gửi đơn khiếu nại → SC-15 | — | Như trên |
-| FL-3 · Xử lý báo sai | SC-02 12:05 | Tab Báo sai (huy hiệu 2) → SC-07 → báo sai của Hoàng Mai Linh → Từ chối → SC-07 còn 1 (huy hiệu 1) → báo sai của Ngô Thanh Vy → Sửa thành Có mặt → SC-08 đã sửa → SC-07 đã xử lý hết → tab Hôm nay: SC-02 12:08, không còn huy hiệu | Dialog từ chối (Destructive) | Hủy trên dialog quay lại SC-08. Prototype đi nhánh khớp bằng chứng: Linh có bằng chứng không có mặt nên chỉ nối "Từ chối"; Vy không có bằng chứng ngược nên chỉ nối "Sửa thành Có mặt" |
+| FL-3 thứ tự khác · Vy trước | Chạm thẻ Vy ở SC-07 | SC-08 Vy → Sửa thành Có mặt → SC-07 còn Linh (huy hiệu 1) → SC-08 Linh → Từ chối (overlay) → SC-07 đã xử lý hết → SC-02 12:08 | Dialog từ chối | Hai thứ tự cùng kết thúc ở một màn; chữ "đã xử lý" không ghi phút để đúng với cả hai thứ tự |
+| FL-3 · Xử lý báo sai | SC-02 12:05 | Tab Báo sai (huy hiệu 2) → SC-07 → báo sai của Hoàng Mai Linh → Từ chối → SC-07 còn 1 (huy hiệu 1) → báo sai của Ngô Thanh Vy → Sửa thành Có mặt → SC-08 đã sửa → SC-07 đã xử lý hết → tab Hôm nay: SC-02 12:08, không còn huy hiệu | Dialog từ chối (Destructive) | Ở SC-07 còn 1 báo sai, tab Hôm nay → SC-02 12:06 có huy hiệu 1. Hủy trên dialog quay lại SC-08. Prototype đi nhánh khớp bằng chứng: Linh có bằng chứng không có mặt nên chỉ nối "Từ chối"; Vy không có bằng chứng ngược nên chỉ nối "Sửa thành Có mặt" |
 
-Đã kiểm bằng script đọc toàn bộ reaction trên trang 06: 63 frame, 0 đích hỏng, frame nào cũng có lối ra, chỉ 9 điểm bắt đầu là không có mũi tên đi vào. Nút quay lại trên app bar dùng hành động Back. Những chỗ cố ý chưa nối: "Ghi tay thêm sinh viên" ở SC-06 (sheet chưa có), "Mở FAP" ở SC-15 (mở trang ngoài), và nút đang vô hiệu.
+Đã kiểm bằng script đọc toàn bộ reaction trên trang 06: 71 frame, 0 đích hỏng, frame nào cũng có lối ra, chỉ 9 điểm bắt đầu là không có mũi tên đi vào. Mọi màn có thanh điều hướng đều nối tab còn lại; mọi nút đang bật đều có hành động, trừ nút cố ý không nối: "Sửa thành Có mặt" của Linh và "Từ chối" của Vy (ngược bằng chứng, xem SC-08). "Ghi tay thêm sinh viên" mở sheet; "Mở FAP" mở fap.fpt.edu.vn. Thẻ buổi học sắp tới hoặc đã qua trên Hôm nay chỉ để xem, không có màn chi tiết trong phạm vi 15 màn. Vùng bấm (hotspot) trong suốt; script cũng kiểm không còn vùng bấm nào có nền.
 
 ## 4. Khoảng trống còn lại
 
@@ -122,3 +123,14 @@ Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
 | Lỗi logic CR-33 đến CR-39 | Đổi giờ sửa của Vy, đảo nhánh sửa/từ chối cho khớp bằng chứng, dời giờ báo sai của K3 sang 21:02, sửa lý do từ chối K3, "Về Hôm nay" cho sinh viên, "màn hình lớp" ở SC-10, QR đã đóng của nhánh K1b |
 | Áp nhất quán ra các màn khác | Chip giờ trên thẻ báo sai (SC-07) là buổi đã qua nên dùng "Giờ slot · khác". Tiêu đề nhóm "Mới · n", "Đã xử lý · n" ở SC-07 cùng kiểu với D-25 |
 | Biến thể mới | SC-03 QR đã đóng (mở từ xa), SC-08 Ngô Thanh Vy, SC-07 Đã xử lý hết (thay "Sau khi sửa"), SC-02 12:08 đã xử lý hết, SC-09 21:22 báo sai có kết quả |
+
+### 8.1. Sửa prototype (14/10, góp ý của thien lúc 14:55)
+
+| Lỗi | Sửa |
+|---|---|
+| 53 vùng bấm trên trang 06 có nền trắng đặc, che nửa thanh điều hướng, nút quay lại và vài nút khác, nên thanh điều hướng trông như chỉ có một tab | Bỏ nền mọi vùng bấm. Lớp mờ 40% của sheet "Không quét được?" bị xóa nhầm khi sửa đã được khôi phục |
+| Từ SC-07 còn 1 báo sai, bấm Hôm nay lại về màn không còn huy hiệu | Thêm SC-02 12:06 "Còn 1 báo sai" (trang 03 và 06) |
+| Từ SC-14 bị từ chối, bấm Hôm nay về màn 20:58 còn banner hạn và nút báo sai | Thêm SC-09 21:22 "Báo sai bị từ chối" |
+| Thẻ Vy ở SC-07 không bấm được | Thêm nhánh FL-3 thứ tự khác (hàng cuối trang 06) và biến thể SC-07 "Sau khi sửa Vy" |
+| "Mở từ xa" ở hàng FL-1 không bấm được; "Ghi tay thêm sinh viên" và "Mở FAP" không có hành động | Nối vào nhánh K1b; thêm sheet "Ghi tay thêm sinh viên" (trang 03 và overlay trang 06); "Mở FAP" mở trang FAP |
+| Màn trên trang 06 lệch Final UI | Script so toàn bộ chữ của từng frame trang 06 với frame gốc trang 03: khớp hết; frame mới trên trang 06 đều có bản gốc ở trang 03 |
