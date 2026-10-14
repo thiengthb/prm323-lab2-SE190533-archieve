@@ -5,6 +5,7 @@
 | Mã tài liệu | DES-FIGMA-IT3 |
 | Trạng thái | IT-3c: đã sửa theo góp ý của thien chiều 14/10 (`design/final-ui-review.md`). Theo D-07 cập nhật, Claude thực thi, thien duyệt |
 | File Figma | [PRM323 Lab 2 · SE190533 · Điểm danh FAP](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w) |
+| Bản dự phòng | [Bản sao trên tài khoản chính của thien](https://www.figma.com/design/ubzn09LV1N7VJnmiBuEA3w) (thien tải bản `.fig` từ file gốc rồi import, 14/10/2026). Chỉ để dự phòng: không mang lịch sử phiên bản, nên file gốc ở trên vẫn là bản nộp. Claude không mở được bản này vì tài khoản MCP không có quyền |
 | Người dựng | Claude qua Figma MCP (AI-23, AI-24), theo D-07 B |
 | Đầu vào | `design/DESIGN.md` v2, `design/component-system.md` (D-22, D-23), `ux/user-flow.md` v2, `ux/persona.md` v2, CR-01..CR-25 đã duyệt |
 | Ảnh xuất | `assets/figma/` |

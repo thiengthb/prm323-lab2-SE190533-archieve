@@ -8,6 +8,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Đề tài | Ứng dụng di động bổ trợ việc điểm danh trên FAP cho giảng viên FPTU cơ sở TP.HCM (đã được GVHD duyệt) |
 | Persona một dòng | *Sẽ cập nhật sau khi tổng hợp nghiên cứu (S2)* |
 | Figma | [PRM323 Lab 2 · SE190533 · Điểm danh FAP](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w) (6 trang; ghi chép dựng file: `design/figma-build.md`) |
+| Figma dự phòng | [Bản sao dự phòng](https://www.figma.com/design/ubzn09LV1N7VJnmiBuEA3w) (không có lịch sử phiên bản; bản nộp là link ở trên) |
 | Thuyết trình | 14:30 thứ Sáu 16/10/2026 |
 
 ## Bản đồ sản phẩm nộp
