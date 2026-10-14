@@ -135,4 +135,6 @@ Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
 | Thẻ Vy ở SC-07 không bấm được | Thêm nhánh FL-3 thứ tự khác (hàng cuối trang 06) và biến thể SC-07 "Sau khi sửa Vy" |
 | "Mở từ xa" ở hàng FL-1 không bấm được; "Ghi tay thêm sinh viên" và "Mở FAP" không có hành động | Nối vào nhánh K1b; thêm sheet "Ghi tay thêm sinh viên" (trang 03 và overlay trang 06); "Mở FAP" mở trang FAP |
 | Tên phòng ở màn sinh viên khác màn giảng viên (CR-40, 14/10 tối) | "Phòng 205" → "P.205", "Phòng 312" → "P.312", "Ca sắp diễn ra" → "Chưa tới giờ học" trên trang 03 và 06; xuất lại 3 ảnh SC-09 |
+| SC-01 chỉ nhận @fpt.edu.vn (CR-41) | Nút "Đăng nhập bằng Google", dòng hướng dẫn email đã đăng ký với trường, lỗi mới (trang 02, 03, 06) |
+| Giờ đóng QR (CR-42, D-28 A) | Nhánh mở từ xa lúc 06:55: "QR còn 4:55" → "QR còn 9:55" (đóng 07:05, khớp frame đã đóng). Chữ mặc định của CMP-03 và bản xem trước trang 04 đổi "Phòng 205" → "P.205" |
 | Màn trên trang 06 lệch Final UI | Script so toàn bộ chữ của từng frame trang 06 với frame gốc trang 03: khớp hết; frame mới trên trang 06 đều có bản gốc ở trang 03 |

@@ -125,7 +125,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 - Laptop chưa kết nối: **chưa có frame**. Theo FL-1, màn báo laptop chưa kết nối và cho hiện QR trên điện thoại để chiếu tạm.
 
 **Quy tắc.**
-- QR tự đóng sau 5 phút; mã đổi sau mỗi 15 giây (D-21 B).
+- QR tự đóng lúc giờ vào slot cộng 5 phút (slot 07:00 đóng lúc 07:05), khớp nội quy "vào lớp muộn quá 5 phút bị tính vắng"; giảng viên mở sau giờ vào slot thì QR mở đủ 5 phút từ lúc mở. Mã đổi sau mỗi 15 giây; máy chủ nhận cả mã hiện tại và mã liền trước để người dùng 4G chậm không bị từ chối oan (D-28 A). Vì vậy phiên mở từ xa lúc 06:55 hiện "QR còn 9:55".
 - Phiên mở từ xa chỉ được lên FAP sau khi giảng viên vào lớp và làm xong SC-04, SC-05 (UX-INTEGRITY, D-24).
 - Danh sách dài cuộn được, bộ đếm và nút chính đứng yên.
 

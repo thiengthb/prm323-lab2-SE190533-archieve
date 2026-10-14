@@ -36,7 +36,7 @@ Giảng viên chiếu QR lên màn chiếu, cả lớp quét cùng lúc, không 
 **Quy tắc cho phiên mở từ xa:**
 - Phiên mở khi giảng viên không ở trong phòng được gắn nhãn **"Mở từ xa"**.
 - Kết quả của phiên này ở trạng thái **"Chờ giảng viên xác nhận"**. Extension **không được** điền lên FAP cho tới khi giảng viên vào phòng và làm xong L3 và L4.
-- QR tự đóng sau 5 phút cộng một khoảng ân hạn nhỏ (theo quy định muộn quá 5 phút là vắng, Q35). Người đến sau giờ đó do giảng viên ghi tay, kèm giờ đến (N-03).
+- QR tự đóng lúc giờ vào slot cộng 5 phút (theo quy định muộn quá 5 phút là vắng, Q35); giảng viên mở muộn thì mở đủ 5 phút từ lúc mở. Máy chủ nhận cả mã hiện tại và mã liền trước, nên một mã có hiệu lực tối đa 30 giây (D-28 A). Người đến sau giờ đó do giảng viên ghi tay, kèm giờ đến (N-03).
 
 **Câu nhắc trên màn quét của sinh viên:** "Điểm danh hộ là gian lận học tập. Giảng viên sẽ kiểm tra ngẫu nhiên." Câu này ngắn, không đe dọa, và cho sinh viên biết có kiểm tra.
 

@@ -105,7 +105,7 @@ flowchart TD
     E -->|Chưa| E1["SC-03 · Báo laptop chưa kết nối,<br/>hiện QR trên điện thoại để chiếu tạm"]
     E -->|Rồi| F["SC-03 · QR hiện trên màn hình lớp,<br/>đếm số đã quét"]
     E1 --> F
-    F --> G["QR tự đóng sau 5 phút,<br/>hoặc GV bấm Đóng QR"]
+    F --> G["QR tự đóng lúc giờ vào slot + 5 phút (D-28),<br/>hoặc GV bấm Đóng QR"]
     G --> H{"GV đã ở trong lớp?"}
     H -->|Chưa| H1["Kết quả giữ ở Chờ GV xác nhận,<br/>không được điền lên FAP"]
     H1 -.->|GV vào lớp| I
@@ -196,6 +196,6 @@ flowchart TD
 
 - **Ảnh sinh viên:** FAP có ảnh từng sinh viên trên trang điểm danh (O-01.9, Observed). Ứng dụng dùng lại ảnh này ở SC-05 và SC-08.
 - **Mốc nhắc 22:00 ở FL-3:** chọn trước 23:59 để còn thời gian sửa; con số là Assumed (thien chưa chắc, 14/10/2026).
-- **QR mở bao lâu:** 5 phút cộng ân hạn nhỏ, theo quy định đến muộn quá 5 phút là vắng (Q35). Con số ân hạn là Assumed.
+- **QR mở bao lâu (D-28 A, chốt 14/10/2026):** đóng lúc giờ vào slot cộng 5 phút, theo quy định đến muộn quá 5 phút là vắng (Q35); giảng viên mở muộn thì mở đủ 5 phút từ lúc mở. Không có ân hạn riêng; thay vào đó máy chủ nhận cả mã 15 giây liền trước.
 - **Ghi lên FAP (D-18):** "Đã lên FAP" nghĩa là extension đã điền xong; trước đó là "Chờ điền lên FAP".
 - **Mở từ xa:** kết quả chỉ được điền lên FAP sau khi giảng viên vào lớp và làm xong SC-04, SC-05 (UX-INTEGRITY, D-21 B).
