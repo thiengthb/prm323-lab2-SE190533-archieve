@@ -4,9 +4,9 @@
 |---|---|
 | Mã tài liệu | DES-CRIT-IT0 |
 | Trạng thái | Cột "Đề xuất" là đề xuất của Claude; chờ thien duyệt. IT-1 (`ai/prompts/AI-20-stitch-it1.md`) đang theo đề xuất |
-| Đầu vào | P1 trong `ai/prompts/AI-18-stitch-first-prompt.md`; ảnh `assets/stitch/IT-0-SC-03-preview.png` (cắt từ ảnh chụp màn hình Stitch của thien, 14/10/2026, độ phân giải thấp; cần bản Export từ Stitch) |
+| Đầu vào | P1, P2, P3 trong `ai/prompts/AI-18-stitch-first-prompt.md`; ảnh `assets/stitch/IT-0-SC-03-preview.png`, `IT-0-SC-09-preview.png`, `IT-0-SC-11-preview.png` (cắt từ ảnh chụp màn hình Stitch của thien, 14/10/2026, độ phân giải thấp) |
 | Người phản biện | Claude, theo heuristic Nielsen, WCAG 2.1 và persona P-01 |
-| Màn | SC-03 · Phiên điểm danh. P2 và P3 chưa chạy |
+| Màn | SC-03 · Phiên điểm danh (CR-01..CR-09); SC-09 · Hôm nay và SC-11 · Kết quả quét (CR-10..CR-17) |
 
 ## 1. Stitch làm đúng gì
 
@@ -27,3 +27,18 @@ Stitch theo brief khá sát: đúng màu chính `#4254BA`, đúng nền, chip tr
 | CR-09 | Stitch tự sinh màu "Tertiary `#944900`" trong bảng theme, không có trong token | DESIGN.md mục 4 | Thấp | Reject màu này; khai báo đủ token ở IT-1 |
 
 CR-01 và CR-02 cho thấy rủi ro chính khi dùng AI sinh giao diện: mô hình tự thêm chức năng nghe hợp lý nhưng mâu thuẫn với quyết định đã chốt. Đây là ví dụ tốt để nói trước hội đồng.
+
+## 3. Phát hiện ở SC-09 và SC-11
+
+**Stitch làm đúng:** banner hạn báo sai, chip giờ cam và chip trạng thái đúng nghĩa màu; màn lỗi theo đúng mẫu "chuyện gì + vì sao + làm gì tiếp", chỉ có một nút chính.
+
+| Mã | Màn | Phát hiện | Căn cứ | Mức | Đề xuất |
+|---|---|---|---|---|---|
+| CR-10 | SC-09 | Link "Báo sai điểm danh" nằm trên slot **chưa diễn ra** ("Ca sắp diễn ra"). Không thể báo sai một buổi chưa học. **Lỗi này do prompt P2 của Claude**, không phải do Stitch | FL-2: chỉ báo sai sau khi có trạng thái chính thức | Nghiêm trọng | Accept: link chỉ hiện trên slot đã kết thúc |
+| CR-11 | SC-09 | Nút "Quét mã điểm danh" nổi giữa màn thay vì cố định ở đáy, và luôn bấm được kể cả khi không có phiên nào đang mở | DESIGN.md NT-6 (vùng ngón cái); Nielsen #5 (phòng lỗi) | Cao | Accept: cố định ở đáy; chỉ bật khi có phiên đang mở, nếu không thì hiện "Chưa có phiên điểm danh nào đang mở" |
+| CR-12 | SC-09 | Thanh điều hướng đáy không có tab nào ở trạng thái được chọn | Nielsen #1 (cho biết đang ở đâu); CMP-04 | Cao | Accept: tab "Hôm nay" có nền `primary-soft` và biểu tượng `primary` |
+| CR-13 | SC-09 | Biểu tượng cửa trên mỗi thẻ slot không rõ nghĩa và không bấm được | Nielsen #8 | Thấp | Accept: bỏ |
+| CR-14 | SC-09, SC-11 | Tiêu đề viết hoa không thống nhất ("Hôm Nay" so với tab "Hôm nay"); avatar tài khoản lặp lại như CR-08 | Nielsen #4 | Thấp | Accept: viết hoa chữ đầu câu; bỏ avatar |
+| CR-15 | SC-11 | Tiêu đề tiếng Anh "Scan Result" (lặp lại CR-03) | D-08; Nielsen #2 | Cao | Accept: "Kết quả quét" |
+| CR-16 | SC-11 | Câu nhắc chống gian lận đặt ở màn **lỗi**, sau khi sinh viên đã quét. Răn đe hiệu quả hơn trước hành vi | UX-INTEGRITY mục 3 | Trung bình | Modify: chuyển câu nhắc sang SC-10 (màn quét), giữ một dòng ngắn ở SC-11 |
+| CR-17 | SC-11 | Nhãn "Lần quét" dễ hiểu nhầm là số lần; link "Không quét được? Báo giảng viên ngay trong giờ" không rõ bấm vào sẽ làm gì | Nielsen #2, #6 | Thấp | Accept: đổi thành "Giờ quét"; link mở một sheet hướng dẫn giơ tay báo giảng viên để được ghi tay |
