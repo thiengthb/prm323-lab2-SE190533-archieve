@@ -68,9 +68,9 @@ Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn g�
 
 ## 5. Chữ
 
-**Font: Roboto.** FAP mới dùng Roboto (O-02.5, Observed qua DevTools). Lý do: cùng font với FAP nên quen mắt, là font hệ thống của Android, khớp `TextTheme` mặc định của Flutter, và đủ dấu tiếng Việt. Không có chữ nào dưới 14 sp. Bố cục phải chịu được cỡ chữ hệ thống 200%.
+**Font: Inter** (D-23 chốt B, 14/10/2026). Web sinh viên, web giảng viên và app mobile của FAP Attendance đều dùng Inter (DES-SYSTEM mục 0), nên bản thiết kế khớp sản phẩm thật và handoff không phải đổi font. FAP dùng Roboto (O-02.5); hai font cùng kiểu không chân, nên lợi ích "giống FAP" ở font được đánh giá là nhỏ (suy luận). Inter đủ dấu tiếng Việt. Không có chữ nào dưới 14 sp. Bố cục phải chịu được cỡ chữ hệ thống 200%.
 
-Thang chữ theo **M3**, để handoff khớp `TextTheme` mặc định của Flutter:
+Thang chữ theo **M3**, để handoff khớp tên style của `TextTheme` trong Flutter (đặt `fontFamily: 'Inter'`):
 
 | Token | M3 | Cỡ / dòng (sp) | Độ đậm | Dùng cho |
 |---|---|---|---|---|

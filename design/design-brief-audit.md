@@ -88,4 +88,6 @@ Năm nghĩa, năm họ màu không chồng nhau. Mã màu cụ thể chờ ảnh
 
 **Font:** DevTools xác nhận FAP mới dùng Roboto (O-02.5, Observed). Đề xuất ở mục 4 đổi từ "giữ Inter" sang **Roboto**. Lý do: cùng font với FAP và là font hệ thống Android. Lý do "tên dài vừa một dòng" của Inter yếu hơn lý do quen mắt, vì ở 360 dp, tên dài nhất trong danh sách mẫu vẫn vừa với Roboto 16 sp. Đây là ước lượng, chưa đo trên Figma.
 
+**Cập nhật (D-23 chốt B):** sau khi kiểm tra app thật dùng Inter trên web và mobile (DES-SYSTEM mục 0), thien chọn **Inter**. Lý do nhất quán với sản phẩm thật được đánh giá nặng hơn lý do giống FAP ở riêng font.
+
 **"Vắng" vẫn chưa có ảnh** (O-02.15). `danger #B42318` là giả định, cần một ảnh có trạng thái "Vắng" để đối chiếu.
