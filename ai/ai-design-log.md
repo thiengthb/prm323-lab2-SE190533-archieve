@@ -33,7 +33,7 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 
 ## AI-23 — Dựng file Figma (14/10/2026)
 
-- **Công cụ:** Claude gọi Figma MCP (`use_figma`, Plugin API) từ Claude Code. Theo D-07 B vì thời gian ngắn; thien vẫn phải làm tay phần ở `design/figma-build.md` mục 5.
+- **Công cụ:** Claude gọi Figma MCP (`use_figma`, Plugin API) từ Claude Code. Theo D-07 B vì thời gian ngắn; sau đó (D-07 cập nhật 14/10) Claude thực thi cả phần còn lại, thien duyệt (`design/figma-build.md` mục 5).
 - **Output:** file [Figma](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w), ghi chép `design/figma-build.md`, ảnh `assets/figma/`.
 - **Tự kiểm:** chụp lại từng màn sau khi dựng và sửa các lỗi dựng hình (thuộc tính chữ dùng chung làm mọi chip cùng một nhãn, scrim đục hẳn, hàng danh sách đè nhau, chữ cái avatar sai, ô lý do không giãn theo nội dung…). Script đọc toàn bộ reaction ở trang 06 xác nhận không có ngõ cụt.
 - **Sửa nội dung nhờ đối chiếu nghiên cứu:** bản đầu của SC-15 ghi thời gian xử lý đơn là "vài ngày (Assumed)". Đối chiếu `research/02-desk/fap-edit-window.md` thì đã có nguồn V01, V02: mục Thủ tục/Đơn từ, phòng QLĐT, 2 ngày làm việc. Màn được sửa theo nguồn.
@@ -44,7 +44,7 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 - **Góp ý của thien:** huy hiệu số bị che; mỗi thành phần phải có mục đích; prototype phải nối trọn vẹn; xử lý thế nào khi giảng viên mở QR lúc đang ở ngoài (GVHD gợi ý một trang web hiện QR; thien lo nút "Điểm danh" trong app làm SV ở nhà cũng điểm danh được).
 - **Phản biện của Claude:** đồng ý với lo ngại của thien, nút trong app không chứng minh có mặt. Đề xuất trang web gắn với phòng thay vì link công khai (D-24; thien chọn A trên thẻ quyết định).
 - **Tự kiểm:** rà từng frame và bỏ 6 thành phần không có việc gì để làm (mục 6 của `design/figma-build.md`). Phát hiện mâu thuẫn giờ: SC-11 báo SV quét MAS291 lúc 09:31 trong khi SC-09 buổi tối ghi MAS291 "không có lượt quét". Sửa bằng một dòng thời gian chung cho cả ngày. Script đọc reaction trang 06: 59 frame, 9 điểm bắt đầu, 0 đích hỏng, không frame nào thiếu lối ra.
-- **Giới hạn:** giả định phòng học có máy tính nối máy chiếu chưa có bằng chứng; lượt quét ngoài Wi-Fi trường chỉ gắn cờ.
+- **Điều chỉnh sau góp ý thứ hai của thien:** phòng học HCM đa số có TV màn hình lớn nên đổi "Màn chiếu" thành "Màn hình phòng"; bỏ việc gắn cờ lượt quét ngoài Wi-Fi trường vì trùng D-21 C mà thien đã bỏ (D-24 vòng 2). Theo D-07 cập nhật, Claude thực thi phần Figma còn lại, thien duyệt.
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 

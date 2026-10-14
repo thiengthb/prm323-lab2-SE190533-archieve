@@ -62,7 +62,7 @@ graph TD
 |---|---|---|---|---|---|
 | SC-01 | Đăng nhập | Cả hai | FL-1, FL-2 | — | Mặc định, đang tải, lỗi tài khoản không thuộc FPTU |
 | SC-02 | Lịch dạy hôm nay | GV | FL-1, FL-3 | N-04, N-11 | Slot sắp tới (nút "Mở điểm danh"), đang mở, chờ xác nhận, chờ điền lên FAP, đã lên FAP, có báo sai mới |
-| SC-03 | Phiên điểm danh: QR đang mở | GV | FL-1 | N-04 | Mở tại lớp, **mở từ xa** (mã chỉ hiện trên trang web Màn chiếu P.205, D-24), laptop chưa kết nối, sắp đóng, đã đóng; dòng có cờ "Cùng thiết bị" |
+| SC-03 | Phiên điểm danh: QR đang mở | GV | FL-1 | N-04 | Mở tại lớp, **mở từ xa** (mã chỉ hiện trên màn hình phòng P.205, D-24), laptop chưa kết nối, sắp đóng, đã đóng; dòng có cờ "Cùng thiết bị" |
 | SC-04 | Đối chiếu sĩ số | GV | FL-1 | N-04 | Khớp, số quét lớn hơn số người (chỉ ra người quét cuối, quét sát lúc mã đổi), số quét nhỏ hơn số người |
 | SC-05 | Kiểm tra ngẫu nhiên | GV | FL-1 | N-04 | 3 thẻ có ảnh FAP; Đúng người, Không có mặt |
 | SC-06 | Xem lại và xác nhận | GV | FL-1 | N-03, N-11 | Ghi tay người đến muộn kèm giờ, còn cờ chưa xử lý, đã xác nhận: Chờ điền lên FAP, Đã lên FAP, extension lỗi |
@@ -88,7 +88,7 @@ Ba flow được chấm điểm. Flow nào cũng có nhánh lỗi. FL-3 là flow
 
 ### FL-1 · Điểm danh một slot bằng QR (P-01, kịch bản K1 và K1b)
 
-Mục tiêu: từ lúc mở QR tới lúc xác nhận xong trong ≤ 2 phút 30 giây, không sai lệch, và phát hiện được quét hộ (TC-1, TC-3, TC-7). Nhánh lỗi: số quét không khớp số người; laptop chưa kết nối; extension chưa điền được. Nhánh K1b (D-24): mã chỉ hiện trên trang web "Màn chiếu P.205" gắn với máy tính phòng, không hiện trên điện thoại của GV, để người ở ngoài phòng không thấy mã.
+Mục tiêu: từ lúc mở QR tới lúc xác nhận xong trong ≤ 2 phút 30 giây, không sai lệch, và phát hiện được quét hộ (TC-1, TC-3, TC-7). Nhánh lỗi: số quét không khớp số người; laptop chưa kết nối; extension chưa điền được. Nhánh K1b (D-24): mã chỉ hiện trên trang web "Màn hình phòng P.205" chạy trên TV (hoặc máy chiếu) của phòng, không hiện trên điện thoại của GV, để người ở ngoài phòng không thấy mã.
 
 ```mermaid
 flowchart TD
@@ -97,8 +97,8 @@ flowchart TD
     C -->|Có| D["Mở điểm danh"]
     C -->|Không, K1b| D2["Mở điểm danh từ xa<br/>(phiên gắn nhãn Mở từ xa)"]
     D --> E{"Laptop trong phòng<br/>đã kết nối?"}
-    D2 --> E2{"Màn chiếu P.205<br/>(web trên máy phòng) đang mở?"}
-    E2 -->|Rồi| F2["SC-03 · Mở từ xa: mã chỉ hiện trên Màn chiếu P.205,<br/>điện thoại GV chỉ đếm số đã quét (D-24)"]
+    D2 --> E2{"Màn hình phòng P.205<br/>(TV hoặc máy chiếu) đang mở trang QR?"}
+    E2 -->|Rồi| F2["SC-03 · Mở từ xa: mã chỉ hiện trên màn hình phòng P.205,<br/>điện thoại GV chỉ đếm số đã quét (D-24)"]
     E2 -->|Chưa| E3["Không mở từ xa được,<br/>mở khi GV vào lớp"]
     E3 -.-> D
     F2 --> G
