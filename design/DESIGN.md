@@ -37,7 +37,7 @@ Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn g�
 
 ## 4. Màu (light theme bắt buộc)
 
-**Chiến lược (D-20, phương án C):** lấy đúng màu chính và nghĩa màu trạng thái của FAP mới (O-02). Những chỗ FAP chưa đạt WCAG thì dùng biến thể đậm hơn cùng sắc độ. Tương phản được tính bằng công thức WCAG 2.1.
+**Chiến lược (D-20 đã chốt phương án C, 14/10/2026):** lấy đúng màu chính và nghĩa màu trạng thái của FAP mới (O-02). Những chỗ FAP chưa đạt WCAG thì dùng biến thể đậm hơn cùng sắc độ. Tương phản được tính bằng công thức WCAG 2.1.
 
 | Token | Light | Dark (tùy chọn) | Dùng cho | Nguồn | Tương phản (light) |
 |---|---|---|---|---|---|
