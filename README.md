@@ -19,7 +19,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Kiến trúc thông tin, user flow | `ux/user-flow.md` | Có (v2) |
 | Design brief cho Stitch | `design/DESIGN.md` | Có (v2) |
 | Đặc tả màn hình | `design/screen-spec.md` | Có (v1, chờ duyệt) |
-| Quyết định thiết kế + checklist accessibility | `design/design-decisions.md` | Chưa có |
+| Quyết định thiết kế + checklist accessibility | `design/design-decisions.md` | Có (v1, chờ duyệt) |
 | Nhật ký AI (prompt, output, critique, quyết định) | `ai/ai-design-log.md` | Đang ghi |
 | Ảnh Stitch, ảnh Figma | `assets/stitch/`, `assets/figma/` | Có (Stitch IT-0..IT-2; Figma 15 màn, 3 flow, trang 04, 05) |
 | Flutter handoff | `handoff/flutter-handoff.md` | Chưa có |
