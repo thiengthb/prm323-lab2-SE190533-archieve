@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | UX-INTEGRITY |
-| Trạng thái | Chờ duyệt |
+| Trạng thái | Đã duyệt: D-21 chốt B, áp dụng cả 4 lớp (14/10/2026) |
 | Đầu vào | RES-DESK-QR (`research/02-desk/qr-attendance-fraud.md`, Q01–Q46), mô hình chống gian lận của app FAP Attendance (`docs/03-architecture-security.md`, mức A), O-01.9, O-01.10, persona P-01 |
 | Quyết định liên quan | D-18, D-19, D-21 |
 

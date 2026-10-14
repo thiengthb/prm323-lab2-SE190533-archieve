@@ -6,7 +6,7 @@
 | Phiên bản | v2 (14/10/2026): chuyển FL-1 sang QR theo D-19. Bản đọc tên là v1, xem lịch sử git |
 | Trạng thái | Chờ duyệt |
 | Đầu vào | UX-PERSONA (`ux/persona.md`), UX-INTEGRITY (`ux/attendance-integrity.md`), RES-AFFINITY-v2, RES-DESK-FAP, RES-DESK-QR |
-| Quyết định liên quan | D-02, D-12, D-17, D-18, D-19, D-21 (đang theo phương án B, chờ thien chốt) |
+| Quyết định liên quan | D-02, D-12, D-17, D-18, D-19, D-21 (chốt B: cả 4 lớp) |
 
 **Giả định nền.** Ứng dụng đọc lịch dạy và danh sách lớp, kể cả ảnh sinh viên, từ FAP. Ứng dụng không ghi thẳng vào FAP. Extension trên laptop của giảng viên tự điền trang điểm danh của FAP từ kết quả đã xác nhận (D-18). FAP vẫn là nơi lưu kết quả chính thức. Trạng thái dùng đúng chữ của FAP mới: **Có mặt**, **Vắng**, **Chưa điểm danh** (D-12, O-02).
 
@@ -194,4 +194,4 @@ flowchart TD
 - **Mốc nhắc 22:00 ở FL-3:** chọn trước 23:59 để còn thời gian sửa; con số là Assumed (thien chưa chắc, 14/10/2026).
 - **QR mở bao lâu:** 5 phút cộng ân hạn nhỏ, theo quy định đến muộn quá 5 phút là vắng (Q35). Con số ân hạn là Assumed.
 - **Ghi lên FAP (D-18):** "Đã lên FAP" nghĩa là extension đã điền xong; trước đó là "Chờ điền lên FAP".
-- **Mở từ xa:** kết quả chỉ được điền lên FAP sau khi giảng viên vào lớp và làm xong SC-04, SC-05 (UX-INTEGRITY, đang theo D-21 B).
+- **Mở từ xa:** kết quả chỉ được điền lên FAP sau khi giảng viên vào lớp và làm xong SC-04, SC-05 (UX-INTEGRITY, D-21 B).

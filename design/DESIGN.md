@@ -68,7 +68,7 @@ Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn g�
 
 ## 5. Chữ
 
-**Font: Roboto**, nếu DevTools xác nhận FAP mới dùng Roboto (O-02.5, hiện là Inferred). Lý do: quen mắt với người dùng FAP và là font hệ thống của Android; Roboto đủ dấu tiếng Việt. Nếu FAP dùng font khác, theo font đó, miễn là có đủ dấu tiếng Việt. Không có chữ nào dưới 14 sp. Bố cục phải chịu được cỡ chữ hệ thống 200%.
+**Font: Roboto.** FAP mới dùng Roboto (O-02.5, Observed qua DevTools). Lý do: cùng font với FAP nên quen mắt, là font hệ thống của Android, khớp `TextTheme` mặc định của Flutter, và đủ dấu tiếng Việt. Không có chữ nào dưới 14 sp. Bố cục phải chịu được cỡ chữ hệ thống 200%.
 
 Thang chữ theo **M3**, để handoff khớp `TextTheme` mặc định của Flutter:
 

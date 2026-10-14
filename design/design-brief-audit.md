@@ -86,6 +86,6 @@ Năm nghĩa, năm họ màu không chồng nhau. Mã màu cụ thể chờ ảnh
 
 **Lập luận "mạo danh" ở mục 3 vẫn giữ**, nhưng chuyển trọng tâm. Dùng cùng màu chính với FAP là chấp nhận được, vì màu không phải nhận diện độc quyền. Ranh giới nằm ở tên, logo và biểu tượng ứng dụng (DESIGN.md, NT-7).
 
-**Font:** FAP mới có thể dùng Roboto (O-02.5, Inferred). Nếu DevTools xác nhận, đổi đề xuất ở mục 4 từ "giữ Inter" sang **Roboto**. Lý do: cùng font với FAP và là font hệ thống Android. Lý do "tên dài vừa một dòng" của Inter yếu hơn lý do quen mắt, vì ở 360 dp, tên dài nhất trong danh sách mẫu vẫn vừa với Roboto 16 sp. Đây là ước lượng, chưa đo trên Figma.
+**Font:** DevTools xác nhận FAP mới dùng Roboto (O-02.5, Observed). Đề xuất ở mục 4 đổi từ "giữ Inter" sang **Roboto**. Lý do: cùng font với FAP và là font hệ thống Android. Lý do "tên dài vừa một dòng" của Inter yếu hơn lý do quen mắt, vì ở 360 dp, tên dài nhất trong danh sách mẫu vẫn vừa với Roboto 16 sp. Đây là ước lượng, chưa đo trên Figma.
 
 **"Vắng" vẫn chưa có ảnh** (O-02.15). `danger #B42318` là giả định, cần một ảnh có trạng thái "Vắng" để đối chiếu.

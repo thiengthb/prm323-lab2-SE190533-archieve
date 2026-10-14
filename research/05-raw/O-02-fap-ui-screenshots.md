@@ -18,7 +18,7 @@
 | O-02.2 | Giao diện nền | Template quản trị **Jidox** (`/assets/vendor/jidox/css/app.min.css`), Bootstrap 5 (`data-bs-toggle`), bộ icon Remix Icon (`ri-*`) | Observed (mã nguồn) |
 | O-02.3 | Màu theme của trình duyệt | `<meta name="theme-color" content="#0e2a47">` | Observed (mã nguồn) |
 | O-02.4 | Có chế độ tối | Nút mặt trăng trên thanh trên; màu chế độ tối chưa chụp | Observed (nút), màu chưa có |
-| O-02.5 | Font | Chữ không chân, dáng giống Roboto. Mã nguồn không gọi Google Fonts, font nằm trong CSS của Jidox | Inferred, cần kiểm bằng DevTools |
+| O-02.5 | Font | `getComputedStyle(document.body).fontFamily` trả về `'Roboto, sans-serif'` (thien chạy trên DevTools, 14/10/2026) | Observed |
 
 ## 2. Màu đo được
 
