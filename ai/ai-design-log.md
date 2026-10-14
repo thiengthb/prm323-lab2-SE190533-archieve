@@ -18,6 +18,7 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-10 | 13/10/2026 | Claude (subagent độc lập) | Tổng hợp affinity từ R01–R11 và O-01 | `ai/prompts/AI-10-synthesis.md` → `research/06-synthesis/affinity-board.md` |
 | AI-11 | 13/10/2026 | Claude (subagent độc lập với AI-10) | Phản biện bản tổng hợp | `ai/prompts/AI-11-synthesis-critic.md` → `research/06-synthesis/synthesis-critique.md` |
 | AI-12 | 13/10/2026 | Claude (subagent độc lập với AI-10, AI-11) | Áp dụng phản biện, tạo bảng affinity v2 | `ai/prompts/AI-12-synthesis-v2.md` → `research/06-synthesis/affinity-board-v2.md` |
+| AI-13 | 14/10/2026 | Claude (phiên chính) | Viết persona P-01, P-02, Coverage Matrix, IA, FL-1..FL-3, danh sách SC-01..SC-13 từ RES-AFFINITY-v2 | Không có prompt riêng; đầu vào là các mã F, N, RB trong tài liệu → `ux/persona.md`, `ux/user-flow.md` |
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
@@ -57,3 +58,9 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 - **AI-11:** không có trích dẫn bịa, nhưng có nguồn bị đọc ngược nghĩa và người bị đếm ở cả hai phía. Đề nghị hạ 10 phát hiện, bỏ F-26 (tiếng vọng của W7), hạ hoặc bỏ N-05, N-07, N-10, N-15, gộp N-02 vào N-04. Chỉ F-17, F-18, F-23, F-24, F-25 đứng vững nguyên văn.
 - **Nhận xét quan trọng nhất của AI-11:** dữ liệu mô phỏng không độc lập (9/11 người cùng lấy thứ Hai 12/10 làm buổi gần nhất, ca của R01 và R10 gần như soi gương, câu khuôn lặp ở 6/11 bản ghi). Vì vậy phát hiện chỉ dựa trên dữ liệu mô phỏng không được gắn nhãn Mạnh.
 - **Quyết định:** D-16. Theo quy ước, v1 giữ nguyên văn; phản biện được áp dụng ở bản v2 (AI-12).
+
+## AI-12, AI-13 — Bản tổng hợp v2, persona và flow (13–14/10/2026)
+
+- **AI-12:** áp dụng 35/43 dòng phản biện, 8 dòng áp dụng một phần có lý do. Chỉ 4 vế còn Mạnh (F-01a, F-02a, F-07b, F-10a), đều có Desk hoặc Observed đi kèm. Còn 11 nhu cầu; N-15 chuyển thành ràng buộc RB-1.
+- **AI-13:** Claude dựng persona và flow trong phiên chính, mỗi trường persona ghi mã bằng chứng. Ngưỡng của tiêu chí thành công (4 phút, 30 giây, 2 chạm) là **Assumed**, phải đo hiện trạng để so.
+- **Quyết định của người thiết kế:** D-16 A, D-17 A (thien, 14/10/2026).
