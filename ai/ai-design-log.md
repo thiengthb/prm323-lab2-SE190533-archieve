@@ -21,6 +21,8 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-13 | 14/10/2026 | Claude (phiên chính) | Viết persona P-01, P-02, Coverage Matrix, IA, FL-1..FL-3, danh sách SC-01..SC-13 từ RES-AFFINITY-v2 | Không có prompt riêng; đầu vào là các mã F, N, RB trong tài liệu → `ux/persona.md`, `ux/user-flow.md` |
 | AI-14 | 14/10/2026 | Claude (subagent, WebSearch/WebFetch) | Tra cứu giao diện, màu, trạng thái điểm danh của FAP và myFAP | `ai/prompts/AI-14-fap-visual-identity.md` → `research/02-desk/fap-visual-identity.md` |
 | AI-15 | 14/10/2026 | Claude (subagent, WebSearch/WebFetch) | Tra cứu kiểu gian lận khi điểm danh QR và biện pháp | `ai/prompts/AI-15-qr-fraud-research.md` → `research/02-desk/qr-attendance-fraud.md` |
+| AI-16 | 14/10/2026 | Claude (phiên chính, Python/PIL) | Đo mã màu từ 6 ảnh FAP của thien, tính tương phản WCAG, viết DESIGN.md v2 theo màu FAP | Không có prompt riêng; đầu vào là ảnh chụp (không lưu vào repo) → `research/05-raw/O-02-fap-ui-screenshots.md`, `design/DESIGN.md`, `design/design-brief-audit.md` mục 6 |
+| AI-17 | 14/10/2026 | Claude (phiên chính) | Viết lại FL-1 theo QR (D-19), danh sách SC-01..SC-15, kịch bản K1b, K5 và TC-7 | Không có prompt riêng; đầu vào là UX-INTEGRITY, D-19 → `ux/user-flow.md` v2, `ux/persona.md` v2 |
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 

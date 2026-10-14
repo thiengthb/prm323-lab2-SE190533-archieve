@@ -31,9 +31,9 @@ Nguồn (S/H, R, O, T, Survey) → Phát hiện F → Nhu cầu N → Persona P 
 
 | Nhu cầu N | Flow FL | Màn hình SC | Tiêu chí thành công đo được |
 |---|---|---|---|
-| N-04, N-03, N-11 | FL-1 | SC-01..SC-06 | TC-1, TC-3 |
-| N-01, N-06, N-10 | FL-2 | SC-01, SC-09..SC-13 | TC-4, TC-5, TC-6 |
-| N-01 | FL-3 | SC-02, SC-07, SC-08, SC-12, SC-13 | TC-2 |
+| N-04, N-03, N-11 | FL-1 | SC-01..SC-06 | TC-1, TC-3, TC-7 |
+| N-01, N-06, N-10 | FL-2 | SC-01, SC-09..SC-15 | TC-4, TC-5, TC-6 |
+| N-01 | FL-3 | SC-02, SC-07, SC-08, SC-14, SC-15 | TC-2 |
 
 ## 3. Màn hình → Component → Handoff
 
