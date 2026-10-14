@@ -39,14 +39,14 @@ Nguồn (S/H, R, O, T, Survey) → Phát hiện F → Nhu cầu N → Persona P 
 
 | Màn hình SC | Component CMP (variant) | Frame Figma | Mục handoff |
 |---|---|---|---|
-| SC-01 | CMP-01 | Trang 03, hàng SC-01: Default; Lỗi tài khoản | `handoff/flutter-handoff.md` mục 3, SC-01 |
-| SC-02 | CMP-03, CMP-10, CMP-01, CMP-04, CMP-05, CMP-07 (skeleton) | Trang 03, hàng SC-02: Default 06:58; Sau slot 1, chờ điền lên FAP; Đang tải; Sau slot 1, đã lên FAP; Có báo sai mới | `handoff/flutter-handoff.md` mục 3, SC-02 |
-| SC-03 | CMP-05, CMP-14 (Đang mở, Đã đóng), CMP-11, CMP-10, CMP-01, CMP-06 (Confirmation) | Trang 03, hàng SC-03: Default; QR đã đóng; Mở từ xa; Dialog đóng QR sớm; trang web Màn hình phòng P.205 (D-24) | `handoff/flutter-handoff.md` mục 3, SC-03 |
-| SC-04 | CMP-05, CMP-11, CMP-01 | Trang 03, hàng SC-04: Default (khớp); Số quét lớn hơn số người | `handoff/flutter-handoff.md` mục 3, SC-04 |
+| SC-01 | CMP-01 | Trang 03, hàng SC-01: Default; Đang đăng nhập; Lỗi tài khoản | `handoff/flutter-handoff.md` mục 3, SC-01 |
+| SC-02 | CMP-03, CMP-10, CMP-01, CMP-04, CMP-05, CMP-07 (skeleton) | Trang 03, hàng SC-02: Default 06:58; Sau slot 1, chờ điền lên FAP; Đang tải; Sau slot 1, đã lên FAP; Có báo sai mới; QR đang mở; Chờ xác nhận (K1b) | `handoff/flutter-handoff.md` mục 3, SC-02 |
+| SC-03 | CMP-05, CMP-14 (Đang mở, Sắp đóng, Đã đóng), CMP-11, CMP-10, CMP-01, CMP-06 (Confirmation) | Trang 03, hàng SC-03: Default; QR đã đóng; Mở từ xa; Dialog đóng QR sớm; QR sắp đóng; Laptop chưa kết nối; trang web Màn hình phòng P.205 (D-24) | `handoff/flutter-handoff.md` mục 3, SC-03 |
+| SC-04 | CMP-05, CMP-11, CMP-01 | Trang 03, hàng SC-04: Default (khớp); Số quét lớn hơn số người; Số quét nhỏ hơn số người | `handoff/flutter-handoff.md` mục 3, SC-04 |
 | SC-05 | CMP-05, CMP-15, CMP-01 | Trang 03, hàng SC-05: Default 1/3; Đã kiểm tra 3/3 | `handoff/flutter-handoff.md` mục 3, SC-05 |
-| SC-06 | CMP-05, CMP-11, CMP-10, CMP-01, CMP-06 (Confirmation) | Trang 03, hàng SC-06: Default; Dialog xác nhận; Chờ điền lên FAP; Đã lên FAP | `handoff/flutter-handoff.md` mục 3, SC-06 |
+| SC-06 | CMP-05, CMP-11, CMP-10, CMP-01, CMP-06 (Confirmation) | Trang 03, hàng SC-06: Default; Còn lượt quét cần xem; Dialog xác nhận; Chờ điền lên FAP; Đã lên FAP | `handoff/flutter-handoff.md` mục 3, SC-06 |
 | SC-07 | CMP-05, CMP-03, CMP-10, CMP-04, CMP-08 | Trang 03, hàng SC-07: Default; Trống; Sau khi sửa; Sau khi từ chối | `handoff/flutter-handoff.md` mục 3, SC-07 |
-| SC-08 | CMP-05, CMP-10, CMP-01, CMP-06 (Destructive) | Trang 03, hàng SC-08: Default; Dialog từ chối; Đã sửa | `handoff/flutter-handoff.md` mục 3, SC-08 |
+| SC-08 | CMP-05, CMP-10, CMP-01, CMP-06 (Destructive) | Trang 03, hàng SC-08: Default; Dialog từ chối; Đã từ chối; Đã sửa | `handoff/flutter-handoff.md` mục 3, SC-08 |
 | SC-09 | CMP-05, CMP-12, CMP-03, CMP-10, CMP-01 (Disabled), CMP-04 | Trang 03, hàng SC-09: Default; Có phiên đang mở; Buổi tối, có buổi Vắng; Đã quét, chờ xác nhận | `handoff/flutter-handoff.md` mục 3, SC-09 |
 | SC-10 | CMP-01, CMP-09 | Trang 03, hàng SC-10: Default; Chưa có quyền camera | `handoff/flutter-handoff.md` mục 3, SC-10 |
 | SC-11 | CMP-05, CMP-07 (Spinner), CMP-10, CMP-01, CMP-09 | Trang 03, hàng SC-11: Đang xác thực; Thành công; Mã hết hạn; Mất mạng | `handoff/flutter-handoff.md` mục 3, SC-11 |

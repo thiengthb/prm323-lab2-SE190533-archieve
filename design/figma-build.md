@@ -17,7 +17,7 @@
 |---|---|---|
 | 01 User Flow | FL-1, FL-2, FL-3 vẽ lại từ `ux/user-flow.md`, có thêm nhánh mở từ xa (K1b), chưa cấp quyền camera và mất mạng khi gửi báo sai. Mỗi ô màn hình có mã SC màu xanh, gạch chân, bấm vào là nhảy tới đúng frame (đúng biến thể) trên trang 03. Khoảng cách giữa các cột là 120 px để nhãn nhánh (Có, Vắng, Thành công, Đã sửa...) nằm giữa mũi tên, không đè lên ô (thien góp ý 14/10) | `FL-1-user-flow.png`, `FL-2-user-flow.png`, `FL-3-user-flow.png` |
 | 02 Wireframe | 15 khung lo-fi, một khung cho mỗi SC | — |
-| 03 Final UI | 60 frame 360 × 800 (15 màn và 45 biến thể trạng thái, đặt cùng hàng bên phải màn gốc), 1 frame web 1280 × 720 "Màn hình phòng P.205", và hàng kiểm 412 dp (3 frame 412 × 915). Tên frame (Figma hiện phía trên) mang mã truy vết, dưới mỗi frame có một ghi chú trỏ về TC, NT, CR và giờ trong ngày | `SC-01-…png` tới `SC-15-…png`, `SC-03-mo-tu-xa.png`, `SC-03-man-hinh-phong-p205.png`, `SC-11-sheet-khong-quet-duoc.png`, `SC-02-dang-tai-skeleton.png`, `SC-07-da-xu-ly-het.png`, `SC-09-bao-sai-co-ket-qua.png`, `a11y-412-*.png` |
+| 03 Final UI | 68 frame 360 × 800 (15 màn và 53 biến thể trạng thái, đặt cùng hàng bên phải màn gốc), 1 frame web 1280 × 720 "Màn hình phòng P.205", và hàng kiểm 412 dp (3 frame 412 × 915). Tên frame (Figma hiện phía trên) mang mã truy vết, dưới mỗi frame có một ghi chú trỏ về TC, NT, CR và giờ trong ngày | `SC-01-…png` tới `SC-15-…png`, `SC-03-mo-tu-xa.png`, `SC-03-man-hinh-phong-p205.png`, `SC-11-sheet-khong-quet-duoc.png`, `SC-02-dang-tai-skeleton.png`, `SC-07-da-xu-ly-het.png`, `SC-09-bao-sai-co-ket-qua.png`, `SC-03-laptop-chua-ket-noi.png`, `SC-04-so-quet-nho-hon.png`, `SC-06-con-luot-can-xem.png`, `SC-08-da-tu-choi.png`, `a11y-412-*.png` |
 | 04 Design System | Biến màu (Light bắt buộc, Dark tùy chọn), 7 text style Inter, khoảng cách, góc bo, 4 effect style, xem trước Light/Dark | `page-04-design-system.png` |
 | 05 Components | 35 icon Lucide và 15 component set CMP-01..CMP-15 dựng bằng Auto Layout, variant và biến token. CMP-04 có thêm 2 thuộc tính "Có báo sai mới" và "Số báo sai" | `page-05-components.png` |
 | 06 Prototype | 8 hàng, 9 điểm bắt đầu, xem mục 3 | — |
@@ -138,3 +138,20 @@ Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
 | SC-01 chỉ nhận @fpt.edu.vn (CR-41) | Nút "Đăng nhập bằng Google", dòng hướng dẫn email đã đăng ký với trường, lỗi mới (trang 02, 03, 06) |
 | Giờ đóng QR (CR-42, D-28 A) | Nhánh mở từ xa lúc 06:55: "QR còn 4:55" → "QR còn 9:55" (đóng 07:05, khớp frame đã đóng). Chữ mặc định của CMP-03 và bản xem trước trang 04 đổi "Phòng 205" → "P.205" |
 | Màn trên trang 06 lệch Final UI | Script so toàn bộ chữ của từng frame trang 06 với frame gốc trang 03: khớp hết; frame mới trên trang 06 đều có bản gốc ở trang 03 |
+
+### 8.2. Vẽ các trạng thái còn thiếu (14/10, thien yêu cầu lúc 16:05)
+
+`design/screen-spec.md` bản đầu liệt kê 8 trạng thái có trong `ux/user-flow.md` mà chưa có frame. Cả 8 đã được vẽ trên trang 03 (8 frame mới), mỗi frame có ghi chú bên dưới. Mọi frame dựng từ component và biến có sẵn, không thêm component mới.
+
+| Frame mới | Nội dung chính |
+|---|---|
+| SC-01 · Đang đăng nhập (CMP-01 Loading) | Nút chính ở State=Loading, chỉ có vòng quay |
+| SC-02 · QR đang mở | 07:03, chip "QR còn 1:52", "28/32 đã quét · QR tự đóng lúc 07:05" (khớp SC-03 và D-28 A) |
+| SC-02 · Chờ xác nhận (mở từ xa, K1b) | 07:06, chip "Chờ xác nhận", "QR đã đóng 07:05, 30/32 đã quét. Vào lớp để đối chiếu sĩ số" |
+| SC-03 · QR sắp đóng (CMP-14 Sắp đóng) | "QR còn 0:20" màu warning kèm chữ "Sắp đóng · còn 20 giây" |
+| SC-03 · Laptop chưa kết nối | 0/32, banner warning, nút "Chiếu tạm mã từ điện thoại" |
+| SC-04 · Số quét nhỏ hơn số người | 30 quét, 32 người, "Chênh −2"; hai người chưa quét có chip "Trong phòng"; vẫn sang kiểm tra ngẫu nhiên |
+| SC-06 · Còn lượt quét cần xem (NT-3) | "Cần xử lý 2", hai nút Có mặt / Vắng dưới mỗi lượt quét bị gắn cờ, nút chính tắt kèm lý do |
+| SC-08 · Đã từ chối (Giữ Vắng) | Banner trung tính nói sinh viên đã nhận lý do và đường khiếu nại; một nút "Về danh sách báo sai" |
+
+Trang 01: ô "Có người chưa quét được" của FL-1 thêm nhãn "SC-04 · nhỏ hơn" nhảy tới frame mới, đổi từ viền đứt (việc của hệ thống) sang viền liền (màn giảng viên thao tác). Các frame mới chưa nối vào prototype trang 06; prototype vẫn đi các nhánh chính như trước.

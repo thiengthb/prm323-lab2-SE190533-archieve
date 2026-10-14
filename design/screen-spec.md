@@ -38,7 +38,7 @@
 | SC-14 | Báo sai của tôi | SV | Tab "Báo sai" | FL-2, FL-3 | N-01 | TC-5 |
 | SC-15 | Hướng dẫn đơn khiếu nại | SV | Lồng | FL-2 | N-06 | TC-6 |
 
-Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trên trang 03 thì ghi tên frame. Trạng thái nào `ux/user-flow.md` liệt kê mà chưa có frame thì ghi **Chưa có frame** và mô tả bằng chữ; danh sách gom ở cuối tài liệu.
+Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trên trang 03 thì ghi tên frame. Mọi trạng thái `ux/user-flow.md` liệt kê đều đã có frame; danh sách 8 frame vẽ thêm ngày 14/10 ở cuối tài liệu.
 
 ---
 
@@ -61,7 +61,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 **Trạng thái.**
 - Mặc định: frame "SC-01 · Đăng nhập".
 - Lỗi tài khoản: frame "SC-01 · Đăng nhập · Lỗi tài khoản". Banner lỗi nói rõ email nào chưa đăng ký với trường và cách sửa: "tran.an@gmail.com chưa được đăng ký với FPTU. Đăng nhập lại bằng email bạn đã đăng ký với trường."
-- Đang đăng nhập: **chưa có frame**. Nút chính chuyển sang biến thể Loading của CMP-01, các phần khác giữ nguyên.
+- Đang đăng nhập: frame "SC-01 · Đăng nhập · Đang đăng nhập (CMP-01 Loading)". Nút chính chuyển sang biến thể Loading của CMP-01 (chỉ có vòng quay, chữ ẩn; trình đọc màn hình đọc "Đang đăng nhập"). Nút không bấm lại được, các phần khác giữ nguyên.
 
 **Quy tắc.**
 - Nhận đúng email mà FAP nhận: giảng viên dùng email @fpt.edu.vn do trường cấp; sinh viên dùng email đã đăng ký với trường, với các khóa mới là Gmail cá nhân khai lúc nhập học, không phải email @fpt.edu.vn (CR-41, nguồn ở `design/final-ui-review.md`). Email không có trong danh sách của trường thì báo lỗi, không đoán theo đuôi email.
@@ -91,7 +91,8 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 - Có 2 báo sai mới, 12:05: frame "… · Có báo sai mới", huy hiệu 2 trên tab "Báo sai".
 - Còn 1 báo sai, 12:06: frame "… · Còn 1 báo sai", huy hiệu 1.
 - Đã xử lý hết, 12:08: frame "… · Đã xử lý hết báo sai", không có huy hiệu.
-- Phiên QR đang mở, và phiên đã đóng nhưng chưa xác nhận (kể cả phiên mở từ xa đang chờ giảng viên vào lớp): **chưa có frame**. Thẻ slot hiện chip "Đang mở" hoặc "Chờ xác nhận"; chạm thẻ để quay lại SC-03 hoặc SC-04.
+- QR đang mở: frame "SC-02 · Lịch dạy hôm nay · QR đang mở" (07:03). Thẻ slot có chip "QR còn 1:52" và dòng "28/32 đã quét · QR tự đóng lúc 07:05. Chạm để xem phiên"; chạm thẻ để quay lại SC-03.
+- Đã đóng, chờ xác nhận: frame "SC-02 · Lịch dạy hôm nay · Chờ xác nhận (mở từ xa, K1b)" (07:06). Chip "Chờ xác nhận", dòng "Mở từ xa · QR đã đóng 07:05, 30/32 đã quét. Vào lớp để đối chiếu sĩ số"; chạm thẻ để vào SC-04.
 
 **Quy tắc.**
 - Thẻ chia nhóm theo giờ hiện tại so với giờ của slot, giống hệt cách chia ở SC-09 (D-25).
@@ -121,8 +122,8 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 - QR đã đóng của phiên mở từ xa: frame "… · QR đã đóng, mở từ xa (K1b)", dòng nguồn "Mở từ xa lúc 06:55 · mã hiện trên TV phòng P.205".
 - Trang web "Màn hình phòng P.205" (1280 × 720) chạy trên TV của phòng: tên phòng, môn và slot, hướng dẫn quét, QR, "12/32 đã quét", và câu "Trang này chỉ mở được trên TV của phòng P.205…".
 - Kiểm 412 dp: frame "SC-03 · Phiên điểm danh · 412 dp".
-- Sắp đóng (dưới 30 giây): **chưa có frame**. CMP-14 đã có biến thể "Sắp đóng"; chip đổi sang màu warning kèm chữ.
-- Laptop chưa kết nối: **chưa có frame**. Theo FL-1, màn báo laptop chưa kết nối và cho hiện QR trên điện thoại để chiếu tạm.
+- Sắp đóng (dưới 30 giây): frame "SC-03 · Phiên điểm danh · QR sắp đóng (CMP-14 Sắp đóng)". CMP-14 ở biến thể "Sắp đóng": chip "QR còn 0:20" màu warning, kèm chữ "Sắp đóng · còn 20 giây" để không dựa vào màu.
+- Laptop chưa kết nối: frame "SC-03 · Phiên điểm danh · Laptop chưa kết nối". Bộ đếm 0/32, dòng chế độ "Mở tại lớp · laptop phòng P.205 chưa kết nối", banner warning "Laptop phòng P.205 chưa kết nối nên mã chưa hiện trên màn hình lớp. Mở app desktop trên laptop, hoặc chiếu tạm mã từ điện thoại này." và nút phụ "Chiếu tạm mã từ điện thoại".
 
 **Quy tắc.**
 - QR tự đóng lúc giờ vào slot cộng 5 phút (slot 07:00 đóng lúc 07:05), khớp nội quy "vào lớp muộn quá 5 phút bị tính vắng"; giảng viên mở sau giờ vào slot thì QR mở đủ 5 phút từ lúc mở. Mã đổi sau mỗi 15 giây; máy chủ nhận cả mã hiện tại và mã liền trước để người dùng 4G chậm không bị từ chối oan (D-28 A). Vì vậy phiên mở từ xa lúc 06:55 hiện "QR còn 9:55".
@@ -149,7 +150,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 **Trạng thái.**
 - Khớp, 30 = 30: frame "SC-04 · Đối chiếu sĩ số (L3)". Màn vẫn cảnh báo: "Số khớp vẫn có thể che một lượt quét hộ. Nếu người chưa quét đang ngồi trong phòng, có một lượt quét không có người." Danh sách "Chưa quét · 2" cho giảng viên đánh dấu ai có trong phòng.
 - Số quét lớn hơn số người: frame "… · Số quét lớn hơn số người". "Chênh +1" màu danger. Danh sách "Lượt quét cần xem · 2" chỉ ra lượt quét cùng thiết bị và lượt quét sát lúc QR đóng.
-- Số quét nhỏ hơn số người: **chưa có frame**. Có người trong phòng chưa quét được; màn chỉ sang ghi tay ở SC-06.
+- Số quét nhỏ hơn số người: frame "SC-04 · Đối chiếu sĩ số · Số quét nhỏ hơn số người". 30 quét, 32 người, "Chênh −2" màu chữ thường. Banner: "Thiếu 2 lượt quét, bằng số người chưa quét đang ngồi trong phòng. Ghi tay họ ở bước xem lại. Vẫn kiểm tra ngẫu nhiên vì số thiếu có thể che một lượt quét hộ." Hai dòng chưa quét có chip "Trong phòng". Nút vẫn là "Kiểm tra ngẫu nhiên" (FL-1: nhánh "Nhỏ hơn" vẫn đi qua SC-05).
 
 **Quy tắc.** Màu đỏ chỉ dùng khi số quét lớn hơn số người, vì đó mới là dấu hiệu quét hộ (D-27). Lượt quét bị gắn cờ luôn có lý do bằng chữ ở dòng riêng (CR-24).
 
@@ -199,7 +200,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 - Chờ điền lên FAP (NT-5): frame "… · Chờ điền lên FAP (NT-5)". "Đã xác nhận lúc 07:12. Chờ điền lên FAP: laptop của thầy đang tắt. Mở laptop, extension sẽ tự điền." Nút "Về lịch dạy" và "Thử điền lại".
 - Đã lên FAP: frame "… · Đã lên FAP". "Đã lên FAP lúc 07:16. Sinh viên thấy trạng thái chính thức trên FAP."
 - Kiểm 412 dp: frame "SC-06 · Xem lại và xác nhận · 412 dp".
-- Còn cờ chưa xử lý ("Cần xử lý" lớn hơn 0): **chưa có frame**. Nút chính tắt cho tới khi mọi lượt quét bị gắn cờ được chọn Có mặt hoặc Vắng (NT-3).
+- Còn cờ chưa xử lý ("Cần xử lý" lớn hơn 0): frame "SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3)", đi tiếp nhánh "lớn hơn" (30 quét, 29 người). Ba số "Có mặt 28", "Vắng 2", "Cần xử lý 2". Nhóm "Cần xem · 2": mỗi lượt quét bị gắn cờ có hai nút "Có mặt" và "Vắng" ngay dưới dòng. Nút chính tắt, phía trên có dòng "Chọn Có mặt hoặc Vắng cho 2 lượt quét cần xem để xác nhận." (NT-3).
 
 **Quy tắc.** Tổng "Có mặt" và "Vắng" luôn bằng sĩ số lớp. Mỗi lần ghi tay lưu kèm giờ.
 
@@ -247,7 +248,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 - Không có bằng chứng ngược: frame "… · Ngô Thanh Vy (mất mạng)".
 - Dialog từ chối (overlay, CMP-06 Destructive): "Từ chối báo sai của Hoàng Mai Linh?", lý do sẽ gửi cho sinh viên, nút "Hủy" và "Từ chối".
 - Đã sửa: frame "… · Đã sửa". "Đã sửa thành Có mặt. Extension sẽ điền lại lên FAP; sinh viên đã được báo." Nút "Về danh sách báo sai".
-- Đã từ chối: **chưa có frame**. Màn hiện chip "Giữ Vắng" và lý do đã gửi; prototype về thẳng SC-07.
+- Đã từ chối: frame "SC-08 · Chi tiết báo sai · Đã từ chối (Giữ Vắng)". Banner trung tính "Đã từ chối, giữ Vắng. Sinh viên đã nhận lý do (không có mặt khi kiểm tra ngẫu nhiên lúc 07:07) và hướng dẫn gửi đơn khiếu nại trên FAP.", chip "Giữ Vắng", một nút "Về danh sách báo sai". Prototype vẫn về thẳng SC-07 từ dialog.
 
 **Quy tắc.** Lý do từ chối lấy từ bằng chứng có sẵn và được gửi kèm hướng dẫn đơn khiếu nại (SC-15). Bằng chứng "Kiểm tra" chỉ có khi sinh viên đã quét và được chọn kiểm tra ngẫu nhiên (CR-36). Prototype chỉ nối nhánh khớp bằng chứng (CR-34).
 
@@ -414,15 +415,19 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 
 ---
 
-## Trạng thái chưa có frame
+## Trạng thái vẽ thêm ngày 14/10
 
-Những trạng thái dưới đây có trong danh sách màn của `ux/user-flow.md` nhưng chưa được vẽ trên trang 03. Đặc tả ở trên đã mô tả chúng bằng chữ.
+Bản đầu của tài liệu này liệt kê 8 trạng thái có trong `ux/user-flow.md` mà chưa có frame. Cả 8 đã được vẽ trên trang 03 ngày 14/10, mỗi frame có ghi chú bên dưới.
 
-| Màn | Trạng thái | Nằm trên nhánh nào |
-|---|---|---|
-| SC-01 | Đang đăng nhập | FL-1, FL-2 (bước đầu) |
-| SC-02 | QR đang mở; đã đóng, chờ xác nhận (kể cả mở từ xa) | FL-1 |
-| SC-03 | Sắp đóng; laptop chưa kết nối | FL-1, nhánh lỗi laptop |
-| SC-04 | Số quét nhỏ hơn số người | FL-1, nhánh "Nhỏ hơn" |
-| SC-06 | Còn cờ chưa xử lý | FL-1 (NT-3) |
-| SC-08 | Đã từ chối | FL-3, nhánh từ chối |
+| Màn | Trạng thái | Frame | Nằm trên nhánh nào |
+|---|---|---|---|
+| SC-01 | Đang đăng nhập | "SC-01 · Đăng nhập · Đang đăng nhập (CMP-01 Loading)" | FL-1, FL-2 (bước đầu) |
+| SC-02 | QR đang mở | "SC-02 · Lịch dạy hôm nay · QR đang mở" | FL-1 |
+| SC-02 | Đã đóng, chờ xác nhận (mở từ xa) | "SC-02 · Lịch dạy hôm nay · Chờ xác nhận (mở từ xa, K1b)" | FL-1, K1b |
+| SC-03 | Sắp đóng | "SC-03 · Phiên điểm danh · QR sắp đóng (CMP-14 Sắp đóng)" | FL-1 |
+| SC-03 | Laptop chưa kết nối | "SC-03 · Phiên điểm danh · Laptop chưa kết nối" | FL-1, nhánh lỗi laptop |
+| SC-04 | Số quét nhỏ hơn số người | "SC-04 · Đối chiếu sĩ số · Số quét nhỏ hơn số người" | FL-1, nhánh "Nhỏ hơn" |
+| SC-06 | Còn lượt quét cần xem | "SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3)" | FL-1 (NT-3) |
+| SC-08 | Đã từ chối | "SC-08 · Chi tiết báo sai · Đã từ chối (Giữ Vắng)" | FL-3, nhánh từ chối |
+
+Trạng thái lỗi và trạng thái tải mà `ux/user-flow.md` không liệt kê (ví dụ lịch dạy trống, lỗi mạng khi lưu) vẫn chỉ được mô tả bằng chữ ở đây và trong `handoff/flutter-handoff.md`.
