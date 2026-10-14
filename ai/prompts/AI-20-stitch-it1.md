@@ -9,9 +9,9 @@
 
 ## Cách chạy
 
-1. Trong project Stitch cũ, chọn màn SC-03 rồi dán prompt dưới đây vào ô chỉnh sửa. Không tạo project mới, để giữ before/after.
+1. Trong project Stitch cũ, chọn từng màn (SC-03, SC-09, SC-11) rồi dán đúng prompt của màn đó vào ô chỉnh sửa. Không tạo project mới, để giữ before/after.
 2. Nếu bảng Theme có, đổi font sang **Inter**, giữ màu chính `#4254BA`.
-3. Export ảnh, lưu `assets/stitch/IT-1-SC-03.png`.
+3. Export ảnh từng màn, lưu `assets/stitch/IT-1-SC-03.png`, `IT-1-SC-09.png`, `IT-1-SC-11.png`. Nếu được, Export lại cả 3 màn IT-0 (`IT-0-SC-03.png`...) trước khi sửa, vì ảnh hiện có chỉ cắt từ ảnh chụp màn hình.
 
 ## Mỗi dòng trong prompt sửa phát hiện nào
 
@@ -24,6 +24,8 @@
 | 5 | CR-06 | Accept |
 | 6 | CR-07 | Accept (phòng ngừa) |
 | 7 | D-22, D-23, CR-09 | Áp dụng quyết định |
+
+Prompt SC-09 sửa CR-10..CR-14; prompt SC-11 sửa CR-14..CR-17 (xem `design/stitch-critique-it0.md` mục 3).
 
 ## Prompt SC-03
 
