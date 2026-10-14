@@ -10,7 +10,7 @@
 
 **Giả định nền.** Ứng dụng đọc lịch dạy và danh sách lớp, kể cả ảnh sinh viên, từ FAP. Ứng dụng không ghi thẳng vào FAP. Extension trên laptop của giảng viên tự điền trang điểm danh của FAP từ kết quả đã xác nhận (D-18). FAP vẫn là nơi lưu kết quả chính thức. Trạng thái dùng đúng chữ của FAP mới: **Có mặt**, **Vắng**, **Chưa điểm danh** (D-12, O-02).
 
-**Cách điểm danh (D-19).** Giảng viên mở phiên, QR hiện trên màn chiếu qua app desktop, cả lớp quét cùng lúc, không đọc tên. Giảng viên có thể mở phiên từ điện thoại khi chưa vào lớp. Trước khi kết quả được điền lên FAP, giảng viên đối chiếu sĩ số và kiểm tra ngẫu nhiên (UX-INTEGRITY, lớp L3 và L4).
+**Cách điểm danh (D-19).** Giảng viên mở phiên, QR hiện trên màn hình phòng (đa số là TV màn hình lớn, số ít máy chiếu), cả lớp quét cùng lúc, không đọc tên. Giảng viên có thể mở phiên từ điện thoại khi chưa vào lớp. Trước khi kết quả được điền lên FAP, giảng viên đối chiếu sĩ số và kiểm tra ngẫu nhiên (UX-INTEGRITY, lớp L3 và L4).
 
 **Mốc báo sai (RB-4, Desk V01, V13).** Với môn thường, sinh viên báo giảng viên trước 23:59 ngày có slot; với môn LUK, hạn là 2 ngày. Quá mốc thì đường duy nhất là "Đơn khiếu nại điểm danh" trên FAP, gửi phòng QLĐT. Ứng dụng chỉ dẫn sang FAP, không làm lại quy trình đơn.
 
@@ -103,7 +103,7 @@ flowchart TD
     E3 -.-> D
     F2 --> G
     E -->|Chưa| E1["SC-03 · Báo laptop chưa kết nối,<br/>hiện QR trên điện thoại để chiếu tạm"]
-    E -->|Rồi| F["SC-03 · QR hiện trên màn chiếu,<br/>đếm số đã quét"]
+    E -->|Rồi| F["SC-03 · QR hiện trên màn hình lớp,<br/>đếm số đã quét"]
     E1 --> F
     F --> G["QR tự đóng sau 5 phút,<br/>hoặc GV bấm Đóng QR"]
     G --> H{"GV đã ở trong lớp?"}
@@ -136,11 +136,11 @@ Mục tiêu: biết ngay mình đã được ghi nhận chưa, và báo sai trư
 
 ```mermaid
 flowchart TD
-    A([QR hiện trên màn chiếu]) --> B["SC-09 · Hôm nay"]
+    A([QR hiện trên màn hình lớp]) --> B["SC-09 · Hôm nay"]
     B --> C["SC-10 · Quét mã"]
     C --> D{"Kết quả quét"}
     D -->|Thành công| E["SC-11 · Đã ghi nhận lúc 07:01,<br/>chờ GV xác nhận"]
-    D -->|Mã hết hạn| F["SC-11 · Quét lại mã<br/>đang hiện trên màn chiếu"]
+    D -->|Mã hết hạn| F["SC-11 · Quét lại mã<br/>đang hiện trên màn hình lớp"]
     F --> C
     D -->|"Mất mạng, QR đã đóng,<br/>máy đã dùng cho tài khoản khác"| G["SC-11 · Báo lý do,<br/>hướng dẫn gặp GV ngay trong giờ"]
     E -.->|GV xác nhận| H{"Trạng thái chính thức"}
