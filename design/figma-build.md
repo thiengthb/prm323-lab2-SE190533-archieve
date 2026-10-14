@@ -120,4 +120,5 @@ Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
 | Thanh tiến độ (CR-31, D-27 A) | CMP-14: phần đã quét màu `success`, nền thanh `border`; độ dài đúng theo số đã quét (28/32, 30/32), 0/32 không có vạch. Đỏ chỉ ở SC-04 khi số quét lớn hơn số người (đã có) |
 | Huy hiệu Báo sai (CR-32) | Giảng viên: đếm báo sai chưa xử lý (SC-07: 2 → 1 → hết). Sinh viên: đếm kết quả mới chưa xem (SC-09 21:22: 1) |
 | Lỗi logic CR-33 đến CR-39 | Đổi giờ sửa của Vy, đảo nhánh sửa/từ chối cho khớp bằng chứng, dời giờ báo sai của K3 sang 21:02, sửa lý do từ chối K3, "Về Hôm nay" cho sinh viên, "màn hình lớp" ở SC-10, QR đã đóng của nhánh K1b |
+| Áp nhất quán ra các màn khác | Chip giờ trên thẻ báo sai (SC-07) là buổi đã qua nên dùng "Giờ slot · khác". Tiêu đề nhóm "Mới · n", "Đã xử lý · n" ở SC-07 cùng kiểu với D-25 |
 | Biến thể mới | SC-03 QR đã đóng (mở từ xa), SC-08 Ngô Thanh Vy, SC-07 Đã xử lý hết (thay "Sau khi sửa"), SC-02 12:08 đã xử lý hết, SC-09 21:22 báo sai có kết quả |
