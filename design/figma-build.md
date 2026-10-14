@@ -14,7 +14,7 @@
 
 | Trang | Nội dung | Ảnh |
 |---|---|---|
-| 01 User Flow | FL-1, FL-2, FL-3 vẽ lại từ `ux/user-flow.md`, có thêm nhánh mở từ xa (K1b), chưa cấp quyền camera và mất mạng khi gửi báo sai. Mỗi ô màn hình có mã SC màu xanh, gạch chân, bấm vào là nhảy tới đúng frame (đúng biến thể) trên trang 03 | `FL-1-user-flow.png`, `FL-2-user-flow.png`, `FL-3-user-flow.png` |
+| 01 User Flow | FL-1, FL-2, FL-3 vẽ lại từ `ux/user-flow.md`, có thêm nhánh mở từ xa (K1b), chưa cấp quyền camera và mất mạng khi gửi báo sai. Mỗi ô màn hình có mã SC màu xanh, gạch chân, bấm vào là nhảy tới đúng frame (đúng biến thể) trên trang 03. Khoảng cách giữa các cột là 120 px để nhãn nhánh (Có, Vắng, Thành công, Đã sửa...) nằm giữa mũi tên, không đè lên ô (thien góp ý 14/10) | `FL-1-user-flow.png`, `FL-2-user-flow.png`, `FL-3-user-flow.png` |
 | 02 Wireframe | 15 khung lo-fi, một khung cho mỗi SC | — |
 | 03 Final UI | 51 frame 360 × 800 (15 màn và 36 biến thể trạng thái, đặt cùng hàng bên phải màn gốc), 1 frame web 1280 × 720 "Màn hình phòng P.205", và hàng kiểm 412 dp (3 frame 412 × 915). Trên mỗi frame có nhãn, dưới mỗi frame có ghi chú trỏ về TC, NT, CR và giờ trong ngày | `SC-01-…png` tới `SC-15-…png`, `SC-03-mo-tu-xa.png`, `SC-03-man-hinh-phong-p205.png`, `SC-11-sheet-khong-quet-duoc.png`, `a11y-412-*.png` |
 | 04 Design System | Biến màu (Light bắt buộc, Dark tùy chọn), 7 text style Inter, khoảng cách, góc bo, 4 effect style, xem trước Light/Dark | `page-04-design-system.png` |
