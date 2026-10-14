@@ -42,7 +42,7 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 ## AI-24 — Sửa Figma theo góp ý (IT-3b, 14/10/2026)
 
 - **Góp ý của thien:** huy hiệu số bị che; mỗi thành phần phải có mục đích; prototype phải nối trọn vẹn; xử lý thế nào khi giảng viên mở QR lúc đang ở ngoài (GVHD gợi ý một trang web hiện QR; thien lo nút "Điểm danh" trong app làm SV ở nhà cũng điểm danh được).
-- **Phản biện của Claude:** đồng ý với lo ngại của thien, nút trong app không chứng minh có mặt. Đề xuất trang web gắn với phòng thay vì link công khai (D-24, chờ thien chốt, Figma dựng tạm theo A).
+- **Phản biện của Claude:** đồng ý với lo ngại của thien, nút trong app không chứng minh có mặt. Đề xuất trang web gắn với phòng thay vì link công khai (D-24; thien chọn A trên thẻ quyết định).
 - **Tự kiểm:** rà từng frame và bỏ 6 thành phần không có việc gì để làm (mục 6 của `design/figma-build.md`). Phát hiện mâu thuẫn giờ: SC-11 báo SV quét MAS291 lúc 09:31 trong khi SC-09 buổi tối ghi MAS291 "không có lượt quét". Sửa bằng một dòng thời gian chung cho cả ngày. Script đọc reaction trang 06: 59 frame, 9 điểm bắt đầu, 0 đích hỏng, không frame nào thiếu lối ra.
 - **Giới hạn:** giả định phòng học có máy tính nối máy chiếu chưa có bằng chứng; lượt quét ngoài Wi-Fi trường chỉ gắn cờ.
 

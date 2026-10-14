@@ -97,5 +97,5 @@ Mỗi hàng là một luồng, có tiêu đề và một dòng mô tả ở trê
 | Mỗi thành phần phải có lý do | Bỏ banner "2 báo sai mới" ở SC-02 (trùng huy hiệu); bỏ chip "Chưa điểm danh" ở slot chưa tới giờ; bỏ banner hạn báo sai ở SC-09 khi không có buổi nào sai (NT-4 chỉ áp dụng ở màn có báo sai); bỏ phụ đề ngày ở SC-14; bỏ chữ "Ai đang trong phòng?" ở SC-04; bỏ câu "Giảng viên sẽ kiểm tra ngẫu nhiên." ở SC-11 Mã hết hạn |
 | Giờ giấc không khớp | Dựng lại một ngày (mục 1): K5 dời về PRM393 07:01 thay cho MAS291 09:31, vì MAS291 là buổi bị Vắng ở K3; SC-02 có thêm biến thể 07:15 đã lên FAP và 12:05 có báo sai mới |
 | Thiếu trạng thái để prototype liền mạch | Thêm SC-09 "Đã quét, chờ xác nhận", SC-14 "Trống", SC-07 "Sau khi sửa" và "Sau khi từ chối" |
-| Luồng mở QR khi giảng viên ở ngoài | SC-03 mở từ xa không còn hiện mã trên điện thoại; thêm trang web "Màn chiếu P.205" gắn với phòng; nút "Tôi đã vào lớp: đóng QR" nối vào bước đối chiếu. Chờ thien chốt D-24 |
+| Luồng mở QR khi giảng viên ở ngoài | SC-03 mở từ xa không còn hiện mã trên điện thoại; thêm trang web "Màn chiếu P.205" gắn với phòng; nút "Tôi đã vào lớp: đóng QR" nối vào bước đối chiếu (D-24, thien chọn A) |
 | Prototype chưa trọn vẹn | Dựng lại trang 06 như mục 3 |

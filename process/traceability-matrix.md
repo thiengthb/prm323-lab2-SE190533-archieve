@@ -64,7 +64,7 @@ Nguồn (S/H, R, O, T, Survey) → Phát hiện F → Nhu cầu N → Persona P 
 | CR-21 | DESIGN.md mục 4 | Modify: Figma chỉ dùng biến DESIGN.md | D-20, D-22 | Mọi màn (trang 04, 05) |
 | CR-24 | WCAG 1.4.10; NT-3 | Accept: xuống dòng, không cắt dữ liệu | — | SC-03, SC-04 (CMP-11) |
 | CR-25 | Nielsen #1; CMP-14 | Accept: trạng thái QR đã đóng | — | SC-03 · QR đã đóng (CMP-14) |
-| IT-3b (góp ý của thien, 14/10) | Nielsen #8 (bỏ phần trang trí), #1; NT-4, NT-5 | Accept: bỏ banner, chip, phụ đề thừa; thống nhất giờ trong ngày; huy hiệu CMP-04 không bị cắt; mở từ xa theo D-24 | D-24 (TẠM) | SC-02, SC-03, SC-04, SC-07, SC-09, SC-11, SC-14 (`design/figma-build.md` mục 6) |
+| IT-3b (góp ý của thien, 14/10) | Nielsen #8 (bỏ phần trang trí), #1; NT-4, NT-5 | Accept: bỏ banner, chip, phụ đề thừa; thống nhất giờ trong ngày; huy hiệu CMP-04 không bị cắt; mở từ xa theo D-24 | D-24 | SC-02, SC-03, SC-04, SC-07, SC-09, SC-11, SC-14 (`design/figma-build.md` mục 6) |
 
 ## 5. Kiểm tra độ phủ (chạy trước khi nộp)
 

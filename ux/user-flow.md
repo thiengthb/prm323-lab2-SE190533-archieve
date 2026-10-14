@@ -88,7 +88,7 @@ Ba flow được chấm điểm. Flow nào cũng có nhánh lỗi. FL-3 là flow
 
 ### FL-1 · Điểm danh một slot bằng QR (P-01, kịch bản K1 và K1b)
 
-Mục tiêu: từ lúc mở QR tới lúc xác nhận xong trong ≤ 2 phút 30 giây, không sai lệch, và phát hiện được quét hộ (TC-1, TC-3, TC-7). Nhánh lỗi: số quét không khớp số người; laptop chưa kết nối; extension chưa điền được. Nhánh K1b (D-24, đang chờ thien chốt): mã chỉ hiện trên trang web "Màn chiếu P.205" gắn với máy tính phòng, không hiện trên điện thoại của GV, để người ở ngoài phòng không thấy mã.
+Mục tiêu: từ lúc mở QR tới lúc xác nhận xong trong ≤ 2 phút 30 giây, không sai lệch, và phát hiện được quét hộ (TC-1, TC-3, TC-7). Nhánh lỗi: số quét không khớp số người; laptop chưa kết nối; extension chưa điền được. Nhánh K1b (D-24): mã chỉ hiện trên trang web "Màn chiếu P.205" gắn với máy tính phòng, không hiện trên điện thoại của GV, để người ở ngoài phòng không thấy mã.
 
 ```mermaid
 flowchart TD
