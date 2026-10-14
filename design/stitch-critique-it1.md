@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-CRIT-IT1 |
-| Trạng thái | Chờ thien duyệt |
+| Trạng thái | Đã duyệt: thien chấp nhận CR-18..CR-23 (14/10/2026). CR-19 được đánh giá lại ở DES-CRIT-IT2 |
 | Đầu vào | Prompt `ai/prompts/AI-20-stitch-it1.md`; bản Export `assets/stitch/IT-1-SC-03.png`, `IT-1-SC-09.png`, `IT-1-SC-11.png`, `IT-1-SC-11-sheet.png` và mã HTML trong `assets/stitch/code/` |
 | Cách kiểm | Nhìn ảnh, rồi đo trên mã HTML: cỡ chữ, chiều cao nút, mã màu, font |
 | Người phản biện | Claude, theo heuristic Nielsen, WCAG 2.1, DESIGN.md v2 |
@@ -28,7 +28,7 @@ Số đo từ mã HTML: chữ nhỏ nhất 14 px, mọi nút cao 48 px (`h-12`),
 | Mã | Màn | Phát hiện | Căn cứ | Mức | Đề xuất |
 |---|---|---|---|---|---|
 | CR-18 | SC-03 | Dòng "Danh sách lớp · 32" và "Đang mở" bị xuống dòng và **cắt chữ** ở khung 360 dp ("32" và "mở" bị che một nửa). Đây là lỗi mới sinh ra khi sửa CR-06 | WCAG 1.4.10 (reflow); Nielsen #8 | Cao | Accept: đưa "Đang mở" vào thẻ bộ đếm, cạnh chip thời gian; dòng tiêu đề danh sách chỉ còn "Danh sách lớp · 32" trên một dòng |
-| CR-19 | SC-03 | Chip đổi thành "QR hết hạn" trong khi phiên vẫn "Đang mở" và nút chính là "Đóng QR". Hai trạng thái mâu thuẫn trên cùng một màn | Nielsen #1 (trạng thái hệ thống phải đúng) | Cao | Accept: trả lại "QR còn 2:41" |
+| CR-19 | SC-03 | Chip đổi thành "QR hết hạn" trong khi phiên vẫn "Đang mở" và nút chính là "Đóng QR". Hai trạng thái mâu thuẫn trên cùng một màn. **Đánh giá lại ở IT-2:** đây là bộ đếm ngược chạy thật, ảnh được chụp sau khi hết giờ (DES-CRIT-IT2) | Nielsen #1 (trạng thái hệ thống phải đúng) | Cao → không phải lỗi bố cục | Accept: trả lại "QR còn 2:41"; sinh ra CR-25 |
 | CR-20 | SC-03 | Lý do "Cùng thiết bị" mất màu vàng, giờ là chữ xám như mã SV. Giảng viên khó thấy vì sao dòng này "Cần xem" | Nielsen #1; NT-3 | Thấp | Accept: lý do dùng màu `warning` kèm biểu tượng điện thoại |
 | CR-21 | SC-09, SC-11 | Mã HTML còn dùng màu của bộ theme Stitch tự sinh (`#181C20`, `#F7F9FF`, `#BBC3FF`, `#DCE3EB`) và vẫn nạp Roboto Flex và Material Symbols cạnh Inter. Trên ảnh khó thấy, nhưng handoff sẽ lẫn token lạ | DESIGN.md mục 4; CR-09 | Thấp | Modify: không sửa thêm trên Stitch; Figma chỉ dùng biến token của DESIGN.md |
 | CR-22 | SC-11 | Nút viền "Không quét được?" dùng viền `#E3E5EC`, tỷ lệ 1,26:1 trên nền trắng, gần như không thấy ranh giới nút | WCAG 1.4.11 (≥ 3:1); DESIGN.md CMP-01 (nút viền dùng `border-control`) | Trung bình | Accept: viền `#767D86` (4,16:1 trên nền trắng) |
