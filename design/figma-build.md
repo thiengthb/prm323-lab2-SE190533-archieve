@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-FIGMA-IT3 |
-| Trạng thái | IT-3b: đã sửa theo góp ý của thien ngày 14/10. Theo D-07 cập nhật, Claude thực thi, thien duyệt |
+| Trạng thái | IT-3c: đã sửa theo góp ý của thien chiều 14/10 (`design/final-ui-review.md`). Theo D-07 cập nhật, Claude thực thi, thien duyệt |
 | File Figma | [PRM323 Lab 2 · SE190533 · Điểm danh FAP](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w) |
 | Người dựng | Claude qua Figma MCP (AI-23, AI-24), theo D-07 B |
 | Đầu vào | `design/DESIGN.md` v2, `design/component-system.md` (D-22, D-23), `ux/user-flow.md` v2, `ux/persona.md` v2, CR-01..CR-25 đã duyệt |
@@ -16,7 +16,7 @@
 |---|---|---|
 | 01 User Flow | FL-1, FL-2, FL-3 vẽ lại từ `ux/user-flow.md`, có thêm nhánh mở từ xa (K1b), chưa cấp quyền camera và mất mạng khi gửi báo sai. Mỗi ô màn hình có mã SC màu xanh, gạch chân, bấm vào là nhảy tới đúng frame (đúng biến thể) trên trang 03. Khoảng cách giữa các cột là 120 px để nhãn nhánh (Có, Vắng, Thành công, Đã sửa...) nằm giữa mũi tên, không đè lên ô (thien góp ý 14/10) | `FL-1-user-flow.png`, `FL-2-user-flow.png`, `FL-3-user-flow.png` |
 | 02 Wireframe | 15 khung lo-fi, một khung cho mỗi SC | — |
-| 03 Final UI | 51 frame 360 × 800 (15 màn và 36 biến thể trạng thái, đặt cùng hàng bên phải màn gốc), 1 frame web 1280 × 720 "Màn hình phòng P.205", và hàng kiểm 412 dp (3 frame 412 × 915). Trên mỗi frame có nhãn, dưới mỗi frame có ghi chú trỏ về TC, NT, CR và giờ trong ngày | `SC-01-…png` tới `SC-15-…png`, `SC-03-mo-tu-xa.png`, `SC-03-man-hinh-phong-p205.png`, `SC-11-sheet-khong-quet-duoc.png`, `a11y-412-*.png` |
+| 03 Final UI | 56 frame 360 × 800 (15 màn và 41 biến thể trạng thái, đặt cùng hàng bên phải màn gốc), 1 frame web 1280 × 720 "Màn hình phòng P.205", và hàng kiểm 412 dp (3 frame 412 × 915). Tên frame (Figma hiện phía trên) mang mã truy vết, dưới mỗi frame có một ghi chú trỏ về TC, NT, CR và giờ trong ngày | `SC-01-…png` tới `SC-15-…png`, `SC-03-mo-tu-xa.png`, `SC-03-man-hinh-phong-p205.png`, `SC-11-sheet-khong-quet-duoc.png`, `a11y-412-*.png` |
 | 04 Design System | Biến màu (Light bắt buộc, Dark tùy chọn), 7 text style Inter, khoảng cách, góc bo, 4 effect style, xem trước Light/Dark | `page-04-design-system.png` |
 | 05 Components | 35 icon Lucide và 15 component set CMP-01..CMP-15 dựng bằng Auto Layout, variant và biến token. CMP-04 có thêm 2 thuộc tính "Có báo sai mới" và "Số báo sai" | `page-05-components.png` |
 | 06 Prototype | 8 hàng, 9 điểm bắt đầu, xem mục 3 | — |
@@ -33,11 +33,13 @@ Mọi màn kể cùng một ngày, thứ Tư 14/10, để giờ trên app bar, c
 | 06:58 | SC-02, chưa điểm danh slot 1, chưa có báo sai | |
 | 07:01 | | Quét PRM393 · P.205 (K5): lần đầu mã hết hạn, quét lại được lúc 07:01:04 |
 | 07:02 | | SC-09 chip Chờ xác nhận, nút quét tắt |
-| 07:12–07:15 | Xác nhận slot 1; laptop tắt nên chờ điền, mở lại thì lên FAP 07:14 | |
+| 07:12–07:17 | Xác nhận slot 1 lúc 07:12; laptop tắt nên chờ điền (07:15), mở lại thì lên FAP 07:16 | |
 | 09:52 | SWT301 lên FAP | |
 | 11:52 | Ngô Thanh Vy gửi báo sai | |
-| 12:05 | SC-02 có huy hiệu 2 ở tab Báo sai, xử lý báo sai (FL-3) | |
-| 20:15–20:58 | | MAS291 bị ghi Vắng vì điện thoại hết pin (K3), gửi báo sai |
+| 12:05 | SC-02 có huy hiệu 2 ở tab Báo sai | |
+| 12:06–12:08 | Từ chối báo sai của Hoàng Mai Linh (không có mặt khi kiểm tra ngẫu nhiên lúc 07:07), sửa Ngô Thanh Vy thành Có mặt (mất mạng, không có bằng chứng ngược); hết việc, huy hiệu mất | |
+| 20:58–21:02 | | MAS291 bị ghi Vắng vì điện thoại hết pin (K3), gửi báo sai lúc 21:02 |
+| 21:20–21:22 | Cô Lan Anh (MAS291) xem và sửa thành Có mặt | SC-09 21:22: tab Báo sai có huy hiệu 1 |
 
 K3 trong persona lấy ví dụ slot 1. Trong Figma, slot 1 (PRM393) đã dùng cho K5 nên K3 chuyển sang MAS291 slot 2; lý do bị Vắng và cách báo sai giữ nguyên.
 
@@ -56,16 +58,16 @@ Mỗi hàng là một luồng, có tiêu đề và một dòng mô tả ở trê
 | Hàng | Điểm bắt đầu | Đường đi | Overlay, loading | Lỗi và hồi phục |
 |---|---|---|---|---|
 | FL-1 · Giảng viên điểm danh tại lớp | SC-01 | Đăng nhập → SC-02 đang tải → 06:58 → Mở điểm danh → SC-03 → đóng QR → SC-04 → SC-05 → SC-06 → xác nhận → Chờ điền lên FAP → Thử điền lại → Đã lên FAP → SC-02 07:15 | Dialog đóng QR sớm; dialog xác nhận gửi lên FAP; SC-02 đang tải 1 giây | Ở SC-04 bấm "−" để thấy số quét lớn hơn số người, "+" để về lại. "Về lịch dạy" khi đang chờ điền đưa tới SC-02 07:15 có thẻ Chờ điền lên FAP, chạm thẻ để thử lại |
-| FL-1 nhánh K1b · Mở từ xa | SC-02 06:58 | Mở từ xa → SC-03 mở từ xa (chạm khung xanh để xem trang Màn hình phòng P.205) → "Tôi đã vào lớp: đóng QR" → QR đã đóng → nối vào SC-04 của FL-1 | — | Phiên mở từ xa không lên FAP trước bước đối chiếu |
+| FL-1 nhánh K1b · Mở từ xa | SC-02 06:58 | Mở từ xa → SC-03 mở từ xa (chạm khung xanh để xem trang Màn hình phòng P.205) → "Tôi đã vào lớp: đóng QR" → QR đã đóng (ghi "Mở từ xa lúc 06:55") → nối vào SC-04 của FL-1 | — | Phiên mở từ xa không lên FAP trước bước đối chiếu |
 | FL-1 lỗi · Sai tài khoản | SC-01 lỗi tài khoản | Đăng nhập lại → nối vào FL-1 | — | Có |
 | FL-2 · Sinh viên quét mã (K5) | SC-09 07:01 | Quét mã → SC-10 (chạm khung quét) → đang xác thực → Mã hết hạn → Quét lại → thành công → SC-09 chờ xác nhận → tab Báo sai (trống) | SC-11 đang xác thực 1,2 giây, hai lần; "Không quét được?" ở SC-10 và SC-11 mở sheet (overlay, trượt từ dưới lên) | Mã hết hạn → Quét lại |
 | FL-2 lỗi · Camera và mất mạng | SC-10 chưa có quyền camera | Cấp quyền → quét → mất mạng → thử lại → thành công | SC-11 đang xác thực | Chưa cấp camera; mất mạng |
-| FL-2 · Sinh viên báo sai (K3) | SC-09 20:58 | Chạm MAS291 → SC-12 → SC-13 → đang gửi → mất mạng → gửi lại → SC-14 Đã gửi → sau 3 giây Đã sửa | SC-13 đang gửi 1,2 giây, hai lần; SC-14 Đã gửi → Đã sửa 3 giây (mô phỏng giảng viên xử lý) | Mất mạng khi gửi → Thử gửi lại |
+| FL-2 · Sinh viên báo sai (K3) | SC-09 20:58 | Chạm MAS291 → SC-12 → SC-13 → đang gửi → mất mạng → gửi lại → SC-14 Đã gửi 21:02 → tab Hôm nay: SC-09 21:22, tab Báo sai có huy hiệu 1 → mở tab: SC-14 Đã sửa, huy hiệu mất | SC-13 đang gửi 1,2 giây, hai lần | Mất mạng khi gửi → Thử gửi lại |
 | FL-2 phục hồi · Bị từ chối | SC-14 bị từ chối | Xem cách gửi đơn khiếu nại → SC-15 | — | Đường sang đơn khiếu nại |
 | FL-2 phục hồi · Quá hạn (K4) | SC-12 đã qua hạn (13/10) | Xem cách gửi đơn khiếu nại → SC-15 | — | Như trên |
-| FL-3 · Xử lý báo sai | SC-02 12:05 | Tab Báo sai (huy hiệu 2) → SC-07 → báo sai của Hoàng Mai Linh → Sửa thành Có mặt → SC-08 đã sửa → SC-07 sau khi sửa → tab Hôm nay, huy hiệu còn 1 | Dialog từ chối (Destructive) → SC-07 sau khi từ chối | Hủy trên dialog quay lại SC-08 |
+| FL-3 · Xử lý báo sai | SC-02 12:05 | Tab Báo sai (huy hiệu 2) → SC-07 → báo sai của Hoàng Mai Linh → Từ chối → SC-07 còn 1 (huy hiệu 1) → báo sai của Ngô Thanh Vy → Sửa thành Có mặt → SC-08 đã sửa → SC-07 đã xử lý hết → tab Hôm nay: SC-02 12:08, không còn huy hiệu | Dialog từ chối (Destructive) | Hủy trên dialog quay lại SC-08. Prototype đi nhánh khớp bằng chứng: Linh có bằng chứng không có mặt nên chỉ nối "Từ chối"; Vy không có bằng chứng ngược nên chỉ nối "Sửa thành Có mặt" |
 
-Đã kiểm bằng script đọc toàn bộ reaction trên trang 06: 60 frame, 0 đích hỏng, frame nào cũng có lối ra, chỉ 9 điểm bắt đầu là không có mũi tên đi vào. Nút quay lại trên app bar dùng hành động Back. Những chỗ cố ý chưa nối: "Ghi tay thêm sinh viên" ở SC-06 (sheet chưa có), "Mở FAP" ở SC-15 (mở trang ngoài), và nút đang vô hiệu.
+Đã kiểm bằng script đọc toàn bộ reaction trên trang 06: 63 frame, 0 đích hỏng, frame nào cũng có lối ra, chỉ 9 điểm bắt đầu là không có mũi tên đi vào. Nút quay lại trên app bar dùng hành động Back. Những chỗ cố ý chưa nối: "Ghi tay thêm sinh viên" ở SC-06 (sheet chưa có), "Mở FAP" ở SC-15 (mở trang ngoài), và nút đang vô hiệu.
 
 ## 4. Khoảng trống còn lại
 
@@ -104,3 +106,18 @@ Mỗi hàng là một luồng, có tiêu đề và một dòng mô tả ở trê
 | 4 trạng thái còn thiếu của SC-11 | Đã quét rồi (nói giờ lượt đầu), Không có trong lớp (chỉ ra mã thuộc lớp nào), Máy đã dùng cho tài khoản khác (lớp "một máy một người" của D-21 B), QR đã đóng (chỉ sang ghi tay, N-03). Dựng từ CMP-09, nút chính "Về Hôm nay" |
 | Sheet "Không quét được?" | Theo CR-17 và prompt AI-20: "Báo giảng viên ngay trong giờ", giơ tay để được ghi tay kèm giờ đến; quá giờ học thì dùng Báo sai trước 23:59. Không có đường tự điểm danh khác, để không mở lại cửa điểm danh từ xa. Đã nối trên trang 06 từ mọi nút "Không quét được?" |
 | Kiểm 412 dp | SC-03 (danh sách dài nhất), SC-06 (nhiều nhóm và chip), SC-09 buổi tối (banner, link báo sai) ở 412 × 915. Không có chữ bị cắt, nút giữ 48 dp, chip không xuống dòng sai, thanh dưới bám đáy. Ảnh: `assets/figma/a11y-412-*.png` |
+
+## 8. Vòng sửa IT-3c (14/10, theo góp ý của thien lúc 14:24 và 14:27)
+
+Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
+
+| Góp ý hoặc lỗi | Đã sửa |
+|---|---|
+| Tên màn và mô tả đè nhau (CR-26, CR-27) | Bỏ 53 dòng nhãn tự đặt đè lên tên frame; mã truy vết đưa vào tên frame. Gộp 4 cặp ghi chú trùng chỗ |
+| Skeleton không thấy (CR-28) | CMP-07 thêm biến thể "Skeleton thẻ slot" giống bố cục SC-02 (tiêu đề nhóm, tên môn, chip giờ, dòng mô tả); xương đổi từ `raised` sang `border` cho cả hai biến thể skeleton |
+| Nhóm thẻ (CR-29, D-25 A) | SC-02 và SC-09 (cả trang 06) chia 3 nhóm cố định theo giờ của khung hình: Đang diễn ra, Sắp tới, Đã xong. Tiêu đề nhóm 16 Semi Bold màu `text`, số thẻ màu `muted`; khoảng cách giữa nhóm 24, trong nhóm 12 |
+| Màu chip giờ (CR-30, D-26 A) | CMP-10 thêm biến thể "Giờ slot · khác" (nền `raised`, chữ `muted`, biểu tượng đồng hồ). "Giờ slot" giữ cam `slot` của FAP, thay đồng hồ bằng chấm, chỉ dùng cho buổi đang diễn ra |
+| Thanh tiến độ (CR-31, D-27 A) | CMP-14: phần đã quét màu `success`, nền thanh `border`; độ dài đúng theo số đã quét (28/32, 30/32), 0/32 không có vạch. Đỏ chỉ ở SC-04 khi số quét lớn hơn số người (đã có) |
+| Huy hiệu Báo sai (CR-32) | Giảng viên: đếm báo sai chưa xử lý (SC-07: 2 → 1 → hết). Sinh viên: đếm kết quả mới chưa xem (SC-09 21:22: 1) |
+| Lỗi logic CR-33 đến CR-39 | Đổi giờ sửa của Vy, đảo nhánh sửa/từ chối cho khớp bằng chứng, dời giờ báo sai của K3 sang 21:02, sửa lý do từ chối K3, "Về Hôm nay" cho sinh viên, "màn hình lớp" ở SC-10, QR đã đóng của nhánh K1b |
+| Biến thể mới | SC-03 QR đã đóng (mở từ xa), SC-08 Ngô Thanh Vy, SC-07 Đã xử lý hết (thay "Sau khi sửa"), SC-02 12:08 đã xử lý hết, SC-09 21:22 báo sai có kết quả |

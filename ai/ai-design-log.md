@@ -30,6 +30,7 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-22 | 14/10/2026 | Claude (phản biện) | Kiểm IT-2: 5/5 phát hiện đã sửa; đánh giá lại CR-19 nhờ đọc mã HTML (bộ đếm chạy thật); thêm CR-24, CR-25; chốt vòng Stitch | `design/stitch-critique-it2.md` |
 | AI-23 | 14/10/2026 | Claude (Figma MCP, Plugin API) | Dựng file Figma IT-3: biến token, text/effect style, 15 component, 15 màn và 25 biến thể, 3 user flow có liên kết, prototype 3 luồng; áp dụng CR-21, CR-24, CR-25 | Không có prompt riêng; đầu vào là DESIGN.md v2, user-flow v2 → file Figma, `design/figma-build.md`, `assets/figma/` |
 | AI-24 | 14/10/2026 | Claude (Figma MCP, Plugin API) | Vòng IT-3b theo góp ý của thien: sửa huy hiệu CMP-04, rà nghĩa từng thành phần, thống nhất giờ trong một ngày, thêm 6 biến thể và trang web Màn chiếu P.205, dựng lại 3 User Flow và prototype 9 điểm bắt đầu | Không có prompt riêng; đầu vào là góp ý của thien, D-19, D-21, gợi ý của GVHD → file Figma, `design/figma-build.md` mục 6, D-24 |
+| AI-25 | 14/10/2026 | Claude (phản biện, Figma MCP) | Vòng IT-3c: phản biện 7 góp ý của thien về Final UI, tự rà chữ trên 55 frame và tìm 7 lỗi logic; áp D-25, D-26, D-27; nối lại FL-3 và FL-2 báo sai | Không có prompt riêng; đầu vào là góp ý của thien → `design/final-ui-review.md`, `design/figma-build.md` mục 8, D-25..D-27 |
 
 ## AI-23 — Dựng file Figma (14/10/2026)
 
@@ -45,6 +46,12 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 - **Phản biện của Claude:** đồng ý với lo ngại của thien, nút trong app không chứng minh có mặt. Đề xuất trang web gắn với phòng thay vì link công khai (D-24; thien chọn A trên thẻ quyết định).
 - **Tự kiểm:** rà từng frame và bỏ 6 thành phần không có việc gì để làm (mục 6 của `design/figma-build.md`). Phát hiện mâu thuẫn giờ: SC-11 báo SV quét MAS291 lúc 09:31 trong khi SC-09 buổi tối ghi MAS291 "không có lượt quét". Sửa bằng một dòng thời gian chung cho cả ngày. Script đọc reaction trang 06: 59 frame, 9 điểm bắt đầu, 0 đích hỏng, không frame nào thiếu lối ra.
 - **Điều chỉnh sau góp ý thứ hai của thien:** phòng học HCM đa số có TV màn hình lớn nên đổi "Màn chiếu" thành "Màn hình phòng"; bỏ việc gắn cờ lượt quét ngoài Wi-Fi trường vì trùng D-21 C mà thien đã bỏ (D-24 vòng 2). Theo D-07 cập nhật, Claude thực thi phần Figma còn lại, thien duyệt.
+
+## AI-25 — Rà Final UI và prototype (IT-3c, 14/10/2026)
+
+- **Góp ý của thien:** tên màn và mô tả đè nhau; skeleton trắng; nhóm thẻ lộn xộn; thẻ các pha trông như nhau; thanh tiến độ đen không nói gì; tab Báo sai không có huy hiệu; "đừng để mắc những lỗi sơ đẳng".
+- **Phản biện của Claude:** đồng ý cả 7 vấn đề, phản biện hai cách làm: tô chip giờ theo trạng thái điểm danh thì thẻ có hai chip cùng màu nói một điều; tô đỏ phần chưa quét thì đỏ mất nghĩa "Vắng, lỗi". thien chọn phương án A ở cả 3 thẻ D-25, D-26, D-27.
+- **Tự kiểm:** đọc toàn bộ chữ trên 55 frame và đối chiếu với dòng thời gian một ngày. Lỗi nặng nhất Claude tự để lại: nhánh "Sửa thành Có mặt" áp cho người vừa bị phát hiện quét hộ (Linh), tức prototype thưởng cho gian lận mà D-21 muốn chặn. Script đọc reaction trang 06: 63 frame, 0 đích hỏng, không có ngõ cụt.
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
