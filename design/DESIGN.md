@@ -6,7 +6,7 @@
 | Phiên bản | **v2** (14/10/2026). v1 dùng bảng màu thienui, xem lịch sử git và DES-AUDIT |
 | Trạng thái | Chờ duyệt (viết **trước** prompt Stitch đầu tiên) |
 | Đầu vào | UX-PERSONA, UX-FLOW, UX-INTEGRITY, O-02 (màu đo từ FAP thật), DES-AUDIT |
-| Quyết định liên quan | D-12, D-17, D-18, D-19, D-20, D-21 |
+| Quyết định liên quan | D-12, D-17, D-18, D-19, D-20, D-21, D-22 (shadcn + Lucide), D-23 (Inter) |
 
 Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn gốc của token trong Figma (trang 04) và trong handoff Flutter. Tên token giống hệt nhau ở cả ba nơi (`process/conventions.md`, mục 2). Mỗi giá trị đều ghi rõ nguồn: **FAP** (đo từ FAP thật, O-02), **WCAG**, **M3** (Material Design 3, khớp với Flutter), hay **Nghiên cứu** (mã F, N).
 
@@ -84,13 +84,15 @@ Thang chữ theo **M3**, để handoff khớp tên style của `TextTheme` trong
 
 ## 6. Khoảng cách, góc bo, độ nổi
 
+Theo D-22, phần cấu trúc lấy từ thienui, bộ token mà app FAP Attendance thật đang dùng (`packages/ui/src/styles/tokens.css`, Observed). thienui suy ra góc bo theo cách của shadcn: một biến gốc, các mức còn lại cộng hoặc trừ từ đó.
+
 | Nhóm | Token | Giá trị | Nguồn |
 |---|---|---|---|
-| Khoảng cách | `space/1` … `space/8` | 4, 8, 12, 16, 20, 24, 32, 40 dp | Lưới 4 dp của M3 |
-| Lề màn hình | `space/4` | 16 dp | M3 (khung compact) |
-| Chiều cao điều khiển | `size/control` | 48 dp | Đề bài; M3 (vùng chạm tối thiểu 48 × 48 dp) |
-| Góc bo | `radius/sm`, `radius/md`, `radius/lg`, `radius/xl`, `radius/full` | 8 (nút, ô nhập, chip), 12 (thẻ), 16 (bottom sheet), 28 (dialog), 999 (chip tròn) | Thang góc bo M3 (small, medium, large, extra-large) |
-| Độ nổi | `elevation/0` … `elevation/3` | 0 (phẳng), 1 (thẻ), 2 (thanh đáy cố định), 3 (dialog, sheet) | Các mức elevation của M3 |
+| Khoảng cách | `space/1` … `space/8` | 4, 8, 12, 16, 20, 24, 32, 40 dp | thienui (thang 0,25 rem của Tailwind) |
+| Lề màn hình | `space/4` | 16 dp | thienui; M3 (khung compact) |
+| Chiều cao điều khiển | `size/control` | 48 dp | Đề bài. **Ghi đè** thienui (`--p-target-min: 44px`) và chiều cao mặc định của shadcn, vốn làm cho web |
+| Góc bo | `radius/sm`, `radius/md`, `radius/lg`, `radius/xl`, `radius/2xl`, `radius/full` | 6 (huy hiệu nhỏ), **8** (nút, ô nhập, chip), 10 (ô nhóm), **14** (thẻ), **18** (sheet, dialog), 999 (avatar, chấm) | thienui: gốc 10, sm = gốc − 4, md = gốc − 2, xl = gốc + 4, theo shadcn |
+| Độ nổi | `elevation/0` … `elevation/4` | 0 phẳng; 1 thẻ (bóng 1 px rất nhẹ); 2 thanh đáy cố định; 3 sheet, dialog; 4 thông báo nổi | thienui. Viền 1 px `border` là cách tách lớp chính, bóng chỉ phụ trợ |
 
 ## 7. Bố cục
 
@@ -102,6 +104,8 @@ Thang chữ theo **M3**, để handoff khớp tên style của `TextTheme` trong
 ## 8. Component
 
 Chín component bắt buộc của đề bài là CMP-01 đến CMP-09. Component riêng của ứng dụng bắt đầu từ CMP-10. Mọi component dùng token, không dùng màu hay cỡ cố định.
+
+**Nền component (D-22):** CMP-01..09 dựng theo component shadcn tương ứng (Button, Input + Label, Card, Dialog và Alert Dialog, Sheet, Skeleton, Alert, Badge), giống thienui. Thanh điều hướng đáy và app bar dựng riêng vì shadcn không có bản di động. Biểu tượng dùng **Lucide**, nét 2 px, cỡ 20 dp trong chip và nút, 24 dp ở thanh điều hướng.
 
 | Mã | Component | Trạng thái | Quy tắc |
 |---|---|---|---|
@@ -123,15 +127,15 @@ Chín component bắt buộc của đề bài là CMP-01 đến CMP-09. Componen
 
 ## 9. Trạng thái điểm danh
 
-| Trạng thái FAP | Hiển thị | Màu | Biểu tượng (Remix Icon, giống FAP) |
+| Trạng thái FAP | Hiển thị | Màu | Biểu tượng Lucide (cùng ẩn dụ với Remix Icon của FAP) |
 |---|---|---|---|
-| Attended | Có mặt | `success` | `ri-checkbox-circle-line` |
-| Absent | Vắng | `danger` | `ri-close-circle-line` |
-| Not yet | Chưa điểm danh | `warning` | `ri-time-line` |
-| Attended, đến muộn được giảng viên ghi tay | Có mặt · đến 07:04 | `success` | `ri-checkbox-circle-line` + giờ |
-| (trong ứng dụng) Chờ giảng viên xác nhận | Chờ xác nhận | `warning` | `ri-shield-check-line` |
-| (trong ứng dụng) Chờ extension điền | Chờ điền lên FAP | `warning` | `ri-upload-cloud-line` |
-| (trong ứng dụng) Extension đã điền | Đã lên FAP | `success` | `ri-cloud-line` |
+| Attended | Có mặt | `success` | `circle-check` |
+| Absent | Vắng | `danger` | `circle-x` |
+| Not yet | Chưa điểm danh | `warning` | `clock` |
+| Attended, đến muộn được giảng viên ghi tay | Có mặt · đến 07:04 | `success` | `circle-check` + giờ |
+| (trong ứng dụng) Chờ giảng viên xác nhận | Chờ xác nhận | `warning` | `shield-check` |
+| (trong ứng dụng) Chờ extension điền | Chờ điền lên FAP | `warning` | `cloud-upload` |
+| (trong ứng dụng) Extension đã điền | Đã lên FAP | `success` | `cloud-check` |
 
 ## 10. Nên và không nên
 

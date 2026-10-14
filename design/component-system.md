@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-SYSTEM |
-| Trạng thái | Đề xuất, chờ thien chốt D-22 |
+| Trạng thái | Đã duyệt: D-22 chốt B (14/10/2026); áp dụng vào DESIGN.md mục 6, 8, 9 |
 | Lý do | Sau IT-0, thien thấy component, góc bo và bố cục chưa "elegant", muốn dùng hệ sinh thái shadcn và Lucide, và cần lý do có nghiên cứu để trình bày (14/10/2026) |
 | Quyết định liên quan | D-20 (màu theo FAP, đã chốt), D-22, D-23 (font Inter, đã chốt) |
 
@@ -46,7 +46,7 @@ Như vậy D-22 B không phải đổi hướng, mà là **đưa bản thiết k
 | Màu | Theo FAP (D-20) | **Giữ nguyên.** Ánh xạ sang tên token của shadcn: `background`, `card`, `border`, `input`, `ring`, `primary`, `muted-foreground`, `destructive`, và thêm các token trạng thái |
 | Font | Roboto (FAP dùng, O-02.5) | **Inter** (D-23 chốt B): giống web và mobile của sản phẩm thật |
 | Biểu tượng | Remix Icon | Lucide |
-| Góc bo | Thang M3: 8 / 12 / 16 / 28 | Thang shadcn, lấy một biến gốc rồi suy ra sm, md, lg, xl. Sẽ ghi số cụ thể sau khi dựng thử trên Figma |
+| Góc bo | Thang M3: 8 / 12 / 16 / 28 | thienui theo cách của shadcn: gốc 10 → 6 / 8 / 10 / 14 / 18 (Observed trong `packages/ui`) |
 | Độ nổi | 4 mức M3 | Gần như phẳng: viền 1 px là chính, bóng rất nhẹ chỉ cho sheet và dialog |
 | Component | CMP-01..15 tự định nghĩa | CMP-01..09 lấy từ shadcn (Button, Input, Card, Dialog, Sheet, Badge, Skeleton, Alert...); CMP-10..15 dựng trên đó |
 | Kích thước | 48 dp | **Ghi đè shadcn:** nút và ô nhập cao 48 dp, chữ ≥ 14 sp |

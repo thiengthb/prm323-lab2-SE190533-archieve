@@ -91,3 +91,5 @@ Năm nghĩa, năm họ màu không chồng nhau. Mã màu cụ thể chờ ảnh
 **Cập nhật (D-23 chốt B):** sau khi kiểm tra app thật dùng Inter trên web và mobile (DES-SYSTEM mục 0), thien chọn **Inter**. Lý do nhất quán với sản phẩm thật được đánh giá nặng hơn lý do giống FAP ở riêng font.
 
 **"Vắng" vẫn chưa có ảnh** (O-02.15). `danger #B42318` là giả định, cần một ảnh có trạng thái "Vắng" để đối chiếu.
+
+**Cập nhật (D-22 chốt B):** góc bo 14 từng bị xếp "Cảm tính" ở mục 2. Kiểm tra `packages/ui` của app thật cho thấy 14 là mức `xl` của thienui, suy ra theo cách của shadcn (gốc 10 + 4). DESIGN.md mục 6 giờ dùng thang 6 / 8 / 10 / 14 / 18 này, có nguồn.

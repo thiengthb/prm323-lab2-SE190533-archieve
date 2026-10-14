@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-CRIT-IT0 |
-| Trạng thái | Chờ thien quyết định từng phát hiện |
+| Trạng thái | Cột "Đề xuất" là đề xuất của Claude; chờ thien duyệt. IT-1 (`ai/prompts/AI-20-stitch-it1.md`) đang theo đề xuất |
 | Đầu vào | P1 trong `ai/prompts/AI-18-stitch-first-prompt.md`; ảnh `assets/stitch/IT-0-SC-03-preview.png` (cắt từ ảnh chụp màn hình Stitch của thien, 14/10/2026, độ phân giải thấp; cần bản Export từ Stitch) |
 | Người phản biện | Claude, theo heuristic Nielsen, WCAG 2.1 và persona P-01 |
 | Màn | SC-03 · Phiên điểm danh. P2 và P3 chưa chạy |

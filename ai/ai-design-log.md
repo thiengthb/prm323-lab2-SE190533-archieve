@@ -25,6 +25,7 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-17 | 14/10/2026 | Claude (phiên chính) | Viết lại FL-1 theo QR (D-19), danh sách SC-01..SC-15, kịch bản K1b, K5 và TC-7 | Không có prompt riêng; đầu vào là UX-INTEGRITY, D-19 → `ux/user-flow.md` v2, `ux/persona.md` v2 |
 | AI-18 | 14/10/2026 | Claude soạn, thien chạy trên Google Stitch | Prompt Stitch đầu tiên cho SC-03, SC-09, SC-11 từ DESIGN.md v2 | `ai/prompts/AI-18-stitch-first-prompt.md` → `assets/stitch/IT-0-*.png` (P1 đã chạy, ảnh tạm `IT-0-SC-03-preview.png`) |
 | AI-19 | 14/10/2026 | Claude (phiên chính) | AI critique cho IT-0 (SC-03): 9 phát hiện CR-01..CR-09; đề xuất hệ component shadcn + Lucide (D-22) | Không có prompt riêng → `design/stitch-critique-it0.md`, `design/component-system.md` |
+| AI-20 | 14/10/2026 | Claude soạn, thien chạy trên Stitch | Prompt IT-1 cho SC-03: sửa CR-01..CR-09, áp dụng D-22 (shadcn + Lucide) và D-23 (Inter) | `ai/prompts/AI-20-stitch-it1.md` → `assets/stitch/IT-1-SC-03.png` (chờ thien chạy) |
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
