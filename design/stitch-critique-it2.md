@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-CRIT-IT2 |
-| Trạng thái | Chờ thien duyệt CR-24 và cách xử lý CR-19 |
+| Trạng thái | Đã duyệt: thien chấp nhận CR-24, CR-25 và cách đánh giá lại CR-19 (14/10/2026) |
 | Đầu vào | Prompt `ai/prompts/AI-21-stitch-it2.md` (thien duyệt CR-18..CR-23 ngày 14/10/2026); bản Export `assets/stitch/IT-2-SC-03.png`, `IT-2-SC-09.png`, `IT-2-SC-11.png` và mã HTML trong `assets/stitch/code/` |
 | Người phản biện | Claude |
 
