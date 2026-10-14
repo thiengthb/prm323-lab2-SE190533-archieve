@@ -45,7 +45,7 @@ Mỗi quyết định ghi: chọn gì, vì sao (theo persona, heuristic hoặc r
 - **Chọn:** một persona chính (giảng viên) và một phụ (sinh viên), 15 màn, 3 flow. Những phần khác (app desktop, tỷ lệ vắng, đơn miễn điểm danh) đưa vào roadmap.
 - **Vì sao:** Rubric cần ít nhất 8 màn và 3 flow, nhưng handoff đòi 6 mục cho mỗi màn và prototype không được có ngõ cụt. Mỗi màn thêm làm tăng việc ở bốn tiêu chí. Làm sâu 15 màn tốt hơn làm nông 38 màn.
 - **Bỏ:** toàn bộ 38 màn và 8 flow của spec cũ.
-- **Thấy ở:** trang 01 (FL-1, FL-2, FL-3), trang 06 (9 điểm bắt đầu).
+- **Thấy ở:** trang 01 (FL-1, FL-2, FL-3), trang 06 (12 điểm bắt đầu).
 
 ### DD-6 · Màu của FAP, làm đậm cho đạt WCAG (D-20 C)
 
@@ -86,39 +86,39 @@ Mỗi quyết định ghi: chọn gì, vì sao (theo persona, heuristic hoặc r
 
 | Mục (đề bài, mục 7) | Kết quả | Bằng chứng |
 |---|---|---|
-| Chữ thường tương phản ít nhất 4,5:1, chữ lớn 3:1 | **Đạt** | Mọi cặp màu chữ trên nền trên 60 màn đạt ít nhất 5,24:1 (mục 2.1) |
+| Chữ thường tương phản ít nhất 4,5:1, chữ lớn 3:1 | **Đạt** | Mọi cặp màu chữ trên nền trên 71 frame của trang 03 đạt ít nhất 5,24:1 (mục 2.1, đo lại 14/10 sau khi vẽ thêm 8 trạng thái) |
 | Thành phần điều khiển tương phản ít nhất 3:1 (WCAG 1.4.11) | **Đạt** | Nút chính `primary` trên nền trắng 6,54:1; viền nút phụ và ô nhập `border-control` 4,16:1 trên trắng, 3,59:1 trên `canvas`; phần đã quét của thanh tiến độ trên nền thanh 5,01:1 (mục 2.2) |
-| Vùng chạm ít nhất 48 × 48 dp | **Đạt** | 75 nút CMP-01 trên trang 03 cao ít nhất 48 dp; 124 vùng có hành động trên trang 06, không vùng nào nhỏ hơn 48 × 48 |
-| Chữ thân ít nhất 14 sp | **Đạt** | Cỡ chữ nhỏ nhất trên 63 frame của trang 03 là 14, kể cả nhãn thanh điều hướng và huy hiệu số |
+| Vùng chạm ít nhất 48 × 48 dp | **Đạt** | Mọi nút CMP-01 đang hiện trên 71 frame của trang 03 cao ít nhất 48 dp; 146 vùng có hành động chạm trên trang 06, không vùng nào nhỏ hơn 48 × 48 |
+| Chữ thân ít nhất 14 sp | **Đạt** | Cỡ chữ nhỏ nhất trên 71 frame của trang 03 là 14, kể cả nhãn thanh điều hướng và huy hiệu số |
 | Không truyền thông tin chỉ bằng màu | **Đạt** | Chip trạng thái luôn có chữ và biểu tượng (NT-2). Thanh tiến độ đi cùng số "28/32". Chip giờ đang diễn ra có thêm chấm và nằm dưới tiêu đề nhóm "Đang diễn ra". Tab đang chọn có nền chỉ báo và chữ đậm, không chỉ đổi màu. Lượt quét bị gắn cờ có lý do bằng chữ (CR-24) |
-| Layout dùng Auto Layout và constraint | **Đạt** | 63/63 frame màn hình trên trang 03 dùng Auto Layout; 15 component set trên trang 05 dựng bằng Auto Layout và biến token |
+| Layout dùng Auto Layout và constraint | **Đạt** | 71/71 frame màn hình trên trang 03 dùng Auto Layout; 15 component set trên trang 05 dựng bằng Auto Layout và biến token |
 | Kiểm ở 360 dp và 412 dp | **Đạt** | Mọi màn ở 360 × 800. Ba màn khó nhất dựng lại ở 412 × 915: SC-03 (danh sách dài nhất), SC-06 (nhiều nhóm và chip), SC-09 buổi tối (banner, link). Không chữ nào bị cắt, nút giữ 48 dp, thanh dưới bám đáy. Ảnh: `assets/figma/a11y-412-SC-03.png`, `a11y-412-SC-06.png`, `a11y-412-SC-09.png` |
 | Màn rộng từ 600 dp | Mô tả trong handoff | Đề bài không yêu cầu thiết kế; cách đổi bố cục ghi ở `handoff/flutter-handoff.md` |
 
 ### 2.1. Tương phản chữ (theme Light)
 
-Script đi qua từng chữ đang hiện trên 60 màn 360 × 800 và 3 màn 412 × 915 của trang 03, lấy biến màu của chữ và biến màu của lớp nền gần nhất, rồi tính tỷ lệ theo công thức WCAG 2.x.
+Script đi qua từng chữ đang hiện trên 68 màn 360 × 800 và 3 màn 412 × 915 của trang 03 (1 240 chữ; 33 chữ không có biến màu chữ hoặc nền nên bỏ qua), lấy biến màu của chữ và biến màu của lớp nền gần nhất, rồi tính tỷ lệ theo công thức WCAG 2.x.
 
 | Chữ | Nền | Tỷ lệ | Số chữ | Ví dụ |
 |---|---|---|---|---|
-| `text` #212529 | `surface` #FFFFFF | 15,43:1 | 256 | "PRM393 · Slot 1 · P.205" |
-| `text` | `raised` #F2F2F7 | 13,82:1 | 100 | "QR còn 1:52" |
-| `text` | `canvas` #EEEEF1 | 13,32:1 | 105 | "Danh sách lớp · 32" |
-| `muted` #5C636A | `surface` | 6,09:1 | 257 | dòng mô tả trên thẻ |
-| `muted` | `raised` | 5,46:1 | 55 | chip giờ trung tính |
-| `muted` | `canvas` | 5,26:1 | 57 | dòng phụ ở SC-01 |
-| `on-primary` #FFFFFF | `primary` #4254BA | 6,54:1 | 42 | chữ trên nút chính |
+| `text` #212529 | `surface` #FFFFFF | 15,43:1 | 306 | "PRM393 · Slot 1 · P.205" |
+| `text` | `raised` #F2F2F7 | 13,82:1 | 130 | "QR còn 1:52" |
+| `text` | `canvas` #EEEEF1 | 13,32:1 | 120 | "Danh sách lớp · 32" |
+| `muted` #5C636A | `surface` | 6,09:1 | 303 | dòng mô tả trên thẻ |
+| `muted` | `raised` | 5,46:1 | 60 | chip giờ trung tính |
+| `muted` | `canvas` | 5,26:1 | 66 | dòng phụ ở SC-01 |
+| `on-primary` #FFFFFF | `primary` #4254BA | 6,54:1 | 51 | chữ trên nút chính |
 | `on-primary` | `danger` #B42318 | 6,57:1 | 7 | số trên huy hiệu |
 | `primary` | `surface` / `canvas` | 6,54:1 / 5,65:1 | 6 | "Hủy", "Mở từ xa" |
 | `success` #0D6E45 | `success-soft` #E3F0EA | 5,38:1 | 41 | chip "Có mặt" |
-| `warning` #855A00 | `warning-soft` #FFF4D2 | 5,53:1 | 29 | chip "Chưa điểm danh" |
-| `warning` | `canvas` / `surface` | 5,24:1 / 6,07:1 | 6 | "Chưa quét 4" |
-| `danger` | `danger-soft` #FDECEA | 5,75:1 | 25 | banner lỗi SC-01 |
-| `danger` | `surface` | 6,57:1 | 13 | "+1", "Không có mặt lúc 07:07" |
-| `slot` #9A3412 | `slot-soft` #FFEFE2 | 6,51:1 | 4 | chip giờ đang diễn ra |
-| `success` | `surface` | 6,30:1 | 7 | "Chênh 0" |
+| `warning` #855A00 | `warning-soft` #FFF4D2 | 5,53:1 | 48 | chip "Chưa điểm danh" |
+| `warning` | `canvas` / `surface` | 5,24:1 / 6,07:1 | 10 | "Chưa quét 4" |
+| `danger` | `danger-soft` #FDECEA | 5,75:1 | 28 | banner lỗi SC-01 |
+| `danger` | `surface` | 6,57:1 | 15 | "+1", "Không có mặt lúc 07:07" |
+| `slot` #9A3412 | `slot-soft` #FFEFE2 | 6,51:1 | 6 | chip giờ đang diễn ra |
+| `success` | `surface` | 6,30:1 | 8 | "Chênh 0" |
 
-Cặp thấp nhất là `warning` trên `canvas`, 5,24:1, vẫn trên ngưỡng 4,5:1 cho chữ thường.
+Cặp thấp nhất là `warning` trên `canvas`, 5,24:1, vẫn trên ngưỡng 4,5:1 cho chữ thường. Ngoài bảng còn 2 chữ `on-primary` trên nền `text` (15,43:1).
 
 ### 2.2. Tương phản thành phần điều khiển
 

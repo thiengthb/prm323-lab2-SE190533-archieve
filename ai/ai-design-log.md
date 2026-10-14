@@ -31,6 +31,7 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-23 | 14/10/2026 | Claude (Figma MCP, Plugin API) | Dựng file Figma IT-3: biến token, text/effect style, 15 component, 15 màn và 25 biến thể, 3 user flow có liên kết, prototype 3 luồng; áp dụng CR-21, CR-24, CR-25 | Không có prompt riêng; đầu vào là DESIGN.md v2, user-flow v2 → file Figma, `design/figma-build.md`, `assets/figma/` |
 | AI-24 | 14/10/2026 | Claude (Figma MCP, Plugin API) | Vòng IT-3b theo góp ý của thien: sửa huy hiệu CMP-04, rà nghĩa từng thành phần, thống nhất giờ trong một ngày, thêm 6 biến thể và trang web Màn chiếu P.205, dựng lại 3 User Flow và prototype 9 điểm bắt đầu | Không có prompt riêng; đầu vào là góp ý của thien, D-19, D-21, gợi ý của GVHD → file Figma, `design/figma-build.md` mục 6, D-24 |
 | AI-25 | 14/10/2026 | Claude (phản biện, Figma MCP) | Vòng IT-3c: phản biện 7 góp ý của thien về Final UI, tự rà chữ trên 55 frame và tìm 7 lỗi logic; áp D-25, D-26, D-27; nối lại FL-3 và FL-2 báo sai | Không có prompt riêng; đầu vào là góp ý của thien → `design/final-ui-review.md`, `design/figma-build.md` mục 8, D-25..D-27 |
+| AI-26 | 14/10/2026 | Claude (phiên chính, Figma MCP) | S5: viết screen-spec, design-decisions (đo a11y bằng script), flutter-handoff; phản biện D-28 (5 phút, 15 giây) theo câu hỏi của thien; sửa SC-01 theo CR-41; vẽ 8 trạng thái còn thiếu và nối vào prototype (12 điểm bắt đầu, 84 frame) | Không có prompt riêng; đầu vào là user-flow v2 và góp ý của thien → `design/screen-spec.md`, `design/design-decisions.md`, `handoff/flutter-handoff.md`, `design/figma-build.md` mục 8.2, D-28 |
 
 ## AI-23 — Dựng file Figma (14/10/2026)
 
@@ -52,6 +53,13 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 - **Góp ý của thien:** tên màn và mô tả đè nhau; skeleton trắng; nhóm thẻ lộn xộn; thẻ các pha trông như nhau; thanh tiến độ đen không nói gì; tab Báo sai không có huy hiệu; "đừng để mắc những lỗi sơ đẳng".
 - **Phản biện của Claude:** đồng ý cả 7 vấn đề, phản biện hai cách làm: tô chip giờ theo trạng thái điểm danh thì thẻ có hai chip cùng màu nói một điều; tô đỏ phần chưa quét thì đỏ mất nghĩa "Vắng, lỗi". thien chọn phương án A ở cả 3 thẻ D-25, D-26, D-27.
 - **Tự kiểm:** đọc toàn bộ chữ trên 55 frame và đối chiếu với dòng thời gian một ngày. Lỗi nặng nhất Claude tự để lại: nhánh "Sửa thành Có mặt" áp cho người vừa bị phát hiện quét hộ (Linh), tức prototype thưởng cho gian lận mà D-21 muốn chặn. Script đọc reaction trang 06: 63 frame, 0 đích hỏng, không có ngõ cụt.
+
+## AI-26 — Đặc tả, handoff và các trạng thái còn thiếu (S5, 14/10/2026)
+
+- **Việc làm:** viết `design/screen-spec.md` (15 màn), `design/design-decisions.md` (DD-1..DD-10 và checklist a11y có số đo), `handoff/flutter-handoff.md` (2 bảng ánh xạ, 6 mục cho mỗi màn). Viết spec làm lộ ra 8 trạng thái user flow có nêu mà Figma chưa vẽ; thien yêu cầu vẽ hết (16:05) và nối vào prototype (16:27).
+- **Góp ý của thien và phản biện:** thien chỉ ra SC-01 sai cách đăng nhập của sinh viên K19 trở đi (CR-41). thien hỏi 5 phút và 15 giây đã được phản biện chưa; Claude thừa nhận là chưa, phản biện và tìm ra lỗi đồng hồ ở nhánh mở từ xa (CR-42); thien chọn D-28 A.
+- **Tự kiểm:** ở SC-04 nhánh "Nhỏ hơn", Claude suýt viết "không có lượt quét thừa"; câu này sai vì 1 lượt quét hộ cộng 3 người chưa quét cũng ra −2, nên màn vẫn dẫn sang kiểm tra ngẫu nhiên như FL-1. Script đọc reaction trang 06 sau khi nối: 84 frame, 0 đích hỏng, 0 frame chồng nhau, mọi frame có lối vào và lối ra; bỏ 4 điểm bắt đầu thừa do Figma tự tạo.
+- **Chưa làm:** hai nút Có mặt / Vắng ở SC-06 còn lượt cần xem và nút "Chiếu tạm mã từ điện thoại" chưa có màn đích (`design/figma-build.md` mục 3).
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 

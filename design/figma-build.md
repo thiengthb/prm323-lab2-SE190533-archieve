@@ -20,7 +20,7 @@
 | 03 Final UI | 68 frame 360 × 800 (15 màn và 53 biến thể trạng thái, đặt cùng hàng bên phải màn gốc), 1 frame web 1280 × 720 "Màn hình phòng P.205", và hàng kiểm 412 dp (3 frame 412 × 915). Tên frame (Figma hiện phía trên) mang mã truy vết, dưới mỗi frame có một ghi chú trỏ về TC, NT, CR và giờ trong ngày | `SC-01-…png` tới `SC-15-…png`, `SC-03-mo-tu-xa.png`, `SC-03-man-hinh-phong-p205.png`, `SC-11-sheet-khong-quet-duoc.png`, `SC-02-dang-tai-skeleton.png`, `SC-07-da-xu-ly-het.png`, `SC-09-bao-sai-co-ket-qua.png`, `SC-03-laptop-chua-ket-noi.png`, `SC-04-so-quet-nho-hon.png`, `SC-06-con-luot-can-xem.png`, `SC-08-da-tu-choi.png`, `a11y-412-*.png` |
 | 04 Design System | Biến màu (Light bắt buộc, Dark tùy chọn), 7 text style Inter, khoảng cách, góc bo, 4 effect style, xem trước Light/Dark | `page-04-design-system.png` |
 | 05 Components | 35 icon Lucide và 15 component set CMP-01..CMP-15 dựng bằng Auto Layout, variant và biến token. CMP-04 có thêm 2 thuộc tính "Có báo sai mới" và "Số báo sai" | `page-05-components.png` |
-| 06 Prototype | 8 hàng, 9 điểm bắt đầu, xem mục 3 | — |
+| 06 Prototype | 12 hàng, 12 điểm bắt đầu, 84 frame, xem mục 3 | — |
 
 Token chỉ lấy từ DESIGN.md (CR-21): 18 biến màu trong collection "Color · DESIGN.md v2", 16 biến số trong collection "Scale · DESIGN.md v2". Màu, khoảng cách, góc bo và chiều cao 48 dp trong component đều gắn biến, không nhập số tay.
 
@@ -58,18 +58,20 @@ Mỗi hàng là một luồng, có tiêu đề và một dòng mô tả ở trê
 
 | Hàng | Điểm bắt đầu | Đường đi | Overlay, loading | Lỗi và hồi phục |
 |---|---|---|---|---|
-| FL-1 · Giảng viên điểm danh tại lớp | SC-01 | Đăng nhập → SC-02 đang tải → 06:58 → Mở điểm danh → SC-03 → đóng QR → SC-04 → SC-05 → SC-06 → xác nhận → Chờ điền lên FAP → Thử điền lại → Đã lên FAP → SC-02 07:15 | Dialog đóng QR sớm; dialog xác nhận gửi lên FAP; SC-02 đang tải 1 giây | Ở SC-04 bấm "−" để thấy số quét lớn hơn số người, "+" để về lại. "Về lịch dạy" khi đang chờ điền đưa tới SC-02 07:15 có thẻ Chờ điền lên FAP, chạm thẻ để thử lại |
-| FL-1 nhánh K1b · Mở từ xa | SC-02 06:58 | Mở từ xa → SC-03 mở từ xa (chạm khung xanh để xem trang Màn hình phòng P.205) → "Tôi đã vào lớp: đóng QR" → QR đã đóng (ghi "Mở từ xa lúc 06:55") → nối vào SC-04 của FL-1 | — | Phiên mở từ xa không lên FAP trước bước đối chiếu |
-| FL-1 lỗi · Email chưa đăng ký với trường | SC-01 lỗi tài khoản | Đăng nhập lại → nối vào FL-1 | — | Có |
+| FL-1 · Giảng viên điểm danh tại lớp | SC-01 | Đăng nhập (nút đang quay 1 giây) → SC-02 đang tải → 06:58 → Mở điểm danh → SC-03 (nhánh phụ: quay lại → SC-02 07:03 QR đang mở → chạm thẻ → SC-03 QR sắp đóng, tự sang QR đã đóng sau 20 giây) → đóng QR → SC-04 → SC-05 → SC-06 → xác nhận → Chờ điền lên FAP → Thử điền lại → Đã lên FAP → SC-02 07:15 | Dialog đóng QR sớm; dialog xác nhận gửi lên FAP; SC-02 đang tải 1 giây | Ở SC-04 bấm "−" để thấy số quét lớn hơn số người, "+" để thấy số quét nhỏ hơn số người; ở mỗi biến thể bấm ngược lại để về số khớp. "Về lịch dạy" khi đang chờ điền đưa tới SC-02 07:15 có thẻ Chờ điền lên FAP, chạm thẻ để thử lại |
+| FL-1 nhánh K1b · Mở từ xa | SC-02 06:58 | Mở từ xa → SC-03 mở từ xa (chạm khung xanh để xem trang Màn hình phòng P.205) → "Tôi đã vào lớp: đóng QR" → QR đã đóng (ghi "Mở từ xa lúc 06:55") → nối vào SC-04 của FL-1. Quay lại từ QR đã đóng → SC-02 07:06 thẻ "Chờ xác nhận" → chạm thẻ → SC-04 | — | Phiên mở từ xa không lên FAP trước bước đối chiếu |
+| FL-1 lỗi · Email chưa đăng ký với trường | SC-01 lỗi tài khoản | Đăng nhập lại (nút đang quay) → nối vào FL-1 | — | Có |
+| FL-1 nhánh lớn hơn · Còn lượt quét cần xem | SC-04 số quét lớn hơn | Kiểm tra ngẫu nhiên → 3/3 → SC-06 còn 2 lượt quét cần xem, nút gửi FAP tắt | — | NT-3: không gửi được khi còn cờ. Hai nút Có mặt / Vắng chưa nối màn |
+| FL-1 lỗi · Laptop chưa kết nối | SC-03 laptop chưa kết nối | Sau 8 giây giả lập laptop vừa kết nối → SC-03 bình thường → nối vào FL-1 | — | Nút "Chiếu tạm mã từ điện thoại" chưa nối: chưa vẽ màn chiếu mã trên điện thoại |
 | FL-2 · Sinh viên quét mã (K5) | SC-09 07:01 | Quét mã → SC-10 (chạm khung quét) → đang xác thực → Mã hết hạn → Quét lại → thành công → SC-09 chờ xác nhận → tab Báo sai (trống) | SC-11 đang xác thực 1,2 giây, hai lần; "Không quét được?" ở SC-10 và SC-11 mở sheet (overlay, trượt từ dưới lên) | Mã hết hạn → Quét lại |
 | FL-2 lỗi · Camera và mất mạng | SC-10 chưa có quyền camera | Cấp quyền → quét → mất mạng → thử lại → thành công | SC-11 đang xác thực | Chưa cấp camera; mất mạng |
 | FL-2 · Sinh viên báo sai (K3) | SC-09 20:58 | Chạm MAS291 → SC-12 → SC-13 → đang gửi → mất mạng → gửi lại → SC-14 Đã gửi 21:02 → tab Hôm nay: SC-09 21:22, tab Báo sai có huy hiệu 1 → mở tab: SC-14 Đã sửa, huy hiệu mất | SC-13 đang gửi 1,2 giây, hai lần | Mất mạng khi gửi → Thử gửi lại |
 | FL-2 phục hồi · Bị từ chối | SC-14 bị từ chối | Xem cách gửi đơn khiếu nại → SC-15; tab Hôm nay → SC-09 21:22 (MAS291 vẫn Vắng, báo sai bị từ chối) | — | Đường sang đơn khiếu nại |
 | FL-2 phục hồi · Quá hạn (K4) | SC-12 đã qua hạn (13/10) | Xem cách gửi đơn khiếu nại → SC-15 | — | Như trên |
-| FL-3 thứ tự khác · Vy trước | Chạm thẻ Vy ở SC-07 | SC-08 Vy → Sửa thành Có mặt → SC-07 còn Linh (huy hiệu 1) → SC-08 Linh → Từ chối (overlay) → SC-07 đã xử lý hết → SC-02 12:08 | Dialog từ chối | Hai thứ tự cùng kết thúc ở một màn; chữ "đã xử lý" không ghi phút để đúng với cả hai thứ tự |
-| FL-3 · Xử lý báo sai | SC-02 12:05 | Tab Báo sai (huy hiệu 2) → SC-07 → báo sai của Hoàng Mai Linh → Từ chối → SC-07 còn 1 (huy hiệu 1) → báo sai của Ngô Thanh Vy → Sửa thành Có mặt → SC-08 đã sửa → SC-07 đã xử lý hết → tab Hôm nay: SC-02 12:08, không còn huy hiệu | Dialog từ chối (Destructive) | Ở SC-07 còn 1 báo sai, tab Hôm nay → SC-02 12:06 có huy hiệu 1. Hủy trên dialog quay lại SC-08. Prototype đi nhánh khớp bằng chứng: Linh có bằng chứng không có mặt nên chỉ nối "Từ chối"; Vy không có bằng chứng ngược nên chỉ nối "Sửa thành Có mặt" |
+| FL-3 thứ tự khác · Vy trước | Chạm thẻ Vy ở SC-07 | SC-08 Vy → Sửa thành Có mặt → SC-07 còn Linh (huy hiệu 1) → SC-08 Linh → Từ chối (overlay) → SC-08 đã từ chối → SC-07 đã xử lý hết → SC-02 12:08 | Dialog từ chối | Hai thứ tự cùng kết thúc ở một màn; chữ "đã xử lý" không ghi phút để đúng với cả hai thứ tự |
+| FL-3 · Xử lý báo sai | SC-02 12:05 | Tab Báo sai (huy hiệu 2) → SC-07 → báo sai của Hoàng Mai Linh → Từ chối → SC-08 đã từ chối → SC-07 còn 1 (huy hiệu 1) → báo sai của Ngô Thanh Vy → Sửa thành Có mặt → SC-08 đã sửa → SC-07 đã xử lý hết → tab Hôm nay: SC-02 12:08, không còn huy hiệu | Dialog từ chối (Destructive) | Ở SC-07 còn 1 báo sai, tab Hôm nay → SC-02 12:06 có huy hiệu 1. Hủy trên dialog quay lại SC-08. Prototype đi nhánh khớp bằng chứng: Linh có bằng chứng không có mặt nên chỉ nối "Từ chối"; Vy không có bằng chứng ngược nên chỉ nối "Sửa thành Có mặt" |
 
-Đã kiểm bằng script đọc toàn bộ reaction trên trang 06: 71 frame, 0 đích hỏng, frame nào cũng có lối ra, chỉ 9 điểm bắt đầu là không có mũi tên đi vào. Mọi màn có thanh điều hướng đều nối tab còn lại; mọi nút đang bật đều có hành động, trừ nút cố ý không nối: "Sửa thành Có mặt" của Linh và "Từ chối" của Vy (ngược bằng chứng, xem SC-08). "Ghi tay thêm sinh viên" mở sheet; "Mở FAP" mở fap.fpt.edu.vn. Thẻ buổi học sắp tới hoặc đã qua trên Hôm nay chỉ để xem, không có màn chi tiết trong phạm vi 15 màn. Vùng bấm (hotspot) trong suốt; script cũng kiểm không còn vùng bấm nào có nền.
+Đã kiểm bằng script đọc toàn bộ reaction trên trang 06 (14/10, sau khi nối 8 trạng thái mới): 84 frame, 0 đích hỏng, 0 frame chồng nhau, frame nào cũng có lối ra, mọi frame không phải điểm bắt đầu đều có mũi tên đi vào. Bảng Flow còn 12 điểm bắt đầu, đã bỏ 4 điểm thừa do Figma tự tạo (tên "Flow n" hoặc trùng tên). Mọi màn có thanh điều hướng đều nối tab còn lại; mọi nút đang bật đều có hành động, trừ nút cố ý không nối: "Sửa thành Có mặt" của Linh và "Từ chối" của Vy (ngược bằng chứng, xem SC-08), hai nút Có mặt / Vắng ở SC-06 còn lượt cần xem và "Chiếu tạm mã từ điện thoại" ở SC-03 laptop chưa kết nối (chưa có màn đích). "Ghi tay thêm sinh viên" mở sheet; "Mở FAP" mở fap.fpt.edu.vn. Thẻ buổi học sắp tới hoặc đã qua trên Hôm nay chỉ để xem, không có màn chi tiết trong phạm vi 15 màn. Vùng bấm (hotspot) trong suốt; script cũng kiểm không còn vùng bấm nào có nền.
 
 ## 4. Khoảng trống còn lại
 
@@ -87,7 +89,7 @@ Mỗi hàng là một luồng, có tiêu đề và một dòng mô tả ở trê
 | Lấp khoảng trống: 4 trạng thái SC-11, sheet "Không quét được?", kiểm 412 dp (đã xong, xem mục 7) | Claude |
 | Chọn mọi điểm rẽ trên thẻ quyết định (D-xx) | thien |
 | Mở FAP thật, đối chiếu chữ ở SC-15 | thien |
-| Chạy cả 9 điểm bắt đầu ở chế độ Present, báo chỗ nào khó hiểu | thien |
+| Chạy cả 12 điểm bắt đầu ở chế độ Present, báo chỗ nào khó hiểu | thien |
 | Nắm lý do của D-21 và D-24 để trả lời khi vấn đáp | thien |
 
 ## 6. Vòng sửa IT-3b (14/10, theo góp ý của thien)
@@ -154,4 +156,4 @@ Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
 | SC-06 · Còn lượt quét cần xem (NT-3) | "Cần xử lý 2", hai nút Có mặt / Vắng dưới mỗi lượt quét bị gắn cờ, nút chính tắt kèm lý do |
 | SC-08 · Đã từ chối (Giữ Vắng) | Banner trung tính nói sinh viên đã nhận lý do và đường khiếu nại; một nút "Về danh sách báo sai" |
 
-Trang 01: ô "Có người chưa quét được" của FL-1 thêm nhãn "SC-04 · nhỏ hơn" nhảy tới frame mới, đổi từ viền đứt (việc của hệ thống) sang viền liền (màn giảng viên thao tác). Các frame mới chưa nối vào prototype trang 06; prototype vẫn đi các nhánh chính như trước.
+Trang 01: ô "Có người chưa quét được" của FL-1 thêm nhãn "SC-04 · nhỏ hơn" nhảy tới frame mới, đổi từ viền đứt (việc của hệ thống) sang viền liền (màn giảng viên thao tác). Cả 8 frame đã được nối vào prototype trang 06 (thien yêu cầu lúc 16:27): 6 frame chèn vào các hàng có sẵn, 2 hàng mới cho nhánh lớn hơn còn cờ và laptop chưa kết nối. Xem bảng mục 3.

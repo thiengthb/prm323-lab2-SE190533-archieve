@@ -248,7 +248,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 - Không có bằng chứng ngược: frame "… · Ngô Thanh Vy (mất mạng)".
 - Dialog từ chối (overlay, CMP-06 Destructive): "Từ chối báo sai của Hoàng Mai Linh?", lý do sẽ gửi cho sinh viên, nút "Hủy" và "Từ chối".
 - Đã sửa: frame "… · Đã sửa". "Đã sửa thành Có mặt. Extension sẽ điền lại lên FAP; sinh viên đã được báo." Nút "Về danh sách báo sai".
-- Đã từ chối: frame "SC-08 · Chi tiết báo sai · Đã từ chối (Giữ Vắng)". Banner trung tính "Đã từ chối, giữ Vắng. Sinh viên đã nhận lý do (không có mặt khi kiểm tra ngẫu nhiên lúc 07:07) và hướng dẫn gửi đơn khiếu nại trên FAP.", chip "Giữ Vắng", một nút "Về danh sách báo sai". Prototype vẫn về thẳng SC-07 từ dialog.
+- Đã từ chối: frame "SC-08 · Chi tiết báo sai · Đã từ chối (Giữ Vắng)". Banner trung tính "Đã từ chối, giữ Vắng. Sinh viên đã nhận lý do (không có mặt khi kiểm tra ngẫu nhiên lúc 07:07) và hướng dẫn gửi đơn khiếu nại trên FAP.", chip "Giữ Vắng", một nút "Về danh sách báo sai". Prototype: dialog Từ chối → frame này → "Về danh sách báo sai" → SC-07.
 
 **Quy tắc.** Lý do từ chối lấy từ bằng chứng có sẵn và được gửi kèm hướng dẫn đơn khiếu nại (SC-15). Bằng chứng "Kiểm tra" chỉ có khi sinh viên đã quét và được chọn kiểm tra ngẫu nhiên (CR-36). Prototype chỉ nối nhánh khớp bằng chứng (CR-34).
 
