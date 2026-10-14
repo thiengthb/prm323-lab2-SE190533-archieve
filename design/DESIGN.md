@@ -3,125 +3,144 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-BRIEF |
+| Phiên bản | **v2** (14/10/2026). v1 dùng bảng màu thienui, xem lịch sử git và DES-AUDIT |
 | Trạng thái | Chờ duyệt (viết **trước** prompt Stitch đầu tiên) |
-| Đầu vào | UX-PERSONA, UX-FLOW, bộ token thienui của app FAP Attendance (`apps/mobile/lib/app/theme.dart`, nhánh của thien) |
-| Quyết định liên quan | D-06, D-12, D-17, D-18, D-19 |
+| Đầu vào | UX-PERSONA, UX-FLOW, UX-INTEGRITY, O-02 (màu đo từ FAP thật), DES-AUDIT |
+| Quyết định liên quan | D-12, D-17, D-18, D-19, D-20, D-21 |
 
-Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn gốc của token trong Figma (trang 04) và trong handoff Flutter. Tên token giống hệt nhau ở cả ba nơi (`process/conventions.md`, mục 2).
+Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn gốc của token trong Figma (trang 04) và trong handoff Flutter. Tên token giống hệt nhau ở cả ba nơi (`process/conventions.md`, mục 2). Mỗi giá trị đều ghi rõ nguồn: **FAP** (đo từ FAP thật, O-02), **WCAG**, **M3** (Material Design 3, khớp với Flutter), hay **Nghiên cứu** (mã F, N).
 
 ---
 
 ## 1. Sản phẩm trong một đoạn
 
-Ứng dụng di động **bổ trợ** FAP cho cơ sở FPTU TP.HCM, không thay FAP. Giảng viên (P-01, Primary) điểm danh một slot bằng đúng cách đọc tên quen thuộc nhưng xử lý ngay các ca lệch: đáp nhỏ, trùng tên, đến muộn hợp lệ. Sinh viên (P-02, Secondary) thấy trạng thái buổi vừa học và báo sai cho giảng viên **trước khi hết ngày**. Qua hạn thì ứng dụng chỉ dẫn sang "Đơn khiếu nại điểm danh" trên FAP. 13 màn hình, 3 flow (`ux/user-flow.md`).
+Ứng dụng di động **bổ trợ** FAP cho cơ sở FPTU TP.HCM, không thay FAP. Giảng viên (P-01) mở điểm danh ở lớp hoặc từ xa; QR hiện trên màn chiếu, cả lớp quét cùng lúc. Giảng viên đối chiếu sĩ số, kiểm tra ngẫu nhiên vài sinh viên bằng ảnh FAP, rồi xác nhận; extension trên laptop điền kết quả lên FAP. Sinh viên (P-02) quét QR, thấy ngay trạng thái của mình, và báo sai cho giảng viên **trước khi hết ngày**. Qua hạn thì ứng dụng chỉ dẫn sang "Đơn khiếu nại điểm danh" trên FAP.
 
-## 2. Nguyên tắc thiết kế (rút từ nghiên cứu)
+## 2. Nguyên tắc thiết kế
 
 | # | Nguyên tắc | Vì sao | Nguồn |
 |---|---|---|---|
-| NT-1 | **Giữ ngôn ngữ và thứ tự của FAP.** Danh sách theo đúng thứ tự FAP; trạng thái là Attended, Absent, Not yet (hiển thị "Có mặt", "Vắng", "Chưa điểm danh"). | Bổ trợ, không bắt học lại; người đồng tình ngại đổi | D-12, RB-1 |
-| NT-2 | **Trạng thái luôn có chữ và biểu tượng, không chỉ màu.** | SV mắt kém, chế độ thang xám, WCAG 1.4.1 | F-19, R09 |
-| NT-3 | **Không có ca nào bị bỏ lửng.** Trước khi lưu, màn hình phải nói rõ còn ca nào chưa xử lý. | Lỗi chính nằm ở các ca lệch khỏi lượt đọc tên | F-01b, F-04, N-04 |
-| NT-4 | **Thời hạn luôn hiện.** Màn nào cho sửa hoặc báo sai đều ghi mốc "trước 23:59 hôm nay" (LUK: 2 ngày). | Quá ngày là chuyển sang đơn, mất nhiều ngày | F-10a, RB-4 |
-| NT-5 | **Không báo thành công giả.** Mất mạng thì hiện "Đang chờ gửi", chỉ hiện "Đã lên FAP" khi FAP đã nhận. | GV cần biết chắc kết quả đã lên | N-11, TC-3 |
-| NT-6 | **Một tay, vùng ngón cái.** Hành động chính ở nửa dưới màn hình; vùng chạm ≥ 48 × 48 dp. | GV đứng hoặc đi giữa các dãy lab | P-01 ràng buộc |
+| NT-1 | **Nói ngôn ngữ của FAP.** Dùng đúng chữ trạng thái "Có mặt", "Vắng", "Chưa điểm danh", cùng nghĩa màu và biểu tượng của FAP mới. | Người dùng FAP lâu năm không phải học lại (Jakob's Law; Nielsen #4) | D-12, D-20, O-02, RB-1 |
+| NT-2 | **Trạng thái luôn có chữ và biểu tượng, không chỉ màu.** | SV mắt kém, thang xám, WCAG 1.4.1; FAP cũng làm vậy | F-19, O-02.9–O-02.11 |
+| NT-3 | **Không xác nhận khi còn ca chưa rõ.** Trước khi gửi lên FAP, màn hình nói rõ sĩ số đã khớp chưa và đã kiểm tra ngẫu nhiên chưa. | QR bỏ bước người kiểm tra; phải đưa lại | UX-INTEGRITY, D-21 |
+| NT-4 | **Thời hạn luôn hiện.** Màn nào cho báo sai đều ghi "trước 23:59 hôm nay" (LUK: 2 ngày). | Quá ngày là chuyển sang đơn, mất nhiều ngày | F-10a, RB-4 |
+| NT-5 | **Không báo thành công giả.** "Đã lên FAP" chỉ hiện khi extension điền xong; trước đó là "Chờ điền lên FAP". | Giảng viên cần biết chắc kết quả đã lên | D-18, N-11 |
+| NT-6 | **Một tay, vùng ngón cái.** Hành động chính ở nửa dưới màn hình; vùng chạm ≥ 48 × 48 dp. | Giảng viên cầm điện thoại khi đi lại trong lớp | P-01; M3; đề bài |
+| NT-7 | **Quen thuộc nhưng không giả FAP.** Không dùng logo FPT hay chữ "FAP" làm tên ứng dụng; khác FAP ở tên và biểu tượng ứng dụng. | Ứng dụng đòi đăng nhập tài khoản trường; trông y hệt FAP dễ bị nhầm là app chính thức | DES-AUDIT mục 3 |
 
 ## 3. Giọng văn
 
-- Tiếng Việt, ngắn, trung tính, xưng hô "bạn" với sinh viên và không xưng hô với giảng viên (dùng câu mệnh lệnh nhẹ: "Lưu điểm danh").
-- Gọi đúng tên việc: "Báo sai điểm danh", không dùng "Khiếu nại" trong ngày (khiếu nại là đơn gửi phòng QLĐT sau hạn).
-- Thông báo lỗi theo mẫu: **chuyện gì xảy ra + vì sao + làm gì tiếp**. Ví dụ: "Chưa gửi được lên FAP. Mạng đang mất. Kết quả đã lưu trên máy và sẽ tự gửi khi có mạng."
-- Không dùng từ đổ lỗi ("Bạn đã nhập sai"); không dùng chấm than.
+- Tiếng Việt, ngắn, trung tính, xưng "bạn" với sinh viên; với giảng viên dùng câu mệnh lệnh nhẹ ("Mở điểm danh", "Xác nhận và gửi lên FAP").
+- Gọi đúng tên việc: "Báo sai điểm danh" (trong ngày, gửi giảng viên), khác với "Đơn khiếu nại điểm danh" (sau hạn, gửi phòng QLĐT trên FAP).
+- Thông báo lỗi theo mẫu **chuyện gì xảy ra + vì sao + làm gì tiếp**. Ví dụ: "Mã đã hết hạn. Mã đổi sau mỗi 15 giây. Quét lại mã đang hiện trên màn chiếu."
+- Không đổ lỗi, không chấm than, không đe dọa. Câu nhắc chống gian lận: "Điểm danh hộ là gian lận học tập. Giảng viên sẽ kiểm tra ngẫu nhiên."
 
 ## 4. Màu (light theme bắt buộc)
 
-Nền ấm, một màu thương hiệu đất nung (clay) cho **một** hành động chính mỗi vùng. Giá trị lấy từ thienui; đã kiểm tương phản WCAG.
+**Chiến lược (D-20, phương án C):** lấy đúng màu chính và nghĩa màu trạng thái của FAP mới (O-02). Những chỗ FAP chưa đạt WCAG thì dùng biến thể đậm hơn cùng sắc độ. Tương phản được tính bằng công thức WCAG 2.1.
 
-| Token | Light | Dark (tùy chọn) | Dùng cho | Tương phản (light) |
-|---|---|---|---|---|
-| `color/canvas` | `#FAF9F5` | `#262624` | Nền màn hình | — |
-| `color/surface` | `#FFFFFF` | `#30302E` | Card, sheet, ô nhập | — |
-| `color/raised` | `#F0EEE6` | `#1F1E1D` | Nền nhóm, hàng đang chọn | — |
-| `color/text` | `#141413` | `#FAF9F5` | Chữ chính | 17,5:1 trên canvas |
-| `color/muted` | `#686762` | `#A5A49E` | Chữ phụ (giờ, mã SV) | 5,38:1 trên canvas; 4,88:1 trên raised |
-| `color/border` | `#E3E1DA` | `#3D3D3B` | Đường chia trang trí | Không dùng cho viền điều khiển |
-| `color/border-control` | `#87867F` | `#8F8E89` | Viền ô nhập, nút viền | 3,47:1 trên canvas (WCAG 1.4.11) |
-| `color/brand` | `#D97756` | `#D97756` | Nền nút chính | Chữ `color/on-brand` 5,9:1 |
-| `color/on-brand` | `#141413` | `#141413` | Chữ trên nền brand | — |
-| `color/brand-text` | `#AB4926` | `#EC8B64` | Link, tab đang chọn, viền focus | 5,37:1 trên canvas |
-| `color/ok` | `#00773F` | `#47B878` | Có mặt, đã sửa, đã lên FAP | 5,37:1 trên canvas |
-| `color/warn` | `#8B5E00` | `#E9B452` | Đến muộn, đang chờ gửi, sắp hết hạn | 5,39:1 |
-| `color/alert` | `#C81E3A` | `#FF7B81` | Vắng, lỗi | 5,38:1 |
-| `color/info` | `#006BAB` | `#54AAEF` | Thông tin, chưa điểm danh (Not yet) | 5,4:1 |
-| `color/destructive` | `#C82223` | `#FF7B7D` | Nền nút phá hủy (từ chối báo sai) | Chữ `color/on-destructive` 5,52:1 |
-| `color/on-destructive` | `#FCFCFC` | `#141413` | Chữ trên nền destructive | — |
-| `color/*-soft` | màu gốc 12% trên surface | như light | Nền chip trạng thái | Chữ màu gốc trên soft ≥ 4,63:1 |
+| Token | Light | Dark (tùy chọn) | Dùng cho | Nguồn | Tương phản (light) |
+|---|---|---|---|---|---|
+| `color/canvas` | `#EEEEF1` | `#1C1F26` | Nền màn hình | FAP (O-02.8) | — |
+| `color/surface` | `#FFFFFF` | `#262A33` | Thẻ, sheet, ô nhập | FAP | — |
+| `color/raised` | `#F2F2F7` | `#2F3440` | Đầu bảng, nhóm, hàng đang chọn | FAP (đầu bảng) | — |
+| `color/text` | `#212529` | `#E7E9F0` | Chữ chính | FAP (O-02.8) | 13,3:1 trên canvas |
+| `color/muted` | `#5C636A` | `#A3A9B3` | Chữ phụ: giờ, mã SV, phòng | FAP `#6C757D`, **làm đậm** vì chỉ đạt 4,05:1 trên nền trang | 5,26:1 trên canvas |
+| `color/border` | `#E3E5EC` | `#3A3F4B` | Đường chia trang trí | — | Không dùng cho viền điều khiển |
+| `color/border-control` | `#767D86` | `#8A919B` | Viền ô nhập, nút viền | WCAG 1.4.11 | 3,59:1 trên canvas |
+| `color/primary` | `#4254BA` | `#8C9BF0` | Nút chính, link, tab đang chọn, viền focus | **FAP** (nút "Tuần hiện tại", O-02.6) | 6,54:1 với chữ trắng; 5,65:1 trên canvas |
+| `color/on-primary` | `#FFFFFF` | `#1C1F26` | Chữ trên nền primary | FAP | 6,54:1 |
+| `color/primary-soft` | `#ECEEF8` | `#2E3557` | Nền chip ngày, mục menu đang chọn | FAP (O-02.6) | primary trên soft 5,66:1 |
+| `color/success` | `#0D6E45` | `#4CC38A` | **Có mặt**, đã sửa, đã lên FAP | FAP `#0F7A4C` (báo cáo điểm danh), **làm đậm** để đạt 4,5:1 trên chip | 5,38:1 trên soft |
+| `color/success-soft` | `#E3F0EA` | `#1F3A2E` | Nền chip "Có mặt" | FAP (O-02.9) | — |
+| `color/warning` | `#855A00` | `#F2B84B` | **Chưa điểm danh**, chờ điền lên FAP, chờ giảng viên xác nhận | FAP `#9A6700`, **làm đậm** | 5,53:1 trên soft |
+| `color/warning-soft` | `#FFF4D2` | `#3A3220` | Nền chip "Chưa điểm danh" | FAP (O-02.11) | — |
+| `color/danger` | `#B42318` | `#FF8A80` | **Vắng**, lỗi, từ chối báo sai | Chưa có ảnh FAP (O-02.15); chọn đỏ đạt chuẩn, **Assumed** | 5,68:1 trên canvas |
+| `color/danger-soft` | `#FDECEA` | `#3D2222` | Nền chip "Vắng", nền lỗi | Assumed | danger trên soft 5,75:1 |
+| `color/slot` | `#9A3412` | `#FDBA8C` | Giờ của slot | FAP (O-02.12, chip giờ ở báo cáo) | 6,51:1 trên soft |
+| `color/slot-soft` | `#FFEFE2` | `#3A2A20` | Nền chip giờ | FAP | — |
 
-**Quy tắc:** `color/brand` không dùng làm màu chữ hay biểu tượng mảnh (chỉ 2,96:1 trên canvas); dùng `color/brand-text`. Mỗi màn chỉ một nút nền brand.
+**Quy tắc màu:**
+- Xanh chàm `primary` chỉ có nghĩa "bấm được hoặc đang chọn". Không dùng cho trạng thái.
+- Xanh lá, vàng, đỏ chỉ dùng cho trạng thái, luôn đi kèm chữ và biểu tượng (NT-2).
+- Mỗi màn chỉ có một nút nền `primary`.
+- Không dùng màu xanh ngọc `#17A497` và vàng `#E5AF0C` của thời khóa biểu FAP, vì hai màu này không đạt 4,5:1 (O-02.10, O-02.13).
 
 ## 5. Chữ
 
-Font **Inter** (hỗ trợ đủ dấu tiếng Việt). Không có chữ nào dưới 14 sp. Bố cục phải chịu được cỡ chữ hệ thống 200% (NT-2, P-02 accessibility).
+**Font: Roboto**, nếu DevTools xác nhận FAP mới dùng Roboto (O-02.5, hiện là Inferred). Lý do: quen mắt với người dùng FAP và là font hệ thống của Android; Roboto đủ dấu tiếng Việt. Nếu FAP dùng font khác, theo font đó, miễn là có đủ dấu tiếng Việt. Không có chữ nào dưới 14 sp. Bố cục phải chịu được cỡ chữ hệ thống 200%.
 
-| Token | Cỡ / dòng (sp) | Độ đậm | Dùng cho |
-|---|---|---|---|
-| `type/display` | 24 / 32 | 600 | Số lớn: "28/32 có mặt" |
-| `type/title-lg` | 20 / 28 | 600 | Tiêu đề màn |
-| `type/title-md` | 16 / 24 | 600 | Tiêu đề card, tên môn |
-| `type/body-lg` | 16 / 24 | 400 | **Tên sinh viên trong danh sách** (đọc ở tầm tay khi đứng) |
-| `type/body-md` | 14 / 20 | 400 | Chữ thân |
-| `type/label` | 14 / 20 | 500 | Nút, tab, chip |
-| `type/mono` | 14 / 20 | 500, chữ số đều | Mã SV (SE190533), giờ (07:04) |
+Thang chữ theo **M3**, để handoff khớp `TextTheme` mặc định của Flutter:
+
+| Token | M3 | Cỡ / dòng (sp) | Độ đậm | Dùng cho |
+|---|---|---|---|---|
+| `type/headline-sm` | headlineSmall | 24 / 32 | 500 | Số lớn: "31/32 đã quét" |
+| `type/title-lg` | titleLarge | 22 / 28 | 500 | Tiêu đề màn |
+| `type/title-md` | titleMedium | 16 / 24 | 500 | Tiêu đề thẻ, tên môn |
+| `type/body-lg` | bodyLarge | 16 / 24 | 400 | Tên sinh viên |
+| `type/body-md` | bodyMedium | 14 / 20 | 400 | Chữ thân |
+| `type/label-lg` | labelLarge | 14 / 20 | 500 | Nút, tab, chip |
+| `type/mono` | (riêng) | 14 / 20 | 500, chữ số đều | Mã SV, giờ, mã lớp. Dùng `FontFeature.tabularFigures()` |
 
 ## 6. Khoảng cách, góc bo, độ nổi
 
-| Nhóm | Token | Giá trị |
-|---|---|---|
-| Khoảng cách (lưới 4) | `space/1` … `space/8` | 4, 8, 12, 16, 20, 24, 32, 40 dp |
-| Lề màn hình | `space/4` | 16 dp hai bên |
-| Chiều cao điều khiển | `size/control` | **48 dp** (thienui gốc là 44 dp; nâng lên để đạt 48 × 48 dp) |
-| Góc bo | `radius/sm`, `radius/md`, `radius/lg`, `radius/full` | 8 (nút, ô nhập), 14 (card), 20 (bottom sheet, dialog), 999 (chip) |
-| Độ nổi | `elevation/0`, `elevation/1`, `elevation/2`, `elevation/3` | Phẳng; card (y1 blur3 8%); thanh dưới cố định (y2 blur8 10%); dialog, sheet (y4 blur16 14%) |
+| Nhóm | Token | Giá trị | Nguồn |
+|---|---|---|---|
+| Khoảng cách | `space/1` … `space/8` | 4, 8, 12, 16, 20, 24, 32, 40 dp | Lưới 4 dp của M3 |
+| Lề màn hình | `space/4` | 16 dp | M3 (khung compact) |
+| Chiều cao điều khiển | `size/control` | 48 dp | Đề bài; M3 (vùng chạm tối thiểu 48 × 48 dp) |
+| Góc bo | `radius/sm`, `radius/md`, `radius/lg`, `radius/xl`, `radius/full` | 8 (nút, ô nhập, chip), 12 (thẻ), 16 (bottom sheet), 28 (dialog), 999 (chip tròn) | Thang góc bo M3 (small, medium, large, extra-large) |
+| Độ nổi | `elevation/0` … `elevation/3` | 0 (phẳng), 1 (thẻ), 2 (thanh đáy cố định), 3 (dialog, sheet) | Các mức elevation của M3 |
 
 ## 7. Bố cục
 
 - Khung 360 × 800 dp; kiểm ở 360 và 412 dp.
-- Cấu trúc chung: App bar (56 dp) → nội dung cuộn → thanh hành động cố định đáy (khi màn có một hành động chính) → bottom navigation 2 tab cho mỗi vai trò.
-- Màn điểm danh (SC-03, SC-04) **ẩn bottom navigation**, thay bằng thanh tiến độ "Đã đánh 18/32" và nút chính ở đáy.
-- Mỗi dòng sinh viên cao ≥ 64 dp, hai nút **Có** và **Vắng** mỗi nút ≥ 48 × 48 dp, nằm bên phải (vùng ngón cái của tay phải). Cách nhau ≥ 8 dp để tránh chạm nhầm.
+- Cấu trúc chung: App bar (64 dp) → nội dung cuộn → thanh hành động cố định đáy (khi màn có một hành động chính) → thanh điều hướng đáy 2 tab cho mỗi vai trò.
+- Màn phiên điểm danh của giảng viên **ẩn thanh điều hướng**, thay bằng bộ đếm "Đã quét 31/32" ở trên và nút chính ở đáy.
+- Dòng sinh viên cao ≥ 64 dp, có ảnh FAP 40 dp bên trái (O-01.9).
 
 ## 8. Component
 
-Chín component bắt buộc của đề bài là CMP-01 đến CMP-09. Component riêng của ứng dụng bắt đầu từ CMP-10. Mọi component dùng token, không màu hay cỡ cứng.
+Chín component bắt buộc của đề bài là CMP-01 đến CMP-09. Component riêng của ứng dụng bắt đầu từ CMP-10. Mọi component dùng token, không dùng màu hay cỡ cố định.
 
 | Mã | Component | Trạng thái | Quy tắc |
 |---|---|---|---|
-| CMP-01 | Button | Default, pressed, disabled, loading | Biến thể: primary (nền brand), secondary (viền `border-control`), text, destructive. Loading giữ nguyên chiều rộng, thay nhãn bằng spinner |
-| CMP-02 | Text field | Default, focused, filled, error, disabled | Nhãn luôn hiện phía trên; lỗi ngay dưới ô kèm biểu tượng; đếm ký tự cho ô lý do báo sai |
-| CMP-03 | Card | Default, pressed | Card slot (môn, phòng, giờ, trạng thái), card báo sai |
-| CMP-04 | Navigation bar | Mỗi tab được chọn | 2 tab mỗi vai trò; tab chọn dùng `brand-text` + chữ đậm + thanh chỉ báo; tab có huy hiệu số (số báo sai mới) |
+| CMP-01 | Button | Default, pressed, disabled, loading | Biến thể: primary (nền `primary`), secondary (viền `border-control`), text, danger. Loading giữ nguyên chiều rộng, thay nhãn bằng spinner |
+| CMP-02 | Text field | Default, focused, filled, error, disabled | Nhãn luôn hiện phía trên; lỗi ngay dưới ô, kèm biểu tượng; đếm ký tự cho ô lý do báo sai |
+| CMP-03 | Card | Default, pressed | Thẻ slot (môn, phòng, giờ, trạng thái), thẻ báo sai |
+| CMP-04 | Navigation bar | Mỗi tab được chọn | 2 tab mỗi vai trò; tab đang chọn có chỉ báo nền `primary-soft` và biểu tượng `primary` (giống menu đang chọn của FAP); tab có huy hiệu số |
 | CMP-05 | App bar | Default, with actions | Tiêu đề trái; nút quay lại; tối đa 1 hành động phải |
-| CMP-06 | Dialog | Confirmation, destructive | Xác nhận lưu khi còn ca chưa xử lý; từ chối báo sai (destructive) |
-| CMP-07 | Loading | Skeleton danh sách, spinner toàn màn | Skeleton cho danh sách lớp; spinner khi đăng nhập |
+| CMP-06 | Dialog | Confirmation, destructive | Xác nhận gửi lên FAP; xác nhận đóng QR sớm; từ chối báo sai (destructive) |
+| CMP-07 | Loading | Skeleton danh sách, spinner | Skeleton cho danh sách lớp; spinner khi xác thực mã QR |
 | CMP-08 | Empty state | Biểu tượng, thông điệp, một hành động | "Hôm nay không có báo sai nào" |
-| CMP-09 | Error state | Thông điệp, nguyên nhân dễ hiểu, nút thử lại | Mất mạng, không tải được lịch |
-| CMP-10 | Status chip | Có mặt, Vắng, Chưa điểm danh, Đến muộn, Đang chờ gửi, Đã lên FAP | Luôn có biểu tượng + chữ + nền soft |
-| CMP-11 | Student row | Chưa đánh, Có mặt, Vắng, Đến muộn, Trùng tên | Tên (`body-lg`), mã SV (`mono`, muted), cặp nút Có/Vắng; trùng tên có nhãn "Trùng tên" và mã SV đậm |
+| CMP-09 | Error state | Thông điệp, nguyên nhân dễ hiểu, nút thử lại | Mã hết hạn, mất mạng, không có trong danh sách lớp |
+| CMP-10 | Status chip | Có mặt, Vắng, Chưa điểm danh, Chờ xác nhận, Chờ điền lên FAP, Đã lên FAP | Biểu tượng + chữ + nền soft, đúng nghĩa màu của FAP |
+| CMP-11 | Student row | Đã quét, Chưa quét, Đánh tay, Được chọn kiểm tra, Cờ "Cùng thiết bị" | Ảnh FAP, tên (`body-lg`), mã SV (`mono`, `muted`), giờ quét, chip trạng thái |
 | CMP-12 | Deadline banner | Còn hạn, sắp hết hạn (sau 20:00), đã qua hạn | "Báo sai trước 23:59 hôm nay"; đã qua hạn dẫn sang hướng dẫn đơn |
 | CMP-13 | Report timeline | Đã gửi, giảng viên đã xem, đã sửa, bị từ chối | Dòng thời gian dọc 4 bước, mỗi bước có giờ |
+| CMP-14 | Scan counter | Đang mở, sắp đóng, đã đóng | "Đã quét 31/32", vòng đếm ngược thời gian QR còn mở, nút "Đóng QR" |
+| CMP-15 | Spot-check card | Chờ, đúng người, không có mặt | Ảnh FAP lớn, tên, mã SV, hai nút "Đúng người" và "Không có mặt" |
 
 ## 9. Trạng thái điểm danh
 
-| Trạng thái FAP | Hiển thị | Màu | Biểu tượng |
+| Trạng thái FAP | Hiển thị | Màu | Biểu tượng (Remix Icon, giống FAP) |
 |---|---|---|---|
-| Attended | Có mặt | `color/ok` | dấu tích trong vòng tròn |
-| Absent | Vắng | `color/alert` | dấu x trong vòng tròn |
-| Not yet | Chưa điểm danh | `color/info` | đồng hồ |
-| Attended, đến muộn hợp lệ | Có mặt · đến 07:04 | `color/warn` | đồng hồ có dấu tích |
-| (chưa lên FAP) | Đang chờ gửi | `color/warn` | đám mây gạch chéo |
+| Attended | Có mặt | `success` | `ri-checkbox-circle-line` |
+| Absent | Vắng | `danger` | `ri-close-circle-line` |
+| Not yet | Chưa điểm danh | `warning` | `ri-time-line` |
+| Attended, đến muộn được giảng viên ghi tay | Có mặt · đến 07:04 | `success` | `ri-checkbox-circle-line` + giờ |
+| (trong ứng dụng) Chờ giảng viên xác nhận | Chờ xác nhận | `warning` | `ri-shield-check-line` |
+| (trong ứng dụng) Chờ extension điền | Chờ điền lên FAP | `warning` | `ri-upload-cloud-line` |
+| (trong ứng dụng) Extension đã điền | Đã lên FAP | `success` | `ri-cloud-line` |
 
 ## 10. Nên và không nên
 
-**Nên:** một hành động chính mỗi màn; số liệu đặt trên cùng ("28 có mặt · 4 vắng · 1 chưa xử lý"); hiện giờ ghi nhận cạnh mọi thay đổi; giữ trạng thái khi quay lại màn.
+**Nên:** một hành động chính mỗi màn; số liệu đặt trên cùng ("31 đã quét · 32 sĩ số · 1 chưa quét"); hiện giờ ghi nhận cạnh mọi thay đổi; giữ trạng thái khi quay lại màn.
 
-**Không nên:** dùng nhận diện khuôn mặt hay GPS (không có trong dữ liệu nghiên cứu); QR để sinh viên tự điểm danh đang chờ D-19; dùng màu brand cho trạng thái; dùng gradient, ảnh minh họa lớn hay hiệu ứng trang trí; ẩn mốc thời hạn trong menu; dùng chữ dưới 14 sp.
+**Không nên:**
+- Dùng nhận diện khuôn mặt, GPS, hay kiểm tra wifi trường (UX-INTEGRITY mục 4).
+- Dùng logo FPT hay tên "FAP" làm nhận diện ứng dụng (NT-7).
+- Dùng màu `primary` cho trạng thái.
+- Dùng gradient (trừ khi chủ ý gợi banner FAP), ảnh minh họa lớn hay hiệu ứng trang trí.
+- Ẩn mốc thời hạn trong menu.
+- Dùng chữ dưới 14 sp.

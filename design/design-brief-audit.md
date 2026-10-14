@@ -65,3 +65,27 @@ Năm nghĩa, năm họ màu không chồng nhau. Mã màu cụ thể chờ ảnh
 ## 5. Điều cần thien cung cấp
 
 Ảnh chụp FAP mới (tài khoản HCM): trang chủ, thời khóa biểu tuần có đủ ba trạng thái, báo cáo điểm danh, và myFAP. Nếu được, mở DevTools lấy màu của header, link, nút và chữ trạng thái. Danh sách đầy đủ ở mục "Khoảng trống" của `research/02-desk/fap-visual-identity.md`. Khi có ảnh, các điểm này đổi nhãn từ Suy luận sang **Observed**.
+
+## 6. Cập nhật sau khi có ảnh FAP thật (O-02, 14/10/2026)
+
+Ảnh chụp của thien thay phần lớn suy luận ở mục 3 bằng số đo. Ba điều đổi so với đề xuất ban đầu:
+
+| Điểm | Đề xuất cũ (mục 2, 3) | Theo O-02 | Đã áp dụng ở DESIGN.md v2 |
+|---|---|---|---|
+| Màu chính | "Xanh dương, gần `#337ab7` của FAP cũ" | FAP mới dùng xanh chàm `#4254BA` (O-02.6) | `primary = #4254BA`, đúng mã FAP, 6,54:1 với chữ trắng |
+| "Chưa điểm danh" | Xám + đồng hồ | FAP dùng **vàng** + đồng hồ (O-02.11) | Theo FAP: `warning #855A00` trên `#FFF4D2`. Bỏ phương án xám, vì người dùng đã quen vàng |
+| Nền | "Trung tính lạnh nhẹ" | FAP dùng `#EEEEF1` (O-02.8) | `canvas = #EEEEF1` |
+
+**FAP không đạt chuẩn ở bốn chỗ**, nên ứng dụng không chép nguyên:
+- "Có mặt" ở thời khóa biểu (`#17A497`, 3,09:1).
+- Giờ slot ở thời khóa biểu (`#E5AF0C`, 2,01:1).
+- Cột hôm nay (`#159488` trên `#D1E7DD`, 2,88:1).
+- Chữ phụ trên nền trang (`#6C757D`, 4,05:1).
+
+Ứng dụng giữ sắc độ của FAP nhưng làm đậm vừa đủ để đạt 4,5:1. "Có mặt" lấy theo bản ở trang báo cáo điểm danh, vì bản đó gần đạt chuẩn nhất (O-02.9), rồi làm đậm thêm một bậc.
+
+**Lập luận "mạo danh" ở mục 3 vẫn giữ**, nhưng chuyển trọng tâm. Dùng cùng màu chính với FAP là chấp nhận được, vì màu không phải nhận diện độc quyền. Ranh giới nằm ở tên, logo và biểu tượng ứng dụng (DESIGN.md, NT-7).
+
+**Font:** FAP mới có thể dùng Roboto (O-02.5, Inferred). Nếu DevTools xác nhận, đổi đề xuất ở mục 4 từ "giữ Inter" sang **Roboto**. Lý do: cùng font với FAP và là font hệ thống Android. Lý do "tên dài vừa một dòng" của Inter yếu hơn lý do quen mắt, vì ở 360 dp, tên dài nhất trong danh sách mẫu vẫn vừa với Roboto 16 sp. Đây là ước lượng, chưa đo trên Figma.
+
+**"Vắng" vẫn chưa có ảnh** (O-02.15). `danger #B42318` là giả định, cần một ảnh có trạng thái "Vắng" để đối chiếu.
