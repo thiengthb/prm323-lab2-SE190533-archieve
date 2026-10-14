@@ -134,4 +134,5 @@ Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
 | Từ SC-14 bị từ chối, bấm Hôm nay về màn 20:58 còn banner hạn và nút báo sai | Thêm SC-09 21:22 "Báo sai bị từ chối" |
 | Thẻ Vy ở SC-07 không bấm được | Thêm nhánh FL-3 thứ tự khác (hàng cuối trang 06) và biến thể SC-07 "Sau khi sửa Vy" |
 | "Mở từ xa" ở hàng FL-1 không bấm được; "Ghi tay thêm sinh viên" và "Mở FAP" không có hành động | Nối vào nhánh K1b; thêm sheet "Ghi tay thêm sinh viên" (trang 03 và overlay trang 06); "Mở FAP" mở trang FAP |
+| Tên phòng ở màn sinh viên khác màn giảng viên (CR-40, 14/10 tối) | "Phòng 205" → "P.205", "Phòng 312" → "P.312", "Ca sắp diễn ra" → "Chưa tới giờ học" trên trang 03 và 06; xuất lại 3 ảnh SC-09 |
 | Màn trên trang 06 lệch Final UI | Script so toàn bộ chữ của từng frame trang 06 với frame gốc trang 03: khớp hết; frame mới trên trang 06 đều có bản gốc ở trang 03 |

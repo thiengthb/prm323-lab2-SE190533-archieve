@@ -25,6 +25,7 @@ Nguồn: góp ý của thien lúc 14:24 và 14:27 ngày 14/10/2026, cộng phầ
 | CR-37 | SC-14 Trống của **sinh viên** có nút "Về lịch dạy" (từ của giảng viên) | Đổi thành "Về Hôm nay" |
 | CR-38 | SC-10 chưa có quyền camera vẫn ghi "màn chiếu" | Đổi thành "màn hình lớp", khớp D-24 |
 | CR-39 | Nhánh K1b (mở từ xa) đóng QR xong lại hiện dòng "Mở tại lớp · QR chiếu từ laptop của thầy" | Màn QR đã đóng của nhánh K1b ghi "Mở từ xa lúc 06:55 · mã hiện trên TV phòng P.205" |
+| CR-40 | Tìm ra khi viết `design/screen-spec.md`: thẻ của sinh viên ghi "Phòng 205", "Phòng 312", trong khi màn giảng viên, SC-12 và dòng đáy SC-09 ghi "P.205", "P.312"; thẻ MAS291 sắp tới ghi "Ca sắp diễn ra" trong khi mọi chỗ khác gọi là slot | Đổi hết sang "P.205", "P.312"; "Ca sắp diễn ra" đổi thành "Chưa tới giờ học" (trang 03 và 06, 36 chỗ) |
 
 ## 3. Quy tắc huy hiệu ở tab Báo sai
 
