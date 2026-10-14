@@ -34,8 +34,10 @@ Revise this student screen. Keep everything else exactly as it is.
 
 ## Prompt SC-11 (sửa CR-22)
 
+Chạy trên màn "Kết quả quét" **không có sheet**. Ở màn có sheet, nút "Không quét được?" bị sheet che nên không cần sửa.
+
 ```text
-Revise this scan result screen and its bottom-sheet variant. Keep everything else exactly as it is.
+Revise this scan result screen. Keep everything else exactly as it is.
 
 1. The outline button "Không quét được?" uses a 1 px border #767D86 and text #212529, so its boundary is clearly visible on white.
 ```
