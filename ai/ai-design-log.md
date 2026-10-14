@@ -29,6 +29,7 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-21 | 14/10/2026 | Claude (phản biện), thien chạy Stitch | Kiểm IT-1 bằng ảnh và mã HTML: 15/16 phát hiện đã sửa, 6 phát hiện mới CR-18..CR-23; soạn prompt IT-2 | `design/stitch-critique-it1.md`; `ai/prompts/AI-21-stitch-it2.md` → `assets/stitch/IT-2-*.png` |
 | AI-22 | 14/10/2026 | Claude (phản biện) | Kiểm IT-2: 5/5 phát hiện đã sửa; đánh giá lại CR-19 nhờ đọc mã HTML (bộ đếm chạy thật); thêm CR-24, CR-25; chốt vòng Stitch | `design/stitch-critique-it2.md` |
 | AI-23 | 14/10/2026 | Claude (Figma MCP, Plugin API) | Dựng file Figma IT-3: biến token, text/effect style, 15 component, 15 màn và 25 biến thể, 3 user flow có liên kết, prototype 3 luồng; áp dụng CR-21, CR-24, CR-25 | Không có prompt riêng; đầu vào là DESIGN.md v2, user-flow v2 → file Figma, `design/figma-build.md`, `assets/figma/` |
+| AI-24 | 14/10/2026 | Claude (Figma MCP, Plugin API) | Vòng IT-3b theo góp ý của thien: sửa huy hiệu CMP-04, rà nghĩa từng thành phần, thống nhất giờ trong một ngày, thêm 6 biến thể và trang web Màn chiếu P.205, dựng lại 3 User Flow và prototype 9 điểm bắt đầu | Không có prompt riêng; đầu vào là góp ý của thien, D-19, D-21, gợi ý của GVHD → file Figma, `design/figma-build.md` mục 6, D-24 |
 
 ## AI-23 — Dựng file Figma (14/10/2026)
 
@@ -37,6 +38,13 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 - **Tự kiểm:** chụp lại từng màn sau khi dựng và sửa các lỗi dựng hình (thuộc tính chữ dùng chung làm mọi chip cùng một nhãn, scrim đục hẳn, hàng danh sách đè nhau, chữ cái avatar sai, ô lý do không giãn theo nội dung…). Script đọc toàn bộ reaction ở trang 06 xác nhận không có ngõ cụt.
 - **Sửa nội dung nhờ đối chiếu nghiên cứu:** bản đầu của SC-15 ghi thời gian xử lý đơn là "vài ngày (Assumed)". Đối chiếu `research/02-desk/fap-edit-window.md` thì đã có nguồn V01, V02: mục Thủ tục/Đơn từ, phòng QLĐT, 2 ngày làm việc. Màn được sửa theo nguồn.
 - **Khoảng trống chưa làm:** 4 trạng thái của SC-11, sheet "Không quét được?", kiểm 412 dp (`design/figma-build.md` mục 4).
+
+## AI-24 — Sửa Figma theo góp ý (IT-3b, 14/10/2026)
+
+- **Góp ý của thien:** huy hiệu số bị che; mỗi thành phần phải có mục đích; prototype phải nối trọn vẹn; xử lý thế nào khi giảng viên mở QR lúc đang ở ngoài (GVHD gợi ý một trang web hiện QR; thien lo nút "Điểm danh" trong app làm SV ở nhà cũng điểm danh được).
+- **Phản biện của Claude:** đồng ý với lo ngại của thien, nút trong app không chứng minh có mặt. Đề xuất trang web gắn với phòng thay vì link công khai (D-24, chờ thien chốt, Figma dựng tạm theo A).
+- **Tự kiểm:** rà từng frame và bỏ 6 thành phần không có việc gì để làm (mục 6 của `design/figma-build.md`). Phát hiện mâu thuẫn giờ: SC-11 báo SV quét MAS291 lúc 09:31 trong khi SC-09 buổi tối ghi MAS291 "không có lượt quét". Sửa bằng một dòng thời gian chung cho cả ngày. Script đọc reaction trang 06: 59 frame, 9 điểm bắt đầu, 0 đích hỏng, không frame nào thiếu lối ra.
+- **Giới hạn:** giả định phòng học có máy tính nối máy chiếu chưa có bằng chứng; lượt quét ngoài Wi-Fi trường chỉ gắn cờ.
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
