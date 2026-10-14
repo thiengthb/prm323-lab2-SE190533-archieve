@@ -28,6 +28,15 @@ Ghi theo thứ tự thời gian, mỗi lần dùng AI có một mã `AI-nn` (xem
 | AI-20 | 14/10/2026 | Claude soạn, thien chạy trên Stitch | Prompt IT-1 cho SC-03, SC-09, SC-11: sửa CR-01..CR-17, áp dụng D-22 (shadcn + Lucide) và D-23 (Inter) | `ai/prompts/AI-20-stitch-it1.md` → `assets/stitch/IT-1-*.png` |
 | AI-21 | 14/10/2026 | Claude (phản biện), thien chạy Stitch | Kiểm IT-1 bằng ảnh và mã HTML: 15/16 phát hiện đã sửa, 6 phát hiện mới CR-18..CR-23; soạn prompt IT-2 | `design/stitch-critique-it1.md`; `ai/prompts/AI-21-stitch-it2.md` → `assets/stitch/IT-2-*.png` |
 | AI-22 | 14/10/2026 | Claude (phản biện) | Kiểm IT-2: 5/5 phát hiện đã sửa; đánh giá lại CR-19 nhờ đọc mã HTML (bộ đếm chạy thật); thêm CR-24, CR-25; chốt vòng Stitch | `design/stitch-critique-it2.md` |
+| AI-23 | 14/10/2026 | Claude (Figma MCP, Plugin API) | Dựng file Figma IT-3: biến token, text/effect style, 15 component, 15 màn và 25 biến thể, 3 user flow có liên kết, prototype 3 luồng; áp dụng CR-21, CR-24, CR-25 | Không có prompt riêng; đầu vào là DESIGN.md v2, user-flow v2 → file Figma, `design/figma-build.md`, `assets/figma/` |
+
+## AI-23 — Dựng file Figma (14/10/2026)
+
+- **Công cụ:** Claude gọi Figma MCP (`use_figma`, Plugin API) từ Claude Code. Theo D-07 B vì thời gian ngắn; thien vẫn phải làm tay phần ở `design/figma-build.md` mục 5.
+- **Output:** file [Figma](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w), ghi chép `design/figma-build.md`, ảnh `assets/figma/`.
+- **Tự kiểm:** chụp lại từng màn sau khi dựng và sửa các lỗi dựng hình (thuộc tính chữ dùng chung làm mọi chip cùng một nhãn, scrim đục hẳn, hàng danh sách đè nhau, chữ cái avatar sai, ô lý do không giãn theo nội dung…). Script đọc toàn bộ reaction ở trang 06 xác nhận không có ngõ cụt.
+- **Sửa nội dung nhờ đối chiếu nghiên cứu:** bản đầu của SC-15 ghi thời gian xử lý đơn là "vài ngày (Assumed)". Đối chiếu `research/02-desk/fap-edit-window.md` thì đã có nguồn V01, V02: mục Thủ tục/Đơn từ, phòng QLĐT, 2 ngày làm việc. Màn được sửa theo nguồn.
+- **Khoảng trống chưa làm:** 4 trạng thái của SC-11, sheet "Không quét được?", kiểm 412 dp (`design/figma-build.md` mục 4).
 
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
