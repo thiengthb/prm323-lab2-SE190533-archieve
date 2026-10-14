@@ -4,7 +4,7 @@
 |---|---|
 | Mã tài liệu | DES-CRIT-IT0 |
 | Trạng thái | **Đã duyệt:** thien chấp nhận toàn bộ đề xuất (14/10/2026), sẽ kiểm bằng cách nhìn kết quả IT-1 |
-| Đầu vào | P1, P2, P3 trong `ai/prompts/AI-18-stitch-first-prompt.md`; bản Export của Stitch `assets/stitch/IT-0-SC-03.png`, `IT-0-SC-11.png` (kèm mã HTML và `IT-0-stitch-generated-DESIGN.md`); SC-09 chỉ có ảnh cắt `IT-0-SC-09-preview.png` |
+| Đầu vào | P1, P2, P3 trong `ai/prompts/AI-18-stitch-first-prompt.md`; bản Export của Stitch `assets/stitch/IT-0-SC-03.png`, `IT-0-SC-09.png`, `IT-0-SC-11.png`, mã HTML trong `assets/stitch/code/`, và `IT-0-stitch-generated-DESIGN.md` |
 | Người phản biện | Claude, theo heuristic Nielsen, WCAG 2.1 và persona P-01 |
 | Màn | SC-03 · Phiên điểm danh (CR-01..CR-09); SC-09 · Hôm nay và SC-11 · Kết quả quét (CR-10..CR-17) |
 

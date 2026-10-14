@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface-variant": "#454652", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#41484e", "background": "#f7f9ff", "on-primary": "#ffffff", "outline-variant": "#c5c5d5", "secondary-fixed-dim": "#c0c7cf", "on-surface": "#181c20", "primary": "#283ba1", "on-tertiary-container": "#ffcdad", "on-tertiary": "#ffffff", "on-error": "#ffffff", "surface-dim": "#d7dadf", "secondary-fixed": "#dce3eb", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#000f5c", "tertiary-fixed": "#ffdcc6", "surface-container": "#ebeef3", "surface": "#f7f9ff", "tertiary-container": "#944900", "primary-fixed": "#dee0ff", "surface-container-low": "#f1f4f9", "inverse-on-surface": "#eef1f6", "error": "#ba1a1a", "outline": "#757684", "inverse-surface": "#2d3135", "secondary-container": "#dce3eb", "on-tertiary-fixed": "#301400", "on-primary-container": "#d0d5ff", "tertiary": "#703600", "primary-container": "#4254ba", "tertiary-fixed-dim": "#ffb785", "surface-variant": "#e0e3e8", "on-secondary-container": "#5e656c", "surface-tint": "#4355bb", "primary-fixed-dim": "#bbc3ff", "on-background": "#181c20", "on-tertiary-fixed-variant": "#723700", "secondary": "#585f66", "on-secondary-fixed": "#151c22", "on-primary-fixed-variant": "#283ba2", "surface-container-highest": "#e0e3e8", "surface-bright": "#f7f9ff", "on-error-container": "#93000a", "inverse-primary": "#bbc3ff", "surface-container-high": "#e5e8ee", "on-secondary": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-md": "0.75rem", "margin-desktop": "1.5rem", "margin": "1rem", "gutter-desktop": "1rem", "space-sm": "0.5rem", "space-lg": "1rem", "gutter": "0.75rem", "space-xl": "1.5rem" }, fontFamily: { "label-sm": ["Roboto Flex"], "label-md": ["Roboto Flex"], "headline-md": ["Roboto Flex"], "body-md": ["Roboto Flex"], "headline-sm": ["Roboto Flex"], "label-lg": ["Roboto Flex"], "headline-lg": ["Roboto Flex"], "body-lg": ["Roboto Flex"] }, fontSize: { "label-sm": ["14px", { "lineHeight": "16px", "fontWeight": "500" }], "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>@layer base { body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface antialiased min-h-full flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Navigate back" class="w-12 h-12 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Daily Roll Call Session</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Session options" class="w-12 h-12 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full pt-14 pb-20 bg-surface px-margin flex flex-col"><div class="flex flex-col w-full">
+<!-- Top App Bar Replacement Container (matches utilitarian spec) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md mb-space-md flex items-center justify-between shadow-none">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">PRM393 · Slot 1</h2>
+<span class="font-body-md text-body-md text-on-surface-variant">Học kỳ Fall 2024</span>
+</div>
+</div>
+<div class="px-space-md py-1 bg-surface-container-low rounded-lg shrink-0">
+<span class="font-label-lg text-label-lg text-on-surface-variant">P.205</span>
+</div>
+</div>
+<!-- Live Counter & Timer Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg mb-space-lg shadow-none">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">Đã quét 31/32</span>
+</div>
+<div class="h-8 px-space-md bg-surface-container-low rounded-lg flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">qr_code_2</span>
+<span class="font-label-md text-label-md tracking-tight" id="qr-timer">QR còn 2:41</span>
+</div>
+</div>
+<!-- Progress Track (No borders, pure background color shifts) -->
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden mb-space-sm">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" style="width: 96.8%;"></div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<p class="font-body-md text-body-md">Đếm người trong phòng rồi xác nhận sĩ số</p>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between px-1 mb-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface-variant">Danh sách lớp · 32</span>
+<span class="font-label-sm text-label-sm text-primary">Đang trực tiếp</span>
+</div>
+<!-- Student Roster Container (Util utilitarian list styling) -->
+<div class="w-full bg-surface-container-lowest rounded-xl overflow-hidden mb-space-xl shadow-none">
+<!-- Row 1: Nguyễn Minh Khoa -->
+<div class="min-h-[64px] px-space-lg py-space-md flex items-center justify-between bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md min-w-0 pr-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 bg-surface-container" data-alt="Clear modern academic headshot portrait of a Vietnamese male college student wearing a neutral grey crewneck t-shirt with clean bright indoor lighting on pure soft grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBGKmJJNxG1U154PLbINMRQe98QnTIWbjDlWqbljqfnrrxp_cNM-TLBudyntvlaMS38W_hbbasHnH_VdwhlsHN0QzmR5SYDbFYTtVfIsSSVOZQx95Emi1oQ3so5Zx4GHaPjAXAjXeixvtXj83h3yn_zKt4pqRuuQWS1YpqCfu1j6lDU3XBwrircu4GULUTSAnJRgBelDy8ci7qGWh-mlUFhUBer1fUpBvXiLQzJQpkFwv6jhTKxsEPZw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Nguyễn Minh Khoa</span>
+<span class="font-body-md text-body-md text-on-surface-variant truncate">SE190412 · 07:01</span>
+</div>
+</div>
+<div class="h-7 px-2.5 bg-[#E3F0EA] text-[#0D6E45] rounded-lg inline-flex items-center gap-1.5 shrink-0">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm">Có mặt</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container"></div>
+<!-- Row 2: Trần Gia Huy (Cần xem) -->
+<div class="min-h-[64px] px-space-lg py-space-md flex items-center justify-between bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md min-w-0 pr-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 bg-surface-container" data-alt="Academic passport style portrait of a young East Asian male student with glasses in a simple navy collared shirt with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJY-tD-G3YZ5Tj-8PTHCtV63uBiyjeXM1GjUH8DIa5H2jrED2uJ8KctDRXP5XnRnzkgUpvCNFhugkCPMqcfyW1dE3H0ZyKbe-B9GlvDSnq0Dko5I12idcxfMIywM0hLPWsmBvOLI7QJQ9QDt0nJe2QLSSeYUM_jEN1zlRJkUFl0n70501cOwQ5wZfnftbQ3AEFWmPunF18mAutS_Ufq5dhvnD1DOz8g6wZvWgszqtY3cp4dQoSn34XXw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Trần Gia Huy</span>
+<span class="font-body-md text-body-md text-tertiary-container truncate">SE190433 · Cùng thiết bị</span>
+</div>
+</div>
+<div class="h-7 px-2.5 bg-[#FFF4D2] text-[#855A00] rounded-lg inline-flex items-center gap-1.5 shrink-0">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="font-label-sm text-label-sm">Cần xem</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container"></div>
+<!-- Row 3: Lê Bảo Trâm (Chưa điểm danh) -->
+<div class="min-h-[64px] px-space-lg py-space-md flex items-center justify-between bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md min-w-0 pr-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 bg-surface-container" data-alt="Academic portrait of a Vietnamese female student with black tied hair and minimal aesthetic wearing white shirt against neutral backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4AHr7kaRy-kZU2_UHDuwCCpSTktw4kqnfdeLKP8DMFD1RK7NlCk4HSUrATh3A2mRldbFNG_iXeYF3lBq4JDoU4_mbIZlAne-RFfaIrQs0DCQTe2dwgnXyBo4T1HcSqONkK1CdnLjsPcmEX19tmkrl8REQLEqIs25ZiMB8sNckkcwwoJxg_p-Blz-xuXqQ6qCgQRnbMs8EaYmUfwXAZP6QTZqrgXw4qQgNNnTHTt_i0na8Y5RuboI8pg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Lê Bảo Trâm</span>
+<span class="font-body-md text-body-md text-on-surface-variant truncate">SE190527</span>
+</div>
+</div>
+<div class="h-7 px-2.5 bg-[#FFF4D2] text-[#855A00] rounded-lg inline-flex items-center gap-1.5 shrink-0">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm">Chưa điểm danh</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container"></div>
+<!-- Row 4: Phạm Quốc Anh (Vắng) -->
+<div class="min-h-[64px] px-space-lg py-space-md flex items-center justify-between bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md min-w-0 pr-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 bg-surface-container" data-alt="Formal student identification headshot of a young adult male with neat short haircut in dark sweater neutral clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtQ8aySgICU8sv0xRWvNUY51g7cs7EQBc7pTpv0mamgqByOcsCTiI07ivKTEYKJbhFabxKCJOu2hxWtBMSiqc8Ybne4wuTCoU3mozsaZ-L_w_A0YKtor-cYI9BW6AAk1nsXi4S7yb63mG6PQc0EUsLqHtZjApOSowWeXDgNFC90wVkYtlCAhD2nD2PNW-1RCAwFNAbzvDWdT4PL04wHziGrXl83CXWjEG0jhBk27mAt64Zuo2KDzoWoQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Phạm Quốc Anh</span>
+<span class="font-body-md text-body-md text-on-surface-variant truncate">SE190501</span>
+</div>
+</div>
+<div class="h-7 px-2.5 bg-[#FDECEA] text-[#B42318] rounded-lg inline-flex items-center gap-1.5 shrink-0">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span class="font-label-sm text-label-sm">Vắng</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container"></div>
+<!-- Row 5: Võ Hoàng Nam (Có mặt) -->
+<div class="min-h-[64px] px-space-lg py-space-md flex items-center justify-between bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md min-w-0 pr-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 bg-surface-container" data-alt="Academic ID photo of a young Southeast Asian male student smiling gently wearing light grey polo shirt in studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAY0GXUtF-ovd2GKt_Q4daUDGqA1sXTa9-DpGygw0abLa4bI7pTBpYrSgFgb45ieyIwCiVFAU1A6RlEXVT5DgIOwExrTpiwZn9imOX4x7on0go8uSo1KZ68O0-F8FGrN8UHjoIHpncXRCDRZtEhrzIb7ma9_wfRjn20vziaQs6aGUClYBN67rUNOzI14_YZc3abme8n4QUeJYmPX5zfpAP1m_vQQDHrnpz0kbruI_DEQjRzGNdQ_aVPg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Võ Hoàng Nam</span>
+<span class="font-body-md text-body-md text-on-surface-variant truncate">SE190488 · 07:02</span>
+</div>
+</div>
+<div class="h-7 px-2.5 bg-[#E3F0EA] text-[#0D6E45] rounded-lg inline-flex items-center gap-1.5 shrink-0">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm">Có mặt</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container"></div>
+<!-- Row 6: Đỗ Thảo Vy (Có mặt) -->
+<div class="min-h-[64px] px-space-lg py-space-md flex items-center justify-between bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-md min-w-0 pr-2">
+<img class="w-10 h-10 rounded-full object-cover shrink-0 bg-surface-container" data-alt="University identity portrait of an Asian female student in modest charcoal cardigan with clear ambient educational background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5lVD8K7ejEFaBEd8ts2KV5hwgsjxIaHoJAavchLwgsSeauGxFwdPbJe_etU3483iAOWIELQLXca-O_FUpAsRb_sRZeXCyCnK4-7QRNC02g7r9--Jf3HKjVuvkP6_jOV9vTiEyWL5GFeriK8tl3Gxl52mwOY8iMRB6BTt218_pgkjAFXDwUcH3Jl4P80TvG9i0dmty3crLkIsULTpUPb-nr2-gTquGLF527MZFSge535XjVCh_ChSFIg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Đỗ Thảo Vy</span>
+<span class="font-body-md text-body-md text-on-surface-variant truncate">SE190515 · 07:03</span>
+</div>
+</div>
+<div class="h-7 px-2.5 bg-[#E3F0EA] text-[#0D6E45] rounded-lg inline-flex items-center gap-1.5 shrink-0">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm">Có mặt</span>
+</div>
+</div>
+</div>
+<!-- Primary Action Container (Embedded seamlessly into content stream) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-none flex flex-col gap-space-sm mb-space-lg">
+<button class="w-full min-h-[48px] bg-primary-container hover:bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-sm transition-colors cursor-pointer active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span>Đóng QR và kiểm tra ngẫu nhiên</span>
+</button>
+<div class="flex items-center justify-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">security</span>
+<span class="font-label-sm text-label-sm">Hệ thống ghi nhận địa chỉ mạng nội bộ</span>
+</div>
+</div>
+</div>
+<script>
+  // Simple functional countdown for QR session timer
+  (function () {
+    let timeLeft = 161; // 2 minutes 41 seconds
+    const timerElem = document.getElementById('qr-timer');
+    if (!timerElem) return;
+
+    const interval = setInterval(() => {
+      if (timeLeft <= 0) {
+        clearInterval(interval);
+        timerElem.textContent = 'QR hết hạn';
+        return;
+      }
+      timeLeft--;
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      timerElem.textContent = `QR còn ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }, 1000);
+  })();
+</script></main><footer class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-xl pb-safe shadow-[0_-2px_10px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin flex items-center justify-between gap-gutter"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">Status</span><span class="font-label-lg text-label-lg text-primary">Roll Call Active</span></div><button class="min-h-[48px] px-space-lg bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">check_circle</span><span>Submit Roster</span></button></div></footer></body></html>
