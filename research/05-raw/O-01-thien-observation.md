@@ -4,7 +4,7 @@
 |---|---|
 | Mã | O-01 |
 | Người cung cấp | Thiên (SE190533), sinh viên FPTU cơ sở TP.HCM, gần 4 năm học |
-| Ngày ghi | 13/10/2026 |
+| Ngày ghi | 13/10/2026; bổ sung O-01.9–O-01.11 ngày 14/10/2026 |
 | Hình thức | Thien gõ trả lời mẫu tự quan sát; ghi lại nguyên ý, chia thành từng điểm |
 | Nhãn | Từng điểm được gắn nhãn riêng: **Observed** (đã tận mắt thấy nhiều lần) hoặc **Reported** (biết qua người khác hoặc hiểu biết chung, chưa có văn bản xác nhận) |
 
@@ -20,6 +20,9 @@
 | O-01.6 | Giảng viên chỉ điều chỉnh được trong ngày có slot học. Qua ngày đó hệ thống tự chốt, giảng viên cũng không sửa được | Reported |
 | O-01.7 | Vì vậy mọi sai sót điểm danh phải được phát hiện và báo trong ngày; quá ngày thì "không còn cứu vãn được" | Reported (hệ quả của O-01.6) |
 | O-01.8 | Nhiều sinh viên rớt môn vì nghỉ gần sát ngưỡng, rồi một buổi cuối bị ghi sai mà không báo kịp trong ngày, thành vượt 20% | Reported (giai thoại, không có số liệu) |
+| O-01.9 | Trang điểm danh của FAP hiện ảnh của từng sinh viên. Giảng viên đi qua từng ô sinh viên và thấy mặt sinh viên đó, phần nào tránh điểm danh nhầm và gian lận (bổ sung 14/10/2026) | Observed |
+| O-01.10 | Laptop là thiết bị chính khi điểm danh. Giảng viên chiếu màn hình điểm danh của FAP lên cho cả lớp cùng xem; sinh viên nhìn danh sách trên bảng và chuẩn bị đáp khi thấy ảnh của mình sắp tới (bổ sung 14/10/2026) | Observed |
+| O-01.11 | Dùng laptop hay điện thoại tùy thói quen từng giảng viên; việc đột xuất thì nhiều khả năng giảng viên mở điện thoại cho nhanh (bổ sung 14/10/2026) | Assumed (thien: "tôi nghĩ") |
 
 ## Đối chiếu với nghiên cứu bàn giấy
 
@@ -29,6 +32,7 @@
 | O-01.2–O-01.4 | Lấp khoảng trống "giảng viên điểm danh thực tế thế nào", web không có nguồn | AI-04, AI-05 mục khoảng trống |
 | O-01.6–O-01.7 | **Ủng hộ một phần** (AI-07, `research/02-desk/fap-edit-window.md`). Sinh viên phải báo giảng viên trong ngày học (môn LUK: 2 ngày), điều này khớp với O-01.6. Quá hạn đó vẫn còn đường nộp "Đơn khiếu nại điểm danh" trên FAP gửi phòng QLĐT, xử lý trong 2 ngày làm việc, nên "không còn cứu vãn được" (O-01.7) là quá mạnh. Chưa có nguồn xác nhận FAP khóa quyền sửa của giảng viên về mặt kỹ thuật | S12, S17, V01–V16 |
 | O-01.8 | Phù hợp với giai thoại "ngủ quên slot 1 dẫn tới cấm thi" | S9, S10 |
+| O-01.9–O-01.10 | Không có nguồn web về cách giảng viên dùng ảnh và màn chiếu. **Mâu thuẫn một phần với F-08** của RES-AFFINITY-v2 ("trong lớp sinh viên thường không thấy mình được ghi gì"): khi FAP được chiếu, cả lớp nhìn thấy danh sách. Khớp với F-09 (công khai kết quả trong lớp) và F-17 (laptop đang mở sẵn) | F-08, F-09, F-17 |
 
 ## Ý nghĩa cho thiết kế (giả thuyết, chưa phải kết luận)
 

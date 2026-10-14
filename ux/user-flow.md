@@ -162,6 +162,7 @@ flowchart TD
 
 ## 5. Câu hỏi mở cho thiết kế
 
-- **Ảnh sinh viên ở SC-08:** giúp giảng viên thỉnh giảng nhận mặt (R03), nhưng chưa biết FAP có cung cấp ảnh cho giảng viên không (Assumed).
-- **Mốc nhắc 22:00 ở FL-3:** chọn trước 23:59 để còn thời gian sửa; con số là Assumed.
-- **Giảng viên dùng điện thoại hay laptop:** rủi ro lớn nhất của P-01 (`ux/persona.md`, mục 6). Nếu giảng viên thật nói họ chỉ dùng laptop, FL-1 vẫn giữ nguyên logic, nhưng lý do chọn mobile phải chuyển sang FL-3 (sửa trong giờ nghỉ, không mở laptop).
+- **Ảnh sinh viên ở SC-08:** FAP có hiện ảnh từng sinh viên trên trang điểm danh (O-01.9, Observed), nên ứng dụng dùng lại ảnh này.
+- **Mốc nhắc 22:00 ở FL-3:** chọn trước 23:59 để còn thời gian sửa; con số là Assumed (thien xác nhận chưa chắc, 14/10/2026).
+- **Giảng viên dùng điện thoại hay laptop:** laptop chiếu FAP là thiết bị chính khi điểm danh (O-01.10, Observed); điện thoại dùng cho việc đột xuất (O-01.11, Assumed). FL-1 sẽ được viết lại theo D-19; FL-3 (sửa trong ngày) là lý do chính để có ứng dụng di động.
+- **Ghi lên FAP (D-18):** không kết nối trực tiếp; extension trên laptop tự điền trang FAP. Mọi chỗ ghi "Đã lên FAP" trong tài liệu này hiểu là "extension đã điền xong"; trước đó trạng thái là "Chờ điền lên FAP".
