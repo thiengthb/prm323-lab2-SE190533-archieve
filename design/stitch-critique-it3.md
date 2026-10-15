@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-CRIT-IT3 |
-| Trạng thái | Chờ thien duyệt |
+| Trạng thái | Đã duyệt (thien, 15/10/2026): chọn “Duyệt như đề xuất”, CR-63 là hạn chế |
 | Đầu vào | Prompt `ai/prompts/AI-28-stitch-flow1-and-it3.md`; bản Export thien gửi tối 15/10/2026 (tệp trong zip ghi giờ 20:31, giờ Việt Nam): `assets/stitch/IT-0b-SC-02.png`, `IT-0b-SC-04.png`, `IT-0b-SC-05.png`, `IT-0b-SC-06.png`, `IT-3-SC-03.png` và mã HTML cùng tên trong `assets/stitch/code/` |
 | Người phản biện | Claude |
 | Tiêu chí | Như các vòng trước: Nielsen, WCAG 2.2, persona P-01, các quyết định đã chốt (D-xx), quy tắc trong `design/DESIGN.md` |

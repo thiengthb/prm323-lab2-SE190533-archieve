@@ -33,7 +33,7 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 | AI-25 | 14/10/2026 | Claude (phản biện, Figma MCP) | Vòng IT-3c: phản biện 7 góp ý của thien về Final UI, tự rà chữ trên 55 frame và tìm 7 lỗi logic; áp D-25, D-26, D-27; nối lại FL-3 và FL-2 báo sai | Không có prompt riêng; đầu vào là góp ý của thien → `design/final-ui-review.md`, `design/figma-build.md` mục 8, D-25..D-27 |
 | AI-26 | 14/10/2026 | Claude (phiên chính, Figma MCP) | S5: viết screen-spec, design-decisions (đo a11y bằng script), flutter-handoff; phản biện D-28 (5 phút, 15 giây) theo câu hỏi của thien; sửa SC-01 theo CR-41; vẽ 8 trạng thái còn thiếu và nối vào prototype (12 điểm bắt đầu, 84 frame) | Không có prompt riêng; đầu vào là user-flow v2 và góp ý của thien → `design/screen-spec.md`, `design/design-decisions.md`, `handoff/flutter-handoff.md`, `design/figma-build.md` mục 8.2, D-28 |
 | AI-27 | 15/10/2026 | Claude (phiên chấm độc lập) | Chấm lại toàn bài theo đề, guideline thuyết trình, persona guideline, UI Simplicity checklist; ra điểm và danh sách lỗi. Phiên chính sửa theo đó: CR-43..CR-53 | `ai/prompts/AI-27-independent-review.md`, `design/final-ui-review.md` mục 4 |
-| AI-28 | 15/10/2026 | Claude soạn, thien chạy trên Stitch | Bổ sung bốn màn FL-1 (SC-02, SC-04, SC-05, SC-06) và vòng IT-3 trên Stitch cho SC-03. Đã chạy tối 15/10; critique CR-54..CR-63, chờ thien duyệt | `ai/prompts/AI-28-stitch-flow1-and-it3.md` → `assets/stitch/IT-0b-*.png`, `IT-3-SC-03.png`  |
+| AI-28 | 15/10/2026 | Claude soạn, thien chạy trên Stitch | Bổ sung bốn màn FL-1 (SC-02, SC-04, SC-05, SC-06) và vòng IT-3 trên Stitch cho SC-03. Đã chạy tối 15/10; critique CR-54..CR-63, thien đã duyệt | `ai/prompts/AI-28-stitch-flow1-and-it3.md` → `assets/stitch/IT-0b-*.png`, `IT-3-SC-03.png`  |
 | AI-29 | 15/10/2026 | Claude soạn, thien chạy trên Codex | Chấm chéo mù bằng mô hình của hãng khác, rồi so với bản chấm AI-27 để tìm thiên lệch của từng mô hình. **Chờ chạy** | `ai/prompts/AI-29-codex-independent-review.md` |
 
 ## AI-01, AI-02 — Quy trình và bộ câu hỏi (13/10/2026)
@@ -184,7 +184,7 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 - **Chạy:** thien chạy trong project Stitch cũ và gửi zip tối 15/10 (tệp trong zip ghi 20:31 giờ Việt Nam), với lời nhắn “Mình đã làm xong phần stitch bạn gửi”. thien không ghi lại số lần chạy và chế độ Stitch nên mục này để trống. Zip có 12 màn; 7 màn cũ có mã HTML trùng từng byte với lần Export 14/10, nên repo chỉ thêm 5 màn mới: `assets/stitch/IT-0b-SC-02.png`, `IT-0b-SC-04.png`, `IT-0b-SC-05.png`, `IT-0b-SC-06.png`, `IT-3-SC-03.png` và mã HTML cùng tên.
 - **Output:** IT-3 sửa đúng 3/3 điểm được giao (CR-24, CR-25, CR-31) và không đổi gì khác, nhưng chip “QR đã đóng” bị tràn chữ (CR-60). Bốn màn IT-0b đúng số liệu, nhưng tiêu đề mất dấu, tự thêm Wi-Fi trái D-24, cắt chữ, đổi sang font Roboto Flex và có chữ 11–12 px.
 - **Critique:** Claude, `design/stitch-critique-it3.md`, CR-54..CR-63. Tám phát hiện Accept nhưng Figma đã đúng; CR-62 Reject; CR-63 (“Chênh −1” cạnh “Dư 1 lượt quét”, có cả trên Figma) đề xuất ghi là hạn chế, chưa sửa trước thứ Sáu. Khi đặt bản Figma cạnh Stitch, Claude cũng thấy ảnh trong `assets/figma/` đã cũ và có lỗi hiển thị nút trên Figma (CR-64, CR-65, đã sửa).
-- **Quyết định:** chờ thien duyệt trên thẻ quyết định.
+- **Quyết định:** thien chọn “Duyệt như đề xuất” trên thẻ quyết định (15/10/2026 22:03). Tám phát hiện Accept (Figma đã đúng), CR-62 Reject, CR-63 Modify nhưng chưa sửa trước thứ Sáu, ghi là hạn chế.
 
 ## AI-29 — Chấm chéo bằng Codex (15/10/2026, đang chờ chạy)
 
