@@ -34,6 +34,7 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 | AI-26 | 14/10/2026 | Claude (phiên chính, Figma MCP) | S5: viết screen-spec, design-decisions (đo a11y bằng script), flutter-handoff; phản biện D-28 (5 phút, 15 giây) theo câu hỏi của thien; sửa SC-01 theo CR-41; vẽ 8 trạng thái còn thiếu và nối vào prototype (12 điểm bắt đầu, 84 frame) | Không có prompt riêng; đầu vào là user-flow v2 và góp ý của thien → `design/screen-spec.md`, `design/design-decisions.md`, `handoff/flutter-handoff.md`, `design/figma-build.md` mục 8.2, D-28 |
 | AI-27 | 15/10/2026 | Claude (phiên chấm độc lập) | Chấm lại toàn bài theo đề, guideline thuyết trình, persona guideline, UI Simplicity checklist; ra điểm và danh sách lỗi. Phiên chính sửa theo đó: CR-43..CR-53 | `ai/prompts/AI-27-independent-review.md`, `design/final-ui-review.md` mục 4 |
 | AI-28 | 15/10/2026 | Claude soạn, thien chạy trên Stitch | Bổ sung bốn màn FL-1 (SC-02, SC-04, SC-05, SC-06) và vòng IT-3 trên Stitch cho SC-03. Đã chạy tối 15/10; critique CR-54..CR-63, chờ thien duyệt | `ai/prompts/AI-28-stitch-flow1-and-it3.md` → `assets/stitch/IT-0b-*.png`, `IT-3-SC-03.png`  |
+| AI-29 | 15/10/2026 | Claude soạn, thien chạy trên Codex | Chấm chéo mù bằng mô hình của hãng khác, rồi so với bản chấm AI-27 để tìm thiên lệch của từng mô hình. **Chờ chạy** | `ai/prompts/AI-29-codex-independent-review.md` |
 
 ## AI-01, AI-02 — Quy trình và bộ câu hỏi (13/10/2026)
 
@@ -184,3 +185,10 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 - **Output:** IT-3 sửa đúng 3/3 điểm được giao (CR-24, CR-25, CR-31) và không đổi gì khác, nhưng chip “QR đã đóng” bị tràn chữ (CR-60). Bốn màn IT-0b đúng số liệu, nhưng tiêu đề mất dấu, tự thêm Wi-Fi trái D-24, cắt chữ, đổi sang font Roboto Flex và có chữ 11–12 px.
 - **Critique:** Claude, `design/stitch-critique-it3.md`, CR-54..CR-63. Tám phát hiện Accept nhưng Figma đã đúng; CR-62 Reject; CR-63 (“Chênh −1” cạnh “Dư 1 lượt quét”, có cả trên Figma) đề xuất ghi là hạn chế, chưa sửa trước thứ Sáu. Khi đặt bản Figma cạnh Stitch, Claude cũng thấy ảnh trong `assets/figma/` đã cũ và có lỗi hiển thị nút trên Figma (CR-64, CR-65, đã sửa).
 - **Quyết định:** chờ thien duyệt trên thẻ quyết định.
+
+## AI-29 — Chấm chéo bằng Codex (15/10/2026, đang chờ chạy)
+
+- **Prompt:** `ai/prompts/AI-29-codex-independent-review.md`, hai phần. Phần 1 chấm mù theo đề, yêu cầu kiểm chứng ít nhất 10 con số mà repo tự ghi, rà tính trung thực của quy trình qua lịch sử git, và tự đưa ra ít nhất 12 phát hiện thiết kế. Phần 2 chỉ gửi sau khi có Phần 1: so với bản chấm của Claude (AI-27), chỉ ra chỗ lệch từ 2 điểm và dấu hiệu thiên lệch của cả hai bên.
+- **Vì sao:** AI-27 do Claude chấm, cùng họ mô hình đã soạn phần lớn tài liệu, nên có thể có chung điểm mù (tin tài liệu của chính mình, coi phần mình sửa là đã xong).
+- **Giới hạn đã biết:** điểm AI-27 có sẵn trong repo (`ai/prompts/AI-27-independent-review.md`). Prompt dặn Codex không mở tệp đó trước khi chấm xong và phải khai nếu đã thấy.
+- **Trạng thái:** chờ thien chạy và gửi lại kết quả. Lỗi mới đặt mã từ CR-66.

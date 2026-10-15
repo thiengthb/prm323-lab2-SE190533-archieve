@@ -1,6 +1,8 @@
 # Google Form khảo sát nhanh: Điểm danh buổi học tại FPTU
 
-Dùng cho D-05a (nguồn bổ sung, nhãn **Survey**). Khoảng 2 phút. Đóng form trước **12:00 thứ Năm 15/10/2026**. Dưới 15 câu trả lời thì kết quả chỉ ghi là "tham khảo".
+Dùng cho D-05a (nguồn bổ sung, nhãn **Survey**). Khoảng 2 phút. Dưới 15 câu trả lời thì kết quả chỉ ghi là “tham khảo”.
+
+**Cập nhật 15/10/2026 tối:** hạn cũ (12:00 thứ Năm 15/10) đã qua mà form chưa được tạo. thien làm lại form tối 15/10, đóng lúc **11:00 thứ Sáu 16/10/2026** để kịp tổng hợp trước buổi thuyết trình. Vì form chạy **sau** khi thiết kế đã xong, kết quả chỉ dùng để kiểm chứng sau (persona và TC có đứng không), không được trình bày như dữ liệu đã dẫn dắt thiết kế. Nếu không có câu trả lời, D-05a ghi rõ là phần khảo sát chưa thực hiện.
 
 Cách tạo: Google Forms → Form trống → dán từng câu dưới đây. Bật "Đi tới phần dựa trên câu trả lời" ở câu 1. Không thu email, để trả lời ẩn danh.
 
