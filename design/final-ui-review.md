@@ -54,3 +54,13 @@ Nguồn: một phiên Claude riêng chấm lại toàn bộ bài theo đề, gui
 | CR-53 | Mô tả CMP-14 trên trang 05 còn ghi thanh tiến độ màu `color/text` (trước D-27); mô tả CMP-04, CMP-15 lộ mã `&quot;`; 10 ghi chú trang 03 không gắn text style; frame web “Màn hình lớp P.205” dùng khoảng cách cứng và số lẻ (12,8; 25,6) | Viết lại mô tả theo D-27; gắn `type/body-md` cho ghi chú, `type/title-md` cho tiêu đề nhóm 412 dp; gắn biến `space/3`, `space/6`, `space/8`, `radius/2xl` cho frame web |
 | CR-64 | Claude tự rà khi đối chiếu với Stitch IT-0b (15/10 tối): 29 ảnh trong `assets/figma/` vẫn là bản xuất ngày 14/10, chưa có các sửa CR-44..CR-53 (ví dụ ảnh SC-04 còn “30 người, Chênh 0”). Trên Figma còn sót ba chỗ: SC-04 “Số quét nhỏ hơn” ghi Tâm “đến 07:06” (trang 03 và 06), mẫu CMP-11 trang 05 ghi “ghi tay, đến 07:08”, và dòng của Tâm ở SC-06 dùng dấu phẩy thay cho dấu “·” | Sửa ba chỗ chữ thành “hết pin” và “ghi tay 07:08 · hết pin”; xuất lại 29 ảnh từ Figma |
 | CR-65 | Nút CMP-01 ở SC-05 (thẻ Hoàng Mai Linh, Đỗ Quốc Bảo) và SC-07 Trống hiện chữ mặc định “Xác nhận” đè lên biểu tượng, dù dữ liệu của nút vẫn đúng (“Không có mặt”, “Đúng người”, “Về lịch dạy”). Lỗi hiển thị xuất hiện sau khi sửa component ở đợt 5 | Gán lại nhãn cho cả 87 nút trang 03 và 91 nút trang 06 để Figma tính lại bố cục; chụp lại và kiểm bằng mắt từng frame có trong `assets/figma/` |
+
+## 5. Sửa theo chấm chéo Codex (AI-29, 15/10/2026 tối)
+
+Nguồn: `ai/reviews/AI-29-triage.md`. thien chọn “Sửa 3 lỗi chữ” (D-31).
+
+| Mã | Lỗi | Sửa |
+|---|---|---|
+| CR-63 | SC-04 ghi “Chênh −1” trong khi banner ngay dưới nói “Dư 1 lượt quét” | Ô thứ ba thành “Quét dư”: số quét trừ số quét dự kiến (người trong phòng trừ người chưa quét được đánh dấu “Trong phòng”). Ba biến thể ghi +1, +1, 0 |
+| CR-67 | SC-03 Mở từ xa hứa “mã không bị chụp gửi ra ngoài”, nhưng người trong phòng vẫn chụp được mã trên màn hình lớp | Câu mới: mã chỉ xuất hiện trong phòng học, vẫn có thể bị chụp lại, nên khi vào lớp vẫn đối chiếu sĩ số |
+| CR-68 | SC-11 “Đã quét rồi” hiện hai giờ quét khác nhau (07:01:04 trong câu, 07:03:10 trong ô) | Nhãn ô đổi thành “Lần quét này” |

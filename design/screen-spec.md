@@ -119,7 +119,7 @@ Trong mục “Trạng thái” của từng màn, trạng thái nào có frame 
 - QR đang mở tại lớp: frame “SC-03 · Phiên điểm danh”.
 - Dialog đóng QR sớm (overlay, CMP-06 Confirmation): “Đóng QR sớm?”, “Còn 4 sinh viên chưa quét và QR còn 1:52. Người đến sau sẽ được ghi tay ở bước xem lại.”, nút “Hủy” và “Đóng QR”.
 - QR đã đóng: frame “… · QR đã đóng (CR-25)”. Chip, chấm và chữ đổi cùng lúc: “QR đã đóng”, “Đã đóng lúc 07:05”.
-- Mở từ xa (K1b): frame “… · Mở từ xa (K1b)”. Điện thoại không hiện mã: “Mã đang hiện trên màn hình lớp P.205. Điện thoại này không hiện mã, để mã không bị chụp gửi ra ngoài.” Không có danh sách lớp, chỉ có bộ đếm.
+- Mở từ xa (K1b): frame “… · Mở từ xa (K1b)”. Điện thoại không hiện mã: “Mã đang hiện trên màn hình lớp P.205. Điện thoại này không hiện mã để mã chỉ xuất hiện trong phòng học. Mã vẫn có thể bị chụp lại, nên khi vào lớp thầy vẫn đối chiếu sĩ số.” (sửa câu cũ “để mã không bị chụp gửi ra ngoài” vì hứa quá mức, CR-67) Không có danh sách lớp, chỉ có bộ đếm.
 - QR đã đóng của phiên mở từ xa: frame “… · QR đã đóng, mở từ xa (K1b)”, dòng nguồn “Mở từ xa lúc 06:55 · mã hiện trên màn hình lớp P.205”.
 - Trang web “Màn hình lớp P.205” (1280 × 720) chạy trên TV của phòng: tên phòng, môn và slot, hướng dẫn quét, QR, “12/32 đã quét”, và câu “Trang này chỉ mở được trên TV của phòng P.205…”.
 - Kiểm 412 dp: frame “SC-03 · Phiên điểm danh · 412 dp”.
@@ -141,7 +141,7 @@ Trong mục “Trạng thái” của từng màn, trạng thái nào có frame 
 1. App bar “Đối chiếu sĩ số”, nút quay lại.
 2. Hướng dẫn: “Đếm số người đang ngồi trong phòng, kể cả người chưa quét. Không cần gọi tên.”
 3. Ô “Số người trong phòng” có nút “−” và “+”.
-4. Ba số: “Đã quét”, “Trong phòng”, “Chênh”.
+4. Ba số: “Đã quét”, “Trong phòng”, “Quét dư”. Quét dư = Đã quét − (Trong phòng − số người chưa quét được đánh dấu “Trong phòng”). Trước 15/10 ô thứ ba là “Chênh” (Đã quét − Trong phòng), dễ đọc nhầm khi đứng cạnh banner “Dư 1 lượt quét” (CR-63).
 5. Câu giải thích kết quả so sánh.
 6. Danh sách cần xem: người chưa quét (khi khớp) hoặc lượt quét bị gắn cờ (khi lệch).
 7. Nút chính.
@@ -149,9 +149,9 @@ Trong mục “Trạng thái” của từng màn, trạng thái nào có frame 
 **Hành động chính.** “Kiểm tra ngẫu nhiên”.
 
 **Trạng thái.**
-- Mặc định, 31 người và 30 lượt quét: frame “SC-04 · Đối chiếu sĩ số (L3)”. “Chênh −1” màu chữ thường. Danh sách “Chưa quét · 2” có Phạm Thu Hà (mất 4G) và Võ Minh Tâm (hết pin), cả hai chip “Trong phòng”. Banner: “Có 2 người chưa quét đang ngồi trong phòng, nên lẽ ra chỉ có 29 lượt quét. Dư 1 lượt quét không có người: kiểm tra ngẫu nhiên để tìm.” Đây là cách L3 bắt quét hộ khi con số nhìn qua không lệch nhiều (CR-44).
-- Số quét lớn hơn số người: frame “… · Số quét lớn hơn số người”. “Chênh +1” màu danger. Danh sách “Lượt quét cần xem · 2” chỉ ra lượt quét cùng thiết bị và lượt quét sát lúc QR đóng.
-- Số quét nhỏ hơn số người: frame “SC-04 · Đối chiếu sĩ số · Số quét nhỏ hơn số người”. 30 quét, 32 người, “Chênh −2” màu chữ thường. Banner: “Thiếu 2 lượt quét, bằng số người chưa quét đang ngồi trong phòng. Ghi tay họ ở bước xem lại. Vẫn kiểm tra ngẫu nhiên vì số thiếu có thể che một lượt quét hộ.” Hai dòng chưa quét có chip “Trong phòng”. Nút vẫn là “Kiểm tra ngẫu nhiên” (FL-1: nhánh “Nhỏ hơn” vẫn đi qua SC-05).
+- Mặc định, 31 người và 30 lượt quét: frame “SC-04 · Đối chiếu sĩ số (L3)”. “Quét dư +1” màu chữ thường (30 − (31 − 2)). Danh sách “Chưa quét · 2” có Phạm Thu Hà (mất 4G) và Võ Minh Tâm (hết pin), cả hai chip “Trong phòng”. Banner: “Có 2 người chưa quét đang ngồi trong phòng, nên lẽ ra chỉ có 29 lượt quét. Dư 1 lượt quét không có người: kiểm tra ngẫu nhiên để tìm.” Đây là cách L3 bắt quét hộ khi con số nhìn qua không lệch nhiều (CR-44).
+- Số quét lớn hơn số người: frame “… · Số quét lớn hơn số người”. “Quét dư +1” màu danger. Danh sách “Lượt quét cần xem · 2” chỉ ra lượt quét cùng thiết bị và lượt quét sát lúc QR đóng.
+- Số quét nhỏ hơn số người: frame “SC-04 · Đối chiếu sĩ số · Số quét nhỏ hơn số người”. 30 quét, 32 người, “Quét dư 0” màu chữ thường (30 − (32 − 2)). Banner: “Thiếu 2 lượt quét, bằng số người chưa quét đang ngồi trong phòng. Ghi tay họ ở bước xem lại. Vẫn kiểm tra ngẫu nhiên vì số thiếu có thể che một lượt quét hộ.” Hai dòng chưa quét có chip “Trong phòng”. Nút vẫn là “Kiểm tra ngẫu nhiên” (FL-1: nhánh “Nhỏ hơn” vẫn đi qua SC-05).
 
 **Quy tắc.** Màu đỏ chỉ dùng khi số quét lớn hơn số người, vì đó mới là dấu hiệu quét hộ (D-27). Lượt quét bị gắn cờ luôn có lý do bằng chữ ở dòng riêng (CR-24).
 
@@ -321,7 +321,7 @@ Trong mục “Trạng thái” của từng màn, trạng thái nào có frame 
 - Thành công: “Đã ghi nhận lúc 07:01”, chip “Chờ xác nhận”, “Giảng viên sẽ đối chiếu và xác nhận. Trạng thái chính thức hiện trên FAP sau khi xác nhận.”
 - Mã hết hạn: “Mã đã hết hạn”, “Mã đổi sau mỗi 15 giây. Quét lại mã đang hiện trên màn hình lớp.”
 - Mất mạng: “Chưa gửi được”, nói cách bật mạng và giơ tay báo giảng viên nếu vẫn lỗi.
-- Đã quét rồi: “Bạn đã quét buổi này rồi”, nói giờ của lượt đầu.
+- Đã quét rồi: “Bạn đã quét buổi này rồi”, nói giờ của lượt đầu. Ô bên dưới ghi “Lần quét này” (giờ của lần quét vừa rồi), không ghi “Giờ quét”, để không có hai giờ quét khác nhau trên cùng màn (CR-68).
 - Không có trong lớp: “Bạn không có trong danh sách lớp này”, nói mã thuộc lớp nào.
 - Máy đã dùng cho tài khoản khác: “Máy này đã điểm danh cho tài khoản khác” (một máy một người, D-21 B).
 - QR đã đóng: “Phiên điểm danh đã đóng”, chỉ sang ghi tay kèm giờ đến (N-03).

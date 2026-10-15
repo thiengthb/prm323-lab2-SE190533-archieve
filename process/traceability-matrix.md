@@ -74,9 +74,9 @@ Nguồn (S/H, R, O, T, Survey) → Phát hiện F → Nhu cầu N → Persona P 
 | CR-42 (thien hỏi, 14/10) | Nielsen #5; D-21 B | Accept: QR đóng lúc giờ vào slot + 5 phút, nhận cả mã liền trước | D-28 | SC-03 (trang 03, 06) |
 | CR-43..CR-48 (bản chấm độc lập, 15/10) | Nielsen #4 (nhất quán), #5; D-28; NT-7; yêu cầu thứ tự trang của đề | Accept, sửa luôn | D-24, D-28 | SC-04, SC-06, SC-08, SC-11, SC-14, SC-15, trang web màn hình lớp (`design/final-ui-review.md` mục 4) |
 | CR-49..CR-53 (bản chấm độc lập, đợt 5, 15/10) | Nielsen #4, #8; UI Simplicity A4; D-27; D-29 | Accept, sửa luôn | D-27, D-29 | SC-01, SC-02, FL-1, FL-2 (trang 01), CMP-08, CMP-14 (trang 05), trang 03, 06 |
-| CR-54..CR-63 (critique Stitch IT-0b và IT-3, 15/10) | Nielsen #1, #2, #4, #8; WCAG 1.4.4, 1.4.10; D-21, D-23, D-24 | Accept 8 (Figma đã đúng), Reject CR-62, Modify CR-63 chưa sửa, ghi là hạn chế (thien duyệt 15/10) | D-21, D-23, D-24 | SC-02, SC-03, SC-04, SC-05, SC-06 (`design/stitch-critique-it3.md`) |
+| CR-54..CR-63 (critique Stitch IT-0b và IT-3, 15/10) | Nielsen #1, #2, #4, #8; WCAG 1.4.4, 1.4.10; D-21, D-23, D-24 | Accept 8 (Figma đã đúng), Reject CR-62, Modify CR-63, ban đầu ghi là hạn chế (thien duyệt 15/10), sau AI-29 thì sửa (D-31) | D-21, D-23, D-24 | SC-02, SC-03, SC-04, SC-05, SC-06 (`design/stitch-critique-it3.md`) |
 | CR-64, CR-65 (Claude tự rà, 15/10 tối) | Nielsen #4; nhất quán dữ liệu với D-29 | Accept, sửa luôn | D-29 | SC-04, SC-05, SC-06, SC-07, CMP-11, CMP-15; 29 ảnh `assets/figma/` |
-| CR-66..CR-72 (chấm chéo Codex AI-29, 15/10 tối) | Rubric “Prototype”, “Component states”; Nielsen #1, #2, #9; WCAG 1.4.10 | CR-66 Accept, đã làm; CR-67, CR-68 Accept chờ thien; CR-69 hạn chế; CR-70 chờ thien; CR-71 việc của nhóm; CR-72 Modify | — | SC-03, SC-05, SC-11, SC-13; `assets/figma/INDEX.md`, `design/prototype-links.md` (`ai/reviews/AI-29-triage.md`) |
+| CR-66..CR-72 (chấm chéo Codex AI-29, 15/10 tối) | Rubric “Prototype”, “Component states”; Nielsen #1, #2, #9; WCAG 1.4.10 | CR-66 Accept, đã làm; CR-67, CR-68 Accept, đã sửa; CR-69 hạn chế; CR-70 giữ 3 màn (thien chọn); CR-71 việc của nhóm; CR-72 Modify | — | SC-03, SC-05, SC-11, SC-13; `assets/figma/INDEX.md`, `design/prototype-links.md` (`ai/reviews/AI-29-triage.md`) |
 
 ## 5. Kiểm tra độ phủ (chạy trước khi nộp)
 

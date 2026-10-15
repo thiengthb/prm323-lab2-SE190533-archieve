@@ -36,7 +36,7 @@ Mỗi quyết định ghi: chọn gì, vì sao (theo persona, heuristic hoặc r
 ### DD-4 · Mở từ xa: mã chỉ hiện trên TV của phòng (D-24 vòng 2 A)
 
 - **Chọn:** khi giảng viên chưa tới lớp, phiên vẫn mở được, nhưng mã chỉ hiện trên trang web chạy trên TV của phòng. Điện thoại của giảng viên chỉ đếm số đã quét. Kết quả chỉ lên FAP sau khi giảng viên vào lớp và làm xong đối chiếu, kiểm tra.
-- **Vì sao:** Đúng gợi ý của GVHD (kịch bản K1b) mà không mở cửa điểm danh từ xa: mã không có trên điện thoại nên không bị chụp gửi ra ngoài. Người quét từ ngoài phòng vẫn bị bắt ở bước đếm sĩ số. Đa số phòng ở HCM có TV lớn (thien quan sát, 14/10).
+- **Vì sao:** Đúng gợi ý của GVHD (kịch bản K1b) mà không mở cửa điểm danh từ xa: mã chỉ hiện trên màn hình trong phòng, không hiện trên điện thoại của giảng viên. Mã vẫn có thể bị chụp lại (CR-67), nên người quét từ ngoài phòng vẫn bị bắt ở bước đếm sĩ số. Đa số phòng ở HCM có TV lớn (thien quan sát, 14/10).
 - **Bỏ:** gắn cờ lượt quét ngoài Wi-Fi (thuộc D-21 C đã bỏ); bắt cả lớp quét lần hai; bỏ hẳn mở từ xa.
 - **Thấy ở:** SC-03 “Mở từ xa (K1b)” và “QR đã đóng, mở từ xa (K1b)”; frame web “Màn hình lớp P.205”.
 
@@ -73,7 +73,7 @@ Mỗi quyết định ghi: chọn gì, vì sao (theo persona, heuristic hoặc r
 - **Chọn:** chip giờ màu cam của FAP chỉ dùng cho buổi đang diễn ra, có chấm; buổi khác dùng chip trung tính. Thanh tiến độ quét màu xanh lá trên nền xám. Màu đỏ chỉ dùng cho Vắng, lỗi, và ở SC-04 khi số quét lớn hơn số người.
 - **Vì sao:** Khi mọi chip giờ đều cam, cam mất nghĩa và trông như cảnh báo. Lúc QR còn mở, chưa quét là bình thường nên không được tô đỏ; đỏ để dành cho dấu hiệu quét hộ (CR-30, CR-31). Màu luôn đi cùng chữ hoặc tên nhóm (NT-2, WCAG 1.4.1).
 - **Bỏ:** chip giờ theo trạng thái điểm danh (lặp lại chip trạng thái); phần chưa quét màu vàng hoặc đỏ.
-- **Thấy ở:** SC-02, SC-09 (chip giờ), SC-03 (thanh tiến độ), SC-04 (Chênh +1).
+- **Thấy ở:** SC-02, SC-09 (chip giờ), SC-03 (thanh tiến độ), SC-04 (Quét dư +1).
 
 ### DD-10 · Báo sai được quyết trên một màn có đủ bằng chứng (FL-3, CR-32, CR-34)
 

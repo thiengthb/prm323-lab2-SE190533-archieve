@@ -152,7 +152,7 @@ Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
 | SC-02 · Chờ xác nhận (mở từ xa, K1b) | 07:06, chip “Chờ xác nhận”, “QR đã đóng 07:05, 30/32 đã quét. Vào lớp để đối chiếu sĩ số” |
 | SC-03 · QR sắp đóng (CMP-14 Sắp đóng) | “QR còn 0:20” màu warning kèm chữ “Sắp đóng · còn 20 giây” |
 | SC-03 · Laptop chưa kết nối | 0/32, banner warning, nút “Chiếu tạm mã từ điện thoại” |
-| SC-04 · Số quét nhỏ hơn số người | 30 quét, 32 người, “Chênh −2”; hai người chưa quét có chip “Trong phòng”; vẫn sang kiểm tra ngẫu nhiên |
+| SC-04 · Số quét nhỏ hơn số người | 30 quét, 32 người, “Quét dư 0” (trước 15/10: “Chênh −2”, CR-63); hai người chưa quét có chip “Trong phòng”; vẫn sang kiểm tra ngẫu nhiên |
 | SC-06 · Còn lượt quét cần xem (NT-3) | “Cần xử lý 2”, hai nút Có mặt / Vắng dưới mỗi lượt quét bị gắn cờ, nút chính tắt kèm lý do |
 | SC-08 · Đã từ chối (Giữ Vắng) | Banner trung tính nói sinh viên đã nhận lý do và đường khiếu nại; một nút “Về danh sách báo sai” |
 
@@ -176,3 +176,14 @@ Trang 01: ô “Có người chưa quét được” của FL-1 thêm nhãn “S
 | 06 Prototype | SC-04 “Số quét nhỏ hơn”: Tâm “hết pin”. Gán lại nhãn 91 nút CMP-01 |
 
 29 ảnh trong `assets/figma/` được xuất lại từ Figma ngày 15/10 và kiểm bằng mắt từng ảnh. Ảnh FL-1, FL-2, SC-01, SC-02, SC-02 Trống và màn hình lớp đã xuất ở đợt 5 nên giữ nguyên. Ảnh trang 04 và wireframe không đổi.
+
+## 11. Sửa ba lỗi chữ sau chấm chéo Codex (15/10 tối, CR-63, CR-67, CR-68)
+
+thien chọn “Sửa 3 lỗi chữ” trên thẻ quyết định (D-31).
+
+| Trang | Thay đổi |
+|---|---|
+| 03 Final UI | SC-04 (ba biến thể): ô thứ ba đổi từ “Chênh” sang “Quét dư”, số là +1, +1 và 0 thay cho −1, +1 và −2; ghi chú dưới màn ghi công thức “Quét dư = 30 − (32 − 2) = 0”. SC-03 Mở từ xa: câu mới không hứa chống chụp mã. SC-11 “Đã quét rồi”: nhãn “Giờ quét” thành “Lần quét này” |
+| 06 Prototype | Cùng các thay đổi ở bản sao SC-04 và SC-03 Mở từ xa |
+
+Xuất lại 5 ảnh: `SC-04-doi-chieu-si-so.png`, `SC-04-so-quet-lon-hon-so-nguoi.png`, `SC-04-so-quet-nho-hon.png`, `SC-03-mo-tu-xa.png`, `SC-11-da-quet-roi.png`. Kiểm bằng mắt từng ảnh.

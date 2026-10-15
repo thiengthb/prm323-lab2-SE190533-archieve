@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-CRIT-IT3 |
-| Trạng thái | Đã duyệt (thien, 15/10/2026): chọn “Duyệt như đề xuất”, CR-63 là hạn chế |
+| Trạng thái | Đã duyệt (thien, 15/10/2026): chọn “Duyệt như đề xuất”, CR-63 là hạn chế. Sau chấm chéo Codex (AI-29), thien mở lại CR-63 và chọn sửa (D-31) |
 | Đầu vào | Prompt `ai/prompts/AI-28-stitch-flow1-and-it3.md`; bản Export thien gửi tối 15/10/2026 (tệp trong zip ghi giờ 20:31, giờ Việt Nam): `assets/stitch/IT-0b-SC-02.png`, `IT-0b-SC-04.png`, `IT-0b-SC-05.png`, `IT-0b-SC-06.png`, `IT-3-SC-03.png` và mã HTML cùng tên trong `assets/stitch/code/` |
 | Người phản biện | Claude |
 | Tiêu chí | Như các vòng trước: Nielsen, WCAG 2.2, persona P-01, các quyết định đã chốt (D-xx), quy tắc trong `design/DESIGN.md` |
@@ -46,7 +46,7 @@ Mức: Cao là sai dữ liệu, sai quyết định đã chốt, hoặc làm gi�
 | CR-60 | SC-03 (IT-3) | Chip “QR đã đóng” có chiều cao cố định 32 dp nên chữ xuống dòng và tràn ra ngoài chip ở 360 dp. Sửa CR-25 đúng ý nhưng sinh lỗi bố cục mới | WCAG 1.4.10; Nielsen #8 | Trung bình | **Accept, không cần sửa Figma.** Chip trên Figma co theo nội dung (Auto Layout). Đây là lần thứ hai Stitch sửa đúng chỗ này lại hỏng chỗ khác (CR-18 ở IT-1) |
 | CR-61 | SC-03, SC-04 | (a) Ở SC-03, trước khi đối chiếu, danh sách đã gắn kết luận “Có mặt” và “Vắng” cho từng người. Spec chỉ cho “Đã quét” và “Chưa quét” tới bước xác nhận ở SC-06. (b) Hai người chưa quét ở SC-03 (Lê Bảo Trâm, Phạm Quốc Anh) khác với SC-04 (Phạm Thu Hà, Võ Minh Tâm). Lỗi (b) do prompt B1 không nhắc lại danh sách | screen-spec SC-03 mục 4; Nielsen #1, #4 | Trung bình | **Accept, không cần sửa Figma.** Figma dùng “Đã quét” và “Chưa quét”, và cùng một danh sách cho cả luồng. Lỗi (a) có từ IT-0 nhưng các vòng trước bỏ sót, nên ghi nhận là thiếu sót của người phản biện |
 | CR-62 | SC-02, SC-04, SC-05, SC-06 | Nút ảnh đại diện ở góc phải mọi màn, bấm vào không đi đâu. Tài khoản đã ghi là ngoài phạm vi (CR-08, CR-14, `ux/user-flow.md`) | Nielsen #8 | Thấp | **Reject.** Figma không có nút này, không cần làm gì |
-| CR-63 | SC-04 | Đặt Stitch và Figma cạnh nhau mới thấy rõ một chỗ dễ đọc nhầm. Ô thứ ba ghi “Chênh −1” màu chữ thường, nhưng banner ngay dưới nói “Dư 1 lượt quét”. Liếc qua, giảng viên có thể nghĩ chỉ thiếu một lượt quét, trong khi thực tế đang có một lượt quét hộ. Lỗi này nằm ở cả bản Figma (screen-spec SC-04, CR-44) | Nielsen #1, #2 | Thấp | **Modify, chưa sửa trước thứ Sáu.** Banner đã nói đúng con số dư và nút chính dẫn sang kiểm tra ngẫu nhiên, nên luồng không sai. Đổi số liệu vào đêm trước dễ làm lệch spec, handoff và kịch bản nói. Ghi vào hạn chế và chuẩn bị câu trả lời cho phần hỏi đáp. Hướng sửa sau: ô thứ ba so với số quét dự kiến (29) và hiện “Dư +1” |
+| CR-63 | SC-04 | Đặt Stitch và Figma cạnh nhau mới thấy rõ một chỗ dễ đọc nhầm. Ô thứ ba ghi “Chênh −1” màu chữ thường, nhưng banner ngay dưới nói “Dư 1 lượt quét”. Liếc qua, giảng viên có thể nghĩ chỉ thiếu một lượt quét, trong khi thực tế đang có một lượt quét hộ. Lỗi này nằm ở cả bản Figma (screen-spec SC-04, CR-44) | Nielsen #1, #2 | Thấp | **Modify, chưa sửa trước thứ Sáu.** Banner đã nói đúng con số dư và nút chính dẫn sang kiểm tra ngẫu nhiên, nên luồng không sai. Đổi số liệu vào đêm trước dễ làm lệch spec, handoff và kịch bản nói. Ghi vào hạn chế và chuẩn bị câu trả lời cho phần hỏi đáp. Hướng sửa sau: ô thứ ba so với số quét dự kiến (29) và hiện “Dư +1”. **Cập nhật 15/10 tối:** Codex (AI-29) cũng bắt lỗi này và xếp mức Cao, nên thien mở lại và chọn sửa (D-31). Ô thứ ba nay là “Quét dư +1”, trên Figma trang 03, 06 và trong spec, handoff |
 
 ## 4. Tổng kết bốn vòng Stitch
 
@@ -64,4 +64,4 @@ Ba bài học có bằng chứng:
 2. AI tự thêm nội dung trái với quyết định đã chốt khi prompt để trống chỗ (CR-55). Vì vậy D-xx phải được ghi vào prompt, không thể coi là AI tự biết.
 3. Prompt viết “như cũ” là chưa đủ: thiếu tên font thì lệch font (CR-57), thiếu danh sách thì lệch dữ liệu giữa các màn (CR-61b). Hai lỗi này là của người viết prompt, không chỉ của Stitch.
 
-Cả 10 phát hiện đều đã được xử lý trên Figma hoặc được ghi là hạn chế (CR-63). Không có màn Figma nào phải sửa vì vòng này.
+Cả 10 phát hiện đều đã được xử lý trên Figma hoặc được ghi là hạn chế (CR-63). Không có màn Figma nào phải sửa vì vòng này. CR-63 sau đó được sửa trên Figma ngày 15/10 tối, sau chấm chéo Codex (D-31).
