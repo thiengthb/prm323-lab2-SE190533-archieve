@@ -22,9 +22,10 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Design brief cho Stitch | `design/DESIGN.md` | Có (v2) |
 | Đặc tả màn hình | `design/screen-spec.md` | Có (v1, thien duyệt 15/10) |
 | Quyết định thiết kế + checklist accessibility | `design/design-decisions.md` | Có (v1, thien duyệt 15/10) |
-| Nhật ký AI (prompt, output, critique, quyết định) | `ai/ai-design-log.md` | Có (AI-01..AI-28; AI-29 chấm chéo bằng Codex đang chờ chạy) |
+| Nhật ký AI (prompt, output, critique, quyết định) | `ai/ai-design-log.md` | Có (AI-01..AI-29; AI-29 Phần 2 đang chờ) |
 | Critique các vòng Stitch | `design/stitch-critique-it0.md` … `stitch-critique-it3.md` | Có (IT-0, IT-1, IT-2 đã duyệt; IT-0b và IT-3 thien duyệt 15/10) |
-| Ảnh Stitch, ảnh Figma | `assets/stitch/`, `assets/figma/` | Có (Stitch IT-0..IT-3 và IT-0b; Figma 15 màn và các trạng thái, 3 flow, trang 04, 05, kiểm 412 dp) |
+| Ảnh Stitch, ảnh Figma | `assets/stitch/`, `assets/figma/` | Có (Stitch IT-0..IT-3 và IT-0b; Figma: đủ 73 frame trang 03, mục lục `assets/figma/INDEX.md`; 3 flow, trang 04, 05, kiểm 412 dp) |
+| Bảng liên kết prototype (đọc từ Figma) | `design/prototype-links.md` | Có (84 frame, 12 điểm bắt đầu, 166 tương tác, 0 liên kết hỏng) |
 | Flutter handoff | `handoff/flutter-handoff.md` | Có (v1, thien duyệt 15/10): 2 bảng ánh xạ, 6 mục cho cả 15 màn |
 
 ## Hồ sơ quá trình (bổ sung, phục vụ truy vết)
@@ -37,6 +38,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Kế hoạch làm việc theo phiên | `process/work-plan.md` |
 | Hồ sơ nghiên cứu (kế hoạch, bàn giấy, công cụ, người trả lời, dữ liệu thô, tổng hợp) | `research/` (mục lục: `research/README.md`) |
 | Prompt nguyên văn của mọi lần dùng AI | `ai/prompts/` |
+| Bản chấm chéo của Codex và bảng phân loại | `ai/reviews/` |
 
 ## Tên nhắc tới nhưng không nằm trong repo này
 

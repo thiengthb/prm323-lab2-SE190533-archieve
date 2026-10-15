@@ -34,7 +34,7 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 | AI-26 | 14/10/2026 | Claude (phiên chính, Figma MCP) | S5: viết screen-spec, design-decisions (đo a11y bằng script), flutter-handoff; phản biện D-28 (5 phút, 15 giây) theo câu hỏi của thien; sửa SC-01 theo CR-41; vẽ 8 trạng thái còn thiếu và nối vào prototype (12 điểm bắt đầu, 84 frame) | Không có prompt riêng; đầu vào là user-flow v2 và góp ý của thien → `design/screen-spec.md`, `design/design-decisions.md`, `handoff/flutter-handoff.md`, `design/figma-build.md` mục 8.2, D-28 |
 | AI-27 | 15/10/2026 | Claude (phiên chấm độc lập) | Chấm lại toàn bài theo đề, guideline thuyết trình, persona guideline, UI Simplicity checklist; ra điểm và danh sách lỗi. Phiên chính sửa theo đó: CR-43..CR-53 | `ai/prompts/AI-27-independent-review.md`, `design/final-ui-review.md` mục 4 |
 | AI-28 | 15/10/2026 | Claude soạn, thien chạy trên Stitch | Bổ sung bốn màn FL-1 (SC-02, SC-04, SC-05, SC-06) và vòng IT-3 trên Stitch cho SC-03. Đã chạy tối 15/10; critique CR-54..CR-63, thien đã duyệt | `ai/prompts/AI-28-stitch-flow1-and-it3.md` → `assets/stitch/IT-0b-*.png`, `IT-3-SC-03.png`  |
-| AI-29 | 15/10/2026 | Claude soạn, thien chạy trên Codex | Chấm chéo mù bằng mô hình của hãng khác, rồi so với bản chấm AI-27 để tìm thiên lệch của từng mô hình. **Chờ chạy** | `ai/prompts/AI-29-codex-independent-review.md` |
+| AI-29 | 15/10/2026 | Claude soạn, thien chạy trên Codex | Chấm chéo mù bằng mô hình của hãng khác, rồi so với bản chấm AI-27 để tìm thiên lệch của từng mô hình. Phần 1 xong (81/100, khoảng 74–86); Phần 2 đang chờ | `ai/prompts/AI-29-codex-independent-review.md` |
 
 ## AI-01, AI-02 — Quy trình và bộ câu hỏi (13/10/2026)
 
@@ -186,9 +186,12 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 - **Critique:** Claude, `design/stitch-critique-it3.md`, CR-54..CR-63. Tám phát hiện Accept nhưng Figma đã đúng; CR-62 Reject; CR-63 (“Chênh −1” cạnh “Dư 1 lượt quét”, có cả trên Figma) đề xuất ghi là hạn chế, chưa sửa trước thứ Sáu. Khi đặt bản Figma cạnh Stitch, Claude cũng thấy ảnh trong `assets/figma/` đã cũ và có lỗi hiển thị nút trên Figma (CR-64, CR-65, đã sửa).
 - **Quyết định:** thien chọn “Duyệt như đề xuất” trên thẻ quyết định (15/10/2026 22:03). Tám phát hiện Accept (Figma đã đúng), CR-62 Reject, CR-63 Modify nhưng chưa sửa trước thứ Sáu, ghi là hạn chế.
 
-## AI-29 — Chấm chéo bằng Codex (15/10/2026, đang chờ chạy)
+## AI-29 — Chấm chéo bằng Codex (15/10/2026)
 
 - **Prompt:** `ai/prompts/AI-29-codex-independent-review.md`, hai phần. Phần 1 chấm mù theo đề, yêu cầu kiểm chứng ít nhất 10 con số mà repo tự ghi, rà tính trung thực của quy trình qua lịch sử git, và tự đưa ra ít nhất 12 phát hiện thiết kế. Phần 2 chỉ gửi sau khi có Phần 1: so với bản chấm của Claude (AI-27), chỉ ra chỗ lệch từ 2 điểm và dấu hiệu thiên lệch của cả hai bên.
 - **Vì sao:** AI-27 do Claude chấm, cùng họ mô hình đã soạn phần lớn tài liệu, nên có thể có chung điểm mù (tin tài liệu của chính mình, coi phần mình sửa là đã xong).
 - **Giới hạn đã biết:** điểm AI-27 có sẵn trong repo (`ai/prompts/AI-27-independent-review.md`). Prompt dặn Codex không mở tệp đó trước khi chấm xong và phải khai nếu đã thấy.
-- **Trạng thái:** chờ thien chạy và gửi lại kết quả. Lỗi mới đặt mã từ CR-66.
+- **Chạy Phần 1:** thien chạy trên Codex với 4 tệp đề và hướng dẫn, bản PDF slide và prompt Phần 1, gửi lại tối 15/10 (22:30) kèm lời nhắn “đây là bản của Codex với tài liệu và promt 1”. Nguyên văn: `ai/reviews/AI-29-codex-phan-1.md`. Codex chấm commit `1242923`, cho 81/100 (khoảng 74–86, độ tin trung bình) và tự khai đã vô tình thấy vài dòng đầu của tệp prompt AI-29 nhưng không thấy điểm AI-27.
+- **Phân loại:** Claude, `ai/reviews/AI-29-triage.md`. Phát hiện lớn nhất (CR-66): repo chỉ có ảnh 32 trong 73 frame và không có bằng chứng liên kết prototype, nên sáu phát hiện thiết kế của Codex là trạng thái đã có trên Figma mà Codex không thấy. Claude xuất thêm 41 ảnh, lập `assets/figma/INDEX.md` và `design/prototype-links.md`. Phát hiện mới đúng: CR-67 (câu “mã không bị chụp gửi ra ngoài” hứa quá mức), CR-69 (SC-13 chưa vẽ ô trống và quá 200 ký tự), CR-70 (kiểm 412 dp mới có 3 màn), CR-71 (chưa có bằng chứng giảng viên cho làm nhóm), CR-72 (ảnh FAP giữ chỗ không ghi là minh họa). Khi xuất ảnh, Claude thấy thêm CR-68 (SC-11 “Đã quét rồi” có hai giờ quét khác nhau) mà cả hai bản chấm đều bỏ sót. Codex cũng xếp CR-63 ở mức Cao.
+- **Phần 2:** Claude xuất bản chấm AI-27 ra PDF và soạn một đoạn ghi chú để thien dán trước prompt Phần 2: AI-27 chấm commit cũ `8c62cda`, nên lỗi AI-27 nêu mà nay không còn phải được kiểm bằng git log. Đoạn ghi chú này thêm bối cảnh, không sửa prompt.
+- **Quyết định:** chờ thien duyệt bảng phân loại.
