@@ -34,3 +34,16 @@ Nguồn: góp ý của thien lúc 14:24 và 14:27 ngày 14/10/2026, cộng phầ
 - Giảng viên: số báo sai **chưa xử lý** trong ngày. 06:58 đến 07:17: không có. 12:05: 2. Xử lý xong Vy: 1. Xử lý xong Linh: không còn.
 - Sinh viên: số báo sai **có kết quả mới mà chưa mở xem**. Thêm màn SC-09 lúc 21:22 có huy hiệu 1. Bấm tab Báo sai thì thấy kết quả và huy hiệu mất.
 - Huy hiệu vẫn hiện khi đang ở chính tab Báo sai, vì nó đếm việc còn lại, không đếm thông báo chưa đọc (với giảng viên).
+
+## 4. Sửa theo bản chấm độc lập (15/10/2026)
+
+Nguồn: một phiên Claude riêng chấm lại toàn bộ bài theo đề, guideline thuyết trình, persona guideline và UI Simplicity checklist, không đọc trao đổi nội bộ của nhóm (AI-27). Mục nào là lỗi rõ ràng thì sửa luôn. Mục nào đổi tiêu chí hoặc phạm vi thì thien quyết.
+
+| Mã | Lỗi | Sửa |
+|---|---|---|
+| CR-43 | Trang Figma xếp 01, 02, 03, 04, 06, 05, trong khi đề yêu cầu đúng thứ tự 01→06 | Đưa trang 05 Components lên trước 06 Prototype |
+| CR-44 | SC-06 ghi tay Võ Minh Tâm "đến 07:08". QR đóng lúc 07:05 theo nội quy "vào muộn quá 5 phút bị tính vắng" (D-28), nên ghi Có mặt là trái chính quy tắc nhóm dùng. Ghi chú SC-04 còn ghi "Tâm đến 07:06", lệch với 07:08 | Tâm có mặt từ đầu nhưng điện thoại hết pin: dòng ghi tay đổi thành "SE190655 · ghi tay 07:08 · hết pin". SC-11 "QR đã đóng" đổi thành "Nếu bạn đã vào lớp trước 07:05, …". K1 trong persona sửa theo (trang 03, 06) |
+| CR-45 | Lý do từ chối ở SC-14 ("lúc đối chiếu sĩ số, cô không ghi nhận em trong phòng") không đứng được: đối chiếu sĩ số chỉ ra một con số, không nhận diện từng người | Lý do mới: "em không quét mã, và lúc đối chiếu, số người trong phòng bằng số lượt quét". Hai điều này cùng đúng thì không còn chỗ cho một người có mặt mà không quét (trang 03, 06) |
+| CR-46 | SC-08 của Hoàng Mai Linh để "Sửa thành Có mặt" là nút chính, trong khi bằng chứng (vắng lúc kiểm tra ngẫu nhiên) nói ngược lại. Nút chính đang gợi ý quyết định | Khi bằng chứng ngược với lời báo, hai nút cùng mức (Secondary). Khi không có bằng chứng ngược (Vy), "Sửa thành Có mặt" vẫn là nút chính (trang 03, 06) |
+| CR-47 | Gọi tên lệch nhau: "Lượt quét" và "Giờ quét" cho cùng một ô; "màn chiếu", "TV phòng", "màn hình phòng", "màn hình lớp" cho cùng một màn hình; trang trên màn hình lớp bảo "Mở app FAP" trong khi app tên "Điểm danh buổi học" (NT-7); SC-15 có ba tên; DESIGN.md ghi "31/32" trong khi màn hiện 28/32 | Nhãn ô thống nhất "Giờ quét". Chữ trên giao diện thống nhất "màn hình lớp" theo CR-38 (D-24 vẫn ghi phần cứng là TV phòng). Trang trên màn hình lớp ghi "Mở app Điểm danh buổi học, chọn "Quét mã điểm danh"". SC-15 thống nhất "Hướng dẫn đơn khiếu nại". DESIGN.md đổi sang "Đã quét 28/32" (trang 02, 03, 06 và tài liệu) |
+| CR-48 | Trang 06 có 21 nút bật nhưng không phản hồi; slide ghi "2 nút" | Nối 10 nút có đích đúng: hai thẻ kiểm tra ngẫu nhiên còn lại ở hai nhánh SC-05, hai nút SC-03 "Laptop chưa kết nối", ba liên kết trên thẻ SC-09 tới SC-14, nút "Ghi tay thêm sinh viên" ở SC-06 nhánh NT-3. Ba nút nằm ở trạng thái đang tải nên không cần chạm. Còn 8 nút ngoài kịch bản: ở SC-08, "Từ chối" của Vy và "Sửa thành Có mặt" của Linh (hai lần mỗi nút), vì mỗi ca chỉ vẽ một kết cục và hai kết cục đã có ở hai ca; ở SC-06 nhánh NT-3, bốn nút Có mặt/Vắng trên hai dòng cần xem, vì màn sau khi chọn chưa được vẽ cho nhánh này |

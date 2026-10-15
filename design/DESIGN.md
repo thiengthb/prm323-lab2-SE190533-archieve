@@ -14,7 +14,7 @@ Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn g�
 
 ## 1. Sản phẩm trong một đoạn
 
-Ứng dụng di động **bổ trợ** FAP cho cơ sở FPTU TP.HCM, không thay FAP. Giảng viên (P-01) mở điểm danh ở lớp hoặc từ xa; QR hiện trên màn chiếu, cả lớp quét cùng lúc. Giảng viên đối chiếu sĩ số, kiểm tra ngẫu nhiên vài sinh viên bằng ảnh FAP, rồi xác nhận; extension trên laptop điền kết quả lên FAP. Sinh viên (P-02) quét QR, thấy ngay trạng thái của mình, và báo sai cho giảng viên **trước khi hết ngày**. Qua hạn thì ứng dụng chỉ dẫn sang "Đơn khiếu nại điểm danh" trên FAP.
+Ứng dụng di động **bổ trợ** FAP cho cơ sở FPTU TP.HCM, không thay FAP. Giảng viên (P-01) mở điểm danh ở lớp hoặc từ xa; QR hiện trên màn hình lớp, cả lớp quét cùng lúc. Giảng viên đối chiếu sĩ số, kiểm tra ngẫu nhiên vài sinh viên bằng ảnh FAP, rồi xác nhận; extension trên laptop điền kết quả lên FAP. Sinh viên (P-02) quét QR, thấy ngay trạng thái của mình, và báo sai cho giảng viên **trước khi hết ngày**. Qua hạn thì ứng dụng chỉ dẫn sang "Đơn khiếu nại điểm danh" trên FAP.
 
 ## 2. Nguyên tắc thiết kế
 
@@ -32,7 +32,7 @@ Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn g�
 
 - Tiếng Việt, ngắn, trung tính, xưng "bạn" với sinh viên; với giảng viên dùng câu mệnh lệnh nhẹ ("Mở điểm danh", "Xác nhận và gửi lên FAP").
 - Gọi đúng tên việc: "Báo sai điểm danh" (trong ngày, gửi giảng viên), khác với "Đơn khiếu nại điểm danh" (sau hạn, gửi phòng QLĐT trên FAP).
-- Thông báo lỗi theo mẫu **chuyện gì xảy ra + vì sao + làm gì tiếp**. Ví dụ: "Mã đã hết hạn. Mã đổi sau mỗi 15 giây. Quét lại mã đang hiện trên màn chiếu."
+- Thông báo lỗi theo mẫu **chuyện gì xảy ra + vì sao + làm gì tiếp**. Ví dụ: "Mã đã hết hạn. Mã đổi sau mỗi 15 giây. Quét lại mã đang hiện trên màn hình lớp."
 - Không đổ lỗi, không chấm than, không đe dọa. Câu nhắc chống gian lận: "Điểm danh hộ là gian lận học tập. Giảng viên sẽ kiểm tra ngẫu nhiên."
 
 ## 4. Màu (light theme bắt buộc)
@@ -74,7 +74,7 @@ Thang chữ theo **M3**, để handoff khớp tên style của `TextTheme` trong
 
 | Token | M3 | Cỡ / dòng (sp) | Độ đậm | Dùng cho |
 |---|---|---|---|---|
-| `type/headline-sm` | headlineSmall | 24 / 32 | 500 | Số lớn: "31/32 đã quét" |
+| `type/headline-sm` | headlineSmall | 24 / 32 | 500 | Số lớn: "Đã quét 28/32" |
 | `type/title-lg` | titleLarge | 22 / 28 | 500 | Tiêu đề màn |
 | `type/title-md` | titleMedium | 16 / 24 | 500 | Tiêu đề thẻ, tên môn |
 | `type/body-lg` | bodyLarge | 16 / 24 | 400 | Tên sinh viên |
@@ -98,7 +98,7 @@ Theo D-22, phần cấu trúc lấy từ thienui, bộ token mà app FAP Attenda
 
 - Khung 360 × 800 dp; kiểm ở 360 và 412 dp.
 - Cấu trúc chung: App bar (64 dp) → nội dung cuộn → thanh hành động cố định đáy (khi màn có một hành động chính) → thanh điều hướng đáy 2 tab cho mỗi vai trò.
-- Màn phiên điểm danh của giảng viên **ẩn thanh điều hướng**, thay bằng bộ đếm "Đã quét 31/32" ở trên và nút chính ở đáy.
+- Màn phiên điểm danh của giảng viên **ẩn thanh điều hướng**, thay bằng bộ đếm "Đã quét 28/32" ở trên và nút chính ở đáy.
 - Dòng sinh viên cao ≥ 64 dp, có ảnh FAP 40 dp bên trái (O-01.9).
 
 ## 8. Component
@@ -122,7 +122,7 @@ Chín component bắt buộc của đề bài là CMP-01 đến CMP-09. Componen
 | CMP-11 | Student row | Đã quét, Chưa quét, Đánh tay, Được chọn kiểm tra, Cờ "Cùng thiết bị" | Ảnh FAP, tên (`body-lg`), mã SV (`mono`, `muted`), giờ quét, chip trạng thái |
 | CMP-12 | Deadline banner | Còn hạn, sắp hết hạn (sau 20:00), đã qua hạn | "Báo sai trước 23:59 hôm nay"; đã qua hạn dẫn sang hướng dẫn đơn |
 | CMP-13 | Report timeline | Đã gửi, giảng viên đã xem, đã sửa, bị từ chối | Dòng thời gian dọc 4 bước, mỗi bước có giờ |
-| CMP-14 | Scan counter | Đang mở, sắp đóng, đã đóng | "Đã quét 31/32", vòng đếm ngược thời gian QR còn mở, nút "Đóng QR" |
+| CMP-14 | Scan counter | Đang mở, sắp đóng, đã đóng | "Đã quét 28/32", vòng đếm ngược thời gian QR còn mở, nút "Đóng QR" |
 | CMP-15 | Spot-check card | Chờ, đúng người, không có mặt | Ảnh FAP lớn, tên, mã SV, hai nút "Đúng người" và "Không có mặt" |
 
 ## 9. Trạng thái điểm danh

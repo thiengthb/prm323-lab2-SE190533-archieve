@@ -6,7 +6,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 |---|---|
 | Nhóm | Group 3 (GVHD thông báo làm nhóm): Trần Ngọc Thiên · SE190533; Vũ Anh Khôi · SE194606; Vũ Huy Phương · SE190742; Lê Thành Lộc · SE182702 |
 | Đề tài | Ứng dụng di động bổ trợ việc điểm danh trên FAP cho giảng viên FPTU cơ sở TP.HCM (đã được GVHD duyệt) |
-| Persona một dòng | **P-01 Thầy Hoàng Nam** (chính): giảng viên cơ sở HCM dạy 3–4 slot liền, cần chốt điểm danh đúng người trong vài phút đầu slot (kể cả bắt quét hộ) và sửa ca lệch ngay trong ngày. **P-02 Bảo Trâm** (phụ): sinh viên năm 2 chỉ yên tâm khi thấy mình được ghi Có mặt, cần báo sai kịp trước khi hết ngày. Cả hai là nhân vật tổng hợp từ phỏng vấn mô phỏng bằng AI (D-05), chi tiết hành vi ở mức Giả thuyết (`ux/persona.md`) |
+| Persona một dòng | **P-01 Thầy Hoàng Nam** (chính): giảng viên cơ sở HCM có ngày dạy 3–4 slot, cần chốt điểm danh đúng người trong vài phút đầu slot (kể cả bắt quét hộ) và sửa ca lệch ngay trong ngày. **P-02 Bảo Trâm** (phụ): sinh viên năm 2 chỉ yên tâm khi thấy mình được ghi Có mặt, cần báo sai kịp trước khi hết ngày. Cả hai là nhân vật tổng hợp từ phỏng vấn mô phỏng bằng AI (D-05), chi tiết hành vi ở mức Giả thuyết (`ux/persona.md`) |
 | Figma | [PRM323 Lab 2 · SE190533 · Điểm danh FAP](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w) (6 trang; ghi chép dựng file: `design/figma-build.md`) |
 | Figma dự phòng | [Bản sao dự phòng](https://www.figma.com/design/ubzn09LV1N7VJnmiBuEA3w) (không có lịch sử phiên bản; bản nộp là link ở trên) |
 | Thuyết trình | 14:30 thứ Sáu 16/10/2026 |

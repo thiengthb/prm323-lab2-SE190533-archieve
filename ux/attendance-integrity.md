@@ -9,7 +9,7 @@
 
 ## 1. Bối cảnh đã chốt (D-19)
 
-Giảng viên chiếu QR lên màn chiếu, cả lớp quét cùng lúc, không đọc tên từng người. Giảng viên có thể bấm mở điểm danh từ điện thoại; máy tính trong phòng có app desktop tự hiện QR, kể cả khi giảng viên chưa có mặt. Kết quả được extension điền lên FAP (D-18).
+Giảng viên chiếu QR lên màn hình lớp, cả lớp quét cùng lúc, không đọc tên từng người. Giảng viên có thể bấm mở điểm danh từ điện thoại; máy tính trong phòng có app desktop tự hiện QR, kể cả khi giảng viên chưa có mặt. Kết quả được extension điền lên FAP (D-18).
 
 **Phần được lợi rõ:** thời gian. Hai nguồn gần sĩ số FPTU nhất cho thấy gọi tên mất khoảng 3,5 phút với 22 sinh viên, quét QR khoảng 25 giây (Q04); với 30 sinh viên là 6–8 phút xuống 1–2 phút (Q08). Cả hai chỉ đo một lần, chưa phải nghiên cứu đối chứng.
 

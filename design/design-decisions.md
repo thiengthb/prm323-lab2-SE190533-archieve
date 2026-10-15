@@ -24,7 +24,7 @@ Mỗi quyết định ghi: chọn gì, vì sao (theo persona, heuristic hoặc r
 - **Chọn:** giảng viên mở phiên, QR hiện trên màn hình phòng, mã đổi sau mỗi 15 giây, cả lớp tự quét.
 - **Vì sao:** Gọi tên một lớp 30 người mất 6 đến 8 phút; quét QR mất 1 đến 2 phút (Q08). Sinh viên thấy ngay mình đã được ghi nhận (N-01, TC-4). Đây cũng là đề bài GVHD đưa ra.
 - **Bỏ:** đọc tên có hỗ trợ trên điện thoại (giảng viên làm hai lần, trên điện thoại và trên FAP); QR thay hẳn mà không có bước kiểm tra (xem DD-3).
-- **Thấy ở:** SC-03, SC-10, SC-11, trang web "Màn hình phòng P.205".
+- **Thấy ở:** SC-03, SC-10, SC-11, trang web "Màn hình lớp P.205".
 
 ### DD-3 · Bốn lớp chống quét hộ, có một bước người kiểm tra (D-21 B)
 
@@ -38,7 +38,7 @@ Mỗi quyết định ghi: chọn gì, vì sao (theo persona, heuristic hoặc r
 - **Chọn:** khi giảng viên chưa tới lớp, phiên vẫn mở được, nhưng mã chỉ hiện trên trang web chạy trên TV của phòng. Điện thoại của giảng viên chỉ đếm số đã quét. Kết quả chỉ lên FAP sau khi giảng viên vào lớp và làm xong đối chiếu, kiểm tra.
 - **Vì sao:** Đúng gợi ý của GVHD (kịch bản K1b) mà không mở cửa điểm danh từ xa: mã không có trên điện thoại nên không bị chụp gửi ra ngoài. Người quét từ ngoài phòng vẫn bị bắt ở bước đếm sĩ số. Đa số phòng ở HCM có TV lớn (thien quan sát, 14/10).
 - **Bỏ:** gắn cờ lượt quét ngoài Wi-Fi (thuộc D-21 C đã bỏ); bắt cả lớp quét lần hai; bỏ hẳn mở từ xa.
-- **Thấy ở:** SC-03 "Mở từ xa (K1b)" và "QR đã đóng, mở từ xa (K1b)"; frame web "Màn hình phòng P.205".
+- **Thấy ở:** SC-03 "Mở từ xa (K1b)" và "QR đã đóng, mở từ xa (K1b)"; frame web "Màn hình lớp P.205".
 
 ### DD-5 · 15 màn, 3 flow được chấm, mỗi flow có nhánh lỗi (D-02)
 

@@ -44,7 +44,7 @@ graph TD
         SC10 --> SC11["SC-11 · Kết quả quét"]
         SC09 --> SC12["SC-12 · Chi tiết buổi học"]
         SC12 --> SC13["SC-13 · Gửi báo sai"]
-        SC12 --> SC15["SC-15 · Đã qua hạn: hướng dẫn đơn"]
+        SC12 --> SC15["SC-15 · Hướng dẫn đơn khiếu nại"]
         SC13 --> SC14
     end
 
@@ -74,7 +74,7 @@ graph TD
 | SC-12 | Chi tiết buổi học | SV | FL-2 | N-01 | Còn hạn báo sai, đã qua hạn |
 | SC-13 | Gửi báo sai | SV | FL-2 | N-01 | Nhập, đang gửi, lỗi mạng |
 | SC-14 | Báo sai của tôi | SV | FL-2, FL-3 | N-01 | Đã gửi, giảng viên đã xem, đã sửa, bị từ chối |
-| SC-15 | Đã qua hạn: hướng dẫn đơn | SV | FL-2 | N-06 | Một trạng thái |
+| SC-15 | Hướng dẫn đơn khiếu nại | SV | FL-2 | N-06 | Một trạng thái |
 
 **So với v1:** bỏ "lượt đọc tên" và "hỏi lại người đang vắng"; gộp "xem lại" với "kết quả lưu" thành SC-06; thêm đối chiếu sĩ số (SC-04), kiểm tra ngẫu nhiên (SC-05), quét mã (SC-10) và kết quả quét (SC-11).
 
@@ -97,7 +97,7 @@ flowchart TD
     C -->|Có| D["Mở điểm danh"]
     C -->|Không, K1b| D2["Mở điểm danh từ xa<br/>(phiên gắn nhãn Mở từ xa)"]
     D --> E{"Laptop trong phòng<br/>đã kết nối?"}
-    D2 --> E2{"Màn hình phòng P.205<br/>(TV hoặc máy chiếu) đang mở trang QR?"}
+    D2 --> E2{"Màn hình lớp P.205<br/>(TV hoặc máy chiếu) đang mở trang QR?"}
     E2 -->|Rồi| F2["SC-03 · Mở từ xa: mã chỉ hiện trên màn hình phòng P.205,<br/>điện thoại GV chỉ đếm số đã quét (D-24)"]
     E2 -->|Chưa| E3["Không mở từ xa được,<br/>mở khi GV vào lớp"]
     E3 -.-> D

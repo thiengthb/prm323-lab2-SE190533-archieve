@@ -72,6 +72,7 @@ Nguồn (S/H, R, O, T, Survey) → Phát hiện F → Nhu cầu N → Persona P 
 | CR-33..CR-40 (lỗi logic Claude tự tìm, 14/10) | Nielsen #4 (nhất quán giờ, tên, vai); D-21, D-24 | Accept, sửa luôn | D-21, D-24 | SC-03, SC-07, SC-08, SC-09, SC-10, SC-14 (`design/final-ui-review.md` mục 2) |
 | CR-41 (thien chỉ ra, 14/10) | Nielsen #9; sự thật FAP: sinh viên K19 trở đi đăng nhập bằng email cá nhân đã đăng ký | Accept: "Đăng nhập bằng Google", nhận cả @fpt.edu.vn và Gmail đã đăng ký | — | SC-01 (trang 02, 03, 06) |
 | CR-42 (thien hỏi, 14/10) | Nielsen #5; D-21 B | Accept: QR đóng lúc giờ vào slot + 5 phút, nhận cả mã liền trước | D-28 | SC-03 (trang 03, 06) |
+| CR-43..CR-48 (bản chấm độc lập, 15/10) | Nielsen #4 (nhất quán), #5; D-28; NT-7; yêu cầu thứ tự trang của đề | Accept, sửa luôn | D-24, D-28 | SC-04, SC-06, SC-08, SC-11, SC-14, SC-15, trang web màn hình lớp (`design/final-ui-review.md` mục 4) |
 
 ## 5. Kiểm tra độ phủ (chạy trước khi nộp)
 
@@ -80,5 +81,5 @@ Chạy ngày 15/10/2026 trên bản repo hiện tại.
 - [x] Mọi SC thuộc ít nhất một FL (rubric: Information architecture). FL-1 có SC-01..SC-06, FL-2 có SC-01 và SC-09..SC-15, FL-3 có SC-07 và SC-08 (mục 2). Đủ 15 màn.
 - [x] Mọi FL phục vụ ít nhất một N của Primary Persona. FL-1 phục vụ N-04, N-03, N-11 (P-01). FL-3 phục vụ N-01 phần giảng viên sửa (P-01). FL-2 chủ yếu phục vụ P-02; nó nối với P-01 qua N-01, vì lời báo sai sinh viên gửi ở FL-2 là đầu vào của FL-3.
 - [x] Mọi N có ít nhất một bằng chứng không phải Assumed, hoặc ghi rõ cách kiểm chứng. Đạt có điều kiện: N-04 và N-01 có bằng chứng Observed hoặc desk research. N-03, N-06, N-10, N-11 chỉ dựa trên phỏng vấn mô phỏng (Simulated), nên mức của chúng là giả thuyết. Cách kiểm chứng là usability test theo TC-1..TC-7 (`ux/persona.md` mục 11), chưa chạy.
-- [x] Mọi CR quan trọng có quyết định và lý do trỏ về persona, heuristic hoặc ràng buộc. CR-01..CR-42 đều có dòng ở mục 4.
+- [x] Mọi CR quan trọng có quyết định và lý do trỏ về persona, heuristic hoặc ràng buộc. CR-01..CR-48 đều có dòng ở mục 4.
 - [x] Mọi SC có đủ 6 mục trong handoff. `handoff/flutter-handoff.md` có 15 mục SC, mỗi mục đủ 6 phần.

@@ -118,9 +118,9 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 - QR đang mở tại lớp: frame "SC-03 · Phiên điểm danh".
 - Dialog đóng QR sớm (overlay, CMP-06 Confirmation): "Đóng QR sớm?", "Còn 4 sinh viên chưa quét và QR còn 1:52. Người đến sau sẽ được ghi tay ở bước xem lại.", nút "Hủy" và "Đóng QR".
 - QR đã đóng: frame "… · QR đã đóng (CR-25)". Chip, chấm và chữ đổi cùng lúc: "QR đã đóng", "Đã đóng lúc 07:05".
-- Mở từ xa (K1b): frame "… · Mở từ xa (K1b)". Điện thoại không hiện mã: "Mã đang hiện trên TV phòng P.205. Điện thoại này không hiện mã, để mã không bị chụp gửi ra ngoài." Không có danh sách lớp, chỉ có bộ đếm.
-- QR đã đóng của phiên mở từ xa: frame "… · QR đã đóng, mở từ xa (K1b)", dòng nguồn "Mở từ xa lúc 06:55 · mã hiện trên TV phòng P.205".
-- Trang web "Màn hình phòng P.205" (1280 × 720) chạy trên TV của phòng: tên phòng, môn và slot, hướng dẫn quét, QR, "12/32 đã quét", và câu "Trang này chỉ mở được trên TV của phòng P.205…".
+- Mở từ xa (K1b): frame "… · Mở từ xa (K1b)". Điện thoại không hiện mã: "Mã đang hiện trên màn hình lớp P.205. Điện thoại này không hiện mã, để mã không bị chụp gửi ra ngoài." Không có danh sách lớp, chỉ có bộ đếm.
+- QR đã đóng của phiên mở từ xa: frame "… · QR đã đóng, mở từ xa (K1b)", dòng nguồn "Mở từ xa lúc 06:55 · mã hiện trên màn hình lớp P.205".
+- Trang web "Màn hình lớp P.205" (1280 × 720) chạy trên TV của phòng: tên phòng, môn và slot, hướng dẫn quét, QR, "12/32 đã quét", và câu "Trang này chỉ mở được trên TV của phòng P.205…".
 - Kiểm 412 dp: frame "SC-03 · Phiên điểm danh · 412 dp".
 - Sắp đóng (dưới 30 giây): frame "SC-03 · Phiên điểm danh · QR sắp đóng (CMP-14 Sắp đóng)". CMP-14 ở biến thể "Sắp đóng": chip "QR còn 0:20" màu warning, kèm chữ "Sắp đóng · còn 20 giây" để không dựa vào màu.
 - Laptop chưa kết nối: frame "SC-03 · Phiên điểm danh · Laptop chưa kết nối". Bộ đếm 0/32, dòng chế độ "Mở tại lớp · laptop phòng P.205 chưa kết nối", banner warning "Laptop phòng P.205 chưa kết nối nên mã chưa hiện trên màn hình lớp. Mở app desktop trên laptop, hoặc chiếu tạm mã từ điện thoại này." và nút phụ "Chiếu tạm mã từ điện thoại".
@@ -186,7 +186,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 1. App bar "Xem lại và xác nhận" (sau khi xác nhận đổi thành "Kết quả điểm danh").
 2. Ba số: "Có mặt 31", "Vắng 1", "Cần xử lý 0".
 3. Hai dòng kiểm: "Đã đối chiếu sĩ số: 30 người lúc 07:06", "Đã kiểm tra ngẫu nhiên 3/3".
-4. Nhóm "Ghi tay · 2": người được ghi tay kèm giờ và lý do, ví dụ "SE190655 · ghi tay, đến 07:08".
+4. Nhóm "Ghi tay · 2": người được ghi tay kèm giờ và lý do, ví dụ "SE190655 · ghi tay 07:08 · hết pin".
 5. Nút phụ "Ghi tay thêm sinh viên".
 6. Nhóm "Vắng · 1" kèm lý do: "quét 07:02 · không có mặt khi kiểm tra".
 7. Nút chính.
@@ -236,7 +236,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 **Nội dung từ trên xuống.**
 1. App bar "Chi tiết báo sai", nút quay lại.
 2. Ảnh FAP, tên, mã SV, chip trạng thái đang ghi.
-3. Bảng bằng chứng: "Buổi", "Lượt quét" (giờ, hoặc "Không có (mất mạng 09:33)"), "Kiểm tra" ("Không có mặt lúc 07:07" hoặc "Không được chọn").
+3. Bảng bằng chứng: "Buổi", "Giờ quét" (giờ, hoặc "Không có (mất mạng 09:33)"), "Kiểm tra" ("Không có mặt lúc 07:07" hoặc "Không được chọn").
 4. "Lời sinh viên · gửi 09:40" và nội dung lời báo.
 5. Dòng "Sinh viên nhận kết quả ngay khi thầy chọn".
 6. Hai nút: "Từ chối" (phụ, destructive) và "Sửa thành Có mặt" (chính).
@@ -388,7 +388,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 **Trạng thái.**
 - Đã gửi: frame "SC-14 · Báo sai của tôi · Đã gửi (K3)". Bước kế tiếp "Chờ giảng viên xem".
 - Đã sửa: frame "… · Đã sửa". "Đã sửa thành Có mặt 21:22", "Đã lên FAP".
-- Bị từ chối: frame "… · Bị từ chối". Lý do: "lúc đối chiếu sĩ số, cô không ghi nhận em trong phòng".
+- Bị từ chối: frame "… · Bị từ chối". Lý do: "em không quét mã, và lúc đối chiếu, số người trong phòng bằng số lượt quét" (CR-45).
 - Trống (CMP-08): frame "… · Trống". "Bạn chưa gửi báo sai nào", nút "Về Hôm nay".
 - Giảng viên đã xem, chưa có kết quả: không có frame riêng. Đây là bước thứ hai trên dòng thời gian, đã thấy trong frame "Đã sửa" và "Bị từ chối".
 
