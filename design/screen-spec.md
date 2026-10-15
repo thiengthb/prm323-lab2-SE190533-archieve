@@ -54,7 +54,7 @@ Trong mục “Trạng thái” của từng màn, trạng thái nào có frame 
 3. Banner lỗi (chỉ ở trạng thái lỗi).
 4. Dòng hướng dẫn “Dùng email bạn đã đăng ký với trường: email @fpt.edu.vn hoặc Gmail cá nhân.”
 5. Nút “Đăng nhập bằng Google”.
-6. Dòng chú thích “Ứng dụng không thay FAP. Kết quả điểm danh vẫn lưu trên FAP.”
+*(Bản trước có thêm dòng chú thích “Ứng dụng không thay FAP…” ở cuối màn; dòng này lặp ý với dòng phụ ở mục 2 nên đã bỏ, CR-50.)*
 
 **Hành động chính.** “Đăng nhập bằng Google”.
 
@@ -85,6 +85,7 @@ Trong mục “Trạng thái” của từng màn, trạng thái nào có frame 
 
 **Trạng thái.**
 - Mặc định 06:58, chưa điểm danh slot 1: frame “SC-02 · Lịch dạy hôm nay”.
+- Trống, ngày không có slot: frame “SC-02 · Lịch dạy hôm nay · Trống (CMP-08)”. CMP-08 biến thể “Không có nút”: “Hôm nay thầy không có slot nào”, vì không có việc gì để làm tiếp (CR-51).
 - Đang tải: frame “SC-02 · Lịch dạy hôm nay · Đang tải (CMP-07 skeleton)”. Skeleton giữ đúng hình thẻ slot để màn không nhảy khi dữ liệu về (CR-28).
 - Chờ điền lên FAP, 07:15: frame “… · Sau slot 1, chờ điền lên FAP”. Dòng mô tả nói lý do và việc cần làm: “Đã xác nhận 07:12. Mở laptop để extension điền lên FAP” (NT-5).
 - Đã lên FAP, 07:17: frame “… · Sau slot 1, đã lên FAP”, dòng mô tả “Đã lên FAP lúc 07:16 · 31 có mặt, 1 vắng”.
@@ -430,4 +431,4 @@ Bản đầu của tài liệu này liệt kê 8 trạng thái có trong `ux/use
 | SC-06 | Còn lượt quét cần xem | “SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3)” | FL-1 (NT-3) |
 | SC-08 | Đã từ chối | “SC-08 · Chi tiết báo sai · Đã từ chối (Giữ Vắng)” | FL-3, nhánh từ chối |
 
-Trạng thái lỗi và trạng thái tải mà `ux/user-flow.md` không liệt kê (ví dụ lịch dạy trống, lỗi mạng khi lưu) vẫn chỉ được mô tả bằng chữ ở đây và trong `handoff/flutter-handoff.md`.
+Trạng thái lỗi và trạng thái tải mà `ux/user-flow.md` không liệt kê (ví dụ ngày sinh viên không có buổi học, lỗi mạng khi lưu) vẫn chỉ được mô tả bằng chữ ở đây và trong `handoff/flutter-handoff.md`.

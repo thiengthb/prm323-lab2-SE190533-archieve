@@ -32,7 +32,7 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 | AI-24 | 14/10/2026 | Claude (Figma MCP, Plugin API) | Vòng IT-3b theo góp ý của thien: sửa huy hiệu CMP-04, rà nghĩa từng thành phần, thống nhất giờ trong một ngày, thêm 6 biến thể và trang web Màn chiếu P.205, dựng lại 3 User Flow và prototype 9 điểm bắt đầu | Không có prompt riêng; đầu vào là góp ý của thien, D-19, D-21, gợi ý của GVHD → file Figma, `design/figma-build.md` mục 6, D-24 |
 | AI-25 | 14/10/2026 | Claude (phản biện, Figma MCP) | Vòng IT-3c: phản biện 7 góp ý của thien về Final UI, tự rà chữ trên 55 frame và tìm 7 lỗi logic; áp D-25, D-26, D-27; nối lại FL-3 và FL-2 báo sai | Không có prompt riêng; đầu vào là góp ý của thien → `design/final-ui-review.md`, `design/figma-build.md` mục 8, D-25..D-27 |
 | AI-26 | 14/10/2026 | Claude (phiên chính, Figma MCP) | S5: viết screen-spec, design-decisions (đo a11y bằng script), flutter-handoff; phản biện D-28 (5 phút, 15 giây) theo câu hỏi của thien; sửa SC-01 theo CR-41; vẽ 8 trạng thái còn thiếu và nối vào prototype (12 điểm bắt đầu, 84 frame) | Không có prompt riêng; đầu vào là user-flow v2 và góp ý của thien → `design/screen-spec.md`, `design/design-decisions.md`, `handoff/flutter-handoff.md`, `design/figma-build.md` mục 8.2, D-28 |
-| AI-27 | 15/10/2026 | Claude (phiên chấm độc lập) | Chấm lại toàn bài theo đề, guideline thuyết trình, persona guideline, UI Simplicity checklist; ra điểm và danh sách lỗi. Phiên chính sửa theo đó: CR-43..CR-48 | `ai/prompts/AI-27-independent-review.md`, `design/final-ui-review.md` mục 4 |
+| AI-27 | 15/10/2026 | Claude (phiên chấm độc lập) | Chấm lại toàn bài theo đề, guideline thuyết trình, persona guideline, UI Simplicity checklist; ra điểm và danh sách lỗi. Phiên chính sửa theo đó: CR-43..CR-53 | `ai/prompts/AI-27-independent-review.md`, `design/final-ui-review.md` mục 4 |
 | AI-28 | 15/10/2026 | Claude soạn, thien chạy trên Stitch | Bổ sung bốn màn FL-1 (SC-02, SC-04, SC-05, SC-06) và vòng IT-3 trên Stitch cho SC-03. **Chờ chạy** | `ai/prompts/AI-28-stitch-flow1-and-it3.md` → `assets/stitch/IT-0b-*.png`, `IT-3-SC-03.png` (chưa có) |
 
 ## AI-01, AI-02 — Quy trình và bộ câu hỏi (13/10/2026)
@@ -174,10 +174,10 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 - **Prompt:** `ai/prompts/AI-27-independent-review.md`, ghi nguyên văn yêu cầu của thien. Bản giao việc phiên chính gửi cho phiên chấm không được lưu, nên không chép lại ở đây.
 - **Cách làm:** một phiên Claude mới, không mang ngữ cảnh của phiên chính, chấm theo đề Lab 2, guideline thuyết trình, persona guideline và UI Simplicity checklist.
 - **Output:** điểm và danh sách lỗi theo năm đợt sửa. Phiên chính kiểm lại từng phát hiện trước khi sửa: phần lớn đúng, một phát hiện về CR-01 là đọc nhầm nhưng slide vẫn được ghi lại cho rõ.
-- **Quyết định:** thien chọn sửa cả năm đợt trước buổi thuyết trình, và chọn D-29 A cho TC-1 (15/10). Các sửa đổi ghi ở `design/final-ui-review.md` mục 4 (CR-43..CR-48).
+- **Quyết định:** thien chọn sửa cả năm đợt trước buổi thuyết trình, và chọn D-29 A cho TC-1 (15/10). Các sửa đổi ghi ở `design/final-ui-review.md` mục 4 (CR-43..CR-53).
 
 ## AI-28 — Stitch bổ sung FL-1 và vòng IT-3 trên Stitch (15/10/2026, đang chờ chạy)
 
 - **Prompt:** `ai/prompts/AI-28-stitch-flow1-and-it3.md`. Phần A sinh SC-02, SC-04, SC-05, SC-06; phần B sửa SC-03 về trạng thái “QR đã đóng” (CR-24, CR-25, CR-31).
 - **Nói rõ:** phần A chạy **sau** khi Figma đã có, nội dung lấy từ screen-spec. Đây là bản để so với Figma, không phải bản Stitch nghĩ ra luồng.
-- **Trạng thái:** chờ thien chạy và gửi zip. Kết quả sẽ ghi ở đây và critique ở `design/stitch-critique-it3.md` (từ CR-49).
+- **Trạng thái:** chờ thien chạy và gửi zip. Kết quả sẽ ghi ở đây và critique ở `design/stitch-critique-it3.md` (từ CR-54).

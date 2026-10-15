@@ -17,7 +17,7 @@
 |---|---|---|
 | 01 User Flow | FL-1, FL-2, FL-3 vẽ lại từ `ux/user-flow.md`, có thêm nhánh mở từ xa (K1b), chưa cấp quyền camera và mất mạng khi gửi báo sai. Mỗi ô màn hình có mã SC màu xanh, gạch chân, bấm vào là nhảy tới đúng frame (đúng biến thể) trên trang 03. Khoảng cách giữa các cột là 120 px để nhãn nhánh (Có, Vắng, Thành công, Đã sửa...) nằm giữa mũi tên, không đè lên ô (thien góp ý 14/10) | `FL-1-user-flow.png`, `FL-2-user-flow.png`, `FL-3-user-flow.png` |
 | 02 Wireframe | 15 khung lo-fi, một khung cho mỗi SC | — |
-| 03 Final UI | 68 frame 360 × 800 (15 màn và 53 biến thể trạng thái, đặt cùng hàng bên phải màn gốc), 1 frame web 1280 × 720 “Màn hình lớp P.205”, và hàng kiểm 412 dp (3 frame 412 × 915). Tên frame (Figma hiện phía trên) mang mã truy vết, dưới mỗi frame có một ghi chú trỏ về TC, NT, CR và giờ trong ngày | `SC-01-…png` tới `SC-15-…png`, `SC-03-mo-tu-xa.png`, `SC-03-man-hinh-phong-p205.png`, `SC-11-sheet-khong-quet-duoc.png`, `SC-02-dang-tai-skeleton.png`, `SC-07-da-xu-ly-het.png`, `SC-09-bao-sai-co-ket-qua.png`, `SC-03-laptop-chua-ket-noi.png`, `SC-04-so-quet-nho-hon.png`, `SC-06-con-luot-can-xem.png`, `SC-08-da-tu-choi.png`, `a11y-412-*.png` |
+| 03 Final UI | 69 frame 360 × 800 (15 màn và 54 biến thể trạng thái, đặt cùng hàng bên phải màn gốc), 1 frame web 1280 × 720 “Màn hình lớp P.205”, và hàng kiểm 412 dp (3 frame 412 × 915). Tên frame (Figma hiện phía trên) mang mã truy vết, dưới mỗi frame có một ghi chú trỏ về TC, NT, CR và giờ trong ngày | `SC-01-…png` tới `SC-15-…png`, `SC-03-mo-tu-xa.png`, `SC-03-man-hinh-phong-p205.png`, `SC-11-sheet-khong-quet-duoc.png`, `SC-02-dang-tai-skeleton.png`, `SC-07-da-xu-ly-het.png`, `SC-09-bao-sai-co-ket-qua.png`, `SC-03-laptop-chua-ket-noi.png`, `SC-04-so-quet-nho-hon.png`, `SC-06-con-luot-can-xem.png`, `SC-08-da-tu-choi.png`, `a11y-412-*.png` |
 | 04 Design System | Biến màu (Light bắt buộc, Dark tùy chọn), 7 text style Inter, khoảng cách, góc bo, 4 effect style, xem trước Light/Dark | `page-04-design-system.png` |
 | 05 Components | 35 icon Lucide và 15 component set CMP-01..CMP-15 dựng bằng Auto Layout, variant và biến token. CMP-04 có thêm 2 thuộc tính “Có báo sai mới” và “Số báo sai” | `page-05-components.png` |
 | 06 Prototype | 12 hàng, 12 điểm bắt đầu, 84 frame, xem mục 3 | — |
@@ -157,3 +157,12 @@ Chi tiết phản biện ở `design/final-ui-review.md` (CR-26 đến CR-39).
 | SC-08 · Đã từ chối (Giữ Vắng) | Banner trung tính nói sinh viên đã nhận lý do và đường khiếu nại; một nút “Về danh sách báo sai” |
 
 Trang 01: ô “Có người chưa quét được” của FL-1 thêm nhãn “SC-04 · nhỏ hơn” nhảy tới frame mới, đổi từ viền đứt (việc của hệ thống) sang viền liền (màn giảng viên thao tác). Cả 8 frame đã được nối vào prototype trang 06 (thien yêu cầu lúc 16:27): 6 frame chèn vào các hàng có sẵn, 2 hàng mới cho nhánh lớn hơn còn cờ và laptop chưa kết nối. Xem bảng mục 3.
+
+## 9. Sửa theo bản chấm độc lập, đợt 5 (15/10, CR-49..CR-53)
+
+| Trang | Thay đổi |
+|---|---|
+| 01 User Flow | FL-1 thêm điểm rẽ “Laptop trong phòng đã kết nối?” (nhánh Chưa → “SC-03 · Chưa kết nối”, liên kết tới frame laptop chưa kết nối) và “Giảng viên đã ở trong lớp?” (nhánh Chưa → “SC-02 · Chờ xác nhận”, mũi tên đứt “Thầy vào lớp” sang SC-04). Khung FL-1 rộng ra 4 760. FL-1 và FL-2 thêm ô SC-01 với nhánh “Chưa đăng nhập”. Dòng mục tiêu FL-1 đo theo D-29. Ảnh: `assets/figma/FL-1-user-flow.png`, `FL-2-user-flow.png` |
+| 03 Final UI | Frame mới “SC-02 · Lịch dạy hôm nay · Trống (CMP-08)” (`SC-02-trong.png`); bỏ chú thích lặp ở ba trạng thái SC-01; ngoặc cong và gạch ngang khoảng giờ trên 82 lớp chữ; ghi chú gắn `type/body-md`; frame web dùng biến `space/*`, `radius/2xl` |
+| 05 Components | CMP-08 thành component set “Hành động = Có nút / Không có nút”; mô tả CMP-14 viết lại theo D-27; bỏ mã `&quot;` trong mô tả CMP-04, CMP-15 |
+| 06 Prototype | Cùng các sửa chữ như trang 03 (66 lớp chữ); bỏ chú thích lặp ở SC-01. Frame SC-02 Trống không vào prototype vì câu chuyện ngày 14/10 có slot |

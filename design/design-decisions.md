@@ -6,7 +6,7 @@
 | Phiên bản | v1 (14/10/2026) |
 | Trạng thái | Chờ thien duyệt |
 | Đầu vào | `process/decision-log.md` (D-xx do thien chốt), `design/DESIGN.md` v2 (NT-1..NT-7), `design/final-ui-review.md` (CR-26..CR-40), Figma trang 03 và 06 sau IT-3c |
-| Cách đo | Số liệu ở mục 2 do Claude đo bằng script đọc file Figma ngày 14/10/2026 (68 frame 360 × 800 và 3 frame 412 × 915 trên trang 03, 146 vùng bấm trên trang 06). Không có số nào ước lượng bằng mắt |
+| Cách đo | Số liệu ở mục 2 do Claude đo bằng script đọc file Figma ngày 14/10/2026 (68 frame 360 × 800 và 3 frame 412 × 915 trên trang 03, 146 vùng bấm trên trang 06). Không có số nào ước lượng bằng mắt. Ngày 15/10 trang 03 thêm frame “SC-02 · Trống” và bỏ dòng chú thích lặp ở SC-01 (CR-50, CR-51); đo lại phần đếm được: 72 frame điện thoại (69 khung 360 × 800, 3 khung 412 × 915), 72/72 dùng Auto Layout, chữ nhỏ nhất 14. Bảng tương phản 2.1 chưa đo lại; frame mới chỉ dùng cặp màu đã có trong bảng (CMP-08 như ở SC-07, SC-14) |
 
 ## 1. Mười quyết định quan trọng nhất
 
@@ -17,7 +17,7 @@ Mỗi quyết định ghi: chọn gì, vì sao (theo persona, heuristic hoặc r
 - **Chọn:** FAP vẫn là nơi lưu kết quả chính thức. Ứng dụng thu kết quả, rồi một extension trên laptop của giảng viên tự điền vào trang điểm danh của FAP.
 - **Vì sao:** Giảng viên đã quen FAP và đã mở FAP trên laptop ở mọi buổi (O-01.10). Không có bằng chứng FAP cho kết nối từ ngoài. Đây cũng là thiết kế gốc của thien. Hệ quả là ứng dụng phải nói thật kết quả đã lên FAP chưa (NT-5, Nielsen #1: hiển thị trạng thái hệ thống).
 - **Bỏ:** ghi thẳng qua API (giả định không kiểm chứng được); không kết nối gì (giảng viên phải nhập tay lại).
-- **Thấy ở:** SC-06 “Chờ điền lên FAP” và “Đã lên FAP”; SC-02 07:15 và 07:17; SC-01 dòng “Ứng dụng không thay FAP”.
+- **Thấy ở:** SC-06 “Chờ điền lên FAP” và “Đã lên FAP”; SC-02 07:15 và 07:17; SC-01 dòng phụ “Ứng dụng bổ trợ FAP…”.
 
 ### DD-2 · QR chiếu chung, cả lớp quét cùng lúc, không đọc tên (D-19)
 
@@ -86,12 +86,12 @@ Mỗi quyết định ghi: chọn gì, vì sao (theo persona, heuristic hoặc r
 
 | Mục (đề bài, mục 7) | Kết quả | Bằng chứng |
 |---|---|---|
-| Chữ thường tương phản ít nhất 4,5:1, chữ lớn 3:1 | **Đạt** | Mọi cặp màu chữ trên nền trên 71 frame của trang 03 đạt ít nhất 5,24:1 (mục 2.1, đo lại 14/10 sau khi vẽ thêm 8 trạng thái) |
+| Chữ thường tương phản ít nhất 4,5:1, chữ lớn 3:1 | **Đạt** | Mọi cặp màu chữ trên nền trên 71 frame của trang 03 (đo 14/10) đạt ít nhất 5,24:1 (mục 2.1, đo lại 14/10 sau khi vẽ thêm 8 trạng thái) |
 | Thành phần điều khiển tương phản ít nhất 3:1 (WCAG 1.4.11) | **Đạt** | Nút chính `primary` trên nền trắng 6,54:1; viền nút phụ và ô nhập `border-control` 4,16:1 trên trắng, 3,59:1 trên `canvas`; phần đã quét của thanh tiến độ trên nền thanh 5,01:1 (mục 2.2) |
-| Vùng chạm ít nhất 48 × 48 dp | **Đạt** | Mọi nút CMP-01 đang hiện trên 71 frame của trang 03 cao ít nhất 48 dp; 146 vùng có hành động chạm trên trang 06, không vùng nào nhỏ hơn 48 × 48 |
-| Chữ thân ít nhất 14 sp | **Đạt** | Cỡ chữ nhỏ nhất trên 71 frame của trang 03 là 14, kể cả nhãn thanh điều hướng và huy hiệu số |
+| Vùng chạm ít nhất 48 × 48 dp | **Đạt** | Mọi nút CMP-01 đang hiện trên các frame của trang 03 cao ít nhất 48 dp; 146 vùng có hành động chạm trên trang 06, không vùng nào nhỏ hơn 48 × 48 |
+| Chữ thân ít nhất 14 sp | **Đạt** | Cỡ chữ nhỏ nhất trên 72 frame điện thoại của trang 03 là 14 (đo lại 15/10), kể cả nhãn thanh điều hướng và huy hiệu số |
 | Không truyền thông tin chỉ bằng màu | **Đạt** | Chip trạng thái luôn có chữ và biểu tượng (NT-2). Thanh tiến độ đi cùng số “28/32”. Chip giờ đang diễn ra có thêm chấm và nằm dưới tiêu đề nhóm “Đang diễn ra”. Tab đang chọn có nền chỉ báo và chữ đậm, không chỉ đổi màu. Lượt quét bị gắn cờ có lý do bằng chữ (CR-24) |
-| Layout dùng Auto Layout và constraint | **Đạt** | 71/71 frame màn hình trên trang 03 dùng Auto Layout; 15 component set trên trang 05 dựng bằng Auto Layout và biến token |
+| Layout dùng Auto Layout và constraint | **Đạt** | 72/72 frame điện thoại trên trang 03 dùng Auto Layout (đo lại 15/10); 15 component set trên trang 05 dựng bằng Auto Layout và biến token |
 | Kiểm ở 360 dp và 412 dp | **Đạt** | Mọi màn ở 360 × 800. Ba màn khó nhất dựng lại ở 412 × 915: SC-03 (danh sách dài nhất), SC-06 (nhiều nhóm và chip), SC-09 buổi tối (banner, link). Không chữ nào bị cắt, nút giữ 48 dp, thanh dưới bám đáy. Ảnh: `assets/figma/a11y-412-SC-03.png`, `a11y-412-SC-06.png`, `a11y-412-SC-09.png` |
 | Màn rộng từ 600 dp | Mô tả trong handoff | Đề bài không yêu cầu thiết kế; cách đổi bố cục ghi ở `handoff/flutter-handoff.md` |
 

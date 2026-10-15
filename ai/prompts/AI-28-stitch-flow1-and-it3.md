@@ -107,4 +107,4 @@ Revise this lecturer session screen to show the state right after the QR has clo
 
 ## Sau khi chạy
 
-Claude chạy critique như các vòng trước (Nielsen, WCAG, persona, ít nhất 5 phát hiện), ghi vào `design/stitch-critique-it3.md`, đặt mã từ CR-49. Mỗi phát hiện có quyết định Accept, Modify hoặc Reject và lý do. thien duyệt trên thẻ quyết định. Dòng AI-28 trong `ai/ai-design-log.md` ghi kết quả.
+Claude chạy critique như các vòng trước (Nielsen, WCAG, persona, ít nhất 5 phát hiện), ghi vào `design/stitch-critique-it3.md`, đặt mã từ CR-54 (CR-49..CR-53 đã dùng cho đợt sửa 15/10). Mỗi phát hiện có quyết định Accept, Modify hoặc Reject và lý do. thien duyệt trên thẻ quyết định. Dòng AI-28 trong `ai/ai-design-log.md` ghi kết quả.

@@ -116,9 +116,9 @@ Chín component bắt buộc của đề bài là CMP-01 đến CMP-09. Componen
 | CMP-05 | App bar | Default, with actions | Tiêu đề trái; nút quay lại; tối đa 1 hành động phải |
 | CMP-06 | Dialog | Confirmation, destructive | Xác nhận gửi lên FAP; xác nhận đóng QR sớm; từ chối báo sai (destructive) |
 | CMP-07 | Loading | Skeleton danh sách, spinner | Skeleton cho danh sách lớp; spinner khi xác thực mã QR |
-| CMP-08 | Empty state | Biểu tượng, thông điệp, một hành động | “Hôm nay không có báo sai nào” |
+| CMP-08 | Empty state | Hai biến thể: Có nút (biểu tượng, thông điệp, một hành động) và Không có nút (khi không có việc gì để làm tiếp) | “Hôm nay không có báo sai nào”; “Hôm nay thầy không có slot nào” |
 | CMP-09 | Error state | Thông điệp, nguyên nhân dễ hiểu, nút thử lại | Mã hết hạn, mất mạng, không có trong danh sách lớp |
-| CMP-10 | Status chip | Có mặt, Vắng, Chưa điểm danh, Chờ xác nhận, Chờ điền lên FAP, Đã lên FAP | Biểu tượng + chữ + nền soft, đúng nghĩa màu của FAP |
+| CMP-10 | Status chip | 13 trạng thái. Điểm danh: Có mặt, Vắng, Chưa điểm danh, Chờ xác nhận, Chờ điền lên FAP, Đã lên FAP, Cần xem, Đã quét. QR và giờ: Giờ slot, Giờ slot · khác, QR đang mở, QR sắp đóng, QR đã đóng | Biểu tượng + chữ + nền soft, đúng nghĩa màu của FAP |
 | CMP-11 | Student row | Đã quét, Chưa quét, Đánh tay, Được chọn kiểm tra, Cờ “Cùng thiết bị” | Ảnh FAP, tên (`body-lg`), mã SV (`mono`, `muted`), giờ quét, chip trạng thái |
 | CMP-12 | Deadline banner | Còn hạn, sắp hết hạn (sau 20:00), đã qua hạn | “Báo sai trước 23:59 hôm nay”; đã qua hạn dẫn sang hướng dẫn đơn |
 | CMP-13 | Report timeline | Đã gửi, giảng viên đã xem, đã sửa, bị từ chối | Dòng thời gian dọc 4 bước, mỗi bước có giờ |
