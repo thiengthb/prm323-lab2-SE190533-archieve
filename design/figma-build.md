@@ -187,3 +187,14 @@ thien chọn “Sửa 3 lỗi chữ” trên thẻ quyết định (D-31).
 | 06 Prototype | Cùng các thay đổi ở bản sao SC-04 và SC-03 Mở từ xa |
 
 Xuất lại 5 ảnh: `SC-04-doi-chieu-si-so.png`, `SC-04-so-quet-lon-hon-so-nguoi.png`, `SC-04-so-quet-nho-hon.png`, `SC-03-mo-tu-xa.png`, `SC-11-da-quet-roi.png`. Kiểm bằng mắt từng ảnh.
+
+## 12. Sửa theo Codex Phần 2 (16/10 rạng sáng, CR-72, CR-73, CR-48; D-32)
+
+| Trang | Thay đổi |
+|---|---|
+| 05 Components | CMP-15: ô ảnh thay biểu tượng máy ảnh bằng hình người minh họa và thêm chữ “minh họa”. Hai biến thể đã chọn có nút “Đổi” (CMP-01 Text), bấm thì đổi thẻ về biến thể “Chờ” (tương tác Change to) |
+| 03 Final UI | SC-05 tự cập nhật theo CMP-15. Ô ảnh ở 5 frame SC-08 sửa giống CMP-15 |
+| 06 Prototype | Thêm overlay “OV · Ngoài kịch bản demo” (bản sao dialog CMP-06, một nút “Đã hiểu” đóng overlay). 9 nút ngoài kịch bản (CR-48) mở overlay này. Ở hai frame “Đã kiểm tra 3/3”, nút “Đổi” quay về màn kiểm tra. Ô ảnh ở các frame SC-08 sửa như trang 03 |
+
+Xuất lại 8 ảnh: `SC-05-kiem-tra-ngau-nhien.png`, `SC-05-da-kiem-tra-3-3.png`, năm ảnh SC-08 và `page-05-components.png`; thêm `prototype-OV-ngoai-kich-ban-demo.png`. Bảng liên kết `design/prototype-links.md` chạy lại: 85 frame, 184 tương tác, 0 liên kết hỏng.
+

@@ -1,19 +1,22 @@
 # Bảng liên kết prototype (trang 06 Prototype)
 
-Bảng này do script đọc thẳng các `reactions` trên trang 06 của file Figma `9yDa2ylfREmndW1mK1hf7w` tạo ra, tối 15/10/2026, để người chấm không mở được chế độ Present vẫn kiểm được từng liên kết. Không có dòng nào gõ tay. Lý do làm: bản chấm chéo bằng Codex (AI-29) chỉ cho 5/10 phần prototype vì không chạy được prototype và repo không có bằng chứng liên kết (CR-66).
+Bảng này do script đọc thẳng các `reactions` trên trang 06 của file Figma `9yDa2ylfREmndW1mK1hf7w` tạo ra, để người chấm không mở được chế độ Present vẫn kiểm được từng liên kết. Không có dòng nào gõ tay. Lý do làm: bản chấm chéo bằng Codex (AI-29) chỉ cho 5/10 phần prototype vì không chạy được prototype và repo không có bằng chứng liên kết (CR-66). Chạy lần đầu tối 15/10/2026 (166 tương tác), chạy lại đêm 15/10 sau D-32 (thêm overlay “Ngoài kịch bản demo” và nút “Đổi” ở SC-05). Script bỏ qua phần tử nằm dưới một hotspot, vì khi bấm thì hotspot nhận trước.
 
 ## Số liệu
 
 | Mục | Giá trị |
 |---|---|
-| Frame trên trang 06 | 84 (kể cả 6 overlay, tên bắt đầu “OV”) |
+| Frame trên trang 06 | 85 (kể cả 7 overlay, tên bắt đầu “OV”) |
 | Điểm bắt đầu (flow starting point) | 12 |
-| Tương tác | 166 |
+| Tương tác | 184 |
 | Liên kết trỏ tới frame không tồn tại | 0 |
 | Frame không có lối ra | 0 |
 | Frame không có lối vào (trừ điểm bắt đầu) | 0 |
+| Nút ngoài kịch bản demo (mở overlay [84]) | 9 |
 
 Số trong ngoặc vuông là thứ tự frame trên trang 06. Một màn có thể có nhiều bản sao (ví dụ “lần 1”, “lần 2”, “sau Vy”) để mỗi luồng đi đúng một đường, không phụ thuộc trạng thái trước đó.
+
+Nút ngoài kịch bản demo là nút có trong thiết kế nhưng prototype chưa vẽ màn tiếp theo (CR-48): hai nút “Từ chối” và hai nút “Sửa thành Có mặt” ở SC-08 (mỗi ca chỉ vẽ một kết cục), bốn nút Có mặt / Vắng ở SC-06 nhánh còn lượt cần xem, và “Chiếu tạm mã từ điện thoại” ở SC-03. Bấm vào thì hiện overlay [84] nói rõ điều đó, thay vì không có gì xảy ra.
 
 ## Điểm bắt đầu
 
@@ -55,11 +58,15 @@ Số trong ngoặc vuông là thứ tự frame trên trang 06. Một màn có th
 | [06] SC-04 · Đối chiếu sĩ số · Số quét lớn hơn số người | Kiểm tra ngẫu nhiên | Bấm | [07] SC-05 · Kiểm tra ngẫu nhiên |
 | [06] SC-04 · Đối chiếu sĩ số · Số quét lớn hơn số người | hotspot · back | Bấm | Quay lại màn trước (Back) |
 | [07] SC-05 · Kiểm tra ngẫu nhiên | Ảnh FAP | Bấm | [08] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 |
+| [07] SC-05 · Kiểm tra ngẫu nhiên | Đổi | Bấm | Đổi thẻ về trạng thái “Chờ” ngay trên màn (variant của CMP-15) |
 | [07] SC-05 · Kiểm tra ngẫu nhiên | Ảnh FAP | Bấm | [08] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 |
 | [07] SC-05 · Kiểm tra ngẫu nhiên | Ảnh FAP | Bấm | [08] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 |
 | [07] SC-05 · Kiểm tra ngẫu nhiên | hotspot · back | Bấm | Quay lại màn trước (Back) |
 | [08] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 | Xem lại và xác nhận | Bấm | [09] SC-06 · Xem lại và xác nhận |
 | [08] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 | hotspot · back | Bấm | Quay lại màn trước (Back) |
+| [08] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 | hotspot · Đổi | Bấm | [07] SC-05 · Kiểm tra ngẫu nhiên |
+| [08] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 | hotspot · Đổi | Bấm | [07] SC-05 · Kiểm tra ngẫu nhiên |
+| [08] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 | hotspot · Đổi | Bấm | [07] SC-05 · Kiểm tra ngẫu nhiên |
 | [09] SC-06 · Xem lại và xác nhận | Ghi tay thêm sinh viên | Bấm | [71] OV · Sheet Ghi tay thêm sinh viên (overlay) |
 | [09] SC-06 · Xem lại và xác nhận | Xác nhận và gửi lên FAP | Bấm | [16] OV · Dialog xác nhận gửi lên FAP (overlay) |
 | [09] SC-06 · Xem lại và xác nhận | hotspot · back | Bấm | Quay lại màn trước (Back) |
@@ -142,6 +149,7 @@ Số trong ngoặc vuông là thứ tự frame trên trang 06. Một màn có th
 | [52] SC-07 · Báo sai hôm nay | hotspot · tab left | Bấm | [51] SC-02 · Lịch dạy hôm nay · Có báo sai mới |
 | [53] SC-08 · Chi tiết báo sai · Hoàng Mai Linh | Từ chối | Bấm | [58] OV · Dialog từ chối báo sai (overlay) |
 | [53] SC-08 · Chi tiết báo sai · Hoàng Mai Linh | hotspot · back | Bấm | Quay lại màn trước (Back) |
+| [53] SC-08 · Chi tiết báo sai · Hoàng Mai Linh | hotspot · Sửa thành Có mặt ( | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
 | [54] SC-08 · Chi tiết báo sai · Đã sửa | Về danh sách báo sai | Bấm | [55] SC-07 · Báo sai hôm nay · Đã xử lý hết |
 | [54] SC-08 · Chi tiết báo sai · Đã sửa | hotspot · back | Bấm | [55] SC-07 · Báo sai hôm nay · Đã xử lý hết |
 | [55] SC-07 · Báo sai hôm nay · Đã xử lý hết | hotspot · tab left | Bấm | [57] SC-02 · Lịch dạy hôm nay · Đã xử lý hết báo sai |
@@ -154,6 +162,7 @@ Số trong ngoặc vuông là thứ tự frame trên trang 06. Một màn có th
 | [59] OV · Sheet Không quét được? | Đã hiểu | Bấm | Đóng overlay |
 | [60] SC-08 · Chi tiết báo sai · Ngô Thanh Vy | Sửa thành Có mặt | Bấm | [54] SC-08 · Chi tiết báo sai · Đã sửa |
 | [60] SC-08 · Chi tiết báo sai · Ngô Thanh Vy | hotspot · back | Bấm | Quay lại màn trước (Back) |
+| [60] SC-08 · Chi tiết báo sai · Ngô Thanh Vy | hotspot · Từ chối (ngoài kịc | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
 | [61] SC-09 · Hôm nay (sinh viên) · Báo sai có kết quả (K3) | Link · Báo sai điểm danh | Bấm | [45] SC-14 · Báo sai của tôi · Đã sửa |
 | [61] SC-09 · Hôm nay (sinh viên) · Báo sai có kết quả (K3) | hotspot · tab right | Bấm | [45] SC-14 · Báo sai của tôi · Đã sửa |
 | [62] SC-09 · Hôm nay (sinh viên) · Báo sai có kết quả, đã xem | Link · Báo sai điểm danh | Bấm | [45] SC-14 · Báo sai của tôi · Đã sửa |
@@ -163,12 +172,14 @@ Số trong ngoặc vuông là thứ tự frame trên trang 06. Một màn có th
 | [64] SC-09 · Hôm nay (sinh viên) · Báo sai bị từ chối | hotspot · tab right | Bấm | [47] SC-14 · Báo sai của tôi · Bị từ chối |
 | [65] SC-08 · Chi tiết báo sai · Ngô Thanh Vy (xử lý trước) | Sửa thành Có mặt | Bấm | [66] SC-08 · Chi tiết báo sai · Đã sửa (Vy trước) |
 | [65] SC-08 · Chi tiết báo sai · Ngô Thanh Vy (xử lý trước) | hotspot · back | Bấm | Quay lại màn trước (Back) |
+| [65] SC-08 · Chi tiết báo sai · Ngô Thanh Vy (xử lý trước) | hotspot · Từ chối (ngoài kịc | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
 | [66] SC-08 · Chi tiết báo sai · Đã sửa (Vy trước) | Về danh sách báo sai | Bấm | [67] SC-07 · Báo sai hôm nay · Sau khi sửa Vy |
 | [66] SC-08 · Chi tiết báo sai · Đã sửa (Vy trước) | hotspot · back | Bấm | [67] SC-07 · Báo sai hôm nay · Sau khi sửa Vy |
 | [67] SC-07 · Báo sai hôm nay · Sau khi sửa Vy | Hoàng Mai Linh · PRM393 Slot | Bấm | [68] SC-08 · Chi tiết báo sai · Hoàng Mai Linh (sau Vy) |
 | [67] SC-07 · Báo sai hôm nay · Sau khi sửa Vy | hotspot · tab left | Bấm | [70] SC-02 · Lịch dạy hôm nay · Còn 1 báo sai (Linh) |
 | [68] SC-08 · Chi tiết báo sai · Hoàng Mai Linh (sau Vy) | Từ chối | Bấm | [69] OV · Dialog từ chối báo sai (sau Vy) (overlay) |
 | [68] SC-08 · Chi tiết báo sai · Hoàng Mai Linh (sau Vy) | hotspot · back | Bấm | Quay lại màn trước (Back) |
+| [68] SC-08 · Chi tiết báo sai · Hoàng Mai Linh (sau Vy) | hotspot · Sửa thành Có mặt ( | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
 | [69] OV · Dialog từ chối báo sai (sau Vy) | hotspot · Hủy | Bấm | Đóng overlay |
 | [69] OV · Dialog từ chối báo sai (sau Vy) | hotspot · Từ chối | Bấm | [79] SC-08 · Chi tiết báo sai · Đã từ chối (sau Vy) |
 | [70] SC-02 · Lịch dạy hôm nay · Còn 1 báo sai (Linh) | hotspot · tab right | Bấm | [67] SC-07 · Báo sai hôm nay · Sau khi sửa Vy |
@@ -188,6 +199,7 @@ Số trong ngoặc vuông là thứ tự frame trên trang 06. Một màn có th
 | [77] SC-03 · Phiên điểm danh · Laptop chưa kết nối | cả frame | Tự chuyển sau thời gian chờ | [03] SC-03 · Phiên điểm danh |
 | [77] SC-03 · Phiên điểm danh · Laptop chưa kết nối | Đóng QR và kiểm tra | Bấm | [15] OV · Dialog đóng QR sớm (overlay) |
 | [77] SC-03 · Phiên điểm danh · Laptop chưa kết nối | hotspot · back | Bấm | Quay lại màn trước (Back) |
+| [77] SC-03 · Phiên điểm danh · Laptop chưa kết nối | hotspot · Chiếu tạm mã từ đi | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
 | [78] SC-08 · Chi tiết báo sai · Đã từ chối (Giữ Vắng) | Về danh sách báo sai | Bấm | [56] SC-07 · Báo sai hôm nay · Sau khi từ chối |
 | [78] SC-08 · Chi tiết báo sai · Đã từ chối (Giữ Vắng) | hotspot · back | Bấm | [56] SC-07 · Báo sai hôm nay · Sau khi từ chối |
 | [79] SC-08 · Chi tiết báo sai · Đã từ chối (sau Vy) | Về danh sách báo sai | Bấm | [55] SC-07 · Báo sai hôm nay · Đã xử lý hết |
@@ -195,10 +207,19 @@ Số trong ngoặc vuông là thứ tự frame trên trang 06. Một màn có th
 | [80] SC-04 · Đối chiếu sĩ số · Số quét lớn hơn số người (nhánh cờ) | Kiểm tra ngẫu nhiên | Bấm | [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) |
 | [80] SC-04 · Đối chiếu sĩ số · Số quét lớn hơn số người (nhánh cờ) | hotspot · back | Bấm | Quay lại màn trước (Back) |
 | [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) | Ảnh FAP | Bấm | [82] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 (nhánh cờ) |
+| [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) | Đổi | Bấm | Đổi thẻ về trạng thái “Chờ” ngay trên màn (variant của CMP-15) |
 | [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) | Ảnh FAP | Bấm | [82] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 (nhánh cờ) |
 | [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) | Ảnh FAP | Bấm | [82] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 (nhánh cờ) |
 | [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) | hotspot · back | Bấm | Quay lại màn trước (Back) |
 | [82] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 (nhánh cờ) | Xem lại và xác nhận | Bấm | [83] SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3) |
 | [82] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 (nhánh cờ) | hotspot · back | Bấm | Quay lại màn trước (Back) |
+| [82] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 (nhánh cờ) | hotspot · Đổi | Bấm | [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) |
+| [82] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 (nhánh cờ) | hotspot · Đổi | Bấm | [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) |
+| [82] SC-05 · Kiểm tra ngẫu nhiên · Đã kiểm tra 3/3 (nhánh cờ) | hotspot · Đổi | Bấm | [81] SC-05 · Kiểm tra ngẫu nhiên (nhánh cờ) |
 | [83] SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3) | Ghi tay thêm sinh viên | Bấm | [71] OV · Sheet Ghi tay thêm sinh viên (overlay) |
 | [83] SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3) | hotspot · back | Bấm | Quay lại màn trước (Back) |
+| [83] SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3) | hotspot · Có mặt (ngoài kịch | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
+| [83] SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3) | hotspot · Vắng (ngoài kịch b | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
+| [83] SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3) | hotspot · Có mặt (ngoài kịch | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
+| [83] SC-06 · Xem lại và xác nhận · Còn lượt quét cần xem (NT-3) | hotspot · Vắng (ngoài kịch b | Bấm | [84] OV · Ngoài kịch bản demo (overlay) |
+| [84] OV · Ngoài kịch bản demo | hotspot · Đã hiểu | Bấm | Đóng overlay |

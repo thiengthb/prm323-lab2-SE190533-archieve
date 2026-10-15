@@ -4,7 +4,7 @@
 |---|---|
 | Đầu vào | `ai/reviews/AI-29-codex-phan-1.md` và `ai/reviews/AI-29-codex-phan-2.md` (nguyên văn), commit Codex chấm `1242923` |
 | Người phân loại | Claude, 15/10/2026 tối |
-| Trạng thái | Đã duyệt (thien, 15/10/2026): chọn “Sửa 3 lỗi chữ” trên thẻ quyết định. CR-63, CR-67, CR-68 đã sửa; CR-70 giữ 3 màn đại diện. Mục 7 (Phần 2) chờ thien quyết |
+| Trạng thái | Đã duyệt (thien, 15/10/2026): chọn “Sửa 3 lỗi chữ” trên thẻ quyết định. CR-63, CR-67, CR-68 đã sửa; CR-70 giữ 3 màn đại diện. Mục 7 (Phần 2): thien chọn “Sửa cả hai” (D-32) |
 | Cách kiểm | Mở lại từng frame trên Figma (trang 03 và 06) và đối chiếu với `design/screen-spec.md`. Mỗi kết luận bên dưới trỏ về một ảnh hoặc một dòng trong repo |
 
 **Lưu ý về thiên lệch:** người phân loại là Claude, cũng là mô hình đã dựng phần lớn bài. Vì vậy một phát hiện của Codex chỉ được ghi là “Không đúng” khi có ảnh xuất từ Figma cho thấy điều ngược lại. Ảnh đó nay nằm trong repo để ai cũng kiểm lại được. Phát hiện nào chỉ phản bác được bằng lời mô tả thì giữ là “Đúng một phần” hoặc “Đúng”.
@@ -71,9 +71,9 @@ Codex đối chiếu ở commit `1242923`, chưa thấy `6bf3c45` (CR-66) và `6
 | Nhận định của Codex | Kiểm lại | Việc |
 |---|---|---|
 | SC-04 “Chênh −1” cạnh “Dư 1”: điểm mù của Claude | Đúng. Đã sửa ở `61685f2` (CR-63, D-31) | Xong |
-| SC-05 ô “Ảnh FAP” trống đụng thẳng lý do chống quét hộ (DD-3) | **Đúng, nặng hơn Phần 1.** Màn bảo giảng viên “nhìn mặt và so với ảnh FAP” (`design/screen-spec.md` SC-05 mục 2) nhưng không có ảnh nào để so. Người xem không biết bản thật có ảnh | CR-72 nâng lên Trung bình. Đề xuất ghi nhãn “Ảnh hồ sơ FAP · minh họa” ngay trên Figma, không dùng ảnh người thật. Chờ thien |
-| SC-05 thiếu phản hồi và hoàn tác | **Đúng một nửa.** Có phản hồi: frame “Đã kiểm tra 3/3” hiện kết quả từng thẻ và banner. Không có hoàn tác: bấm nhầm “Không có mặt” thì lượt quét bị ghi Vắng, SC-06 không có chỗ đổi lại, sinh viên chỉ còn đường báo sai | CR-73 · Trung bình. Đề xuất thêm nút “Đổi” trên thẻ đã kiểm. Chờ thien |
-| 9 nút không phản hồi trên prototype (ưu tiên 1 của Codex) | **Đúng.** CR-48 đã ghi lý do cho 9 nút, nhưng khi demo trực tiếp, bấm nhầm một nút sẽ không có gì xảy ra và trông như prototype hỏng | Đề xuất trên trang 06: nối 9 nút tới một overlay “Ngoài kịch bản demo” có nút Đóng. Không đổi trang 03. Chờ thien |
+| SC-05 ô “Ảnh FAP” trống đụng thẳng lý do chống quét hộ (DD-3) | **Đúng, nặng hơn Phần 1.** Màn bảo giảng viên “nhìn mặt và so với ảnh FAP” (`design/screen-spec.md` SC-05 mục 2) nhưng không có ảnh nào để so. Người xem không biết bản thật có ảnh | CR-72 nâng lên Trung bình. **Đã sửa (D-32):** ô ảnh ở SC-05 và SC-08 thành hình người minh họa có nhãn “Ảnh FAP · minh họa”, không dùng ảnh người thật |
+| SC-05 thiếu phản hồi và hoàn tác | **Đúng một nửa.** Có phản hồi: frame “Đã kiểm tra 3/3” hiện kết quả từng thẻ và banner. Không có hoàn tác trên Figma và trong spec: bấm nhầm “Không có mặt” thì lượt quét bị ghi Vắng, SC-06 không có chỗ đổi lại, sinh viên chỉ còn đường báo sai. Khi sửa, Claude thấy handoff (SC-05 mục 4, CMP-15) đã viết nút “Đổi” từ trước, nên đây còn là chỗ handoff và Figma lệch nhau | CR-73 · Trung bình. **Đã sửa (D-32):** CMP-15 có nút “Đổi”, spec ghi theo |
+| 9 nút không phản hồi trên prototype (ưu tiên 1 của Codex) | **Đúng.** CR-48 đã ghi lý do cho 9 nút, nhưng khi demo trực tiếp, bấm nhầm một nút sẽ không có gì xảy ra và trông như prototype hỏng | **Đã sửa (D-32):** trên trang 06, 9 nút mở overlay “Ngoài kịch bản demo” có nút “Đã hiểu”. Trang 03 giữ nguyên. Bảng liên kết chạy lại: 184 tương tác, 0 liên kết hỏng |
 | SC-08 không có ảnh dialog từ chối | Đúng ở `1242923`. Nay có `SC-08-dialog-tu-choi-destructive.png` (CR-66). Không có ô nhập lý do là chủ ý (mục 2, phát hiện 8) | Không làm thêm |
 | 412 dp chỉ 3 màn | Đúng. thien đã chọn giữ 3 màn (D-31) | Không làm thêm |
 | Link slide chưa chứng minh là xem được | Đúng. README vẫn ghi “cần được chia sẻ quyền xem” | Việc của thien: bật chia sẻ, mở thử bằng cửa sổ ẩn danh, tải bản PDF dự phòng |

@@ -80,4 +80,4 @@ Tổng: 69 frame 360 × 800, 3 frame 412 × 915 (kiểm 412 dp), 1 frame web 128
 | SC-06 · Xem lại và xác nhận · 412 dp | `51:2635` | [a11y-412-SC-06.png](a11y-412-SC-06.png) |
 | SC-09 · Hôm nay (sinh viên) · Buổi tối, có buổi Vắng · 412 dp | `51:2671` | [a11y-412-SC-09.png](a11y-412-SC-09.png) |
 
-Ảnh luồng (trang 01): `FL-1-user-flow.png`, `FL-2-user-flow.png`, `FL-3-user-flow.png`. Trang 02: `wireframe-SC-03.png`, `wireframe-SC-08.png`. Trang 04 và 05: `page-04-design-system.png`, `page-05-components.png`.
+Ảnh luồng (trang 01): `FL-1-user-flow.png`, `FL-2-user-flow.png`, `FL-3-user-flow.png`. Trang 02: `wireframe-SC-03.png`, `wireframe-SC-08.png`. Trang 04 và 05: `page-04-design-system.png`, `page-05-components.png`. Trang 06: `prototype-OV-ngoai-kich-ban-demo.png` (overlay hiện khi bấm nút ngoài kịch bản demo, D-32).

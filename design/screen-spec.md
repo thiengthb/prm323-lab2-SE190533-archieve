@@ -166,7 +166,7 @@ Trong mục “Trạng thái” của từng màn, trạng thái nào có frame 
 2. Hướng dẫn: “Gọi tên từng người, nhìn mặt và so với ảnh FAP. Ba người được chọn ngẫu nhiên trong số đã quét.”
 3. Tiến độ “Đã kiểm tra 1/3”.
 4. Banner kết quả (khi có người không có mặt).
-5. Ba thẻ (CMP-15): ảnh FAP, tên, mã SV, giờ quét, hai nút “Đúng người” và “Không có mặt”.
+5. Ba thẻ (CMP-15): ảnh FAP, tên, mã SV, giờ quét, hai nút “Đúng người” và “Không có mặt”. Thẻ đã chọn hiện chip kết quả và nút “Đổi” để đưa thẻ về trạng thái chờ khi bấm nhầm (CR-73). Trên Figma, ô ảnh là hình người minh họa có nhãn “Ảnh FAP · minh họa”, vì bài không dùng ảnh người thật; bản thật lấy ảnh hồ sơ trên FAP (CR-72).
 6. Nút chính.
 
 **Hành động chính.** “Xem lại và xác nhận”. Nút tắt cho tới khi kiểm đủ 3 người, kèm dòng “Kiểm tra đủ 3 người để tiếp tục”.
@@ -236,7 +236,7 @@ Trong mục “Trạng thái” của từng màn, trạng thái nào có frame 
 
 **Nội dung từ trên xuống.**
 1. App bar “Chi tiết báo sai”, nút quay lại.
-2. Ảnh FAP, tên, mã SV, chip trạng thái đang ghi.
+2. Ảnh FAP (trên Figma là hình minh họa, như SC-05), tên, mã SV, chip trạng thái đang ghi.
 3. Bảng bằng chứng: “Buổi”, “Giờ quét” (giờ, hoặc “Không có (mất mạng 09:33)”), “Kiểm tra” (“Không có mặt lúc 07:07” hoặc “Không được chọn”).
 4. “Lời sinh viên · gửi 09:40” và nội dung lời báo.
 5. Dòng “Sinh viên nhận kết quả ngay khi thầy chọn”.

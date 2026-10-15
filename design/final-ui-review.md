@@ -57,10 +57,13 @@ Nguồn: một phiên Claude riêng chấm lại toàn bộ bài theo đề, gui
 
 ## 5. Sửa theo chấm chéo Codex (AI-29, 15/10/2026 tối)
 
-Nguồn: `ai/reviews/AI-29-triage.md`. thien chọn “Sửa 3 lỗi chữ” (D-31).
+Nguồn: `ai/reviews/AI-29-triage.md`. thien chọn “Sửa 3 lỗi chữ” (D-31) sau Phần 1 và “Sửa cả hai” (D-32) sau Phần 2.
 
 | Mã | Lỗi | Sửa |
 |---|---|---|
 | CR-63 | SC-04 ghi “Chênh −1” trong khi banner ngay dưới nói “Dư 1 lượt quét” | Ô thứ ba thành “Quét dư”: số quét trừ số quét dự kiến (người trong phòng trừ người chưa quét được đánh dấu “Trong phòng”). Ba biến thể ghi +1, +1, 0 |
 | CR-67 | SC-03 Mở từ xa hứa “mã không bị chụp gửi ra ngoài”, nhưng người trong phòng vẫn chụp được mã trên màn hình lớp | Câu mới: mã chỉ xuất hiện trong phòng học, vẫn có thể bị chụp lại, nên khi vào lớp vẫn đối chiếu sĩ số |
 | CR-68 | SC-11 “Đã quét rồi” hiện hai giờ quét khác nhau (07:01:04 trong câu, 07:03:10 trong ô) | Nhãn ô đổi thành “Lần quét này” |
+| CR-72 | Ô “Ảnh FAP” ở SC-05 và SC-08 chỉ có biểu tượng máy ảnh. Màn bảo giảng viên so mặt với ảnh FAP mà không có ảnh để so, người xem không biết bản thật có ảnh | Hình người minh họa kèm chữ “minh họa”, không dùng ảnh người thật. Spec và handoff ghi rằng app thật lấy ảnh hồ sơ FAP |
+| CR-73 | SC-05 không hoàn tác được: bấm nhầm “Không có mặt” là lượt quét bị ghi Vắng. Handoff đã viết nút “Đổi” nhưng Figma chưa vẽ | CMP-15 thêm nút “Đổi” trên thẻ đã chọn, đưa thẻ về trạng thái Chờ |
+| CR-48 (tiếp) | 9 nút ngoài kịch bản vẫn im lặng khi bấm lúc demo | Trên trang 06, 9 nút mở overlay “Ngoài kịch bản demo” |
