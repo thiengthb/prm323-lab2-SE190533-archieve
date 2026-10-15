@@ -148,7 +148,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 **Hành động chính.** "Kiểm tra ngẫu nhiên".
 
 **Trạng thái.**
-- Khớp, 30 = 30: frame "SC-04 · Đối chiếu sĩ số (L3)". Màn vẫn cảnh báo: "Số khớp vẫn có thể che một lượt quét hộ. Nếu người chưa quét đang ngồi trong phòng, có một lượt quét không có người." Danh sách "Chưa quét · 2" cho giảng viên đánh dấu ai có trong phòng.
+- Mặc định, 31 người và 30 lượt quét: frame "SC-04 · Đối chiếu sĩ số (L3)". "Chênh −1" màu chữ thường. Danh sách "Chưa quét · 2" có Phạm Thu Hà (mất 4G) và Võ Minh Tâm (hết pin), cả hai chip "Trong phòng". Banner: "Có 2 người chưa quét đang ngồi trong phòng, nên lẽ ra chỉ có 29 lượt quét. Dư 1 lượt quét không có người: kiểm tra ngẫu nhiên để tìm." Đây là cách L3 bắt quét hộ khi con số nhìn qua không lệch nhiều (CR-44).
 - Số quét lớn hơn số người: frame "… · Số quét lớn hơn số người". "Chênh +1" màu danger. Danh sách "Lượt quét cần xem · 2" chỉ ra lượt quét cùng thiết bị và lượt quét sát lúc QR đóng.
 - Số quét nhỏ hơn số người: frame "SC-04 · Đối chiếu sĩ số · Số quét nhỏ hơn số người". 30 quét, 32 người, "Chênh −2" màu chữ thường. Banner: "Thiếu 2 lượt quét, bằng số người chưa quét đang ngồi trong phòng. Ghi tay họ ở bước xem lại. Vẫn kiểm tra ngẫu nhiên vì số thiếu có thể che một lượt quét hộ." Hai dòng chưa quét có chip "Trong phòng". Nút vẫn là "Kiểm tra ngẫu nhiên" (FL-1: nhánh "Nhỏ hơn" vẫn đi qua SC-05).
 
@@ -185,7 +185,7 @@ Trong mục "Trạng thái" của từng màn, trạng thái nào có frame trê
 **Nội dung từ trên xuống.**
 1. App bar "Xem lại và xác nhận" (sau khi xác nhận đổi thành "Kết quả điểm danh").
 2. Ba số: "Có mặt 31", "Vắng 1", "Cần xử lý 0".
-3. Hai dòng kiểm: "Đã đối chiếu sĩ số: 30 người lúc 07:06", "Đã kiểm tra ngẫu nhiên 3/3".
+3. Hai dòng kiểm: "Đã đối chiếu sĩ số: 31 người lúc 07:06", "Đã kiểm tra ngẫu nhiên 3/3".
 4. Nhóm "Ghi tay · 2": người được ghi tay kèm giờ và lý do, ví dụ "SE190655 · ghi tay 07:08 · hết pin".
 5. Nút phụ "Ghi tay thêm sinh viên".
 6. Nhóm "Vắng · 1" kèm lý do: "quét 07:02 · không có mặt khi kiểm tra".
