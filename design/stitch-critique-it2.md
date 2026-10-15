@@ -11,19 +11,19 @@
 
 | Mã | Kết quả | Bằng chứng |
 |---|---|---|
-| CR-18 | Đã sửa: "Đang mở" nằm trong thẻ bộ đếm; "Danh sách lớp · 32" trên một dòng | IT-2-SC-03 |
-| CR-19 | **Đánh giá lại.** Mã HTML cho thấy Stitch đã viết một bộ đếm ngược chạy thật, bắt đầu từ 2:39 và đổi chữ thành "QR hết hạn" khi về 0 (`code/IT-2-SC-03.html`, dòng 221–239). Ảnh Export được chụp sau khi bộ đếm chạy hết. Vậy đây **không phải lỗi bố cục** như IT-1 đã ghi. Tuy vậy, nó cho thấy một khoảng trống thật: chưa có thiết kế cho trạng thái "QR đã đóng" | `code/IT-1-SC-03.html`, `code/IT-2-SC-03.html` |
-| CR-20 | Đã sửa: "Cùng thiết bị" màu vàng đất, có biểu tượng điện thoại | IT-2-SC-03 |
-| CR-22 | Đã sửa: viền nút "Không quét được?" là `#767D86` | `code/IT-2-SC-11.html` |
-| CR-23 | Đã sửa: "Lịch học hôm nay" | IT-2-SC-09 |
+| CR-18 | Đã sửa: “Đang mở” nằm trong thẻ bộ đếm; “Danh sách lớp · 32” trên một dòng | IT-2-SC-03 |
+| CR-19 | **Đánh giá lại.** Mã HTML cho thấy Stitch đã viết một bộ đếm ngược chạy thật, bắt đầu từ 2:39 và đổi chữ thành “QR hết hạn” khi về 0 (`code/IT-2-SC-03.html`, dòng 221–239). Ảnh Export được chụp sau khi bộ đếm chạy hết. Vậy đây **không phải lỗi bố cục** như IT-1 đã ghi. Tuy vậy, nó cho thấy một khoảng trống thật: chưa có thiết kế cho trạng thái “QR đã đóng” | `code/IT-1-SC-03.html`, `code/IT-2-SC-03.html` |
+| CR-20 | Đã sửa: “Cùng thiết bị” màu vàng đất, có biểu tượng điện thoại | IT-2-SC-03 |
+| CR-22 | Đã sửa: viền nút “Không quét được?” là `#767D86` | `code/IT-2-SC-11.html` |
+| CR-23 | Đã sửa: “Lịch học hôm nay” | IT-2-SC-09 |
 | CR-21 | Để lại cho Figma, như đã duyệt | — |
 
 ## 2. Phát hiện mới
 
 | Mã | Màn | Phát hiện | Căn cứ | Mức | Đề xuất |
 |---|---|---|---|---|---|
-| CR-24 | SC-03 | Dữ liệu bị cắt bằng dấu ba chấm: "Cùng thiết…" (mất chữ "bị") và giờ quét "07:…". Mã HTML dùng `truncate` cho cả dòng mã SV. Mã SV, giờ quét và lý do gắn cờ là **dữ liệu để giảng viên ra quyết định**, không được cắt | WCAG 1.4.10; NT-3; Nielsen #1 | Cao | Accept, sửa ở Figma: dòng phụ được xuống dòng thay vì cắt; lý do gắn cờ nằm ở dòng riêng; tên dài mới được cắt |
-| CR-25 | SC-03 | Thiếu trạng thái "QR đã đóng" của bộ đếm (rút ra từ CR-19): khi hết giờ, chip, chấm "Đang mở" và nút chính phải đổi cùng lúc | Nielsen #1; CMP-14 (Đang mở, sắp đóng, đã đóng) | Trung bình | Accept, thiết kế ở Figma: chip "QR đã đóng", chấm xám "Đã đóng", nút chính đổi thành "Đối chiếu sĩ số" |
+| CR-24 | SC-03 | Dữ liệu bị cắt bằng dấu ba chấm: “Cùng thiết…” (mất chữ “bị”) và giờ quét “07:…”. Mã HTML dùng `truncate` cho cả dòng mã SV. Mã SV, giờ quét và lý do gắn cờ là **dữ liệu để giảng viên ra quyết định**, không được cắt | WCAG 1.4.10; NT-3; Nielsen #1 | Cao | Accept, sửa ở Figma: dòng phụ được xuống dòng thay vì cắt; lý do gắn cờ nằm ở dòng riêng; tên dài mới được cắt |
+| CR-25 | SC-03 | Thiếu trạng thái “QR đã đóng” của bộ đếm (rút ra từ CR-19): khi hết giờ, chip, chấm “Đang mở” và nút chính phải đổi cùng lúc | Nielsen #1; CMP-14 (Đang mở, sắp đóng, đã đóng) | Trung bình | Accept, thiết kế ở Figma: chip “QR đã đóng”, chấm xám “Đã đóng”, nút chính đổi thành “Đối chiếu sĩ số” |
 
 ## 3. Chốt vòng Stitch
 

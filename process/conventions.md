@@ -15,10 +15,12 @@ Mọi tài liệu trong repo tuân theo các quy ước dưới đây. Mục ti�
 - File đề bài bắt buộc giữ **đúng tên đề yêu cầu** (`ux/persona.md`, `design/DESIGN.md`, …).
 - Thư mục có thứ tự đọc được đánh số `01-`, `02-`… theo trình tự công việc.
 - Phiên bản ghi ở cuối tên file (`-v1`, `-v2`). Không ghi đè bản cũ khi bản đó là bằng chứng của một bước đã làm.
+- **Tên người trong hồ sơ.** “thien” (viết thường, không dấu, theo tên tài khoản GitHub `thiengthb`) là Trần Ngọc Thiên, SE190533, trưởng nhóm và người chốt mọi quyết định D-nn. Cách viết này giữ nguyên trong hồ sơ quá trình vì nó khớp với lời trích nguyên văn và lịch sử commit; README và slide dùng tên đầy đủ.
+- **Dấu câu.** Tài liệu và chữ trên giao diện dùng ngoặc kép cong “…”. Khoảng giờ và khoảng số dùng gạch ngang ngắn không có khoảng trắng: 07:00–09:15, 30–35 tuổi. Phần nằm trong `code`, sơ đồ Mermaid và prompt nguyên văn giữ ngoặc thẳng.
 
 ## 2. Hệ thống mã (ID)
 
-Mỗi đối tượng có một mã duy nhất. Tài liệu luôn trích bằng mã, không viết "như trên" hay "phần trước".
+Mỗi đối tượng có một mã duy nhất. Tài liệu luôn trích bằng mã, không viết “như trên” hay “phần trước”.
 
 | Mã | Đối tượng | Nơi định nghĩa |
 |---|---|---|
@@ -49,7 +51,7 @@ Token dùng tên của design system (`color/primary`, `space/4`), giống hệt
 | **Simulated** | Từ phỏng vấn mô phỏng bằng AI (R-nn). Không bao giờ được trình bày như dữ liệu thật |
 | **Observed** | Người thiết kế tự quan sát (O-nn) |
 | **Reported** | Người thật kể lại (T-nn) |
-| **Survey** | Google Form; dưới 15 câu trả lời thì chỉ ghi "tham khảo" |
+| **Survey** | Google Form; dưới 15 câu trả lời thì chỉ ghi “tham khảo” |
 | **Desk** | Nguồn web (S-nn, H-nn), kèm độ tin cậy của nguồn |
 | **Assumed** | Chưa có nguồn, phải ghi cách kiểm chứng |
 

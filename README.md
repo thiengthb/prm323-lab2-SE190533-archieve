@@ -42,7 +42,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 |---|---|---|
 | App FAP Attendance, repo `fap-attendance-assistant` | Sản phẩm thật thien đang làm (web sinh viên, web giảng viên, app desktop và app mobile). Repo riêng, không nộp kèm bài lab. Claude đọc mã nguồn trên laptop của thien ngày 14/10/2026 và chỉ ghi lại các sự thật cần dùng (Observed) | `design/component-system.md` mục 0 (DES-SYSTEM), D-19, D-22, D-23 |
 | thienui | Bộ token và component tự viết của app FAP Attendance (đường dẫn như `packages/ui/src/styles/tokens.css`, `apps/mobile/lib/app/theme.dart` là đường dẫn trong repo sản phẩm, không phải repo này) | DESIGN.md mục 6, `design/design-brief-audit.md`, D-06, D-20 |
-| "Spec cũ 38 màn, 8 flow" và "file Figma 22 màn" | Bản đặc tả và file Figma của app thật làm **trước** bài lab, trước khi có nghiên cứu. Không dùng làm đáp án; D-02 và D-06 giải thích vì sao bỏ | `process/work-plan.md`, D-02, D-06, `design/design-decisions.md` |
+| “Spec cũ 38 màn, 8 flow” và “file Figma 22 màn” | Bản đặc tả và file Figma của app thật làm **trước** bài lab, trước khi có nghiên cứu. Không dùng làm đáp án; D-02 và D-06 giải thích vì sao bỏ | `process/work-plan.md`, D-02, D-06, `design/design-decisions.md` |
 
 ## Công cụ AI đã dùng
 

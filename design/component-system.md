@@ -4,7 +4,7 @@
 |---|---|
 | Mã tài liệu | DES-SYSTEM |
 | Trạng thái | Đã duyệt: D-22 chốt B (14/10/2026); áp dụng vào DESIGN.md mục 6, 8, 9 |
-| Lý do | Sau IT-0, thien thấy component, góc bo và bố cục chưa "elegant", muốn dùng hệ sinh thái shadcn và Lucide, và cần lý do có nghiên cứu để trình bày (14/10/2026) |
+| Lý do | Sau IT-0, thien thấy component, góc bo và bố cục chưa “elegant”, muốn dùng hệ sinh thái shadcn và Lucide, và cần lý do có nghiên cứu để trình bày (14/10/2026) |
 | Quyết định liên quan | D-20 (màu theo FAP, đã chốt), D-22, D-23 (font Inter, đã chốt) |
 
 ## 0. Hiện trạng sản phẩm thật (Observed, repo `fap-attendance-assistant` trên laptop của thien, 14/10/2026)
@@ -21,11 +21,11 @@ Như vậy D-22 B không phải đổi hướng, mà là **đưa bản thiết k
 
 ## 1. Phản biện trước
 
-1. **"Stitch miễn phí nên chưa đủ tầm" không phải lý do dùng được trước hội đồng.** Stitch đã theo brief khá sát (DES-CRIT-IT0 mục 1). Vẻ "trang quản trị" đến từ chính prompt, vì prompt yêu cầu giống Bootstrap 5 admin. Lý do đúng là: Stitch là bản nháp đầu, và đề bài muốn thấy người thiết kế phản biện rồi cải tiến bản nháp đó. Bản cuối ở Figma khác Stitch là điều **được mong đợi**, miễn là mỗi thay đổi có mã phát hiện (CR) và quyết định (D).
-2. **"Tôi thích" cũng không được chấp nhận** (work-plan mục 4; đề bài cấm lý do "AI nói vậy" hay sở thích). Sở thích của người thiết kế là điểm khởi đầu. Lý do trình bày phải là các căn cứ ở mục 2.
-3. **"Dùng bảng màu của shadcn" mâu thuẫn với D-20.** Bảng màu mặc định của shadcn là xám trung tính và màu chính gần như đen. D-20 vừa chốt màu chính và màu trạng thái theo FAP. Đề xuất ở đây chỉ lấy **cấu trúc** của shadcn (component, viền, góc bo, độ nổi, khoảng trắng, các token nền và viền) và giữ nguyên màu FAP. Bảng màu shadcn cho phép đổi từng token, nên việc này không phải gượng ép.
+1. **“Stitch miễn phí nên chưa đủ tầm” không phải lý do dùng được trước hội đồng.** Stitch đã theo brief khá sát (DES-CRIT-IT0 mục 1). Vẻ “trang quản trị” đến từ chính prompt, vì prompt yêu cầu giống Bootstrap 5 admin. Lý do đúng là: Stitch là bản nháp đầu, và đề bài muốn thấy người thiết kế phản biện rồi cải tiến bản nháp đó. Bản cuối ở Figma khác Stitch là điều **được mong đợi**, miễn là mỗi thay đổi có mã phát hiện (CR) và quyết định (D).
+2. **“Tôi thích” cũng không được chấp nhận** (work-plan mục 4; đề bài cấm lý do “AI nói vậy” hay sở thích). Sở thích của người thiết kế là điểm khởi đầu. Lý do trình bày phải là các căn cứ ở mục 2.
+3. **“Dùng bảng màu của shadcn” mâu thuẫn với D-20.** Bảng màu mặc định của shadcn là xám trung tính và màu chính gần như đen. D-20 vừa chốt màu chính và màu trạng thái theo FAP. Đề xuất ở đây chỉ lấy **cấu trúc** của shadcn (component, viền, góc bo, độ nổi, khoảng trắng, các token nền và viền) và giữ nguyên màu FAP. Bảng màu shadcn cho phép đổi từng token, nên việc này không phải gượng ép.
 4. **shadcn được thiết kế cho web trên máy tính.** Nút mặc định thấp hơn 48 dp và chữ phổ biến ở cỡ 14 px. Nếu dùng nguyên, thiết kế trượt tiêu chí vùng chạm ≥ 48 dp của đề. Phải ghi đè kích thước cho di động.
-5. **Không được nói "shadcn đạt chuẩn accessibility".** Bản web dựa trên Radix UI, có sẵn hành vi bàn phím và ARIA. Bản Flutter là bản port, không thừa hưởng các hành vi đó, nên vẫn phải tự kiểm Semantics và tương phản.
+5. **Không được nói “shadcn đạt chuẩn accessibility”.** Bản web dựa trên Radix UI, có sẵn hành vi bàn phím và ARIA. Bản Flutter là bản port, không thừa hưởng các hành vi đó, nên vẫn phải tự kiểm Semantics và tương phản.
 6. **Nhiều sản phẩm trông giống nhau vì cùng dùng shadcn.** Màu FAP và các component riêng (bộ đếm, thẻ kiểm tra ngẫu nhiên) giúp ứng dụng vẫn có dáng riêng.
 
 ## 2. Lý do có căn cứ

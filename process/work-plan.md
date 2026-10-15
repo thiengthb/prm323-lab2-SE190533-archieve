@@ -7,15 +7,15 @@ Lưu trong repo `prm323-lab2-SE190533` (D-03). Người quyết định cuối c
 - **45/100 điểm là quá trình**: persona + IA + flow (15), prompt Stitch và output đầu tiên (10), 3 vòng lặp có before/after + AI critique ≥ 5 phát hiện + quyết định accept/modify/reject có lý do (15), log đầy đủ (5).
 - **55/100 là sản phẩm**: Final UI (20), design system + 9 component có state (15), prototype 3 flow click được (10), Flutter handoff đủ 6 mục cho **mỗi** màn + 2 bảng mapping (10).
 - Bắt buộc: Google Stitch tạo UI đầu tiên; `design/DESIGN.md` phải viết **trước** prompt Stitch đầu tiên; Figma đúng 6 trang đúng thứ tự; khung 360 × 800; kiểm tra 360 dp và 412 dp.
-- Kiểm tra tính trung thực: Git phải có commit rải nhiều ngày; lịch sử phiên bản Figma được xem (file "hoàn chỉnh trong một lần lưu" sẽ bị hỏi); review 5 phút: tự đi một flow và giải thích hai quyết định trong log.
+- Kiểm tra tính trung thực: Git phải có commit rải nhiều ngày; lịch sử phiên bản Figma được xem (file “hoàn chỉnh trong một lần lưu” sẽ bị hỏi); review 5 phút: tự đi một flow và giải thích hai quyết định trong log.
 - Repo nộp tên `prm323-lab2-<MSSV>` với cấu trúc cố định (ux/, design/, ai/, assets/, handoff/).
 - Slide: 10–12 slide theo khung 12 mục của guideline trình bày; slide chỉ là bằng chứng cho rubric, không có điểm riêng.
 
 ## 2. Ba rủi ro lớn nhất (phản biện thẳng)
 
-1. **"Toàn bộ luồng nghiệp vụ đa luồng" là cái bẫy về điểm.** Spec cũ có 38 màn, 8 flow. Handoff đòi 6 mục cho mọi màn, prototype đòi mọi flow click không dead-end. Mỗi màn thêm là thêm việc ở 4 tiêu chí, trong khi rubric chỉ cần ≥ 8 màn, ≥ 3 flow. Làm 38 màn nông sẽ mất điểm "partial" ở nhiều mục hơn làm 12–15 màn sâu.
+1. **“Toàn bộ luồng nghiệp vụ đa luồng” là cái bẫy về điểm.** Spec cũ có 38 màn, 8 flow. Handoff đòi 6 mục cho mọi màn, prototype đòi mọi flow click không dead-end. Mỗi màn thêm là thêm việc ở 4 tiêu chí, trong khi rubric chỉ cần ≥ 8 màn, ≥ 3 flow. Làm 38 màn nông sẽ mất điểm “partial” ở nhiều mục hơn làm 12–15 màn sâu.
 2. **File Figma 22 màn hiện có là rủi ro liêm chính, không phải lợi thế.** Nó được dựng trước khi có persona, DESIGN.md và Stitch, nên đi ngược thứ tự Analyze → Generate → Critique → Refine. Hội đồng xem version history sẽ thấy UI xong trước nghiên cứu. Token và component thienui vẫn dùng lại được, nhưng màn hình nên dựng lại trong file mới theo đúng trình tự.
-3. **Nghiên cứu không được bịa.** Persona guideline yêu cầu gắn nhãn Observed/Reported/Inferred/Assumed. Muốn "thuyết phục hội đồng" bằng nghiên cứu thì cần vài cuộc phỏng vấn thật (dù ngắn); nếu không có, persona phải ghi rõ là Proto-Persona và slide nói đúng như vậy.
+3. **Nghiên cứu không được bịa.** Persona guideline yêu cầu gắn nhãn Observed/Reported/Inferred/Assumed. Muốn “thuyết phục hội đồng” bằng nghiên cứu thì cần vài cuộc phỏng vấn thật (dù ngắn); nếu không có, persona phải ghi rõ là Proto-Persona và slide nói đúng như vậy.
 
 ## 3. Lịch phiên làm việc
 
@@ -34,10 +34,10 @@ Mỗi phiên kết thúc bằng một commit, để Git tự chứng minh quá t
 ## 4. Luật làm việc giữa hai ta
 
 - Mỗi quyết định có mã **D-xx** trong `process/decision-log.md`: vấn đề, các phương án, khuyến nghị của Claude kèm căn cứ (persona, heuristic Nielsen, WCAG, ràng buộc đề/thời gian), quyết định của thien, lý do. Bất đồng được ghi lại nguyên văn, không xoá.
-- Claude không chấp nhận lý do "thích" hoặc "AI nói vậy" (đề bài cũng cấm). Mọi lý do phải trỏ về persona, heuristic hoặc ràng buộc thật.
+- Claude không chấp nhận lý do “thích” hoặc “AI nói vậy” (đề bài cũng cấm). Mọi lý do phải trỏ về persona, heuristic hoặc ràng buộc thật.
 - Không câu hỏi nào bị bỏ qua: Claude hỏi, thien chọn. Nếu thien chưa trả lời, Claude làm tiếp theo phương án khuyến nghị và ghi rõ là tạm.
 - Phần việc của bạn phải đủ để bạn tự trả lời review 5 phút: bạn chạy Stitch, bạn dựng hoặc ít nhất tự tay chỉnh Figma; Claude viết prompt, phản biện, soạn tài liệu, kiểm tra a11y.
-- Cuộc trao đổi này chính là "AI assistant for critique" của đề, nên được khai báo trong log (Disclosure).
+- Cuộc trao đổi này chính là “AI assistant for critique” của đề, nên được khai báo trong log (Disclosure).
 
 ## 5. Nguồn tham chiếu dùng xuyên suốt
 

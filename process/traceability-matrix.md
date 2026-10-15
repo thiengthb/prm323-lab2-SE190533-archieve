@@ -67,10 +67,10 @@ Nguồn (S/H, R, O, T, Survey) → Phát hiện F → Nhu cầu N → Persona P 
 | IT-3b (góp ý của thien, 14/10) | Nielsen #8 (bỏ phần trang trí), #1; NT-4, NT-5 | Accept: bỏ banner, chip, phụ đề thừa; thống nhất giờ trong ngày; huy hiệu CMP-04 không bị cắt; mở từ xa theo D-24 | D-24 | SC-02, SC-03, SC-04, SC-07, SC-09, SC-11, SC-14 (`design/figma-build.md` mục 6) |
 | CR-26..CR-28, CR-32 (IT-3c, góp ý của thien 14/10) | Nielsen #4, #1; WCAG 1.4.11 | Accept, sửa luôn: bỏ tiêu đề chồng, gộp ghi chú, vẽ lại skeleton theo thẻ slot, thêm huy hiệu báo sai | — | SC-02, SC-03, SC-07 (`design/final-ui-review.md` mục 1) |
 | CR-29 | Nielsen #2, #4 | Modify theo thẻ quyết định: ba nhóm theo thời gian Đang diễn ra / Sắp tới / Đã xong | D-25 | SC-02, SC-09 |
-| CR-30 | Nielsen #8; WCAG 1.4.1 | Modify: chỉ thẻ đang diễn ra giữ chip cam có chấm, thẻ khác dùng chip "Giờ slot · khác" | D-26 | SC-02, SC-09 (CMP-02) |
+| CR-30 | Nielsen #8; WCAG 1.4.1 | Modify: chỉ thẻ đang diễn ra giữ chip cam có chấm, thẻ khác dùng chip “Giờ slot · khác” | D-26 | SC-02, SC-09 (CMP-02) |
 | CR-31 | Nielsen #1; WCAG 1.4.11 | Modify: thanh tiến độ màu xanh, đỏ chỉ dành cho lệch sĩ số ở SC-04 | D-27 | SC-03 (CMP-14) |
 | CR-33..CR-40 (lỗi logic Claude tự tìm, 14/10) | Nielsen #4 (nhất quán giờ, tên, vai); D-21, D-24 | Accept, sửa luôn | D-21, D-24 | SC-03, SC-07, SC-08, SC-09, SC-10, SC-14 (`design/final-ui-review.md` mục 2) |
-| CR-41 (thien chỉ ra, 14/10) | Nielsen #9; sự thật FAP: sinh viên K19 trở đi đăng nhập bằng email cá nhân đã đăng ký | Accept: "Đăng nhập bằng Google", nhận cả @fpt.edu.vn và Gmail đã đăng ký | — | SC-01 (trang 02, 03, 06) |
+| CR-41 (thien chỉ ra, 14/10) | Nielsen #9; sự thật FAP: sinh viên K19 trở đi đăng nhập bằng email cá nhân đã đăng ký | Accept: “Đăng nhập bằng Google”, nhận cả @fpt.edu.vn và Gmail đã đăng ký | — | SC-01 (trang 02, 03, 06) |
 | CR-42 (thien hỏi, 14/10) | Nielsen #5; D-21 B | Accept: QR đóng lúc giờ vào slot + 5 phút, nhận cả mã liền trước | D-28 | SC-03 (trang 03, 06) |
 | CR-43..CR-48 (bản chấm độc lập, 15/10) | Nielsen #4 (nhất quán), #5; D-28; NT-7; yêu cầu thứ tự trang của đề | Accept, sửa luôn | D-24, D-28 | SC-04, SC-06, SC-08, SC-11, SC-14, SC-15, trang web màn hình lớp (`design/final-ui-review.md` mục 4) |
 

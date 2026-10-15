@@ -12,9 +12,9 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 | AI-04 | 13/10/2026 | Claude (subagent, WebSearch/WebFetch) | Nghiên cứu bàn giấy về quy định và bối cảnh điểm danh FPTU | `ai/prompts/AI-04-desk-research-fptu.md` → `research/02-desk/fptu-all-campuses.md` |
 | AI-05 | 13/10/2026 | Claude (subagent, WebSearch/WebFetch) | Nghiên cứu bàn giấy riêng cơ sở TP.HCM (D-11) | `ai/prompts/AI-05-desk-research-hcm.md` → `research/02-desk/fptu-hcm.md` |
 | AI-06 | 13/10/2026 | Claude (11 subagent độc lập, mỗi người một agent) | Phỏng vấn mô phỏng R01–R11 | `ai/prompts/AI-06-respondents/Rnn.md` → `research/05-raw/Rnn-transcript.md` |
-| AI-07 | 13/10/2026 | Claude (subagent, WebSearch/WebFetch) | Kiểm chứng quy tắc "chỉ sửa điểm danh trong ngày" (O-01.6) | `ai/prompts/AI-07-verify-fap-edit-window.md` → `research/02-desk/fap-edit-window.md` |
+| AI-07 | 13/10/2026 | Claude (subagent, WebSearch/WebFetch) | Kiểm chứng quy tắc “chỉ sửa điểm danh trong ngày” (O-01.6) | `ai/prompts/AI-07-verify-fap-edit-window.md` → `research/02-desk/fap-edit-window.md` |
 | AI-08 | 13/10/2026 | Claude (11 subagent độc lập với người trả lời) | Đặt 3 câu đào sâu cho từng bản ghi | `ai/prompts/AI-08-probers/Rnn.md` → `research/05-raw/Rnn-probes.md` |
-| AI-09 | 13/10/2026 | Claude (tiếp tục agent AI-06) | Người trả lời trả lời câu đào sâu | `ai/prompts/AI-09-probe-answer-message.md` → mục "Đào sâu (vòng 2)" trong bản ghi |
+| AI-09 | 13/10/2026 | Claude (tiếp tục agent AI-06) | Người trả lời trả lời câu đào sâu | `ai/prompts/AI-09-probe-answer-message.md` → mục “Đào sâu (vòng 2)” trong bản ghi |
 | AI-10 | 13/10/2026 | Claude (subagent độc lập) | Tổng hợp affinity từ R01–R11 và O-01 | `ai/prompts/AI-10-synthesis.md` → `research/06-synthesis/affinity-board.md` |
 | AI-11 | 13/10/2026 | Claude (subagent độc lập với AI-10) | Phản biện bản tổng hợp | `ai/prompts/AI-11-synthesis-critic.md` → `research/06-synthesis/synthesis-critique.md` |
 | AI-12 | 13/10/2026 | Claude (subagent độc lập với AI-10, AI-11) | Áp dụng phản biện, tạo bảng affinity v2 | `ai/prompts/AI-12-synthesis-v2.md` → `research/06-synthesis/affinity-board-v2.md` |
@@ -43,8 +43,8 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 ## AI-03 — Kiểm định thiên lệch bộ câu hỏi (13/10/2026)
 
 - **Vấn đề:** dữ liệu phỏng vấn do AI mô phỏng (D-05) rất dễ bị câu hỏi dẫn dắt làm sai lệch.
-- **AI output:** 152 câu được soi, 8 lỗi mức cao, 28 mức trung, 60 mức thấp. Lỗi nặng nhất: các câu mặc định "có trục trặc", phần hỏi sự cố đứng trước câu hỏi về buổi suôn sẻ, RQ2 có 13 câu trong khi RQ8 chỉ có 3.
-- **Quyết định:** chấp nhận bản v2. Lý do: theo persona guideline, người trả lời phải có cơ hội nói "mọi thứ ổn", nếu không persona sẽ phóng đại nỗi đau.
+- **AI output:** 152 câu được soi, 8 lỗi mức cao, 28 mức trung, 60 mức thấp. Lỗi nặng nhất: các câu mặc định “có trục trặc”, phần hỏi sự cố đứng trước câu hỏi về buổi suôn sẻ, RQ2 có 13 câu trong khi RQ8 chỉ có 3.
+- **Quyết định:** chấp nhận bản v2. Lý do: theo persona guideline, người trả lời phải có cơ hội nói “mọi thứ ổn”, nếu không persona sẽ phóng đại nỗi đau.
 
 ## AI-04 — Nghiên cứu bàn giấy về bối cảnh FPTU (13/10/2026)
 
@@ -56,7 +56,7 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 ## AI-05 — Nghiên cứu bàn giấy riêng cơ sở TP.HCM (13/10/2026)
 
 - **Lý do:** D-11 giới hạn phạm vi ở cơ sở HCM, trong khi AI-04 tổng hợp cho mọi cơ sở.
-- **Output:** `research/02-desk/fptu-hcm.md`, gồm 43 nguồn mới H01–H43 và bảng đánh dấu nguồn nào của AI-04 áp dụng cho HCM. Chỉ 3/35 nguồn cũ nói rõ là của HCM; ngưỡng vắng 20% và FAP là quy định toàn trường. Chi tiết riêng HCM: Block A, wifi FPTU_Students, F-Bus chạy trước mỗi slot, kẹt xe ở Lê Văn Việt và Xa lộ Hà Nội, không có KTX, trạng thái "Not yet" trên FAP sau giờ học.
+- **Output:** `research/02-desk/fptu-hcm.md`, gồm 43 nguồn mới H01–H43 và bảng đánh dấu nguồn nào của AI-04 áp dụng cho HCM. Chỉ 3/35 nguồn cũ nói rõ là của HCM; ngưỡng vắng 20% và FAP là quy định toàn trường. Chi tiết riêng HCM: Block A, wifi FPTU_Students, F-Bus chạy trước mỗi slot, kẹt xe ở Lê Văn Việt và Xa lộ Hà Nội, không có KTX, trạng thái “Not yet” trên FAP sau giờ học.
 - **Khoảng trống:** khung giờ slot hiện hành ở HCM, ai được sửa điểm danh, hạn chót giảng viên điểm danh, cách giảng viên điểm danh thực tế trên lớp. Confession và fanpage HCM chặn công cụ đọc.
 - **Quyết định:** thêm chi tiết HCM vào từng thẻ người trả lời. Các khoảng trống được giao cho phần tự quan sát O-nn (`research/05-raw/O-self-observation-template.md`), vì chỉ người học thật ở HCM mới trả lời được.
 
@@ -68,9 +68,9 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 
 ## AI-07 — Kiểm chứng quy tắc sửa điểm danh (13/10/2026)
 
-- **Vấn đề:** O-01.6 ("chỉ sửa trong ngày, qua ngày hệ thống tự chốt") là ràng buộc thiết kế mạnh nhất, nhưng mới ở mức Reported.
-- **Output:** `research/02-desk/fap-edit-window.md`, 16 nguồn V01–V16. Kết luận: **ủng hộ một phần**. Sinh viên phải báo giảng viên trong ngày học (2 ngày với môn LUK). Quá hạn thì vẫn còn đường nộp "Đơn khiếu nại điểm danh" trên FAP gửi phòng QLĐT, xử lý trong 2 ngày làm việc. Không có nguồn nào xác nhận FAP tự khóa về mặt kỹ thuật sau ngày học.
-- **Quyết định:** sửa cách diễn đạt từ "quá ngày là không còn cứu vãn" thành "quá ngày thì sửa sai chuyển từ giảng viên (nhanh, trong ngày) sang đơn khiếu nại lên phòng QLĐT (chậm hơn, cần bằng chứng)". Luồng phục hồi trong thiết kế phải có cả hai nhánh.
+- **Vấn đề:** O-01.6 (“chỉ sửa trong ngày, qua ngày hệ thống tự chốt”) là ràng buộc thiết kế mạnh nhất, nhưng mới ở mức Reported.
+- **Output:** `research/02-desk/fap-edit-window.md`, 16 nguồn V01–V16. Kết luận: **ủng hộ một phần**. Sinh viên phải báo giảng viên trong ngày học (2 ngày với môn LUK). Quá hạn thì vẫn còn đường nộp “Đơn khiếu nại điểm danh” trên FAP gửi phòng QLĐT, xử lý trong 2 ngày làm việc. Không có nguồn nào xác nhận FAP tự khóa về mặt kỹ thuật sau ngày học.
+- **Quyết định:** sửa cách diễn đạt từ “quá ngày là không còn cứu vãn” thành “quá ngày thì sửa sai chuyển từ giảng viên (nhanh, trong ngày) sang đơn khiếu nại lên phòng QLĐT (chậm hơn, cần bằng chứng)”. Luồng phục hồi trong thiết kế phải có cả hai nhánh.
 
 ## AI-10, AI-11 — Tổng hợp và phản biện (13/10/2026)
 
@@ -119,55 +119,55 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 
 - **Prompt:** `ai/prompts/AI-18-stitch-first-prompt.md`, ba prompt P1 (SC-03), P2 (SC-09), P3 (SC-11). Claude soạn, thien chạy trên Google Stitch (D-07).
 - **Brief Stitch nhận:** DESIGN.md v2 ở commit 2aa48f8 và 29d7fd3, tức trước D-22 và D-23: lúc đó font còn là Roboto và component theo Material 3. Vì vậy IT-0 dùng Roboto; Inter chỉ có từ IT-1.
-- **Kích hoạt:** thien gửi ảnh chụp kết quả hai lần; lần thứ hai kèm lời: "đây là toàn bộ ảnh mà mình dùng promt của file AI-18-stich-first prompt…" (14/10).
+- **Kích hoạt:** thien gửi ảnh chụp kết quả hai lần; lần thứ hai kèm lời: “đây là toàn bộ ảnh mà mình dùng promt của file AI-18-stich-first prompt…” (14/10).
 - **Output:** `assets/stitch/IT-0-SC-03.png`, `IT-0-SC-09.png`, `IT-0-SC-11.png`, mã HTML trong `assets/stitch/code/`, và `IT-0-stitch-generated-DESIGN.md` do Stitch tự sinh.
 
 ## AI-19 — Critique IT-0 và hệ component (14/10/2026)
 
 - **Cách phản biện:** theo tiêu chí đặt sẵn ở bước 6 của AI-18 (heuristic Nielsen, WCAG 2.1, persona P-01, ít nhất 5 phát hiện). Không có prompt riêng cho bước critique.
 - **Output:** `design/stitch-critique-it0.md`: CR-01..CR-09 cho SC-03, CR-10..CR-17 cho SC-09 và SC-11. Sau khi đo lại trên mã HTML, CR-07 là báo động nhầm.
-- **Góp ý của thien dẫn tới D-22:** "…layout stich trên đây thiết kế không elegant… tôi sẽ áp dụng nhiều nhất các component shadcn, color plate, rồi thêm thư viện lucide icon… khi ra được hội đồng thì tôi cần phải có một lý do để tại sao chọn phần thiết kế mà tôi đề cập" (14/10). Claude kiểm mã nguồn app FAP Attendance thật và thấy sản phẩm đã dùng shadcn, Lucide và Inter (`design/component-system.md` mục 0), nên đề xuất D-22 B và D-23 B trên thẻ quyết định.
-- **Quyết định:** thien chọn D-22 B và D-23 B, rồi duyệt toàn bộ critique: "1. tôi duyệt toàn bộ. tôi chưa đọc hiểu được toàn bộ vì quá nhiều vấn đề, tôi sẽ theo đề xuất của bạn. và sẽ kiểm tra bằng cách trực quan nhìn kết quả." (14/10).
+- **Góp ý của thien dẫn tới D-22:** “…layout stich trên đây thiết kế không elegant… tôi sẽ áp dụng nhiều nhất các component shadcn, color plate, rồi thêm thư viện lucide icon… khi ra được hội đồng thì tôi cần phải có một lý do để tại sao chọn phần thiết kế mà tôi đề cập” (14/10). Claude kiểm mã nguồn app FAP Attendance thật và thấy sản phẩm đã dùng shadcn, Lucide và Inter (`design/component-system.md` mục 0), nên đề xuất D-22 B và D-23 B trên thẻ quyết định.
+- **Quyết định:** thien chọn D-22 B và D-23 B, rồi duyệt toàn bộ critique: “1. tôi duyệt toàn bộ. tôi chưa đọc hiểu được toàn bộ vì quá nhiều vấn đề, tôi sẽ theo đề xuất của bạn. và sẽ kiểm tra bằng cách trực quan nhìn kết quả.” (14/10).
 
 ## AI-20, AI-21 — Stitch IT-1 và critique IT-1 (14/10/2026)
 
-- **AI-20:** prompt `ai/prompts/AI-20-stitch-it1.md` sửa CR-01..CR-17 và áp dụng D-22, D-23. thien chạy trên chính các màn IT-0 để giữ before/after, rồi gửi lại zip: "lần này tôi đã làm file zip chưa tất cả, bạn hãy check lại giúp tôi" (14/10).
+- **AI-20:** prompt `ai/prompts/AI-20-stitch-it1.md` sửa CR-01..CR-17 và áp dụng D-22, D-23. thien chạy trên chính các màn IT-0 để giữ before/after, rồi gửi lại zip: “lần này tôi đã làm file zip chưa tất cả, bạn hãy check lại giúp tôi” (14/10).
 - **AI-21 (critique):** Claude kiểm IT-1 bằng ảnh và đo trên mã HTML (cỡ chữ, chiều cao nút, mã màu, font). 15/16 phát hiện cũ đã sửa, thêm 6 phát hiện mới CR-18..CR-23 (`design/stitch-critique-it1.md`). Tiêu chí như AI-19.
-- **AI-21 (prompt IT-2):** `ai/prompts/AI-21-stitch-it2.md`. thien hỏi "SC-11 có 2 màn hình it1 lận, thì tôi sẽ chọn màn nào", nên prompt được sửa lại cho rõ màn đích (commit 24a2a3b).
-- **Quyết định:** thien duyệt CR-18..CR-23 và báo đã chạy IT-2: "1. duyệt 2. trên là zip tôi đã chạy xong AI-21-stitch-it2.md" (14/10).
+- **AI-21 (prompt IT-2):** `ai/prompts/AI-21-stitch-it2.md`. thien hỏi “SC-11 có 2 màn hình it1 lận, thì tôi sẽ chọn màn nào”, nên prompt được sửa lại cho rõ màn đích (commit 24a2a3b).
+- **Quyết định:** thien duyệt CR-18..CR-23 và báo đã chạy IT-2: “1. duyệt 2. trên là zip tôi đã chạy xong AI-21-stitch-it2.md” (14/10).
 
 ## AI-22 — Critique IT-2 và chốt vòng Stitch (14/10/2026)
 
-- **Output:** `design/stitch-critique-it2.md`. 5/5 phát hiện đã sửa. Đọc mã HTML cho thấy bộ đếm của Stitch chạy thật, nên CR-19 được đánh giá lại. Thêm CR-24 (lý do gắn cờ bị cắt ở 360 dp) và CR-25 (thiếu trạng thái "QR đã đóng"); hai điểm này chuyển sang Figma.
-- **Quyết định:** thien trả lời "duyệt" (14/10). Vòng Stitch dừng ở IT-2, phần còn lại làm trên Figma (AI-23). Ngày 15/10, bản chấm độc lập chỉ ra Stitch mới phủ 3 màn và mới có 2 vòng sửa trên Stitch, nên có thêm AI-28.
+- **Output:** `design/stitch-critique-it2.md`. 5/5 phát hiện đã sửa. Đọc mã HTML cho thấy bộ đếm của Stitch chạy thật, nên CR-19 được đánh giá lại. Thêm CR-24 (lý do gắn cờ bị cắt ở 360 dp) và CR-25 (thiếu trạng thái “QR đã đóng”); hai điểm này chuyển sang Figma.
+- **Quyết định:** thien trả lời “duyệt” (14/10). Vòng Stitch dừng ở IT-2, phần còn lại làm trên Figma (AI-23). Ngày 15/10, bản chấm độc lập chỉ ra Stitch mới phủ 3 màn và mới có 2 vòng sửa trên Stitch, nên có thêm AI-28.
 
 ## AI-23 — Dựng file Figma (14/10/2026)
 
 - **Công cụ:** Claude gọi Figma MCP (`use_figma`, Plugin API) từ Claude Code. Theo D-07 B vì thời gian ngắn; sau đó (D-07 cập nhật 14/10) Claude thực thi cả phần còn lại, thien duyệt (`design/figma-build.md` mục 5).
 - **Output:** file [Figma](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w), ghi chép `design/figma-build.md`, ảnh `assets/figma/`.
 - **Tự kiểm:** chụp lại từng màn sau khi dựng và sửa các lỗi dựng hình (thuộc tính chữ dùng chung làm mọi chip cùng một nhãn, scrim đục hẳn, hàng danh sách đè nhau, chữ cái avatar sai, ô lý do không giãn theo nội dung…). Script đọc toàn bộ reaction ở trang 06 xác nhận không có ngõ cụt.
-- **Sửa nội dung nhờ đối chiếu nghiên cứu:** bản đầu của SC-15 ghi thời gian xử lý đơn là "vài ngày (Assumed)". Đối chiếu `research/02-desk/fap-edit-window.md` thì đã có nguồn V01, V02: mục Thủ tục/Đơn từ, phòng QLĐT, 2 ngày làm việc. Màn được sửa theo nguồn.
-- **Khoảng trống chưa làm:** 4 trạng thái của SC-11, sheet "Không quét được?", kiểm 412 dp (`design/figma-build.md` mục 4).
+- **Sửa nội dung nhờ đối chiếu nghiên cứu:** bản đầu của SC-15 ghi thời gian xử lý đơn là “vài ngày (Assumed)”. Đối chiếu `research/02-desk/fap-edit-window.md` thì đã có nguồn V01, V02: mục Thủ tục/Đơn từ, phòng QLĐT, 2 ngày làm việc. Màn được sửa theo nguồn.
+- **Khoảng trống chưa làm:** 4 trạng thái của SC-11, sheet “Không quét được?”, kiểm 412 dp (`design/figma-build.md` mục 4).
 
 ## AI-24 — Sửa Figma theo góp ý (IT-3b, 14/10/2026)
 
-- **Góp ý của thien:** huy hiệu số bị che; mỗi thành phần phải có mục đích; prototype phải nối trọn vẹn; xử lý thế nào khi giảng viên mở QR lúc đang ở ngoài (GVHD gợi ý một trang web hiện QR; thien lo nút "Điểm danh" trong app làm SV ở nhà cũng điểm danh được).
+- **Góp ý của thien:** huy hiệu số bị che; mỗi thành phần phải có mục đích; prototype phải nối trọn vẹn; xử lý thế nào khi giảng viên mở QR lúc đang ở ngoài (GVHD gợi ý một trang web hiện QR; thien lo nút “Điểm danh” trong app làm SV ở nhà cũng điểm danh được).
 - **Phản biện của Claude:** đồng ý với lo ngại của thien, nút trong app không chứng minh có mặt. Đề xuất trang web gắn với phòng thay vì link công khai (D-24; thien chọn A trên thẻ quyết định).
-- **Tự kiểm:** rà từng frame và bỏ 6 thành phần không có việc gì để làm (mục 6 của `design/figma-build.md`). Phát hiện mâu thuẫn giờ: SC-11 báo SV quét MAS291 lúc 09:31 trong khi SC-09 buổi tối ghi MAS291 "không có lượt quét". Sửa bằng một dòng thời gian chung cho cả ngày. Script đọc reaction trang 06: 59 frame, 9 điểm bắt đầu, 0 đích hỏng, không frame nào thiếu lối ra.
-- **Điều chỉnh sau góp ý thứ hai của thien:** phòng học HCM đa số có TV màn hình lớn nên đổi "Màn chiếu" thành "Màn hình phòng"; bỏ việc gắn cờ lượt quét ngoài Wi-Fi trường vì trùng D-21 C mà thien đã bỏ (D-24 vòng 2). Theo D-07 cập nhật, Claude thực thi phần Figma còn lại, thien duyệt.
+- **Tự kiểm:** rà từng frame và bỏ 6 thành phần không có việc gì để làm (mục 6 của `design/figma-build.md`). Phát hiện mâu thuẫn giờ: SC-11 báo SV quét MAS291 lúc 09:31 trong khi SC-09 buổi tối ghi MAS291 “không có lượt quét”. Sửa bằng một dòng thời gian chung cho cả ngày. Script đọc reaction trang 06: 59 frame, 9 điểm bắt đầu, 0 đích hỏng, không frame nào thiếu lối ra.
+- **Điều chỉnh sau góp ý thứ hai của thien:** phòng học HCM đa số có TV màn hình lớn nên đổi “Màn chiếu” thành “Màn hình phòng”; bỏ việc gắn cờ lượt quét ngoài Wi-Fi trường vì trùng D-21 C mà thien đã bỏ (D-24 vòng 2). Theo D-07 cập nhật, Claude thực thi phần Figma còn lại, thien duyệt.
 
 ## AI-25 — Rà Final UI và prototype (IT-3c, 14/10/2026)
 
-- **Góp ý của thien:** tên màn và mô tả đè nhau; skeleton trắng; nhóm thẻ lộn xộn; thẻ các pha trông như nhau; thanh tiến độ đen không nói gì; tab Báo sai không có huy hiệu; "đừng để mắc những lỗi sơ đẳng".
-- **Phản biện của Claude:** đồng ý cả 7 vấn đề, phản biện hai cách làm: tô chip giờ theo trạng thái điểm danh thì thẻ có hai chip cùng màu nói một điều; tô đỏ phần chưa quét thì đỏ mất nghĩa "Vắng, lỗi". thien chọn phương án A ở cả 3 thẻ D-25, D-26, D-27.
-- **Tự kiểm:** đọc toàn bộ chữ trên 55 frame và đối chiếu với dòng thời gian một ngày. Lỗi nặng nhất Claude tự để lại: nhánh "Sửa thành Có mặt" áp cho người vừa bị phát hiện quét hộ (Linh), tức prototype thưởng cho gian lận mà D-21 muốn chặn. Script đọc reaction trang 06: 63 frame, 0 đích hỏng, không có ngõ cụt.
+- **Góp ý của thien:** tên màn và mô tả đè nhau; skeleton trắng; nhóm thẻ lộn xộn; thẻ các pha trông như nhau; thanh tiến độ đen không nói gì; tab Báo sai không có huy hiệu; “đừng để mắc những lỗi sơ đẳng”.
+- **Phản biện của Claude:** đồng ý cả 7 vấn đề, phản biện hai cách làm: tô chip giờ theo trạng thái điểm danh thì thẻ có hai chip cùng màu nói một điều; tô đỏ phần chưa quét thì đỏ mất nghĩa “Vắng, lỗi”. thien chọn phương án A ở cả 3 thẻ D-25, D-26, D-27.
+- **Tự kiểm:** đọc toàn bộ chữ trên 55 frame và đối chiếu với dòng thời gian một ngày. Lỗi nặng nhất Claude tự để lại: nhánh “Sửa thành Có mặt” áp cho người vừa bị phát hiện quét hộ (Linh), tức prototype thưởng cho gian lận mà D-21 muốn chặn. Script đọc reaction trang 06: 63 frame, 0 đích hỏng, không có ngõ cụt.
 
 ## AI-26 — Đặc tả, handoff và các trạng thái còn thiếu (S5, 14/10/2026)
 
 - **Việc làm:** viết `design/screen-spec.md` (15 màn), `design/design-decisions.md` (DD-1..DD-10 và checklist a11y có số đo), `handoff/flutter-handoff.md` (2 bảng ánh xạ, 6 mục cho mỗi màn). Viết spec làm lộ ra 8 trạng thái user flow có nêu mà Figma chưa vẽ; thien yêu cầu vẽ hết (16:05) và nối vào prototype (16:27).
 - **Góp ý của thien và phản biện:** thien chỉ ra SC-01 sai cách đăng nhập của sinh viên K19 trở đi (CR-41). thien hỏi 5 phút và 15 giây đã được phản biện chưa; Claude thừa nhận là chưa, phản biện và tìm ra lỗi đồng hồ ở nhánh mở từ xa (CR-42); thien chọn D-28 A.
-- **Tự kiểm:** ở SC-04 nhánh "Nhỏ hơn", Claude suýt viết "không có lượt quét thừa"; câu này sai vì 1 lượt quét hộ cộng 3 người chưa quét cũng ra −2, nên màn vẫn dẫn sang kiểm tra ngẫu nhiên như FL-1. Script đọc reaction trang 06 sau khi nối: 84 frame, 0 đích hỏng, 0 frame chồng nhau, mọi frame có lối vào và lối ra; bỏ 4 điểm bắt đầu thừa do Figma tự tạo.
-- **Chưa làm:** hai nút Có mặt / Vắng ở SC-06 còn lượt cần xem và nút "Chiếu tạm mã từ điện thoại" chưa có màn đích (`design/figma-build.md` mục 3). Ngày 15/10 các nút này được ghi rõ là nút ngoài kịch bản demo (CR-48).
+- **Tự kiểm:** ở SC-04 nhánh “Nhỏ hơn”, Claude suýt viết “không có lượt quét thừa”; câu này sai vì 1 lượt quét hộ cộng 3 người chưa quét cũng ra −2, nên màn vẫn dẫn sang kiểm tra ngẫu nhiên như FL-1. Script đọc reaction trang 06 sau khi nối: 84 frame, 0 đích hỏng, 0 frame chồng nhau, mọi frame có lối vào và lối ra; bỏ 4 điểm bắt đầu thừa do Figma tự tạo.
+- **Chưa làm:** hai nút Có mặt / Vắng ở SC-06 còn lượt cần xem và nút “Chiếu tạm mã từ điện thoại” chưa có màn đích (`design/figma-build.md` mục 3). Ngày 15/10 các nút này được ghi rõ là nút ngoài kịch bản demo (CR-48).
 
 ## AI-27 — Chấm độc lập toàn bài (15/10/2026)
 
@@ -178,6 +178,6 @@ Phần chi tiết bên dưới xếp theo thứ tự thời gian (vài mục li�
 
 ## AI-28 — Stitch bổ sung FL-1 và vòng IT-3 trên Stitch (15/10/2026, đang chờ chạy)
 
-- **Prompt:** `ai/prompts/AI-28-stitch-flow1-and-it3.md`. Phần A sinh SC-02, SC-04, SC-05, SC-06; phần B sửa SC-03 về trạng thái "QR đã đóng" (CR-24, CR-25, CR-31).
+- **Prompt:** `ai/prompts/AI-28-stitch-flow1-and-it3.md`. Phần A sinh SC-02, SC-04, SC-05, SC-06; phần B sửa SC-03 về trạng thái “QR đã đóng” (CR-24, CR-25, CR-31).
 - **Nói rõ:** phần A chạy **sau** khi Figma đã có, nội dung lấy từ screen-spec. Đây là bản để so với Figma, không phải bản Stitch nghĩ ra luồng.
 - **Trạng thái:** chờ thien chạy và gửi zip. Kết quả sẽ ghi ở đây và critique ở `design/stitch-critique-it3.md` (từ CR-49).
