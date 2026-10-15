@@ -22,7 +22,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Design brief cho Stitch | `design/DESIGN.md` | Có (v2) |
 | Đặc tả màn hình | `design/screen-spec.md` | Có (v1, thien duyệt 15/10) |
 | Quyết định thiết kế + checklist accessibility | `design/design-decisions.md` | Có (v1, thien duyệt 15/10) |
-| Nhật ký AI (prompt, output, critique, quyết định) | `ai/ai-design-log.md` | Có (AI-01..AI-29; AI-29 Phần 2 đang chờ) |
+| Nhật ký AI (prompt, output, critique, quyết định) | `ai/ai-design-log.md` | Có (AI-01..AI-29; chấm chéo Codex hai phần ở `ai/reviews/`) |
 | Critique các vòng Stitch | `design/stitch-critique-it0.md` … `stitch-critique-it3.md` | Có (IT-0, IT-1, IT-2 đã duyệt; IT-0b và IT-3 thien duyệt 15/10) |
 | Ảnh Stitch, ảnh Figma | `assets/stitch/`, `assets/figma/` | Có (Stitch IT-0..IT-3 và IT-0b; Figma: đủ 73 frame trang 03, mục lục `assets/figma/INDEX.md`; 3 flow, trang 04, 05, kiểm 412 dp) |
 | Bảng liên kết prototype (đọc từ Figma) | `design/prototype-links.md` | Có (84 frame, 12 điểm bắt đầu, 166 tương tác, 0 liên kết hỏng) |

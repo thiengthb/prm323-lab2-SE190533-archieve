@@ -77,6 +77,7 @@ Nguồn (S/H, R, O, T, Survey) → Phát hiện F → Nhu cầu N → Persona P 
 | CR-54..CR-63 (critique Stitch IT-0b và IT-3, 15/10) | Nielsen #1, #2, #4, #8; WCAG 1.4.4, 1.4.10; D-21, D-23, D-24 | Accept 8 (Figma đã đúng), Reject CR-62, Modify CR-63, ban đầu ghi là hạn chế (thien duyệt 15/10), sau AI-29 thì sửa (D-31) | D-21, D-23, D-24 | SC-02, SC-03, SC-04, SC-05, SC-06 (`design/stitch-critique-it3.md`) |
 | CR-64, CR-65 (Claude tự rà, 15/10 tối) | Nielsen #4; nhất quán dữ liệu với D-29 | Accept, sửa luôn | D-29 | SC-04, SC-05, SC-06, SC-07, CMP-11, CMP-15; 29 ảnh `assets/figma/` |
 | CR-66..CR-72 (chấm chéo Codex AI-29, 15/10 tối) | Rubric “Prototype”, “Component states”; Nielsen #1, #2, #9; WCAG 1.4.10 | CR-66 Accept, đã làm; CR-67, CR-68 Accept, đã sửa; CR-69 hạn chế; CR-70 giữ 3 màn (thien chọn); CR-71 việc của nhóm; CR-72 Modify | — | SC-03, SC-05, SC-11, SC-13; `assets/figma/INDEX.md`, `design/prototype-links.md` (`ai/reviews/AI-29-triage.md`) |
+| CR-73 (Codex Phần 2, 15/10 tối) | Nielsen #3 (kiểm soát và tự do), #5 | Chờ thien | D-21 | SC-05 (`ai/reviews/AI-29-triage.md` mục 7) |
 
 ## 5. Kiểm tra độ phủ (chạy trước khi nộp)
 
@@ -85,5 +86,5 @@ Chạy ngày 15/10/2026 trên bản repo hiện tại.
 - [x] Mọi SC thuộc ít nhất một FL (rubric: Information architecture). FL-1 có SC-01..SC-06, FL-2 có SC-01 và SC-09..SC-15, FL-3 có SC-07 và SC-08 (mục 2). Đủ 15 màn.
 - [x] Mọi FL phục vụ ít nhất một N của Primary Persona. FL-1 phục vụ N-04, N-03, N-11 (P-01). FL-3 phục vụ N-01 phần giảng viên sửa (P-01). FL-2 chủ yếu phục vụ P-02; nó nối với P-01 qua N-01, vì lời báo sai sinh viên gửi ở FL-2 là đầu vào của FL-3.
 - [x] Mọi N có ít nhất một bằng chứng không phải Assumed, hoặc ghi rõ cách kiểm chứng. Đạt có điều kiện: N-04 và N-01 có bằng chứng Observed hoặc desk research. N-03, N-06, N-10, N-11 chỉ dựa trên phỏng vấn mô phỏng (Simulated), nên mức của chúng là giả thuyết. Cách kiểm chứng là usability test theo TC-1..TC-7 (`ux/persona.md` mục 11), chưa chạy.
-- [x] Mọi CR quan trọng có quyết định và lý do trỏ về persona, heuristic hoặc ràng buộc. CR-01..CR-72 đều có dòng ở mục 4.
+- [x] Mọi CR quan trọng có quyết định và lý do trỏ về persona, heuristic hoặc ràng buộc. CR-01..CR-73 đều có dòng ở mục 4.
 - [x] Mọi SC có đủ 6 mục trong handoff. `handoff/flutter-handoff.md` có 15 mục SC, mỗi mục đủ 6 phần.

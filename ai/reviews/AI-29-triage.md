@@ -2,9 +2,9 @@
 
 | Thuộc tính | Giá trị |
 |---|---|
-| Đầu vào | `ai/reviews/AI-29-codex-phan-1.md` (nguyên văn), commit Codex chấm `1242923` |
+| Đầu vào | `ai/reviews/AI-29-codex-phan-1.md` và `ai/reviews/AI-29-codex-phan-2.md` (nguyên văn), commit Codex chấm `1242923` |
 | Người phân loại | Claude, 15/10/2026 tối |
-| Trạng thái | Đã duyệt (thien, 15/10/2026): chọn “Sửa 3 lỗi chữ” trên thẻ quyết định. CR-63, CR-67, CR-68 đã sửa; CR-70 giữ 3 màn đại diện |
+| Trạng thái | Đã duyệt (thien, 15/10/2026): chọn “Sửa 3 lỗi chữ” trên thẻ quyết định. CR-63, CR-67, CR-68 đã sửa; CR-70 giữ 3 màn đại diện. Mục 7 (Phần 2) chờ thien quyết |
 | Cách kiểm | Mở lại từng frame trên Figma (trang 03 và 06) và đối chiếu với `design/screen-spec.md`. Mỗi kết luận bên dưới trỏ về một ảnh hoặc một dòng trong repo |
 
 **Lưu ý về thiên lệch:** người phân loại là Claude, cũng là mô hình đã dựng phần lớn bài. Vì vậy một phát hiện của Codex chỉ được ghi là “Không đúng” khi có ảnh xuất từ Figma cho thấy điều ngược lại. Ảnh đó nay nằm trong repo để ai cũng kiểm lại được. Phát hiện nào chỉ phản bác được bằng lời mô tả thì giữ là “Đúng một phần” hoặc “Đúng”.
@@ -59,5 +59,27 @@ Codex chỉ chấm từ những gì có trong repo, như một giảng viên ch�
 
 ## 6. Việc còn chờ
 
-- Phần 2: thien gửi Codex bản chấm của Claude (`/mnt/project-files/codex-review/phan-2-bao-cao-cham-claude-AI-27.pdf`) kèm ghi chú rằng bản đó chấm commit cũ `8c62cda`.
+- ~~Phần 2: thien gửi Codex bản chấm của Claude kèm ghi chú rằng bản đó chấm commit cũ `8c62cda`.~~ Xong 15/10 23:07, xem mục 7.
 - ~~thien duyệt bảng này, quyết CR-63, CR-67, CR-68 và CR-70.~~ Xong 15/10 tối, xem `design/figma-build.md` §11.
+
+## 7. Phần 2: Codex đối chiếu với bản chấm AI-27
+
+**Điểm hòa giải của Codex: 84/100** (khoảng 78–87, độ tin trung bình). Codex tự nâng hai phần mình chấm thấp vì không mở được Figma (Design system 12 lên 13,5; Prototype 5 lên 8), hạ hai phần AI-27 chấm (Iterations 13 xuống 12 vì IT-0b chạy sau Figma và IT-3 chỉ sửa một màn; Documentation 3 xuống 2,5). Claude không chấm lại con số này: người chấm cuối là giảng viên, và Claude là bên bị chấm.
+
+Codex đối chiếu ở commit `1242923`, chưa thấy `6bf3c45` (CR-66) và `61685f2` (D-31). Bảng dưới kiểm lại từng nhận định ở commit hiện tại.
+
+| Nhận định của Codex | Kiểm lại | Việc |
+|---|---|---|
+| SC-04 “Chênh −1” cạnh “Dư 1”: điểm mù của Claude | Đúng. Đã sửa ở `61685f2` (CR-63, D-31) | Xong |
+| SC-05 ô “Ảnh FAP” trống đụng thẳng lý do chống quét hộ (DD-3) | **Đúng, nặng hơn Phần 1.** Màn bảo giảng viên “nhìn mặt và so với ảnh FAP” (`design/screen-spec.md` SC-05 mục 2) nhưng không có ảnh nào để so. Người xem không biết bản thật có ảnh | CR-72 nâng lên Trung bình. Đề xuất ghi nhãn “Ảnh hồ sơ FAP · minh họa” ngay trên Figma, không dùng ảnh người thật. Chờ thien |
+| SC-05 thiếu phản hồi và hoàn tác | **Đúng một nửa.** Có phản hồi: frame “Đã kiểm tra 3/3” hiện kết quả từng thẻ và banner. Không có hoàn tác: bấm nhầm “Không có mặt” thì lượt quét bị ghi Vắng, SC-06 không có chỗ đổi lại, sinh viên chỉ còn đường báo sai | CR-73 · Trung bình. Đề xuất thêm nút “Đổi” trên thẻ đã kiểm. Chờ thien |
+| 9 nút không phản hồi trên prototype (ưu tiên 1 của Codex) | **Đúng.** CR-48 đã ghi lý do cho 9 nút, nhưng khi demo trực tiếp, bấm nhầm một nút sẽ không có gì xảy ra và trông như prototype hỏng | Đề xuất trên trang 06: nối 9 nút tới một overlay “Ngoài kịch bản demo” có nút Đóng. Không đổi trang 03. Chờ thien |
+| SC-08 không có ảnh dialog từ chối | Đúng ở `1242923`. Nay có `SC-08-dialog-tu-choi-destructive.png` (CR-66). Không có ô nhập lý do là chủ ý (mục 2, phát hiện 8) | Không làm thêm |
+| 412 dp chỉ 3 màn | Đúng. thien đã chọn giữ 3 màn (D-31) | Không làm thêm |
+| Link slide chưa chứng minh là xem được | Đúng. README vẫn ghi “cần được chia sẻ quyền xem” | Việc của thien: bật chia sẻ, mở thử bằng cửa sổ ẩn danh, tải bản PDF dự phòng |
+| Mọi commit do một người, nhóm bốn người | Đúng. Mọi commit đứng tên thien, phần lớn có Claude đồng tác giả; ba bạn còn lại không có commit nào | Gộp với CR-71, việc của nhóm: bảng phân công có bằng chứng. Không tạo commit thay cho ai |
+| File Figma nằm trong team mượn | Đúng, đã ghi rõ trong README (D-30) | Không làm thêm |
+| Codex rút lại nhận định “ảnh `assets/figma` đã cũ” ở Phần 1 | Codex đúng khi rút lại | Không làm thêm |
+| AI-27 cộng “+6 vì công phu vượt đề” và đưa ra con số 86,5 ngoài rubric | Đúng một phần. AI-27 ghi “cộng 6, trừ 3”, ra +3, và tách riêng khỏi điểm rubric. Codex nói đúng rằng 86,5 không phải điểm Lab hợp lệ | Khi nhắc tới AI-27, chỉ dùng 83,5. Slide không nêu 86,5 |
+| AI-27 trừ vì thiếu đăng xuất, cài đặt, thông báo dựa trên checklist không mở được | Đồng ý: đề không yêu cầu các màn này | Không làm thêm |
+
