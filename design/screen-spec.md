@@ -4,7 +4,7 @@
 |---|---|
 | Mã tài liệu | DES-SCREEN-SPEC |
 | Phiên bản | v1 (14/10/2026) |
-| Trạng thái | Chờ thien duyệt |
+| Trạng thái | Đã duyệt (thien, 15/10/2026) |
 | Đầu vào | `ux/user-flow.md` v2 (danh sách màn, FL-1..FL-3), `ux/persona.md` v2 (N, TC), `design/DESIGN.md` v2 (NT-1..NT-7), Figma trang 03 sau IT-3c (`design/figma-build.md`) |
 | Phạm vi | Ý đồ thiết kế của 15 màn: màn để làm gì, hiện nội dung gì, thuộc flow nào, có những trạng thái nào. Bố cục, widget, tương tác và điều hướng chi tiết nằm ở `handoff/flutter-handoff.md` |
 

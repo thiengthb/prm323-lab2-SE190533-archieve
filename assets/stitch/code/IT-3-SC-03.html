@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<meta content="mobile_stack" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            background: '#EEEEF1',
+            primary: '#4254BA',
+            'primary-hover': '#354396',
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      body {
+        overscroll-behavior-y: none;
+        font-family: 'Inter', sans-serif;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    body {
+      min-height: max(884px, 100dvh);
+      background-color: #EEEEF1;
+    }
+  </style>
+</head>
+<body class="bg-[#EEEEF1] text-[#212529] antialiased min-h-full flex flex-col">
+<!-- 1. Top App Bar (64 dp tall, background #FFFFFF, border-b 1px solid #E3E5EC) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF] border-b border-[#E3E5EC] pt-safe">
+<div class="h-16 px-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button aria-label="Quay lại" class="w-12 h-12 -ml-2 flex items-center justify-center rounded-lg text-[#212529] hover:bg-[#F1F3F5] active:bg-[#E3E5EC] transition-colors" onclick="history.back()" type="button">
+<!-- Back arrow icon (stroke width 2px, #212529) -->
+<svg class="w-6 h-6 stroke-[#212529]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<line x1="19" x2="5" y1="12" y2="12"></line>
+<polyline points="12 19 5 12 12 5"></polyline>
+</svg>
+</button>
+<h1 class="font-medium text-[18px] text-[#212529] truncate">PRM393 · Slot 1</h1>
+</div>
+<div class="flex items-center">
+<span class="text-[15px] font-normal text-[#5C636A]">P.205</span>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full pt-[calc(4rem+env(safe-area-inset-top,0px))] pb-28 px-4 flex flex-col mt-4">
+<div class="flex flex-col w-full max-w-md mx-auto">
+<!-- 2. Counter Card (White card, 14 dp corner radius, 1 px border #E3E5EC, soft subtle shadow) -->
+<div class="w-full bg-[#FFFFFF] rounded-[14px] border border-[#E3E5EC] p-4 mb-4 shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[24px] font-semibold text-[#212529] leading-tight tracking-tight">Đã quét 30/32</span>
+<!-- Badge: QR còn 2:39 -->
+<div class="h-8 px-3 bg-[#F1F3F5] border border-[#E3E5EC] rounded-lg flex items-center gap-1.5 text-[#5C636A]"><svg class="w-4 h-4 stroke-[#5C636A]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span class="text-[14px] font-medium tracking-tight">QR đã đóng</span></div>
+</div>
+<!-- Thin progress bar (6 dp tall, 8 dp radius, background #E3E5EC with primary fill #4254BA at 97% width) -->
+<div class="w-full h-[6px] bg-[#E3E5EC] rounded-[8px] overflow-hidden mb-3">
+<div class="h-full bg-[#0D6E45] rounded-[8px] transition-all duration-500" style="width: 93.75%;"></div>
+</div>
+<!-- Helper text with info icon (14 sp, #5C636A) -->
+<div class="flex items-center justify-between text-[#5C636A] text-[14px] leading-5"><div class="flex items-center gap-1.5"><svg class="w-4 h-4 shrink-0 stroke-[#5C636A]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="16" y2="12"></line><line x1="12" x2="12.01" y1="8" y2="8"></line></svg><p class="text-[14px] leading-5">Đếm người trong phòng rồi xác nhận sĩ số</p></div><div class="cursor-default select-none shrink-0"><span class="text-[14px] font-normal text-[#5C636A]">Đã đóng lúc 07:05</span></div></div>
+</div>
+<!-- 3. Section Header -->
+<div class="flex items-center justify-between px-1 mb-2.5"><span class="text-[14px] font-medium text-[#5C636A] whitespace-nowrap">Danh sách lớp · 32</span></div>
+<!-- 4. Student List in a White Card (14 dp corner radius, 1 px border #E3E5EC, soft shadow, divided by 1px #F1F3F5 borders) -->
+<div class="w-full bg-[#FFFFFF] rounded-[14px] border border-[#E3E5EC] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.03)] divide-y divide-[#F1F3F5]">
+<!-- Row 1: Nguyễn Minh Khoa -> "K" -->
+<div class="min-h-[64px] px-4 py-3 flex items-center justify-between bg-[#FFFFFF]">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded-full bg-[#F1F3F5] flex items-center justify-center shrink-0">
+<span class="text-[16px] font-semibold text-[#212529]">K</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[16px] font-medium text-[#212529] truncate">Nguyễn Minh Khoa</span>
+<span class="text-[14px] text-[#5C636A] truncate">SE190412 · 07:01</span>
+</div>
+</div>
+<!-- Status Chip: Có mặt -->
+<div class="h-[32px] px-2.5 bg-[#E3F0EA] text-[#0D6E45] rounded-[8px] inline-flex items-center gap-1.5 shrink-0 select-none">
+<svg class="w-4 h-4 stroke-[#0D6E45]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+<polyline points="22 4 12 14.01 9 11.01"></polyline>
+</svg>
+<span class="text-[14px] font-medium">Có mặt</span>
+</div>
+</div>
+<!-- Row 2: Trần Gia Huy -> "H" -->
+<div class="min-h-[64px] px-4 py-3 flex items-center justify-between bg-[#FFFFFF]">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded-full bg-[#F1F3F5] flex items-center justify-center shrink-0">
+<span class="text-[16px] font-semibold text-[#212529]">H</span>
+</div>
+<div class="flex flex-col min-w-0"><span class="text-[16px] font-medium text-[#212529] truncate">Trần Gia Huy</span><span class="text-[14px] text-[#5C636A]">SE190433</span><span class="text-[14px] text-[#855A00] flex items-center gap-1 mt-0.5"><svg class="w-3.5 h-3.5 stroke-[#855A00] shrink-0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="2" ry="2" width="12" x="6" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg><span>Cùng thiết bị với một lượt quét khác lúc 07:02</span></span></div>
+</div>
+<!-- Status Chip: Cần xem -->
+<div class="h-[32px] px-2.5 bg-[#FFF4D2] text-[#855A00] rounded-[8px] inline-flex items-center gap-1.5 shrink-0 select-none">
+<svg class="w-4 h-4 stroke-[#855A00]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+<line x1="4" x2="4" y1="22" y2="15"></line>
+</svg>
+<span class="text-[14px] font-medium">Cần xem</span>
+</div>
+</div>
+<!-- Row 3: Lê Bảo Trâm -> "T" -->
+<div class="min-h-[64px] px-4 py-3 flex items-center justify-between bg-[#FFFFFF]">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded-full bg-[#F1F3F5] flex items-center justify-center shrink-0">
+<span class="text-[16px] font-semibold text-[#212529]">T</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[16px] font-medium text-[#212529] truncate">Lê Bảo Trâm</span>
+<span class="text-[14px] text-[#5C636A] truncate">SE190527</span>
+</div>
+</div>
+<!-- Status Chip: Chưa điểm danh -->
+<div class="h-[32px] px-2.5 bg-[#FFF4D2] text-[#855A00] rounded-[8px] inline-flex items-center gap-1.5 shrink-0 select-none">
+<svg class="w-4 h-4 stroke-[#855A00]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+<span class="text-[14px] font-medium">Chưa điểm danh</span>
+</div>
+</div>
+<!-- Row 4: Phạm Quốc Anh -> "A" -->
+<div class="min-h-[64px] px-4 py-3 flex items-center justify-between bg-[#FFFFFF]">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded-full bg-[#F1F3F5] flex items-center justify-center shrink-0">
+<span class="text-[16px] font-semibold text-[#212529]">A</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[16px] font-medium text-[#212529] truncate">Phạm Quốc Anh</span>
+<span class="text-[14px] text-[#5C636A] truncate">SE190501</span>
+</div>
+</div>
+<!-- Status Chip: Vắng -->
+<div class="h-[32px] px-2.5 bg-[#FDECEA] text-[#B42318] rounded-[8px] inline-flex items-center gap-1.5 shrink-0 select-none">
+<svg class="w-4 h-4 stroke-[#B42318]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<line x1="15" x2="9" y1="9" y2="15"></line>
+<line x1="9" x2="15" y1="9" y2="15"></line>
+</svg>
+<span class="text-[14px] font-medium">Vắng</span>
+</div>
+</div>
+<!-- Row 5: Võ Hoàng Nam -> "N" -->
+<div class="min-h-[64px] px-4 py-3 flex items-center justify-between bg-[#FFFFFF]">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded-full bg-[#F1F3F5] flex items-center justify-center shrink-0">
+<span class="text-[16px] font-semibold text-[#212529]">N</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[16px] font-medium text-[#212529] truncate">Võ Hoàng Nam</span>
+<span class="text-[14px] text-[#5C636A] truncate">SE190488 · 07:02</span>
+</div>
+</div>
+<!-- Status Chip: Có mặt -->
+<div class="h-[32px] px-2.5 bg-[#E3F0EA] text-[#0D6E45] rounded-[8px] inline-flex items-center gap-1.5 shrink-0 select-none">
+<svg class="w-4 h-4 stroke-[#0D6E45]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+<polyline points="22 4 12 14.01 9 11.01"></polyline>
+</svg>
+<span class="text-[14px] font-medium">Có mặt</span>
+</div>
+</div>
+<!-- Row 6: Đỗ Thảo Vy -> "V" -->
+<div class="min-h-[64px] px-4 py-3 flex items-center justify-between bg-[#FFFFFF]">
+<div class="flex items-center gap-3 min-w-0 pr-2">
+<div class="w-10 h-10 rounded-full bg-[#F1F3F5] flex items-center justify-center shrink-0">
+<span class="text-[16px] font-semibold text-[#212529]">V</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="text-[16px] font-medium text-[#212529] truncate">Đỗ Thảo Vy</span>
+<span class="text-[14px] text-[#5C636A] truncate">SE190515 · 07:03</span>
+</div>
+</div>
+<!-- Status Chip: Có mặt -->
+<div class="h-[32px] px-2.5 bg-[#E3F0EA] text-[#0D6E45] rounded-[8px] inline-flex items-center gap-1.5 shrink-0 select-none">
+<svg class="w-4 h-4 stroke-[#0D6E45]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+<polyline points="22 4 12 14.01 9 11.01"></polyline>
+</svg>
+<span class="text-[14px] font-medium">Có mặt</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- 5. Bottom Action Area (fixed at bottom on white background with 1px border-t #E3E5EC) -->
+<footer class="fixed bottom-0 left-0 right-0 z-40 bg-[#FFFFFF] border-t border-[#E3E5EC] pb-safe shadow-[0_-2px_10px_rgba(0,0,0,0.03)]">
+<div class="p-4 flex items-center">
+<button class="w-full h-12 bg-[#4254BA] hover:bg-[#354396] active:scale-[0.99] text-white rounded-[8px] text-[14px] font-medium flex items-center justify-center gap-2 transition-all cursor-pointer" type="button"><svg class="w-5 h-5 stroke-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Đối chiếu sĩ số</span></button>
+</div>
+</footer>
+<script>
+    // Functional countdown for QR session timer
+    (function () {
+      let timeLeft = 159; // 2 minutes 39 seconds
+      const timerElem = document.getElementById('qr-timer');
+      if (!timerElem) return;
+
+      const interval = setInterval(() => {
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          timerElem.textContent = 'QR hết hạn';
+          return;
+        }
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerElem.textContent = `QR còn ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      }, 1000);
+    })();
+  </script>
+</body></html>

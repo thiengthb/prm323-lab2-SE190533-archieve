@@ -166,3 +166,13 @@ Trang 01: ô “Có người chưa quét được” của FL-1 thêm nhãn “S
 | 03 Final UI | Frame mới “SC-02 · Lịch dạy hôm nay · Trống (CMP-08)” (`SC-02-trong.png`); bỏ chú thích lặp ở ba trạng thái SC-01; ngoặc cong và gạch ngang khoảng giờ trên 82 lớp chữ; ghi chú gắn `type/body-md`; frame web dùng biến `space/*`, `radius/2xl` |
 | 05 Components | CMP-08 thành component set “Hành động = Có nút / Không có nút”; mô tả CMP-14 viết lại theo D-27; bỏ mã `&quot;` trong mô tả CMP-04, CMP-15 |
 | 06 Prototype | Cùng các sửa chữ như trang 03 (66 lớp chữ); bỏ chú thích lặp ở SC-01. Frame SC-02 Trống không vào prototype vì câu chuyện ngày 14/10 có slot |
+
+## 10. Rà lại sau Stitch IT-0b (15/10 tối, CR-64, CR-65)
+
+| Trang | Thay đổi |
+|---|---|
+| 03 Final UI | SC-04 “Số quét nhỏ hơn số người”: Tâm “có trong phòng, hết pin”. SC-06 (bốn trạng thái, bản 412 dp, sheet ghi tay): “ghi tay 07:08 · hết pin”. Gán lại nhãn 87 nút CMP-01 để sửa lỗi hiển thị “Xác nhận” ở SC-05 và SC-07 Trống |
+| 05 Components | Mẫu CMP-11: “SE190655 · ghi tay 07:08 · hết pin”; gán lại nhãn hai nút trong CMP-15 “Chờ” |
+| 06 Prototype | SC-04 “Số quét nhỏ hơn”: Tâm “hết pin”. Gán lại nhãn 91 nút CMP-01 |
+
+29 ảnh trong `assets/figma/` được xuất lại từ Figma ngày 15/10 và kiểm bằng mắt từng ảnh. Ảnh FL-1, FL-2, SC-01, SC-02, SC-02 Trống và màn hình lớp đã xuất ở đợt 5 nên giữ nguyên. Ảnh trang 04 và wireframe không đổi.

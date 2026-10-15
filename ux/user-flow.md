@@ -4,7 +4,7 @@
 |---|---|
 | Mã tài liệu | UX-FLOW |
 | Phiên bản | v2 (14/10/2026): chuyển FL-1 sang QR theo D-19. Bản đọc tên là v1, xem lịch sử git |
-| Trạng thái | Chờ duyệt |
+| Trạng thái | Đã duyệt (thien, 15/10/2026) |
 | Đầu vào | UX-PERSONA (`ux/persona.md`), UX-INTEGRITY (`ux/attendance-integrity.md`), RES-AFFINITY-v2, RES-DESK-FAP, RES-DESK-QR |
 | Quyết định liên quan | D-02, D-12, D-17, D-18, D-19, D-21 (chốt B: cả 4 lớp) |
 

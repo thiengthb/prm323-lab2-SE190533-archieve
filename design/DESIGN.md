@@ -4,7 +4,7 @@
 |---|---|
 | Mã tài liệu | DES-BRIEF |
 | Phiên bản | **v2** (14/10/2026). v1 dùng bảng màu thienui, xem lịch sử git và DES-AUDIT |
-| Trạng thái | Chờ duyệt (viết **trước** prompt Stitch đầu tiên) |
+| Trạng thái | Đã duyệt (thien, 15/10/2026). Viết **trước** prompt Stitch đầu tiên |
 | Đầu vào | UX-PERSONA, UX-FLOW, UX-INTEGRITY, O-02 (màu đo từ FAP thật), DES-AUDIT |
 | Quyết định liên quan | D-12, D-17, D-18, D-19, D-20, D-21, D-22 (shadcn + Lucide), D-23 (Inter) |
 

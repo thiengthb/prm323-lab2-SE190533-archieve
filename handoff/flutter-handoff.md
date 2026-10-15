@@ -4,7 +4,7 @@
 |---|---|
 | Mã tài liệu | HANDOFF-FLUTTER |
 | Phiên bản | v1 (14/10/2026) |
-| Trạng thái | Chờ thien duyệt. Giờ đóng QR và hạn mã theo D-28 A (thien chốt 14/10/2026) |
+| Trạng thái | Đã duyệt (thien, 15/10/2026). Giờ đóng QR và hạn mã theo D-28 A (thien chốt 14/10/2026) |
 | Đầu vào | Figma trang 03 (giao diện), trang 04 (token), trang 05 (component), trang 06 (luồng); `design/DESIGN.md` v2; `design/screen-spec.md` (ý đồ từng màn) |
 | Người đọc | Lập trình viên Flutter dựng ứng dụng mà chỉ mở Figma để xem hình, không phải hỏi lại người thiết kế |
 

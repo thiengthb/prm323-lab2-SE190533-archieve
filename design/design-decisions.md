@@ -4,7 +4,7 @@
 |---|---|
 | Mã tài liệu | DES-DECISIONS |
 | Phiên bản | v1 (14/10/2026) |
-| Trạng thái | Chờ thien duyệt |
+| Trạng thái | Đã duyệt (thien, 15/10/2026) |
 | Đầu vào | `process/decision-log.md` (D-xx do thien chốt), `design/DESIGN.md` v2 (NT-1..NT-7), `design/final-ui-review.md` (CR-26..CR-40), Figma trang 03 và 06 sau IT-3c |
 | Cách đo | Số liệu ở mục 2 do Claude đo bằng script đọc file Figma ngày 14/10/2026 (68 frame 360 × 800 và 3 frame 412 × 915 trên trang 03, 146 vùng bấm trên trang 06). Không có số nào ước lượng bằng mắt. Ngày 15/10 trang 03 thêm frame “SC-02 · Trống” và bỏ dòng chú thích lặp ở SC-01 (CR-50, CR-51); đo lại phần đếm được: 72 frame điện thoại (69 khung 360 × 800, 3 khung 412 × 915), 72/72 dùng Auto Layout, chữ nhỏ nhất 14. Bảng tương phản 2.1 chưa đo lại; frame mới chỉ dùng cặp màu đã có trong bảng (CMP-08 như ở SC-07, SC-14) |
 

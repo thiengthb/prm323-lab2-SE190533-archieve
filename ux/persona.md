@@ -3,7 +3,7 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | UX-PERSONA |
-| Trạng thái | Chờ duyệt |
+| Trạng thái | Đã duyệt (thien, 15/10/2026) |
 | Đầu vào | RES-AFFINITY-v2 (`research/06-synthesis/affinity-board-v2.md`), RES-DESK-FAP (`research/02-desk/fap-edit-window.md`), O-01, roster R01–R11 |
 | Quyết định liên quan | D-02, D-04, D-11, D-12, D-13, D-16, D-17, D-18, D-19, D-21 |
 | Phiên bản | v2 (14/10/2026): kịch bản, tiêu chí và ý tưởng của P-01 chuyển sang điểm danh bằng QR (D-19). Các trường mô tả hiện trạng (hành vi, nỗi đau) giữ nguyên vì vẫn đúng với cách làm hôm nay |
