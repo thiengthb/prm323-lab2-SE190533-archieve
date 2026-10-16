@@ -1,0 +1,11 @@
+{
+  "_nguon": "Đọc từ file Figma 9yDa2ylfREmndW1mK1hf7w bằng Figma MCP (use_figma, chỉ đọc), 16/10/2026 04:20 (giờ UTC). Cách đọc: xem process/sync/README.md, bước 1.",
+  "trang_03": {"frame": 73, "kich_thuoc": {"360x800": 69, "412x915": 3, "1280x720": 1}, "so_man_SC": 15},
+  "trang_06": {"frame": 85, "diem_bat_dau": 12, "tuong_tac_tho": 190, "tuong_tac_bi_che": 6,
+               "ghi_chu_bi_che": "6 nút “Đổi” ở hai frame SC-05 · Đã kiểm tra 3/3 có hotspot “Đổi” đè lên; khi bấm, hotspot nhận trước, nên prototype-links.md không đếm chúng"},
+  "trang_05": {"component_set": 15, "bien_the": 70, "icon_le": 35},
+  "bien": {"Color · DESIGN.md v2": 18, "Scale · DESIGN.md v2": 16},
+  "text_style": 7,
+  "effect_style": 4,
+  "mau_light": {"color/canvas":"#EEEEF1","color/surface":"#FFFFFF","color/raised":"#F2F2F7","color/text":"#212529","color/muted":"#5C636A","color/border":"#E3E5EC","color/border-control":"#767D86","color/primary":"#4254BA","color/on-primary":"#FFFFFF","color/primary-soft":"#ECEEF8","color/success":"#0D6E45","color/success-soft":"#E3F0EA","color/warning":"#855A00","color/warning-soft":"#FFF4D2","color/danger":"#B42318","color/danger-soft":"#FDECEA","color/slot":"#9A3412","color/slot-soft":"#FFEFE2"}
+}

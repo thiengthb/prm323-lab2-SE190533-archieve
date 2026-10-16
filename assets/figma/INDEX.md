@@ -82,4 +82,20 @@ Tổng: 69 frame 360 × 800, 3 frame 412 × 915 (kiểm 412 dp), 1 frame web 128
 | SC-06 · Xem lại và xác nhận · 412 dp | `51:2635` | [a11y-412-SC-06.png](a11y-412-SC-06.png) |
 | SC-09 · Hôm nay (sinh viên) · Buổi tối, có buổi Vắng · 412 dp | `51:2671` | [a11y-412-SC-09.png](a11y-412-SC-09.png) |
 
-Ảnh luồng (trang 01): `FL-1-user-flow.png`, `FL-2-user-flow.png`, `FL-3-user-flow.png`. Trang 02: `wireframe-SC-03.png`, `wireframe-SC-08.png`. Trang 04 và 05: `page-04-design-system.png`, `page-05-components.png`. Trang 06: `prototype-OV-ngoai-kich-ban-demo.png` (overlay hiện khi bấm nút ngoài kịch bản demo, D-32).
+Ảnh ngoài trang 03. Node là id trong file Figma, tỉ lệ là tỉ lệ xuất (`scale`). Ba ảnh cuối là nguồn của các ảnh trên slide 9.
+
+| Ảnh | Trang | Node | Tỉ lệ |
+|---|---|---|---|
+| [FL-1-user-flow.png](FL-1-user-flow.png) | 01 | `42:4` | 1 |
+| [FL-2-user-flow.png](FL-2-user-flow.png) | 01 | `42:91` | 1 |
+| [FL-3-user-flow.png](FL-3-user-flow.png) | 01 | `42:188` | 1 |
+| [wireframe-SC-03.png](wireframe-SC-03.png) | 02 | `11:35` | 1 |
+| [wireframe-SC-08.png](wireframe-SC-08.png) | 02 | `11:166` | 1 |
+| [page-04-design-system.png](page-04-design-system.png) | 04 | `10:2` | 1 |
+| [page-05-components.png](page-05-components.png) | 05 | `3:2` | 0,5 |
+| [prototype-OV-ngoai-kich-ban-demo.png](prototype-OV-ngoai-kich-ban-demo.png) | 06 | `126:6979` (overlay khi bấm nút ngoài kịch bản demo, D-32) | 2 |
+| [page-04-mau.png](page-04-mau.png) | 04 | `10:5` (18 biến màu) | 1 |
+| [CMP-01-button.png](CMP-01-button.png) | 05 | `3:162` | 1 |
+| [CMP-10-status-chip.png](CMP-10-status-chip.png) | 05 | `3:70` | 1 |
+
+Cách xuất lại và đối chiếu với repo và slide: [process/sync/README.md](../../process/sync/README.md).

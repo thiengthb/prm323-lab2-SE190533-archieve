@@ -11,7 +11,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Figma dự phòng | [Bản sao dự phòng](https://www.figma.com/design/ubzn09LV1N7VJnmiBuEA3w) (không có lịch sử phiên bản; bản nộp là link ở trên) |
 | Tài khoản chứa file Figma | File nằm trong team của một tài khoản Figma Education mà thien mượn của bạn, vì Figma MCP cần lượt gọi mà tài khoản của thien không đủ. Giữ nguyên ở đó để còn lịch sử phiên bản (D-30). Mọi thao tác trên file do Claude thực hiện qua Figma MCP theo D-07, thien duyệt; nhật ký ở `design/figma-build.md` |
 | Thuyết trình | 14:30 thứ Sáu 16/10/2026 |
-| Slide thuyết trình | [`presentation/PRM323-Lab2-SE190533-slides.pptx`](presentation/PRM323-Lab2-SE190533-slides.pptx) (12 slide, có ghi chú người nói; mọi “Bằng chứng” ở chân slide là link bấm được tới file trong repo hoặc trang Figma) · [ảnh xem trước 12 slide](presentation/xem-truoc-12-slide.png) · [kịch bản nói và demo](presentation/kich-ban-thuyet-trinh.md) |
+| Slide thuyết trình | [`presentation/PRM323-Lab2-SE190533-slides.pptx`](presentation/PRM323-Lab2-SE190533-slides.pptx) (bản v8, 12 slide, có ghi chú người nói; mọi “Bằng chứng” ở chân slide là link bấm được tới file trong repo hoặc trang Figma) · [ảnh xem trước 12 slide](presentation/xem-truoc-12-slide.png) · [kịch bản nói và demo](presentation/kich-ban-thuyet-trinh.md) |
 
 ## Bản đồ sản phẩm nộp
 
@@ -24,10 +24,10 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Quyết định thiết kế + checklist accessibility | `design/design-decisions.md` | Có (v1, thien duyệt 15/10) |
 | Nhật ký AI (prompt, output, critique, quyết định) | `ai/ai-design-log.md` | Có (AI-01..AI-29; chấm chéo Codex hai phần ở `ai/reviews/`) |
 | Critique các vòng Stitch | `design/stitch-critique-it0.md` … `stitch-critique-it3.md` | Có (IT-0, IT-1, IT-2 đã duyệt; IT-0b và IT-3 thien duyệt 15/10) |
-| Ảnh Stitch, ảnh Figma | `assets/stitch/`, `assets/figma/` | Có (Stitch IT-0..IT-3 và IT-0b; Figma: đủ 73 frame trang 03, mục lục `assets/figma/INDEX.md`; 3 flow, trang 04, 05, kiểm 412 dp) |
+| Ảnh Stitch, ảnh Figma | `assets/stitch/`, `assets/figma/` | Có (Stitch IT-0..IT-3 và IT-0b; Figma: đủ 73 frame trang 03, mục lục `assets/figma/INDEX.md`; 3 flow, trang 04, 05, kiểm 412 dp, ba ảnh nguồn của slide 9) |
 | Bảng liên kết prototype (đọc từ Figma) | `design/prototype-links.md` | Có (85 frame, 12 điểm bắt đầu, 184 tương tác, 0 liên kết hỏng) |
 | Flutter handoff | `handoff/flutter-handoff.md` | Có (v1, thien duyệt 15/10): 2 bảng ánh xạ, 6 mục cho cả 15 màn |
-| Slide thuyết trình, kịch bản nói và demo | `presentation/` | Có (bản trình bày 16/10/2026) |
+| Slide thuyết trình, kịch bản nói và demo | `presentation/` | Có (v8, bản trình bày 16/10/2026; thay đổi từng phiên bản ghi đầu kịch bản) |
 
 ## Hồ sơ quá trình (bổ sung, phục vụ truy vết)
 
@@ -36,6 +36,7 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 | Quy ước tài liệu, hệ mã, nhãn bằng chứng | `process/conventions.md` |
 | Ma trận truy vết bằng chứng → màn hình | `process/traceability-matrix.md` |
 | Sổ quyết định D-nn | `process/decision-log.md` |
+| Đối chiếu Figma · GitHub · slide (quy trình, script, báo cáo mới nhất) | `process/sync/README.md`, `tools/sync_check.py`, `process/sync/bao-cao-doi-chieu.md` |
 | Kế hoạch làm việc theo phiên | `process/work-plan.md` |
 | Hồ sơ nghiên cứu (kế hoạch, bàn giấy, công cụ, người trả lời, dữ liệu thô, tổng hợp) | `research/` (mục lục: `research/README.md`) |
 | Prompt nguyên văn của mọi lần dùng AI | `ai/prompts/` |
