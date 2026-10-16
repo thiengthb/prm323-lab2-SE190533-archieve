@@ -6,27 +6,28 @@ Thiết kế UI/UX có AI hỗ trợ (Google Stitch → Figma) cho ứng dụng 
 |---|---|
 | Nhóm | Group 3 (GVHD thông báo làm nhóm): Trần Ngọc Thiên · SE190533; Vũ Anh Khôi · SE194606; Vũ Huy Phương · SE190742; Lê Thành Lộc · SE182702 |
 | Đề tài | Ứng dụng di động bổ trợ việc điểm danh trên FAP cho giảng viên FPTU cơ sở TP.HCM (đã được GVHD duyệt) |
-| Persona một dòng | **P-01 Thầy Hoàng Nam** (chính): giảng viên cơ sở HCM có ngày dạy 3–4 slot, cần chốt điểm danh đúng người trong vài phút đầu slot (kể cả bắt quét hộ) và sửa ca lệch ngay trong ngày. **P-02 Bảo Trâm** (phụ): sinh viên năm 2 chỉ yên tâm khi thấy mình được ghi Có mặt, cần báo sai kịp trước khi hết ngày. Cả hai là nhân vật tổng hợp từ phỏng vấn mô phỏng bằng AI (D-05), chi tiết hành vi ở mức Giả thuyết (`ux/persona.md`) |
+| Persona một dòng | **P-01 Thầy Hoàng Nam** (chính): giảng viên cơ sở HCM có ngày dạy 3–4 slot, cần điểm danh mà không đọc tên từng người và mở được cả khi chưa tới phòng (theo đề bài GVHD, D-19), nhưng vẫn bắt được quét hộ và sửa ca lệch ngay trong ngày. **P-02 Bảo Trâm** (phụ): sinh viên năm 2 chỉ yên tâm khi thấy mình được ghi Có mặt, cần báo sai kịp trước khi hết ngày. Cả hai là nhân vật tổng hợp từ phỏng vấn mô phỏng bằng AI (D-05), chi tiết hành vi ở mức Giả thuyết (`ux/persona.md`) |
 | Figma | [PRM323 Lab 2 · SE190533 · Điểm danh FAP](https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w) (6 trang; ghi chép dựng file: `design/figma-build.md`) |
 | Figma dự phòng | [Bản sao dự phòng](https://www.figma.com/design/ubzn09LV1N7VJnmiBuEA3w) (không có lịch sử phiên bản; bản nộp là link ở trên) |
 | Tài khoản chứa file Figma | File nằm trong team của một tài khoản Figma Education mà thien mượn của bạn, vì Figma MCP cần lượt gọi mà tài khoản của thien không đủ. Giữ nguyên ở đó để còn lịch sử phiên bản (D-30). Mọi thao tác trên file do Claude thực hiện qua Figma MCP theo D-07, thien duyệt; nhật ký ở `design/figma-build.md` |
 | Thuyết trình | 14:30 thứ Sáu 16/10/2026 |
-| Slide | [12 slide trên Claude](https://claude.ai/artifact/2zGSwXg9K52VN8QBrFrjhq) (mỗi slide có ghi chú người nói; cần được chia sẻ quyền xem) |
+| Slide thuyết trình | [`presentation/PRM323-Lab2-SE190533-slides.pptx`](presentation/PRM323-Lab2-SE190533-slides.pptx) (12 slide, có ghi chú người nói; mọi “Bằng chứng” ở chân slide là link bấm được tới file trong repo hoặc trang Figma) · [ảnh xem trước 12 slide](presentation/xem-truoc-12-slide.png) · [kịch bản nói và demo](presentation/kich-ban-thuyet-trinh.md) |
 
 ## Bản đồ sản phẩm nộp
 
 | Sản phẩm | Đường dẫn | Trạng thái |
 |---|---|---|
-| Persona, problem statement, tiêu chí thành công | `ux/persona.md` | Có (v2) |
+| Persona, problem statement, tiêu chí thành công | `ux/persona.md` | Có (v3: lý do chính là bỏ bước đọc tên và mở từ xa, D-33) |
 | Kiến trúc thông tin, user flow | `ux/user-flow.md` | Có (v2) |
-| Design brief cho Stitch | `design/DESIGN.md` | Có (v2) |
+| Design brief cho Stitch | `design/DESIGN.md` | Có (v2 là bản đưa cho Stitch; v2.1 sửa sau Figma: app bar màn cấp một 72 dp, lề 20 dp, D-34) |
 | Đặc tả màn hình | `design/screen-spec.md` | Có (v1, thien duyệt 15/10) |
 | Quyết định thiết kế + checklist accessibility | `design/design-decisions.md` | Có (v1, thien duyệt 15/10) |
 | Nhật ký AI (prompt, output, critique, quyết định) | `ai/ai-design-log.md` | Có (AI-01..AI-29; chấm chéo Codex hai phần ở `ai/reviews/`) |
 | Critique các vòng Stitch | `design/stitch-critique-it0.md` … `stitch-critique-it3.md` | Có (IT-0, IT-1, IT-2 đã duyệt; IT-0b và IT-3 thien duyệt 15/10) |
 | Ảnh Stitch, ảnh Figma | `assets/stitch/`, `assets/figma/` | Có (Stitch IT-0..IT-3 và IT-0b; Figma: đủ 73 frame trang 03, mục lục `assets/figma/INDEX.md`; 3 flow, trang 04, 05, kiểm 412 dp) |
-| Bảng liên kết prototype (đọc từ Figma) | `design/prototype-links.md` | Có (84 frame, 12 điểm bắt đầu, 166 tương tác, 0 liên kết hỏng) |
+| Bảng liên kết prototype (đọc từ Figma) | `design/prototype-links.md` | Có (85 frame, 12 điểm bắt đầu, 184 tương tác, 0 liên kết hỏng) |
 | Flutter handoff | `handoff/flutter-handoff.md` | Có (v1, thien duyệt 15/10): 2 bảng ánh xạ, 6 mục cho cả 15 màn |
+| Slide thuyết trình, kịch bản nói và demo | `presentation/` | Có (bản trình bày 16/10/2026) |
 
 ## Hồ sơ quá trình (bổ sung, phục vụ truy vết)
 

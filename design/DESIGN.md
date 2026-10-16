@@ -3,10 +3,10 @@
 | Thuộc tính | Giá trị |
 |---|---|
 | Mã tài liệu | DES-BRIEF |
-| Phiên bản | **v2** (14/10/2026). v1 dùng bảng màu thienui, xem lịch sử git và DES-AUDIT |
+| Phiên bản | **v2** (14/10/2026). v1 dùng bảng màu thienui, xem lịch sử git và DES-AUDIT. **v2.1** (16/10/2026, sau Figma, không đưa lại cho Stitch): app bar màn cấp một 72 dp và lề 20 dp ở các màn có thanh tab (D-34) |
 | Trạng thái | Đã duyệt (thien, 15/10/2026). Viết **trước** prompt Stitch đầu tiên |
 | Đầu vào | UX-PERSONA, UX-FLOW, UX-INTEGRITY, O-02 (màu đo từ FAP thật), DES-AUDIT |
-| Quyết định liên quan | D-12, D-17, D-18, D-19, D-20, D-21, D-22 (shadcn + Lucide), D-23 (Inter) |
+| Quyết định liên quan | D-12, D-17, D-18, D-19, D-20, D-21, D-22 (shadcn + Lucide), D-23 (Inter), D-34 |
 
 Tài liệu này là bản brief đưa cho Stitch, đồng thời là nguồn gốc của token trong Figma (trang 04) và trong handoff Flutter. Tên token giống hệt nhau ở cả ba nơi (`process/conventions.md`, mục 2). Mỗi giá trị đều ghi rõ nguồn: **FAP** (đo từ FAP thật, O-02), **WCAG**, **M3** (Material Design 3, khớp với Flutter), hay **Nghiên cứu** (mã F, N).
 
@@ -89,7 +89,7 @@ Theo D-22, phần cấu trúc lấy từ thienui, bộ token mà app FAP Attenda
 | Nhóm | Token | Giá trị | Nguồn |
 |---|---|---|---|
 | Khoảng cách | `space/1` … `space/8` | 4, 8, 12, 16, 20, 24, 32, 40 dp | thienui (thang 0,25 rem của Tailwind) |
-| Lề màn hình | `space/4` | 16 dp | thienui; M3 (khung compact) |
+| Lề màn hình | `space/4` | 16 dp; **20 dp (`space/5`) ở màn cấp một có thanh tab** (v2.1, D-34) | thienui; M3 (khung compact) |
 | Chiều cao điều khiển | `size/control` | 48 dp | Đề bài. **Ghi đè** thienui (`--p-target-min: 44px`) và chiều cao mặc định của shadcn, vốn làm cho web |
 | Góc bo | `radius/sm`, `radius/md`, `radius/lg`, `radius/xl`, `radius/2xl`, `radius/full` | 6 (huy hiệu nhỏ), **8** (nút, ô nhập, chip), 10 (ô nhóm), **14** (thẻ), **18** (sheet, dialog), 999 (avatar, chấm) | thienui: gốc 10, sm = gốc − 4, md = gốc − 2, xl = gốc + 4, theo shadcn |
 | Độ nổi | `elevation/0` … `elevation/4` | 0 phẳng; 1 thẻ (bóng 1 px rất nhẹ); 2 thanh đáy cố định; 3 sheet, dialog; 4 thông báo nổi | thienui. Viền 1 px `border` là cách tách lớp chính, bóng chỉ phụ trợ |
@@ -97,7 +97,7 @@ Theo D-22, phần cấu trúc lấy từ thienui, bộ token mà app FAP Attenda
 ## 7. Bố cục
 
 - Khung 360 × 800 dp; kiểm ở 360 và 412 dp.
-- Cấu trúc chung: App bar (64 dp) → nội dung cuộn → thanh hành động cố định đáy (khi màn có một hành động chính) → thanh điều hướng đáy 2 tab cho mỗi vai trò.
+- Cấu trúc chung: App bar (64 dp ở màn lồng; **72 dp ở màn cấp một**, padding 20/20/4/20, v2.1, D-34) → nội dung cuộn → thanh hành động cố định đáy (khi màn có một hành động chính) → thanh điều hướng đáy 2 tab cho mỗi vai trò.
 - Màn phiên điểm danh của giảng viên **ẩn thanh điều hướng**, thay bằng bộ đếm “Đã quét 28/32” ở trên và nút chính ở đáy.
 - Dòng sinh viên cao ≥ 64 dp, có ảnh FAP 40 dp bên trái (O-01.9).
 

@@ -100,7 +100,7 @@ Thẻ dùng `Card(elevation: 0)` cộng viền 1 dp `outlineVariant` và `AppSha
 | CMP-02 Text field | `TextFormField` | Nhãn đặt trên ô bằng `Text` riêng (không dùng nhãn nổi). `maxLength: 200` hiện bộ đếm. Lỗi qua `errorText`. Focused: viền 2 dp `primary` |
 | CMP-03 Card · Default, Pressed | `Card` + `InkWell` | Thẻ chỉ để xem thì không bọc `InkWell` |
 | CMP-04 Navigation bar · Vai trò, Tab | `NavigationBar` + 2 `NavigationDestination` | `indicatorColor: primaryContainer`, cao 80. Huy hiệu: `Badge.count(count: n, isLabelVisible: n > 0)` bọc biểu tượng tab “Báo sai” |
-| CMP-05 App bar · Top-level | `AppBar` không có nút quay lại, `title` là `Column` (tiêu đề + ngày giờ `bodyMedium` màu `onSurfaceVariant`) | Màn cấp một |
+| CMP-05 App bar · Top-level | `AppBar` không có nút quay lại, `toolbarHeight: 72`, `titleSpacing: AppSpace.s5`, `title` là `Column` (tiêu đề + ngày giờ `bodyMedium` màu `onSurfaceVariant`) | Màn cấp một (D-34) |
 | CMP-05 App bar · Default | `AppBar` với `BackButton` hoặc `CloseButton` | Màn lồng |
 | CMP-05 App bar · With actions | `AppBar` + `actions` (tối đa 1) | |
 | CMP-06 Dialog · Confirmation | `AlertDialog` qua `showDialog` | Nút trái `TextButton` “Hủy”, nút phải `FilledButton` |
@@ -196,7 +196,7 @@ Mỗi màn có 6 mục theo đề bài. Tên frame trong ngoặc kép là tên f
 
 ### SC-02 · Lịch dạy hôm nay
 
-1. **Bố cục.** `Scaffold` → `AppBar` (CMP-05 Top-level: “Hôm nay” + ngày giờ) → `RefreshIndicator` → `CustomScrollView`, padding ngang `s4`: cho mỗi nhóm khác rỗng theo thứ tự “Đang diễn ra”, “Sắp tới”, “Đã xong”: tiêu đề nhóm (`titleMedium` w600 + “ · n” màu `onSurfaceVariant`), khoảng `s3`, các thẻ cách nhau `s3`; giữa các nhóm khoảng `s6` → `bottomNavigationBar` CMP-04. Cuộn: toàn bộ danh sách thẻ.
+1. **Bố cục.** `Scaffold` → `AppBar` (CMP-05 Top-level: “Hôm nay” + ngày giờ) → `RefreshIndicator` → `CustomScrollView`, padding ngang `s5`: cho mỗi nhóm khác rỗng theo thứ tự “Đang diễn ra”, “Sắp tới”, “Đã xong”: tiêu đề nhóm (`titleMedium` w600 + “ · n” màu `onSurfaceVariant`), khoảng `s3`, các thẻ cách nhau `s3`; giữa các nhóm khoảng `s6` → `bottomNavigationBar` CMP-04. Cuộn: toàn bộ danh sách thẻ.
 2. **Component.** CMP-05 · Top-level; CMP-03 Card (thẻ slot); CMP-10 Status chip · Giờ slot (đang diễn ra), Giờ slot · khác (sắp tới, đã xong), Chưa điểm danh, Chờ điền lên FAP, Đã lên FAP; CMP-01 · Primary “Mở điểm danh” và · Secondary “Mở từ xa” trên thẻ slot kế tiếp; CMP-07 · Skeleton thẻ slot; CMP-04 · Vai trò=Giảng viên, Tab=Hôm nay, có huy hiệu.
 3. **Trạng thái.** Đang tải: 3 `SlotCardSkeleton` (“… · Đang tải (CMP-07 skeleton)”). Có dữ liệu: 7 frame theo giờ trong ngày (xem `design/screen-spec.md`). Trống (không có slot hôm nay): CMP-08 · Không có nút, “Hôm nay thầy không có slot nào” (frame “SC-02 · Lịch dạy hôm nay · Trống (CMP-08)”). Lỗi tải: CMP-09 · Mất mạng thay cho danh sách, nút “Thử lại”; nếu đã có dữ liệu cũ thì giữ danh sách và hiện `SnackBar` “Chưa cập nhật được”.
 4. **Tương tác.** Kéo xuống để tải lại. “Mở điểm danh” → tạo phiên tại lớp. “Mở từ xa” → tạo phiên từ xa (mã chỉ hiện trên màn hình lớp, tức TV phòng, D-24). Nút trên thẻ chỉ bật trong khoảng 15 phút trước giờ vào slot tới hết giờ slot; ngoài khoảng đó thẻ không có nút. Chạm thẻ “Chờ điền lên FAP” → mở SC-06 ở trạng thái chờ để thử điền lại. Chạm thẻ có phiên đang mở hoặc chờ xác nhận → mở lại SC-03 hoặc SC-04. Thẻ sắp tới khác và thẻ đã lên FAP chỉ để xem, không bấm được (không có `InkWell`). Chạm tab “Báo sai” → SC-07.
@@ -242,7 +242,7 @@ Mỗi màn có 6 mục theo đề bài. Tên frame trong ngoặc kép là tên f
 
 ### SC-07 · Báo sai hôm nay
 
-1. **Bố cục.** `Scaffold` → `AppBar` (CMP-05 Top-level: “Báo sai” + dòng phụ hạn hoặc tình trạng) → `RefreshIndicator` → `ListView`, padding `s4`: nhóm “Mới · n” (tiêu đề `titleMedium` w600, thẻ cách `s3`) → khoảng `s6` → nhóm “Đã xử lý · n” → `bottomNavigationBar` CMP-04.
+1. **Bố cục.** `Scaffold` → `AppBar` (CMP-05 Top-level: “Báo sai” + dòng phụ hạn hoặc tình trạng) → `RefreshIndicator` → `ListView`, padding ngang `s5`: nhóm “Mới · n” (tiêu đề `titleMedium` w600, thẻ cách `s3`) → khoảng `s6` → nhóm “Đã xử lý · n” → `bottomNavigationBar` CMP-04.
 2. **Component.** CMP-05 · Top-level; CMP-03 Card (thẻ báo sai); CMP-10 · Giờ slot · khác, Vắng (“Đang ghi: Vắng”), Có mặt (“Đã sửa: Có mặt”), Vắng (“Giữ Vắng”); CMP-08 Empty state; CMP-04 · Vai trò=Giảng viên, Tab=Báo sai; CMP-07 · Skeleton list.
 3. **Trạng thái.** Đang tải: `SlotCardSkeleton` × 2. Có báo sai mới (“SC-07 · Báo sai hôm nay”). Sau khi xử lý một cái (“… · Sau khi từ chối”, “… · Sau khi sửa Vy”). Đã xử lý hết (“… · Đã xử lý hết”). Trống (“… · Trống (CMP-08)”). Lỗi tải: CMP-09 · Mất mạng, nút “Thử lại”.
 4. **Tương tác.** Chạm thẻ trong nhóm “Mới” → SC-08. Chạm thẻ “Đã xử lý” → SC-08 ở trạng thái đã sửa hoặc đã từ chối (chỉ xem). Kéo xuống để tải lại. Báo sai mới đến khi đang mở màn: thẻ chèn vào đầu nhóm “Mới”, huy hiệu tăng. Huy hiệu bằng số thẻ trong nhóm “Mới” và vẫn hiện khi đang ở tab này.
@@ -260,7 +260,7 @@ Mỗi màn có 6 mục theo đề bài. Tên frame trong ngoặc kép là tên f
 
 ### SC-09 · Hôm nay (sinh viên)
 
-1. **Bố cục.** `Scaffold` → `AppBar` (CMP-05 Top-level: “Hôm nay” + ngày giờ) → `RefreshIndicator` → `ListView`, padding `s4`: CMP-12 (nếu có buổi Vắng còn hạn) → các nhóm “Đang diễn ra”, “Sắp tới”, “Đã xong” như SC-02 → link “Báo sai điểm danh” ngay dưới thẻ Vắng còn hạn → vùng đáy cố định (chỉ khi trong khung giờ học): dòng trạng thái phiên `bodyMedium` canh giữa và nút “Quét mã điểm danh” → `bottomNavigationBar` CMP-04.
+1. **Bố cục.** `Scaffold` → `AppBar` (CMP-05 Top-level: “Hôm nay” + ngày giờ) → `RefreshIndicator` → `ListView`, padding ngang `s5`: CMP-12 (nếu có buổi Vắng còn hạn) → các nhóm “Đang diễn ra”, “Sắp tới”, “Đã xong” như SC-02 → link “Báo sai điểm danh” ngay dưới thẻ Vắng còn hạn → vùng đáy cố định (chỉ khi trong khung giờ học): dòng trạng thái phiên `bodyMedium` canh giữa và nút “Quét mã điểm danh” → `bottomNavigationBar` CMP-04.
 2. **Component.** CMP-05 · Top-level; CMP-12 · Còn hạn, Sắp hết hạn; CMP-03 Card; CMP-10 · Giờ slot, Giờ slot · khác, Chưa điểm danh, Chờ xác nhận, Có mặt, Vắng; CMP-01 · Primary (Default, Disabled), · Text (“Báo sai điểm danh”); CMP-04 · Vai trò=Sinh viên, có huy hiệu; CMP-07 · Skeleton thẻ slot.
 3. **Trạng thái.** Đang tải: skeleton như SC-02. 7 frame có dữ liệu (xem `design/screen-spec.md`). Trống (hôm nay không có buổi): CMP-08 “Hôm nay bạn không có buổi học nào”, không có nút. Lỗi tải: CMP-09 · Mất mạng.
 4. **Tương tác.** “Quét mã điểm danh” chỉ bật khi có phiên đang mở cho một buổi của sinh viên này và sinh viên chưa quét buổi đó; khi tắt, dòng phía trên nói lý do (“Chưa có phiên điểm danh nào đang mở”, “Bạn đã quét PRM393 lúc 07:01”). Chạm nút → SC-10. Chạm thẻ buổi đã xong → SC-12. Chạm thẻ buổi sắp tới hoặc đang diễn ra: không có hành động. Chạm “Báo sai điểm danh” → SC-12 của buổi Vắng đó. Trạng thái thẻ đổi từ “Chờ xác nhận” sang “Có mặt” hoặc “Vắng” khi giảng viên xác nhận (đẩy từ máy chủ hoặc khi mở lại màn).
@@ -305,7 +305,7 @@ Mỗi màn có 6 mục theo đề bài. Tên frame trong ngoặc kép là tên f
 
 ### SC-14 · Báo sai của tôi
 
-1. **Bố cục.** `Scaffold` → `AppBar` (CMP-05 Top-level “Báo sai của tôi”) → `RefreshIndicator` → `ListView`, padding `s4`: mỗi báo sai là một thẻ (tiêu đề buổi `titleMedium`, dòng phụ ngày và người nhận, CMP-13 timeline, phần kết quả) cách nhau `s4`; mới nhất ở trên → `bottomNavigationBar` CMP-04.
+1. **Bố cục.** `Scaffold` → `AppBar` (CMP-05 Top-level “Báo sai của tôi”) → `RefreshIndicator` → `ListView`, padding ngang `s5`: mỗi báo sai là một thẻ (tiêu đề buổi `titleMedium`, dòng phụ ngày và người nhận, CMP-13 timeline, phần kết quả) cách nhau `s4`; mới nhất ở trên → `bottomNavigationBar` CMP-04.
 2. **Component.** CMP-05 · Top-level; CMP-03 Card; CMP-13 Report timeline · Đã gửi, Đã xem, Đã sửa, Bị từ chối; CMP-10 · Đã lên FAP; CMP-01 · Secondary (“Xem cách gửi đơn khiếu nại”); CMP-08 Empty state; CMP-04 · Vai trò=Sinh viên, Tab=Báo sai.
 3. **Trạng thái.** Đã gửi (“SC-14 · … · Đã gửi (K3)”). Đã sửa (“… · Đã sửa”). Bị từ chối (“… · Bị từ chối”). Trống (“… · Trống”). Đang tải: skeleton một thẻ. Lỗi tải: CMP-09 · Mất mạng.
 4. **Tương tác.** Mở tab này đánh dấu mọi kết quả mới là đã xem; huy hiệu trên tab mất. Kéo xuống để tải lại. “Xem cách gửi đơn khiếu nại” (khi bị từ chối) → SC-15. “Về Hôm nay” (khi trống) → SC-09. Thẻ không bấm được (mọi thông tin đã hiện).
