@@ -2,6 +2,8 @@
 
 File Figma: https://www.figma.com/design/9yDa2ylfREmndW1mK1hf7w (trang 03, node `1:3`). Mỗi frame trên trang 03 có đúng một ảnh dưới đây, xuất ở tỉ lệ 2× bằng Figma MCP. 32 ảnh xuất ngày 14–15/10 (đợt sửa 5 và CR-64). 41 ảnh trạng thái còn lại xuất tối 15/10/2026 sau khi bản chấm chéo bằng Codex (AI-29) không thấy được các trạng thái đó trong repo (CR-66).
 
+**Xuất lại cả 73 ảnh ngày 16/10/2026** sau khi sửa app bar màn cấp một (72 dp) và lề 20 dp (D-34); 44 ảnh đổi, 29 ảnh giống hệt bản cũ.
+
 Tổng: 69 frame 360 × 800, 3 frame 412 × 915 (kiểm 412 dp), 1 frame web 1280 × 720. Thứ tự theo mã màn rồi theo luồng.
 
 | Frame trên Figma | Node | Ảnh |
