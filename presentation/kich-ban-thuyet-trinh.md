@@ -1,4 +1,4 @@
-# Kịch bản thuyết trình v8 · PRM323 Lab 2 · Nhóm 3
+# Kịch bản thuyết trình v9 · PRM323 Lab 2 · Nhóm 3
 
 Bài chia 10 phút slide, 5 phút demo, 5 phút hỏi đáp (guideline mục 1). Câu chuyện đi theo trình tự đề chấm: Phân tích → AI tạo → Phản biện → Sửa → Prototype → Bàn giao.
 
@@ -7,6 +7,8 @@ Bài chia 10 phút slide, 5 phút demo, 5 phút hỏi đáp (guideline mục 1).
 **Thay đổi ở v7 (16/10/2026):** bìa còn hai điện thoại: thầy mở phiên QR, sinh viên tự quét. Tiêu đề slide 3 và 5 ngắn hơn, slide 12 kết bằng lời đề nghị gửi hội đồng.
 
 **Thay đổi ở v8 (16/10/2026):** ảnh chip trạng thái (CMP-10) trên slide 9 lấy lại từ Figma: khung giờ giờ viết 07:00–09:15 như trong app. Lời nói không đổi. Phát hiện nhờ bước đối chiếu Figma, GitHub và slide (process/sync/).
+
+**Thay đổi ở v9 (16/10/2026):** file pptx nhúng sẵn font Inter và Be Vietnam Pro, để máy không cài hai font này vẫn hiện đúng chữ tiếng Việt. Nội dung, ảnh và lời nói giữ nguyên như v8.
 
 **Thay đổi so với dàn ý cũ:** số phát hiện là 73 (CR-01..CR-73, không phải 65 hay 72); số quyết định là 32 (D-01..D-32, không phải 30); đổi màu chính làm 72 frame điện thoại đổi theo (không phải 71). Script slide 2 được rút từ khoảng 1:50 xuống khoảng 1:15, và bỏ chỉ dẫn “chỉ câu bên phải” vì slide mới đặt problem statement trong từng thẻ persona. Để tổng vẫn 10:00, slide 8 và 10 còn 0:45, slide 12 còn 0:50.
 
